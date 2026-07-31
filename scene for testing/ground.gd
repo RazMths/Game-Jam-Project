@@ -2,20 +2,22 @@ extends StaticBody2D
 
 @export var duration: float = 1.4
 
-@onready var sprite = $MeshInstance2D 
+@onready var sprite = $Sprite2D # أو ColorRect حسب ما استخدمت
 var fade_tween: Tween
 
 func _ready() -> void:
-	# استخدام self_modulate يضمن التأثير على هذه العقدة فقط وليس العقد المرتبطة بها
-	sprite.self_modulate.a = 0.0
+	# جعل المنصة مخفية في بداية اللعبة
+	sprite.modulate.a = 0.0
 
+# هذه الدالة تناديها موجة الصدى عندما تلمس المنصة
 func reveal_platform() -> void:
+	# إذا كان هناك تأثير تلاشي شغال حالياً، نلغيه ونبدأ من جديد
 	if fade_tween and fade_tween.is_running():
 		fade_tween.kill()
-		
-	# إظهار المنصة فوراً
-	sprite.self_modulate.a = 1.0
 	
-	# بدء التلاشي الناعم
+	# 1. إظهار المنصة فوراً
+	sprite.modulate.a = 1.0
+	
+	# 2. عمل تلاشي تدريجي (Fade out) خلال ثانيتين مثلاً
 	fade_tween = create_tween()
-	fade_tween.tween_property(sprite, "self_modulate:a", 0.0, duration)
+	fade_tween.tween_property(sprite, "modulate:a", 0.0, duration)

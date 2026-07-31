@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://bi32pe66qa6dy"]
 
 [ext_resource type="Script" uid="uid://bcxasyeigyl7o" path="res://scene for testing/ground.gd" id="1_bf6ie"]
+[ext_resource type="Texture2D" uid="uid://dkg2pkxcafeyd" path="res://word/تكتشر/العشب.png" id="2_qbt0e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
 size = Vector2(258, 28)
-
-[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
 
 [node name="ground" type="StaticBody2D" unique_id=1026929526]
 script = ExtResource("1_bf6ie")
@@ -13,7 +12,7 @@ script = ExtResource("1_bf6ie")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=935068014]
 shape = SubResource("RectangleShape2D_7dm0k")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=2046302526]
-position = Vector2(0, 7.6293945e-06)
-scale = Vector2(258, 28.000013)
-mesh = SubResource("BoxMesh_ig7tw")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=83332232]
+position = Vector2(1.1444092e-05, -10.5)
+scale = Vector2(0.21833336, 0.1225)
+texture = ExtResource("2_qbt0e")
