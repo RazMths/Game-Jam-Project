@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 		can_dash = true
 
 	# 3. Jump & Double Jump
-	if Input.is_action_just_pressed("ui_accept"): # Space / W
+	if Input.is_action_just_pressed("jump"): # Space / W
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
 			jumps_left -= 1
@@ -46,7 +46,7 @@ func _physics_process(delta: float) -> void:
 			spawn_echo(240.0) # قفزة مزدوجة بموجة أكبر
 
 	# 4. Horizontal Movement
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
