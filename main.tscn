@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bi32pe66qa6dy" path="res://scene for testing/ground.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://blftmxdlk301y" path="res://power_up.tscn" id="3_h2yge"]
 
 [node name="main" type="Node2D" unique_id=1916839064]
 
@@ -37,8 +38,12 @@ scale = Vector2(0.485, 1)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=616888279]
 position = Vector2(4, -125)
 
-[node name="Player" parent="." unique_id=891439576 instance=ExtResource("2_h2yge")]
+[node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
 position = Vector2(91, -332)
+fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
+camera = NodePath("../Camera2D")
+SHAKE_INTENSITY = 5.0
+CAMERA_FOLLOW_SPEED = 0.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1693423614]
 
@@ -61,3 +66,9 @@ offset_bottom = 27.0
 grow_horizontal = 2
 value = 22.63
 metadata/_edit_use_anchors_ = true
+
+[node name="Power up" parent="." unique_id=612369099 instance=ExtResource("3_h2yge")]
+position = Vector2(-173, -101)
+
+[node name="Power up2" parent="." unique_id=1359119012 instance=ExtResource("3_h2yge")]
+position = Vector2(252, -157)

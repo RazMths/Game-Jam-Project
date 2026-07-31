@@ -4,3 +4,5 @@ res://echo_wave.tscn
 res://Player/Characters/player.gd
 res://scene for testing/ground.tscn
 res://scene for testing/ground.gd
+res://power_up.tscn
+res://power_up.gd
