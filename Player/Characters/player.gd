@@ -2,24 +2,31 @@ extends CharacterBody2D
 
 # --- الثوابت والإعدادات الأساسية ---
 @export_category("Movement Settings")
-@export var SPEED = 300.0           # سرعة الحركة الأفقيّة
-@export var JUMP_VELOCITY = -420.0  # قوة القفز
-@export var GRAVITY = 980.0         # الجاذبية الأرضية
-@export var FRICTION = 1200.0       # قوة التباطؤ عند التوقف (مرتبطة بـ delta)
+@export var SPEED = 280.0           
+@export var JUMP_VELOCITY = -380.0  
+@export var GRAVITY = 850.0         
+@export var ACCELERATION = 2400.0   
+@export var DECELERATION = 2800.0   
+
+# --- إعدادات صدى المشي ---
+@export_category("Footstep Echo")
+@export var STEP_ECHO_INTERVAL: float = 0.22  
+@export var STEP_ECHO_RADIUS: float = 70.0
+var step_echo_timer: float = 0.0
 
 # --- خصائص الاندفاع (Dash) ---
-const DASH_SPEED = 650.0      # سرعة الاندفاع السريع
-const DASH_DURATION = 0.15    # مدة الاندفاع بالثواني
+const DASH_SPEED = 650.0
+const DASH_DURATION = 0.12  
 var is_dashing: bool = false
 var dash_timer: float = 0.0
 var can_dash: bool = true
 
 # --- القفز المزدوج ---
-var jumps_left: int = 2       # عدد القفزات المتاحة
+var jumps_left: int = 2
 
 # --- مشاهد خارجية ---
 @export_category("Effects")
-@export var wave_scene: PackedScene # مشهد موجة الـ Echo
+@export var wave_scene: PackedScene
 
 # --- الإشارة إلى عقدة التحريكات ---
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -30,10 +37,13 @@ func _physics_process(delta: float) -> void:
 		dash_timer -= delta
 		if dash_timer <= 0:
 			is_dashing = false
+			# --- التغيير هنا: إطلاق صدى قوي فور وصول اللاعب لنقطة نهاية الداش (الموقع ب) ---
+			spawn_echo(240.0)
+			
 		move_and_slide()
 		return
 
-	# 2. الجاذبية وإعادة ضبط القفز والاندفاع عند ملامسة الأرض
+	# 2. الجاذبية وإعادة ضبط القفز والاندفاع
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
 	else:
@@ -47,23 +57,24 @@ func _physics_process(delta: float) -> void:
 			jumps_left -= 1
 			spawn_echo(180.0)
 		elif jumps_left > 0:
-			velocity.y = JUMP_VELOCITY * 0.9
+			velocity.y = JUMP_VELOCITY * 0.92
 			jumps_left -= 1
 			spawn_echo(240.0)
 
-	# 4. الحركة الأفقية والتباطؤ
+	# 4. الحركة الأفقية
 	var direction := Input.get_axis("left", "right")
 	if direction != 0:
-		velocity.x = direction * SPEED
-		# تدوير وجه الشخصية أفقياً حسب اتجاه الحركة
+		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION * delta)
 		animated_sprite.flip_h = (direction < 0)
 	else:
-		# تباطؤ ناعم وثابت بغض النظر عن سرعة الجهاز
-		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
+		velocity.x = move_toward(velocity.x, 0, DECELERATION * delta)
 		
 	update_animations(direction)
 
-	
+	# 5. صدى الخطوات
+	handle_walk_echo(delta, direction)
+
+	# 6. الاندفاع والصدى اليدوي
 	if Input.is_action_just_pressed("dash") and can_dash:
 		start_dash(direction)
 		
@@ -72,7 +83,26 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-# --- دالة التحكم في التحريكات ---
+# --- دالة بدء الداش ---
+func start_dash(dir: float) -> void:
+	is_dashing = true
+	can_dash = false
+	dash_timer = DASH_DURATION
+	var dash_dir = dir if dir != 0 else (1.0 if velocity.x >= 0 else -1.0)
+	velocity.x = dash_dir * DASH_SPEED
+	velocity.y = 0
+	# تم إزالة spawn_echo من هنا ليتم إطلاقها عند الوصول فقط
+
+# --- باقي الدوارل كما هي ---
+func handle_walk_echo(delta: float, dir: float) -> void:
+	if is_on_floor() and dir != 0:
+		step_echo_timer -= delta
+		if step_echo_timer <= 0.0:
+			spawn_echo(STEP_ECHO_RADIUS)
+			step_echo_timer = STEP_ECHO_INTERVAL
+	else:
+		step_echo_timer = 0.0
+
 func update_animations(dir: float) -> void:
 	if not is_on_floor():
 		animated_sprite.play("jamp")
@@ -81,17 +111,6 @@ func update_animations(dir: float) -> void:
 			animated_sprite.play("run")
 		else:
 			animated_sprite.play("idle")
-
-
-func start_dash(dir: float) -> void:
-	is_dashing = true
-	can_dash = false
-	dash_timer = DASH_DURATION
-	var dash_dir = dir if dir != 0 else (1.0 if velocity.x >= 0 else -1.0)
-	velocity.x = dash_dir * DASH_SPEED
-	velocity.y = 0
-	spawn_echo(220.0)
-
 
 func spawn_echo(radius: float) -> void:
 	if wave_scene:
