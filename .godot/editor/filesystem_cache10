@@ -1,16 +1,13 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785496785
+::res://::1785499006
 echo_wave.gd::GDScript::8990162606447599727::1785489799::0::1::::<>Area2D<><>0<>0<><>::
 echo_wave.tscn::PackedScene::7730046669918722604::1785489800::0::1::::<><><>0<>0<><>::uid://d1c5wulmm8utr::::res://echo_wave.gd
 icon.svg::CompressedTexture2D::2422543624120626462::1785445026::1785486754::1::::<><><>0<>0<>f07825c0a0b0da6ed0b55b8dc649a8c6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-main.tscn::PackedScene::5306283812555800665::1785489800::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn
-العالم.tscn::PackedScene::2759367309964955363::1785492436::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
+main.tscn::PackedScene::5306283812555800665::1785498198::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn
 ::res://Player/::1785489770
-::res://Player/Characters/::1785492759
+::res://Player/Characters/::1785498713
 player.gd::GDScript::6085750118889052468::1785489626::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::1034129163329373470::1785492740::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Player/Characters/player.gd<>uid://drfv0ixwmcret::::res://Player/Characters/الانميشن/وقوف/الولد الابيض.png<>uid://bfc3ewq1scv1f::::res://Player/Characters/tile_0132.png<>uid://cwpmecveq3hhs::::res://Player/Characters/الانميشن/الركض/1.png<>uid://dst4tjqx3jsny::::res://Player/Characters/الانميشن/الركض/2.png<>uid://b7pv7v3lg0w0l::::res://Player/Characters/الانميشن/الركض/3.png<>uid://clxgjjkhpujqu::::res://Player/Characters/الانميشن/الركض/4.png
-tile_0132.png::CompressedTexture2D::2743202057800515773::1785487796::1785492759::1::::<><><>0<>0<>3edb9433e0b895f90f5bf265715d7cd9<>res://.godot/imported/tile_0132.png-31ae0305174160ff2def6e7c66d840f3.ctex::
-tile_0133.png::CompressedTexture2D::3850618377725335986::1785487796::1785492759::1::::<><><>0<>0<>a2c9e217a9704859937eb2a346b16231<>res://.godot/imported/tile_0133.png-763563835a98a402a2718505e004ae3b.ctex::
+player.tscn::PackedScene::1034129163329373470::1785498713::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Player/Characters/player.gd<>uid://drfv0ixwmcret::::res://Player/Characters/الانميشن/وقوف/الولد الابيض.png<>uid://cwpmecveq3hhs::::res://Player/Characters/الانميشن/الركض/1.png<>uid://dst4tjqx3jsny::::res://Player/Characters/الانميشن/الركض/2.png<>uid://b7pv7v3lg0w0l::::res://Player/Characters/الانميشن/الركض/3.png<>uid://clxgjjkhpujqu::::res://Player/Characters/الانميشن/الركض/4.png
 ::res://Player/Characters/الانميشن/::1785492740
 ::res://Player/Characters/الانميشن/الركض/::1785492760
 1.png::CompressedTexture2D::6348697478514453308::1785492740::1785492759::1::::<><><>0<>0<>09367426a3c89b171e7a6d656893ff2e<>res://.godot/imported/1.png-41741f158beb406f72f4136b8a07c815.ctex::
