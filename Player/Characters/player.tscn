@@ -26,8 +26,14 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_8o5op")
 }, {
-"duration": 1.0,
+"duration": 0.7,
 "texture": ExtResource("5_crptq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8munr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8munr")
 }],
 "loop": 0,
 "name": &"jamp",
