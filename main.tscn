@@ -38,4 +38,26 @@ scale = Vector2(0.485, 1)
 position = Vector2(4, -125)
 
 [node name="Player" parent="." unique_id=891439576 instance=ExtResource("2_h2yge")]
-position = Vector2(12, -458)
+position = Vector2(91, -332)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1693423614]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1684857892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=129432941]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.0
+offset_right = 42.0
+offset_bottom = 27.0
+grow_horizontal = 2
+value = 22.63
+metadata/_edit_use_anchors_ = true
