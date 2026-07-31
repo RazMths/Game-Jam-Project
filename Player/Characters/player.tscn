@@ -67,4 +67,4 @@ mesh = SubResource("BoxMesh_eovys")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ajdtp")
 animation = &"run"
-frame_progress = 0.09144543
+frame_progress = 0.8610563
