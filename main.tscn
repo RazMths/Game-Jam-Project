@@ -1,3 +1,24 @@
 [gd_scene format=3 uid="uid://chunypk5a35q8"]
 
+[ext_resource type="PackedScene" uid="uid://bi32pe66qa6dy" path="res://scene for testing/ground.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="2_h2yge"]
+
 [node name="main" type="Node2D" unique_id=1916839064]
+
+[node name="ground" parent="." unique_id=1026929526 instance=ExtResource("1_0xm2m")]
+position = Vector2(-4, 290)
+
+[node name="ground2" parent="." unique_id=1901872701 instance=ExtResource("1_0xm2m")]
+position = Vector2(-265, 82)
+
+[node name="ground3" parent="." unique_id=1851421787 instance=ExtResource("1_0xm2m")]
+position = Vector2(297, 163)
+
+[node name="ground4" parent="." unique_id=993685892 instance=ExtResource("1_0xm2m")]
+position = Vector2(65, -16)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=802453918]
+position = Vector2(0, 9)
+position_smoothing_enabled = true
+
+[node name="Player" parent="." unique_id=891439576 instance=ExtResource("2_h2yge")]
