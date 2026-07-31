@@ -204,7 +204,6 @@ func add_fear_time(amount: float) -> void:
 		fear_progress_bar.value = current_fear_time
 
 func game_over_fear() -> void:
-	print("استسلمت الشخصية للظلام!")
 	get_tree().reload_current_scene()
 
 func align_sprite_to_floor(delta: float) -> void:
