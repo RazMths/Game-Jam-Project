@@ -1,0 +1,8 @@
+res://main.tscn
+res://Characters/player.tscn
+res://Characters/player.gd
+res://العالم.tscn
+res://echo_wave.gd
+res://echo_wave.tscn
+res://scene for testing/ground.tscn
+res://scene for testing/ground.gd

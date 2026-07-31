@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://oy67rn0cumj3"]
 
 [ext_resource type="Script" uid="uid://csx8oedxtsdyy" path="res://Characters/player.gd" id="1_5mj4t"]
+[ext_resource type="PackedScene" uid="uid://dieq0euv7qjse" path="res://echo_wave.tscn" id="2_eovys"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65n15"]
 size = Vector2(34, 60)
@@ -9,6 +10,7 @@ size = Vector2(34, 60)
 
 [node name="Player" type="CharacterBody2D" unique_id=891439576]
 script = ExtResource("1_5mj4t")
+wave_scene = ExtResource("2_eovys")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=282876629]
 shape = SubResource("RectangleShape2D_65n15")
