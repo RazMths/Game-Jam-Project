@@ -2,73 +2,55 @@
 
 [ext_resource type="PackedScene" uid="uid://bi32pe66qa6dy" path="res://scene for testing/ground.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://blftmxdlk301y" path="res://power_up.tscn" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://dnhbkk4buusmi" path="res://scene for testing/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png" id="3_h2yge"]
 
 [node name="main" type="Node2D" unique_id=1916839064]
 
 [node name="ground" parent="." unique_id=1026929526 instance=ExtResource("1_0xm2m")]
-position = Vector2(-4, 290)
+position = Vector2(-48, 188)
 
 [node name="ground2" parent="." unique_id=1901872701 instance=ExtResource("1_0xm2m")]
-position = Vector2(-265, 82)
+position = Vector2(-308, 188)
 
 [node name="ground3" parent="." unique_id=1851421787 instance=ExtResource("1_0xm2m")]
-position = Vector2(297, 163)
+position = Vector2(214, 188)
 
 [node name="ground4" parent="." unique_id=993685892 instance=ExtResource("1_0xm2m")]
-position = Vector2(65, -16)
+position = Vector2(476, 188)
 
 [node name="ground5" parent="." unique_id=2146517963 instance=ExtResource("1_0xm2m")]
-position = Vector2(226, -124)
+position = Vector2(222, 56)
 scale = Vector2(0.43, 1)
 
 [node name="ground6" parent="." unique_id=1229989855 instance=ExtResource("1_0xm2m")]
-position = Vector2(-199.00002, -66)
+position = Vector2(-494, 188)
 scale = Vector2(0.43, 1)
 
 [node name="ground7" parent="." unique_id=22310443 instance=ExtResource("1_0xm2m")]
-position = Vector2(-325, -188)
+position = Vector2(-605, 188)
 scale = Vector2(0.43, 1)
 
 [node name="ground8" parent="." unique_id=537059906 instance=ExtResource("1_0xm2m")]
-position = Vector2(108, -226)
+position = Vector2(401.99997, -106.000015)
 rotation = -0.3246443
 scale = Vector2(0.485, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=616888279]
 position = Vector2(4, -125)
 
-[node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
-position = Vector2(91, -332)
-fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
-camera = NodePath("../Camera2D")
-SHAKE_INTENSITY = 5.0
-CAMERA_FOLLOW_SPEED = 0.0
+[node name="Player" parent="." unique_id=891439576 instance=ExtResource("2_h2yge")]
+position = Vector2(12, -458)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1693423614]
+[node name="PngtreeSilhouetteOfPineForestWithSmallAndTallEvergreenTreesOnPngImage4838656" type="Sprite2D" parent="." unique_id=966759777]
+z_index = -1
+position = Vector2(-12.000002, -114)
+scale = Vector2(1.490099, 1.5408388)
+texture = ExtResource("3_h2yge")
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1684857892]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ground9" parent="." unique_id=939245974 instance=ExtResource("1_0xm2m")]
+position = Vector2(-11, -26)
+scale = Vector2(0.43, 1)
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=129432941]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -42.0
-offset_right = 42.0
-offset_bottom = 27.0
-grow_horizontal = 2
-value = 22.63
-metadata/_edit_use_anchors_ = true
-
-[node name="Power up" parent="." unique_id=612369099 instance=ExtResource("3_h2yge")]
-position = Vector2(-173, -101)
-
-[node name="Power up2" parent="." unique_id=1359119012 instance=ExtResource("3_h2yge")]
-position = Vector2(252, -157)
+[node name="ground10" parent="." unique_id=920013394 instance=ExtResource("1_0xm2m")]
+position = Vector2(-311, -115)
+scale = Vector2(0.43, 1)
