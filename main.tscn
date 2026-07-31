@@ -42,6 +42,7 @@ position = Vector2(4, -125)
 position = Vector2(12, -458)
 fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
 camera = NodePath("../Camera2D")
+CAMERA_FOLLOW_SPEED = 0.0
 
 [node name="PngtreeSilhouetteOfPineForestWithSmallAndTallEvergreenTreesOnPngImage4838656" type="Sprite2D" parent="." unique_id=966759777]
 z_index = -1

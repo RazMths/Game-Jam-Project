@@ -55,6 +55,8 @@ animations = [{
 script = ExtResource("1_5mj4t")
 JUMP_VELOCITY = -470.0
 GRAVITY = 1200.0
+SHAKE_INTENSITY = 5.0
+CAMERA_FOLLOW_SPEED = 0.0
 DASH_COLOR = Color(1.152, 0.50977486, 0.6050993, 1)
 wave_scene = ExtResource("2_jrrtc")
 
