@@ -1,16 +1,16 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785518276
+::res://::1785518664
 echo_wave.gd::GDScript::8990162606447599727::1785488651::0::1::::<>Area2D<><>0<>0<><>::
-echo_wave.tscn::PackedScene::7730046669918722604::1785518276::0::1::::<><><>0<>0<><>::uid://d1c5wulmm8utr::::res://echo_wave.gd
+echo_wave.tscn::PackedScene::-1::1785518276::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::2422543624120626462::1785444176::1785498771::1::::<><><>0<>0<>f07825c0a0b0da6ed0b55b8dc649a8c6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-main.tscn::PackedScene::5306283812555800665::1785518230::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://blftmxdlk301y::::res://power_up.tscn
-power_up.tscn::PackedScene::3169996118056927632::1785513779::0::1::::<><><>0<>0<><>::uid://c2ts736njtwew::::res://power_up.gd
+main.tscn::PackedScene::5306283812555800665::1785518567::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://bgp751rdwrwdh::::res://العالم.tscn<>uid://dnhbkk4buusmi::::res://scene for testing/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png
 power_up.gd::GDScript::6708314893361166078::1785513779::0::1::::<>Area2D<><>0<>0<><>::
+power_up.tscn::PackedScene::3169996118056927632::1785513779::0::1::::<><><>0<>0<><>::uid://c2ts736njtwew::::res://power_up.gd
 العالم.tscn::PackedScene::2840517321453043917::1785499951::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
 ::res://Player/::1785498277
-::res://Player/Characters/::1785515096
-player.gd::GDScript::6085750118889052468::1785515096::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::1034129163329373470::1785513908::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Player/Characters/player.gd<>uid://dieq0euv7qjse::::res://echo_wave.tscn<>uid://drfv0ixwmcret::::res://Player/Characters/الانميشن/وقوف/الولد الابيض.png<>uid://cwpmecveq3hhs::::res://Player/Characters/الانميشن/الركض/1.png<>uid://dst4tjqx3jsny::::res://Player/Characters/الانميشن/الركض/2.png<>uid://mq3a6biyfdsp::::res://Player/Characters/الانميشن/قفز/2.png<>uid://b7pv7v3lg0w0l::::res://Player/Characters/الانميشن/الركض/3.png<>uid://clxgjjkhpujqu::::res://Player/Characters/الانميشن/الركض/4.png
+::res://Player/Characters/::1785518612
+player.gd::GDScript::6085750118889052468::1785518298::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::1034129163329373470::1785518612::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Player/Characters/player.gd<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://drfv0ixwmcret::::res://Player/Characters/الانميشن/وقوف/الولد الابيض.png<>uid://cwpmecveq3hhs::::res://Player/Characters/الانميشن/الركض/1.png<>uid://dst4tjqx3jsny::::res://Player/Characters/الانميشن/الركض/2.png<>uid://mq3a6biyfdsp::::res://Player/Characters/الانميشن/قفز/2.png<>uid://b7pv7v3lg0w0l::::res://Player/Characters/الانميشن/الركض/3.png<>uid://clxgjjkhpujqu::::res://Player/Characters/الانميشن/الركض/4.png
 ::res://Player/Characters/الانميشن/::1785509434
 ::res://Player/Characters/الانميشن/الركض/::1785498277
 1.png::CompressedTexture2D::6348697478514453308::1785498277::1785498277::1::::<><><>0<>0<>09367426a3c89b171e7a6d656893ff2e<>res://.godot/imported/1.png-41741f158beb406f72f4136b8a07c815.ctex::
@@ -23,9 +23,9 @@ player.tscn::PackedScene::1034129163329373470::1785513908::0::1::::<><><>0<>0<><
 3.png::CompressedTexture2D::4408803751631894336::1785509434::1785509434::1::::<><><>0<>0<>add6e91524765f5a34f6fde48982ae74<>res://.godot/imported/3.png-f3eafc8fb2d35d491c21e577f119dffc.ctex::
 ::res://Player/Characters/الانميشن/وقوف/::1785498277
 الولد الابيض.png::CompressedTexture2D::8364114440124887215::1785498277::1785498277::1::::<><><>0<>0<>41fbca20caf2545b536ae495e373d3f6<>res://.godot/imported/الولد الابيض.png-62c1aee42904644bf4eda61b3b6bd4f0.ctex::
-::res://scene for testing/::1785518230
+::res://scene for testing/::1785518292
 ground.gd::GDScript::2574312470714908442::1785518230::0::1::::<>StaticBody2D<><>0<>0<><>::
-ground.tscn::PackedScene::3007400415036554778::1785518230::0::1::::<><><>0<>0<><>::uid://bcxasyeigyl7o::::res://scene for testing/ground.gd
+ground.tscn::PackedScene::3007400415036554778::1785518230::0::1::::<><><>0<>0<><>::uid://bcxasyeigyl7o::::res://scene for testing/ground.gd<>uid://dkg2pkxcafeyd::::res://word/تكتشر/العشب.png
 pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png::CompressedTexture2D::8086246807689756968::1785518230::1785518292::1::::<><><>0<>0<>f954915dce2ac4a469b4e362a7b97297<>res://.godot/imported/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png-778934e2ef25061f5c19318b4549d400.ctex::
 ::res://word/::1785518230
 العالم.tscn::PackedScene::7548362440901741290::1785486120::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
