@@ -204,7 +204,6 @@ func add_fear_time(amount: float) -> void:
 		fear_progress_bar.value = current_fear_time
 
 func game_over_fear() -> void:
-	print("استسلمت الشخصية للظلام!")
 	get_tree().reload_current_scene()
 
 func align_sprite_to_floor(delta: float) -> void:
@@ -268,4 +267,4 @@ func spawn_echo(radius: float) -> void:
 		var wave = wave_scene.instantiate()
 		wave.global_position = global_position
 		wave.max_radius = radius
-		get_tree().current_scene.add_child(wave)
+		get_tree().current_scene.call_deferred("add_child", wave)

@@ -1,2 +1,10 @@
+res://echo_wave.gd
+res://echo_wave.tscn
+res://power_up.gd
+res://Player/Characters/player.gd
+res://scene for testing/ground.gd
+res://Player/Characters/player.tscn
+res://main.tscn
+res://power_up.tscn
 res://scene for testing/ground.tscn
 res://main.tscn
