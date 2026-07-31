@@ -8,9 +8,29 @@ extends CharacterBody2D
 @export var ACCELERATION = 2400.0   
 @export var DECELERATION = 2800.0   
 
+# --- إعدادات عداد الخوف / الوقت ---
+@export_category("Fear & Darkness Settings")
+@export var MAX_FEAR_TIME: float = 45.0  
+var current_fear_time: float = 0.0
+@export var fear_progress_bar: ProgressBar 
+
+# عقوبة الخوف عند استخدام الداش
+@export var DASH_FEAR_PENALTY: float = 3.0 
+
+# --- إعدادات الكاميرا المستقلة واهتزازها ---
+@export_category("Camera FX")
+@export var camera: Camera2D # اسحب عقدة Camera2D من شجرة المشهد
+@export var LOW_TIME_THRESHOLD: float = 0.25 
+@export var SHAKE_INTENSITY: float = 2.5 
+@export var CAMERA_FOLLOW_SPEED: float = 5.0 # سرعة تتبع الكاميرا للاعب (ضعها 0 لو الكاميرا ثابتة تماماً بالخلفية)
+
+var low_time_shake: float = 0.0
+var dash_impact_shake: float = 0.0
+var base_camera_position: Vector2
+
 # --- إعدادات الميلان على السطوح المائلة ---
 @export_category("Slope Alignment")
-@export var SLOPE_ALIGN_SPEED: float = 12.0 # سرعة الدوران والميلان
+@export var SLOPE_ALIGN_SPEED: float = 12.0 
 
 # --- إعدادات صدى المشي ---
 @export_category("Footstep Echo")
@@ -49,8 +69,21 @@ var jumps_left: int = 2
 
 func _ready() -> void:
 	original_color = animated_sprite.modulate
+	
+	current_fear_time = MAX_FEAR_TIME
+	if fear_progress_bar:
+		fear_progress_bar.max_value = MAX_FEAR_TIME
+		fear_progress_bar.value = current_fear_time
+		
+	# حفظ موقع الكاميرا الأصلي إذا كانت ثابتة في المكان
+	if camera:
+		base_camera_position = camera.global_position
 
 func _physics_process(delta: float) -> void:
+	# 0. معالجة عداد الخوف وتأثيرات الكاميرا
+	handle_fear_timer(delta)
+	apply_camera_shake(delta)
+
 	# 1. منطق الاندفاع (Dash)
 	if is_dashing:
 		dash_timer -= delta
@@ -62,7 +95,7 @@ func _physics_process(delta: float) -> void:
 			spawn_echo(240.0)
 			
 		move_and_slide()
-		align_sprite_to_floor(delta) # محاذاة الميلان حتى أثناء الداش
+		align_sprite_to_floor(delta)
 		return
 
 	# 2. الجاذبية وإعادة ضبط القفز والاندفاع
@@ -104,56 +137,56 @@ func _physics_process(delta: float) -> void:
 		spawn_echo(150.0)
 
 	move_and_slide()
-	
-	# 7. تطبيق الميلان العمودي/المائل بحسب الأرضية
 	align_sprite_to_floor(delta)
 
-# --- دالة موازنة وميلان الـ Sprite مع زاوية الأرضية ---
-func align_sprite_to_floor(delta: float) -> void:
-	var target_rotation: float = 0.0
-	
-	if is_on_floor():
-		# الحصول على متجه العمود المائل للسطح (Floor Normal)
-		var floor_normal = get_floor_normal()
+# --- دالة معالجة العداد والاهتزاز ---
+func handle_fear_timer(delta: float) -> void:
+	if current_fear_time > 0:
+		current_fear_time -= delta
 		
-		# حساب الزاوية بالمقدار الدائري (Radian)
-		target_rotation = floor_normal.angle() + (PI / 2.0)
-	else:
-		# إذا كان في الهواء، يعود الوضع ربيعاً مستقيماً (زاوية صفر)
-		target_rotation = 0.0
+		if fear_progress_bar:
+			fear_progress_bar.value = current_fear_time
+			
+		var time_ratio = current_fear_time / MAX_FEAR_TIME
+		
+		if time_ratio <= LOW_TIME_THRESHOLD:
+			var stress_factor = 1.0 - (time_ratio / LOW_TIME_THRESHOLD)
+			low_time_shake = SHAKE_INTENSITY * stress_factor
+		else:
+			low_time_shake = 0.0
 
-	# التدوير السلس للانتقال من التسطيح للميلان بدون قفزات حادة
-	animated_sprite.rotation = lerp_angle(animated_sprite.rotation, target_rotation, SLOPE_ALIGN_SPEED * delta)
+		if current_fear_time <= 0:
+			game_over_fear()
 
-# --- باقي الدوال ---
-func handle_ghost_trail(delta: float) -> void:
-	ghost_timer -= delta
-	if ghost_timer <= 0.0:
-		ghost_timer = GHOST_INTERVAL
-		spawn_ghost()
+# --- دالة تطبيق اهتزاز الكاميرا المستقلة ---
+func apply_camera_shake(delta: float) -> void:
+	if camera:
+		dash_impact_shake = move_toward(dash_impact_shake, 0.0, delta * 15.0)
+		var total_shake = low_time_shake + dash_impact_shake
+		
+		# إذا كنت تريد الكاميرا تتتبع اللاعب بنعومة من بعيد:
+		if CAMERA_FOLLOW_SPEED > 0:
+			base_camera_position = base_camera_position.lerp(global_position, CAMERA_FOLLOW_SPEED * delta)
+			
+		var shake_offset = Vector2.ZERO
+		if total_shake > 0:
+			shake_offset = Vector2(
+				randf_range(-total_shake, total_shake),
+				randf_range(-total_shake, total_shake)
+			)
+			
+		# تطبيق الموقع النهائي للكاميرا (الموقع الأصلي/المتتبع + الهزة)
+		camera.global_position = base_camera_position + shake_offset
 
-func spawn_ghost() -> void:
-	var ghost = Sprite2D.new()
-	var current_texture = animated_sprite.sprite_frames.get_frame_texture(animated_sprite.animation, animated_sprite.frame)
-	ghost.texture = current_texture
-	ghost.global_position = global_position
-	ghost.rotation = animated_sprite.rotation # جعل الشبح يأخذ نفس درجة الميلان الحالية
-	ghost.flip_h = animated_sprite.flip_h
-	ghost.modulate = GHOST_COLOR
-	ghost.scale = animated_sprite.scale
-	
-	get_tree().current_scene.add_child(ghost)
-	
-	var tween = create_tween()
-	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	tween.tween_property(ghost, "modulate:a", 0.0, 0.22)
-	tween.tween_callback(ghost.queue_free)
-
+# --- باقي الدوال كما هي ---
 func start_dash(dir: float) -> void:
 	is_dashing = true
 	can_dash = false
 	dash_timer = DASH_DURATION
 	ghost_timer = 0.0
+	
+	current_fear_time = max(0.0, current_fear_time - DASH_FEAR_PENALTY)
+	dash_impact_shake = 6.0 
 	
 	var dash_dir = dir if dir != 0 else (1.0 if velocity.x >= 0 else -1.0)
 	velocity.x = dash_dir * DASH_SPEED
@@ -165,10 +198,49 @@ func start_dash(dir: float) -> void:
 	color_tween = create_tween()
 	color_tween.tween_property(animated_sprite, "modulate", DASH_COLOR, 0.03)
 
+func add_fear_time(amount: float) -> void:
+	current_fear_time = clamp(current_fear_time + amount, 0.0, MAX_FEAR_TIME)
+	if fear_progress_bar:
+		fear_progress_bar.value = current_fear_time
+
+func game_over_fear() -> void:
+	print("استسلمت الشخصية للظلام!")
+	get_tree().reload_current_scene()
+
+func align_sprite_to_floor(delta: float) -> void:
+	var target_rotation: float = 0.0
+	if is_on_floor():
+		var floor_normal = get_floor_normal()
+		target_rotation = floor_normal.angle() + (PI / 2.0)
+	else:
+		target_rotation = 0.0
+	animated_sprite.rotation = lerp_angle(animated_sprite.rotation, target_rotation, SLOPE_ALIGN_SPEED * delta)
+
+func handle_ghost_trail(delta: float) -> void:
+	ghost_timer -= delta
+	if ghost_timer <= 0.0:
+		ghost_timer = GHOST_INTERVAL
+		spawn_ghost()
+
+func spawn_ghost() -> void:
+	var ghost = Sprite2D.new()
+	var current_texture = animated_sprite.sprite_frames.get_frame_texture(animated_sprite.animation, animated_sprite.frame)
+	ghost.texture = current_texture
+	ghost.global_position = global_position
+	ghost.rotation = animated_sprite.rotation
+	ghost.flip_h = animated_sprite.flip_h
+	ghost.modulate = GHOST_COLOR
+	ghost.scale = animated_sprite.scale
+	get_tree().current_scene.add_child(ghost)
+	
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.tween_property(ghost, "modulate:a", 0.0, 0.22)
+	tween.tween_callback(ghost.queue_free)
+
 func fade_color_back() -> void:
 	if color_tween and color_tween.is_running():
 		color_tween.kill()
-		
 	color_tween = create_tween()
 	color_tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	color_tween.tween_property(animated_sprite, "modulate", original_color, 0.18)
