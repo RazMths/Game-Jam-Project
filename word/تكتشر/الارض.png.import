@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjq7uxn644vrq"
-path="res://.godot/imported/العشب.png-727e1a727fc1a0861b41f8f2a9aa7f4d.ctex"
+uid="uid://bpwnawnfg6rt1"
+path="res://.godot/imported/الارض.png-f7b3a71f746b4571e4a5be469170e191.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://word/تكتشر/العشب.png"
-dest_files=["res://.godot/imported/العشب.png-727e1a727fc1a0861b41f8f2a9aa7f4d.ctex"]
+source_file="res://word/تكتشر/الارض.png"
+dest_files=["res://.godot/imported/الارض.png-f7b3a71f746b4571e4a5be469170e191.ctex"]
 
 [params]
 
