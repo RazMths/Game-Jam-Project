@@ -1,14 +1,17 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785486941
-icon.svg::CompressedTexture2D::2422543624120626462::1785445026::1785486754::1::::<><><>0<>0<>f07825c0a0b0da6ed0b55b8dc649a8c6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-main.tscn::PackedScene::5306283812555800665::1785486695::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://oy67rn0cumj3::::res://Characters/player.tscn
-::res://Characters/::1785487796
-player.gd::GDScript::6085750118889052468::1785486695::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::1034129163329373470::1785486695::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Characters/player.gd
-tile_0132.png::CompressedTexture2D::2743202057800515773::1785487796::1785487796::1::::<><><>0<>0<>03c0e0ecfc514cecc81a70572a4ceb44<>res://.godot/imported/tile_0132.png-8d5c73d1b89fd8ccd3362a8c8a1f4048.ctex::
-tile_0133.png::CompressedTexture2D::3850618377725335986::1785487796::1785487796::1::::<><><>0<>0<>5611baecd44f4c60412bb01045aa865f<>res://.godot/imported/tile_0133.png-63c1d4fca11bffa11ac0456839b9b5ac.ctex::
-::res://Player/::1785481988
-::res://scene for testing/::1785486695
-ground.tscn::PackedScene::3007400415036554778::1785486695::0::1::::<><><>0<>0<><>::
-::res://word/::1785485565
-العالم.tscn::PackedScene::7548362440901741290::1785485565::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
+::res://::1785488975
+icon.svg::CompressedTexture2D::2422543624120626462::1785444176::1785445443::1::::<><><>0<>0<>f07825c0a0b0da6ed0b55b8dc649a8c6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.tscn::PackedScene::5306283812555800665::1785488975::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://oy67rn0cumj3::::res://Characters/player.tscn
+echo_wave.gd::GDScript::8990162606447599727::1785488651::0::1::::<>Area2D<><>0<>0<><>::
+echo_wave.tscn::PackedScene::7730046669918722604::1785488664::0::1::::<><><>0<>0<><>::uid://d1c5wulmm8utr::::res://echo_wave.gd
+العالم.tscn::PackedScene::2759367309964955363::1785488698::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
+::res://Characters/::1785489085
+player.tscn::PackedScene::1034129163329373470::1785489085::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Characters/player.gd<>uid://dieq0euv7qjse::::res://echo_wave.tscn
+player.gd::GDScript::6085750118889052468::1785485014::0::1::::<>CharacterBody2D<><>0<>0<><>::
+tile_0132.png::CompressedTexture2D::2743202057800515773::1785489055::1785489098::1::::<><><>0<>0<>03c0e0ecfc514cecc81a70572a4ceb44<>res://.godot/imported/tile_0132.png-8d5c73d1b89fd8ccd3362a8c8a1f4048.ctex::
+tile_0133.png::CompressedTexture2D::3850618377725335986::1785489055::1785489098::1::::<><><>0<>0<>5611baecd44f4c60412bb01045aa865f<>res://.godot/imported/tile_0133.png-63c1d4fca11bffa11ac0456839b9b5ac.ctex::
+::res://scene for testing/::1785488910
+ground.tscn::PackedScene::3007400415036554778::1785488839::0::1::::<><><>0<>0<><>::uid://bcxasyeigyl7o::::res://scene for testing/ground.gd
+ground.gd::GDScript::2574312470714908442::1785488910::0::1::::<>StaticBody2D<><>0<>0<><>::
+::res://word/::1785486120
+العالم.tscn::PackedScene::7548362440901741290::1785486120::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
