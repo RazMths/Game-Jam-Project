@@ -1,4 +1,4 @@
-res://Characters/player.tscn
-res://Characters/player.gd
-res://main.tscn
 res://Player/Characters/player.tscn
+res://main.tscn
+res://echo_wave.tscn
+res://العالم.tscn
