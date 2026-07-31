@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 # --- الثوابت والإعدادات الأساسية ---
-const SPEED = 220.0           # سرعة الحركة الأفقيّة
+@export_category("Movement Settings")
+@export var SPEED = 300.0           # سرعة الحركة الأفقيّة
 const JUMP_VELOCITY = -420.0  # قوة القفز
 const GRAVITY = 980.0         # الجاذبية الأرضية
 const FRICTION = 1200.0       # قوة التباطؤ عند التوقف (مرتبطة بـ delta)

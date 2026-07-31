@@ -22,3 +22,4 @@ position = Vector2(0, 9)
 position_smoothing_enabled = true
 
 [node name="Player" parent="." unique_id=891439576 instance=ExtResource("2_h2yge")]
+position = Vector2(-23, 205)
