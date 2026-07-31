@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+@export var duration: float = 1.4
+
 @onready var sprite = $MeshInstance2D # أو ColorRect حسب ما استخدمت
 var fade_tween: Tween
 
@@ -18,4 +20,4 @@ func reveal_platform() -> void:
 	
 	# 2. عمل تلاشي تدريجي (Fade out) خلال ثانيتين مثلاً
 	fade_tween = create_tween()
-	fade_tween.tween_property(sprite, "modulate:a", 0.0, 1.0)
+	fade_tween.tween_property(sprite, "modulate:a", 0.0, duration)

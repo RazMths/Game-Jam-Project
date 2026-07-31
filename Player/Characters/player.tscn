@@ -1,17 +1,15 @@
 [gd_scene format=3 uid="uid://oy67rn0cumj3"]
 
 [ext_resource type="Script" uid="uid://csx8oedxtsdyy" path="res://Player/Characters/player.gd" id="1_5mj4t"]
+[ext_resource type="PackedScene" uid="uid://dieq0euv7qjse" path="res://echo_wave.tscn" id="2_jrrtc"]
 [ext_resource type="Texture2D" uid="uid://drfv0ixwmcret" path="res://Player/Characters/الانميشن/وقوف/الولد الابيض.png" id="2_nhaih"]
-[ext_resource type="Texture2D" uid="uid://bfc3ewq1scv1f" path="res://Player/Characters/tile_0132.png" id="3_65n15"]
 [ext_resource type="Texture2D" uid="uid://cwpmecveq3hhs" path="res://Player/Characters/الانميشن/الركض/1.png" id="4_jrrtc"]
 [ext_resource type="Texture2D" uid="uid://dst4tjqx3jsny" path="res://Player/Characters/الانميشن/الركض/2.png" id="5_8munr"]
 [ext_resource type="Texture2D" uid="uid://b7pv7v3lg0w0l" path="res://Player/Characters/الانميشن/الركض/3.png" id="6_8o5op"]
 [ext_resource type="Texture2D" uid="uid://clxgjjkhpujqu" path="res://Player/Characters/الانميشن/الركض/4.png" id="7_crptq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65n15"]
-size = Vector2(34, 60)
-
-[sub_resource type="BoxMesh" id="BoxMesh_eovys"]
+size = Vector2(12, 56)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ajdtp"]
 animations = [{
@@ -25,11 +23,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_65n15")
+"texture": ExtResource("7_crptq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8o5op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8munr")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"jamp",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 0.8,
@@ -46,25 +50,25 @@ animations = [{
 }],
 "loop": 1,
 "name": &"run",
-"speed": 6.0
+"speed": 5.5
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=891439576]
 script = ExtResource("1_5mj4t")
+JUMP_VELOCITY = -470.0
+GRAVITY = 1200.0
+DASH_COLOR = Color(1.152, 0.50977486, 0.6050993, 1)
+wave_scene = ExtResource("2_jrrtc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=282876629]
+[node name="Colli" type="CollisionShape2D" parent="." unique_id=282876629]
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_65n15")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1723530545]
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1819426647]
-modulate = Color(1.347661e-06, 0.7016393, 0.56440187, 1)
-position = Vector2(0, 7.6293945e-06)
-scale = Vector2(34, 60.000004)
-mesh = SubResource("BoxMesh_eovys")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1597177720]
 texture_filter = 1
+position = Vector2(-1, 0)
+scale = Vector2(0.115, 0.115)
 sprite_frames = SubResource("SpriteFrames_ajdtp")
 animation = &"run"
-frame_progress = 0.8610563
+frame = 3
+frame_progress = 0.6319562
