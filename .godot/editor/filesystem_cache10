@@ -21,3 +21,5 @@ ground.gd::GDScript::2574312470714908442::1785489800::0::1::::<>StaticBody2D<><>
 ground.tscn::PackedScene::3007400415036554778::1785489800::0::1::::<><><>0<>0<><>::uid://bcxasyeigyl7o::::res://scene for testing/ground.gd
 ::res://word/::1785485565
 العالم.tscn::PackedScene::7548362440901741290::1785485565::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
+tile_0132.png::CompressedTexture2D::2743202057800515773::1785498277::1785498771::1::::<><><>0<>0<>3edb9433e0b895f90f5bf265715d7cd9<>res://.godot/imported/tile_0132.png-31ae0305174160ff2def6e7c66d840f3.ctex::
+tile_0133.png::CompressedTexture2D::3850618377725335986::1785498277::1785498771::1::::<><><>0<>0<>a2c9e217a9704859937eb2a346b16231<>res://.godot/imported/tile_0133.png-763563835a98a402a2718505e004ae3b.ctex::
