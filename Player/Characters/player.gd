@@ -21,6 +21,18 @@ var is_dashing: bool = false
 var dash_timer: float = 0.0
 var can_dash: bool = true
 
+# --- إعدادات تأثير الشبحية/التردد (Dash Trail / Echo Effect) ---
+@export_category("Dash Ghost Effect")
+@export var GHOST_INTERVAL: float = 0.03 # معدل إصدار أطياف التردد (كل 0.03 ثانية)
+@export var GHOST_COLOR: Color = Color(2.5, 0.5, 0.5, 0.7) # لون طيف التردد المتوهج
+var ghost_timer: float = 0.0
+
+# --- مظاهر الـ Dash المتشبعة ---
+@export_category("Dash Visuals")
+@export var DASH_COLOR: Color = Color(3.0, 0.4, 0.4, 1.0)
+var original_color: Color = Color.WHITE
+var color_tween: Tween
+
 # --- القفز المزدوج ---
 var jumps_left: int = 2
 
@@ -31,13 +43,20 @@ var jumps_left: int = 2
 # --- الإشارة إلى عقدة التحريكات ---
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+func _ready() -> void:
+	original_color = animated_sprite.modulate
+
 func _physics_process(delta: float) -> void:
 	# 1. منطق الاندفاع (Dash)
 	if is_dashing:
 		dash_timer -= delta
+		
+		# توليد أطياف تردد خلف اللاعب أثناء الحركة
+		handle_ghost_trail(delta)
+		
 		if dash_timer <= 0:
 			is_dashing = false
-			# --- التغيير هنا: إطلاق صدى قوي فور وصول اللاعب لنقطة نهاية الداش (الموقع ب) ---
+			fade_color_back()
 			spawn_echo(240.0)
 			
 		move_and_slide()
@@ -83,17 +102,59 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+# --- دالة توليد أطياف التردد (Ghosts) ---
+func handle_ghost_trail(delta: float) -> void:
+	ghost_timer -= delta
+	if ghost_timer <= 0.0:
+		ghost_timer = GHOST_INTERVAL
+		spawn_ghost()
+
+func spawn_ghost() -> void:
+	# إنشاء عقدة Sprite جديدة برمجياً لتأخذ شكل فريم اللاعب الحالي
+	var ghost = Sprite2D.new()
+	
+	# أخذ النسيج الحالي (Texture) والإطار الحالي من AnimatedSprite2D
+	var current_texture = animated_sprite.sprite_frames.get_frame_texture(animated_sprite.animation, animated_sprite.frame)
+	ghost.texture = current_texture
+	ghost.global_position = global_position
+	ghost.flip_h = animated_sprite.flip_h
+	ghost.modulate = GHOST_COLOR
+	ghost.scale = animated_sprite.scale
+	
+	# إضافته للمشهد الرئيسي حتى يظل ثابتاً في مكانه بينما يتحرك اللاعب
+	get_tree().current_scene.add_child(ghost)
+	
+	# عمل تلاشي سريع للطيف وتدميره فور اختفائه
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.tween_property(ghost, "modulate:a", 0.0, 0.22)
+	tween.tween_callback(ghost.queue_free)
+
 # --- دالة بدء الداش ---
 func start_dash(dir: float) -> void:
 	is_dashing = true
 	can_dash = false
 	dash_timer = DASH_DURATION
+	ghost_timer = 0.0 # إطلاق أول طيف فوراً
+	
 	var dash_dir = dir if dir != 0 else (1.0 if velocity.x >= 0 else -1.0)
 	velocity.x = dash_dir * DASH_SPEED
 	velocity.y = 0
-	# تم إزالة spawn_echo من هنا ليتم إطلاقها عند الوصول فقط
+	
+	if color_tween and color_tween.is_running():
+		color_tween.kill()
+		
+	color_tween = create_tween()
+	color_tween.tween_property(animated_sprite, "modulate", DASH_COLOR, 0.03)
 
-# --- باقي الدوارل كما هي ---
+func fade_color_back() -> void:
+	if color_tween and color_tween.is_running():
+		color_tween.kill()
+		
+	color_tween = create_tween()
+	color_tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	color_tween.tween_property(animated_sprite, "modulate", original_color, 0.18)
+
 func handle_walk_echo(delta: float, dir: float) -> void:
 	if is_on_floor() and dir != 0:
 		step_echo_timer -= delta

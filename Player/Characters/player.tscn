@@ -23,11 +23,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_nhaih")
+"texture": ExtResource("7_crptq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8o5op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8munr")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"jamp",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 0.8,
@@ -51,6 +57,7 @@ animations = [{
 script = ExtResource("1_5mj4t")
 JUMP_VELOCITY = -470.0
 GRAVITY = 1200.0
+DASH_COLOR = Color(1.152, 0.50977486, 0.6050993, 1)
 wave_scene = ExtResource("2_jrrtc")
 
 [node name="Colli" type="CollisionShape2D" parent="." unique_id=282876629]
@@ -62,4 +69,6 @@ texture_filter = 1
 position = Vector2(-1, 0)
 scale = Vector2(0.115, 0.115)
 sprite_frames = SubResource("SpriteFrames_ajdtp")
-animation = &"jamp"
+animation = &"run"
+frame = 3
+frame_progress = 0.6319562

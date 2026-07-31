@@ -17,6 +17,23 @@ position = Vector2(297, 163)
 [node name="ground4" parent="." unique_id=993685892 instance=ExtResource("1_0xm2m")]
 position = Vector2(65, -16)
 
+[node name="ground5" parent="." unique_id=2146517963 instance=ExtResource("1_0xm2m")]
+position = Vector2(226, -124)
+scale = Vector2(0.43, 1)
+
+[node name="ground6" parent="." unique_id=1229989855 instance=ExtResource("1_0xm2m")]
+position = Vector2(-199.00002, -66)
+scale = Vector2(0.43, 1)
+
+[node name="ground7" parent="." unique_id=22310443 instance=ExtResource("1_0xm2m")]
+position = Vector2(-325, -188)
+scale = Vector2(0.43, 1)
+
+[node name="ground8" parent="." unique_id=537059906 instance=ExtResource("1_0xm2m")]
+position = Vector2(108, -226)
+rotation = -0.3246443
+scale = Vector2(0.485, 1)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=616888279]
 position = Vector2(4, -125)
 
