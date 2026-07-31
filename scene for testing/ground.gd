@@ -2,7 +2,7 @@ extends StaticBody2D
 
 @export var duration: float = 1.4
 
-@onready var sprite = $MeshInstance2D # أو ColorRect حسب ما استخدمت
+@onready var sprite = $Sprite2D # أو ColorRect حسب ما استخدمت
 var fade_tween: Tween
 
 func _ready() -> void:
