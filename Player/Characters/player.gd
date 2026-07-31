@@ -3,9 +3,9 @@ extends CharacterBody2D
 # --- الثوابت والإعدادات الأساسية ---
 @export_category("Movement Settings")
 @export var SPEED = 300.0           # سرعة الحركة الأفقيّة
-const JUMP_VELOCITY = -420.0  # قوة القفز
-const GRAVITY = 980.0         # الجاذبية الأرضية
-const FRICTION = 1200.0       # قوة التباطؤ عند التوقف (مرتبطة بـ delta)
+@export var JUMP_VELOCITY = -420.0  # قوة القفز
+@export var GRAVITY = 980.0         # الجاذبية الأرضية
+@export var FRICTION = 1200.0       # قوة التباطؤ عند التوقف (مرتبطة بـ delta)
 
 # --- خصائص الاندفاع (Dash) ---
 const DASH_SPEED = 650.0      # سرعة الاندفاع السريع
@@ -18,6 +18,7 @@ var can_dash: bool = true
 var jumps_left: int = 2       # عدد القفزات المتاحة
 
 # --- مشاهد خارجية ---
+@export_category("Effects")
 @export var wave_scene: PackedScene # مشهد موجة الـ Echo
 
 # --- الإشارة إلى عقدة التحريكات ---
