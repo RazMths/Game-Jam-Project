@@ -39,11 +39,11 @@ scale = Vector2(0.485, 1)
 position = Vector2(4, -125)
 
 [node name="Player" parent="." unique_id=891439576 instance=ExtResource("2_h2yge")]
-position = Vector2(12, -458)
+position = Vector2(9, 136)
 
 [node name="PngtreeSilhouetteOfPineForestWithSmallAndTallEvergreenTreesOnPngImage4838656" type="Sprite2D" parent="." unique_id=966759777]
 z_index = -1
-position = Vector2(-12.000002, -114)
+position = Vector2(-6.0000005, -118)
 scale = Vector2(1.490099, 1.5408388)
 texture = ExtResource("3_h2yge")
 

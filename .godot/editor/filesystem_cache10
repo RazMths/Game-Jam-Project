@@ -23,15 +23,16 @@ player.tscn::PackedScene::1034129163329373470::1785516411::0::1::::<><><>0<>0<><
 3.png::CompressedTexture2D::4408803751631894336::1785506883::1785506921::1::::<><><>0<>0<>add6e91524765f5a34f6fde48982ae74<>res://.godot/imported/3.png-f3eafc8fb2d35d491c21e577f119dffc.ctex::
 ::res://Player/Characters/الانميشن/وقوف/::1785490552
 الولد الابيض.png::CompressedTexture2D::8364114440124887215::1785486904::1785490552::1::::<><><>0<>0<>41fbca20caf2545b536ae495e373d3f6<>res://.godot/imported/الولد الابيض.png-62c1aee42904644bf4eda61b3b6bd4f0.ctex::
-::res://scene for testing/::1785516437
+::res://scene for testing/::1785523003
 ground.gd::GDScript::2574312470714908442::1785516437::0::1::::<>StaticBody2D<><>0<>0<><>::
-ground.tscn::PackedScene::3007400415036554778::1785516064::0::1::::<><><>0<>0<><>::uid://bcxasyeigyl7o::::res://scene for testing/ground.gd<>uid://dkg2pkxcafeyd::::res://word/تكتشر/العشب.png
+ground.tscn::PackedScene::3007400415036554778::1785523003::0::1::::<><><>0<>0<><>::uid://bcxasyeigyl7o::::res://scene for testing/ground.gd<>uid://bjq7uxn644vrq::::res://word/تكتشر/العشب.png
 pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png::CompressedTexture2D::8086246807689756968::1785510664::1785510664::1::::<><><>0<>0<>f954915dce2ac4a469b4e362a7b97297<>res://.godot/imported/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png-778934e2ef25061f5c19318b4549d400.ctex::
 ::res://word/::1785509787
 العالم.tscn::PackedScene::7548362440901741290::1785490075::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
-::res://word/تكتشر/::1785522664
+::res://word/تكتشر/::1785524126
 images.jpg::CompressedTexture2D::6023208314858722406::1785510522::1785522917::1::::<><><>0<>0<>e4c92244120c9ef0e6763a16c3f8ce67<>res://.godot/imported/images.jpg-bd4c0cb07f7667bfedd3d0bba923f879.ctex::
 pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png::CompressedTexture2D::7728607931734827779::1785510659::1785522917::1::::<><><>0<>0<>d6451478cf6fd11036a6ebac1c46c093<>res://.godot/imported/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png-94ee286c2ab529b61ca633e12f1c1d45.ctex::
 الارض.png::CompressedTexture2D::3485460145591460380::1785509891::1785522917::1::::<><><>0<>0<>1a01a68bb750b4298c1b62d85c10e332<>res://.godot/imported/الارض.png-f7b3a71f746b4571e4a5be469170e191.ctex::
 العشب.png::CompressedTexture2D::3053130209714900990::1785509818::1785522917::1::::<><><>0<>0<>2e34dc85e9fb1829a0bd93edcef2088c<>res://.godot/imported/العشب.png-727e1a727fc1a0861b41f8f2a9aa7f4d.ctex::
+العشب.pngال.png::CompressedTexture2D::2681398599058061762::1785524126::1785524127::1::::<><><>0<>0<>3ade92c5cdc8767e5a0ec2660268e49e<>res://.godot/imported/العشب.pngال.png-5fff3d406c4de2262cb1e6bdbf6e3de9.ctex::
 عشي.png::CompressedTexture2D::7153989124039024587::1785512864::1785512866::1::::<><><>0<>0<>17addc5fb76ff405e96c85d578e667c0<>res://.godot/imported/عشي.png-de5b7f497ef88c87abdbb6626a67bb8f.ctex::
