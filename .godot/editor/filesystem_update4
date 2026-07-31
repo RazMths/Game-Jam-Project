@@ -1,6 +1,2 @@
-res://Player/Characters/player.tscn
 res://main.tscn
-res://echo_wave.tscn
-res://Player/Characters/player.gd
-res://scene for testing/ground.tscn
-res://scene for testing/ground.gd
+res://word/العالم.tscn
