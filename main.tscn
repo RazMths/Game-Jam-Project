@@ -8,6 +8,15 @@
 [node name="ground" parent="." unique_id=1026929526 instance=ExtResource("1_0xm2m")]
 position = Vector2(-4, 290)
 
+[node name="ground2" parent="." unique_id=1901872701 instance=ExtResource("1_0xm2m")]
+position = Vector2(-265, 82)
+
+[node name="ground3" parent="." unique_id=1851421787 instance=ExtResource("1_0xm2m")]
+position = Vector2(297, 163)
+
+[node name="ground4" parent="." unique_id=993685892 instance=ExtResource("1_0xm2m")]
+position = Vector2(65, -16)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=802453918]
 position = Vector2(0, 9)
 position_smoothing_enabled = true
