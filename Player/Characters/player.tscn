@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://oy67rn0cumj3"]
 
-[ext_resource type="Script" uid="uid://csx8oedxtsdyy" path="res://Characters/player.gd" id="1_5mj4t"]
-[ext_resource type="PackedScene" uid="uid://dieq0euv7qjse" path="res://echo_wave.tscn" id="2_eovys"]
-[ext_resource type="Texture2D" uid="uid://bu4jefe77rcxu" path="res://Characters/tile_0133.png" id="2_vb825"]
-[ext_resource type="Texture2D" uid="uid://bfc3ewq1scv1f" path="res://Characters/tile_0132.png" id="3_65n15"]
+[ext_resource type="Script" uid="uid://csx8oedxtsdyy" path="res://Player/Characters/player.gd" id="1_5mj4t"]
+[ext_resource type="Texture2D" uid="uid://drfv0ixwmcret" path="res://Player/Characters/الانميشن/وقوف/الولد الابيض.png" id="2_nhaih"]
+[ext_resource type="Texture2D" uid="uid://bfc3ewq1scv1f" path="res://Player/Characters/tile_0132.png" id="3_65n15"]
+[ext_resource type="Texture2D" uid="uid://cwpmecveq3hhs" path="res://Player/Characters/الانميشن/الركض/1.png" id="4_jrrtc"]
+[ext_resource type="Texture2D" uid="uid://dst4tjqx3jsny" path="res://Player/Characters/الانميشن/الركض/2.png" id="5_8munr"]
+[ext_resource type="Texture2D" uid="uid://b7pv7v3lg0w0l" path="res://Player/Characters/الانميشن/الركض/3.png" id="6_8o5op"]
+[ext_resource type="Texture2D" uid="uid://clxgjjkhpujqu" path="res://Player/Characters/الانميشن/الركض/4.png" id="7_crptq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65n15"]
 size = Vector2(34, 60)
@@ -14,7 +17,7 @@ size = Vector2(34, 60)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vb825")
+"texture": ExtResource("2_nhaih")
 }],
 "loop": 1,
 "name": &"idle",
@@ -29,11 +32,17 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_vb825")
+"duration": 0.8,
+"texture": ExtResource("4_jrrtc")
 }, {
-"duration": 1.0,
-"texture": ExtResource("3_65n15")
+"duration": 0.8,
+"texture": ExtResource("5_8munr")
+}, {
+"duration": 0.8,
+"texture": ExtResource("6_8o5op")
+}, {
+"duration": 0.8,
+"texture": ExtResource("7_crptq")
 }],
 "loop": 1,
 "name": &"run",
@@ -42,7 +51,6 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=891439576]
 script = ExtResource("1_5mj4t")
-wave_scene = ExtResource("2_eovys")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=282876629]
 shape = SubResource("RectangleShape2D_65n15")
@@ -59,3 +67,4 @@ mesh = SubResource("BoxMesh_eovys")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ajdtp")
 animation = &"run"
+frame_progress = 0.8610563

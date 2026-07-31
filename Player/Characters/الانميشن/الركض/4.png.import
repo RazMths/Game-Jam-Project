@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu4jefe77rcxu"
-path="res://.godot/imported/tile_0133.png-63c1d4fca11bffa11ac0456839b9b5ac.ctex"
+uid="uid://clxgjjkhpujqu"
+path="res://.godot/imported/4.png-accfa4c13007f50b93fa86a72fad6aa1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/tile_0133.png"
-dest_files=["res://.godot/imported/tile_0133.png-63c1d4fca11bffa11ac0456839b9b5ac.ctex"]
+source_file="res://Player/Characters/الانميشن/الركض/4.png"
+dest_files=["res://.godot/imported/4.png-accfa4c13007f50b93fa86a72fad6aa1.ctex"]
 
 [params]
 
