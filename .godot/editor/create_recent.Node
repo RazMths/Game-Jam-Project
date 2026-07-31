@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Sprite2D
 =======
@@ -13,5 +14,17 @@ CollisionShape2D
 =======
 Sprite2D
 >>>>>>> Stashed changes
+=======
+CollisionShape2D
+MeshInstance2D
+Area2D
+ProgressBar
+Control
+CanvasLayer
+Camera2D
+AnimatedSprite2D
+StaticBody2D
+Sprite2D
+>>>>>>> parent of b7a3708 (Merge branch 'main' of https://github.com/RazMths/Game-Jam-Project)
 CharacterBody2D
 PointLight2D
