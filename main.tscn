@@ -17,8 +17,7 @@ position = Vector2(297, 163)
 [node name="ground4" parent="." unique_id=993685892 instance=ExtResource("1_0xm2m")]
 position = Vector2(65, -16)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=802453918]
-position = Vector2(0, 9)
-position_smoothing_enabled = true
-
 [node name="Player" parent="." unique_id=891439576 instance=ExtResource("2_h2yge")]
+position = Vector2(4, -125)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=616888279]

@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://csx8oedxtsdyy" path="res://Player/Characters/player.gd" id="1_5mj4t"]
 [ext_resource type="Texture2D" uid="uid://drfv0ixwmcret" path="res://Player/Characters/الانميشن/وقوف/الولد الابيض.png" id="2_nhaih"]
-[ext_resource type="Texture2D" uid="uid://bfc3ewq1scv1f" path="res://Player/Characters/tile_0132.png" id="3_65n15"]
 [ext_resource type="Texture2D" uid="uid://cwpmecveq3hhs" path="res://Player/Characters/الانميشن/الركض/1.png" id="4_jrrtc"]
 [ext_resource type="Texture2D" uid="uid://dst4tjqx3jsny" path="res://Player/Characters/الانميشن/الركض/2.png" id="5_8munr"]
 [ext_resource type="Texture2D" uid="uid://b7pv7v3lg0w0l" path="res://Player/Characters/الانميشن/الركض/3.png" id="6_8o5op"]
@@ -23,10 +22,7 @@ animations = [{
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_65n15")
-}],
+"frames": [],
 "loop": 1,
 "name": &"jamp",
 "speed": 5.0
@@ -46,7 +42,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"run",
-"speed": 6.0
+"speed": 5.5
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=891439576]
@@ -64,7 +60,7 @@ scale = Vector2(34, 60.000004)
 mesh = SubResource("BoxMesh_eovys")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1597177720]
-texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ajdtp")
-animation = &"run"
-frame_progress = 0.8610563
+animation = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1686859942]
