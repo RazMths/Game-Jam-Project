@@ -1,8 +1,17 @@
+<<<<<<< Updated upstream
 Sprite2D
+=======
+CollisionShape2D
+Area2D
+>>>>>>> Stashed changes
 Camera2D
 AnimatedSprite2D
 StaticBody2D
 MeshInstance2D
+<<<<<<< Updated upstream
 CollisionShape2D
+=======
+Sprite2D
+>>>>>>> Stashed changes
 CharacterBody2D
 PointLight2D
