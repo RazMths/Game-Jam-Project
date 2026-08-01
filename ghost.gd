@@ -56,8 +56,8 @@ func _on_body_entered(body: Node) -> void:
 				
 			if "velocity" in body:
 				var push_dir = 1.0 if body.global_position.x > global_position.x else -1.0
-				body.velocity.x = push_dir * 350.0
-				body.velocity.y = -150.0
+				body.velocity.x = push_dir * 900.0
+				body.velocity.y = -400.0
 
 # --- دالة انفجار صورة الشبح لملايين القطع الشفافة ---
 func spawn_ghost_burst() -> void:
