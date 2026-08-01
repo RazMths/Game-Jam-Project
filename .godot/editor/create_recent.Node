@@ -1,5 +1,6 @@
-ColorRect
 AudioStreamPlayer2D
+Node2D
+ColorRect
 CheckButton
 HSlider
 CheckBox
@@ -11,4 +12,3 @@ CanvasLayer
 TextureButton
 ProgressBar
 Control
-Camera2D

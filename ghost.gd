@@ -25,7 +25,7 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	
 	# for fading effect
-	sprite.modulate.a = 0.0
+	#sprite.modulate.a = 0.0
 
 func _physics_process(delta: float) -> void:
 	global_position.x += SPEED * direction * delta
@@ -110,16 +110,3 @@ func spawn_ghost_burst() -> void:
 
 	# 3. حذف عقدة الشبح الأصلية بعد اكتمال زمن الانفجار
 	get_tree().create_timer(BURST_DURATION).timeout.connect(queue_free)
-
-
-func reveal_platform() -> void:
-	# إذا كان هناك تأثير تلاشي شغال حالياً، نلغيه ونبدأ من جديد
-	if fade_tween and fade_tween.is_running():
-		fade_tween.kill()
-	
-	# 1. إظهار المنصة فوراً
-	sprite.modulate.a = 1.0
-	
-	# 2. عمل تلاشي تدريجي (Fade out) خلال ثانيتين مثلاً
-	fade_tween = create_tween()
-	fade_tween.tween_property(sprite, "modulate:a", 0.0, duration)

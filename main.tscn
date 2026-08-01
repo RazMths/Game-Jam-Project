@@ -3,16 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://bi32pe66qa6dy" path="res://scene for testing/ground.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://blftmxdlk301y" path="res://power_up.tscn" id="4_1bvp3"]
-[ext_resource type="Shader" uid="uid://l8nt6ycbl668" path="res://VignetteEffectShader.gdshader" id="4_lquwl"]
+[ext_resource type="Shader" uid="uid://d0hwf8w4dmms7" path="res://echo_mask.gdshader" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="5_lquwl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mtjga"]
 shader = ExtResource("4_lquwl")
-shader_parameter/player_screen_pos = Vector2(0, 0)
-shader_parameter/inner_radius = 0.1
-shader_parameter/outer_radius = 1.0
-shader_parameter/vignette_opacity = 0.0
-shader_parameter/vignette_color = Color(0, 0, 0, 1)
+shader_parameter/echo_positions = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/echo_radii = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/active_echoes_count = 0
+shader_parameter/ambient_darkness = 1.0
 
 [node name="main" type="Node2D" unique_id=1916839064]
 

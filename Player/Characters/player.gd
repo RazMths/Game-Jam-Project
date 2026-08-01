@@ -71,6 +71,11 @@ var jumps_left: int = 2
 # --- الإشارة إلى عقدة التحريكات ---
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+# for audio 
+@onready var wk_audio: AudioStreamPlayer2D = $"wk audio"
+@onready var jp_audio: AudioStreamPlayer2D = $"jp audio"
+
+
 func _ready() -> void:
 	original_color = animated_sprite.modulate
 	
@@ -111,6 +116,7 @@ func _physics_process(delta: float) -> void:
 
 	# 3. القفز والقفز المزدوج
 	if Input.is_action_just_pressed("jump"):
+		jp_audio.play()
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
 			jumps_left -= 1
@@ -266,7 +272,7 @@ func spawn_ghost() -> void:
 	ghost.flip_h = animated_sprite.flip_h
 	ghost.modulate = GHOST_COLOR
 	ghost.scale = animated_sprite.scale
-	get_tree().current_scene.call_deferred("add_child", ghost)
+	get_tree().root.call_deferred("add_child", ghost)
 	
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
@@ -284,6 +290,7 @@ func handle_walk_echo(delta: float, dir: float) -> void:
 	if is_on_floor() and dir != 0:
 		step_echo_timer -= delta
 		if step_echo_timer <= 0.0:
+			wk_audio.play()
 			spawn_echo(STEP_ECHO_RADIUS)
 			step_echo_timer = STEP_ECHO_INTERVAL
 	else:

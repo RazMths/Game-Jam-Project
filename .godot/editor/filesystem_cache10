@@ -1,19 +1,23 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785584071
-echo_wave.gd::GDScript::8990162606447599727::1785516437::0::1::::<>Area2D<><>0<>0<><>::
-echo_wave.tscn::PackedScene::7730046669918722604::1785524603::0::1::::<><><>0<>0<><>::uid://d1c5wulmm8utr::::res://echo_wave.gd
+::res://::1785601585
+echo_wave.gd::GDScript::8990162606447599727::1785601585::0::1::::<>Area2D<><>0<>0<><>::
+echo_wave.tscn::PackedScene::7730046669918722604::1785599912::0::1::::<><><>0<>0<><>::uid://d1c5wulmm8utr::::res://echo_wave.gd
 icon.svg::CompressedTexture2D::2422543624120626462::1785516437::1785575467::1::::<><><>0<>0<>f07825c0a0b0da6ed0b55b8dc649a8c6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ideativas-tlm-halloween-9862664_640.png::CompressedTexture2D::692390602844629287::1785584071::1785584072::1::::<><><>0<>0<>8dbd71c2be151b527360869e7c53af93<>res://.godot/imported/ideativas-tlm-halloween-9862664_640.png-03a06227f538cd4c74c647d0bac98c00.ctex::
-main.tscn::PackedScene::5306283812555800665::1785583648::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://blftmxdlk301y::::res://power_up.tscn
+main.tscn::PackedScene::5306283812555800665::1785593264::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://blftmxdlk301y::::res://power_up.tscn<>uid://d0hwf8w4dmms7::::res://echo_mask.gdshader<>uid://cwplhe37nno1a::::res://ghost.tscn
 power_up.gd::GDScript::6708314893361166078::1785516437::0::1::::<>Area2D<><>0<>0<><>::
 power_up.tscn::PackedScene::3169996118056927632::1785516437::0::1::::<><><>0<>0<><>::uid://c2ts736njtwew::::res://power_up.gd
-ghost.tscn::PackedScene::6348642236031334756::1785583815::0::1::::<><><>0<>0<><>::res://ghost.gd
-ghost.gd::GDScript::8113814340216088341::1785583815::0::1::::<>Area2D<><>0<>0<><>::
+ghost.tscn::PackedScene::6348642236031334756::1785584823::0::1::::<><><>0<>0<><>::uid://dnunlpjid7htd::::res://ghost.gd<>uid://j4ntpku3avxf::::res://ideativas-tlm-halloween-9862664_640.png
+ghost.gd::GDScript::8113814340216088341::1785600918::0::1::::<>Area2D<><>0<>0<><>::
+echo_mask.gdshader::Shader::8929780257697292260::1785601218::0::1::::<><><>0<>0<><>::
+new_main.tscn::PackedScene::2895099643762878130::1785601585::0::1::::<><><>0<>0<><>::uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://d0hwf8w4dmms7::::res://echo_mask.gdshader<>uid://hns1tcs6vt8a::::res://scene for testing/new_ground.tscn<>uid://dqwfwg0cox5wc::::res://test_node.gd<>uid://cwplhe37nno1a::::res://ghost.tscn
+test_node.gd::GDScript::8328043086177606654::1785596643::0::1::::<>Node<><>0<>0<><>::
+VignetteEffectShader.gdshader::Shader::841026662284322787::1785590989::0::1::::<><><>0<>0<><>::
 العالم.tscn::PackedScene::2840517321453043917::1785516437::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
 ::res://Player/::1785519776
-::res://Player/Characters/::1785583415
-player.gd::GDScript::6085750118889052468::1785583415::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::1034129163329373470::1785576013::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Player/Characters/player.gd<>uid://dieq0euv7qjse::::res://echo_wave.tscn<>uid://drfv0ixwmcret::::res://Player/Characters/الانميشن/وقوف/الولد الابيض.png<>uid://cwpmecveq3hhs::::res://Player/Characters/الانميشن/الركض/1.png<>uid://dst4tjqx3jsny::::res://Player/Characters/الانميشن/الركض/2.png<>uid://mq3a6biyfdsp::::res://Player/Characters/الانميشن/قفز/2.png<>uid://b7pv7v3lg0w0l::::res://Player/Characters/الانميشن/الركض/3.png<>uid://clxgjjkhpujqu::::res://Player/Characters/الانميشن/الركض/4.png
+::res://Player/Characters/::1785601036
+player.gd::GDScript::6085750118889052468::1785601036::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::1034129163329373470::1785591925::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Player/Characters/player.gd<>uid://dieq0euv7qjse::::res://echo_wave.tscn<>uid://drfv0ixwmcret::::res://Player/Characters/الانميشن/وقوف/الولد الابيض.png<>uid://cwpmecveq3hhs::::res://Player/Characters/الانميشن/الركض/1.png<>uid://dst4tjqx3jsny::::res://Player/Characters/الانميشن/الركض/2.png<>uid://mq3a6biyfdsp::::res://Player/Characters/الانميشن/قفز/2.png<>uid://b7pv7v3lg0w0l::::res://Player/Characters/الانميشن/الركض/3.png<>uid://clxgjjkhpujqu::::res://Player/Characters/الانميشن/الركض/4.png
 ::res://Player/Characters/الانميشن/::1785519776
 ::res://Player/Characters/الانميشن/الركض/::1785521117
 1.png::CompressedTexture2D::6348697478514453308::1785521242::1785521242::1::::<><><>0<>0<>09367426a3c89b171e7a6d656893ff2e<>res://.godot/imported/1.png-41741f158beb406f72f4136b8a07c815.ctex::
@@ -26,10 +30,11 @@ player.tscn::PackedScene::1034129163329373470::1785576013::0::1::::<><><>0<>0<><
 3.png::CompressedTexture2D::4408803751631894336::1785521242::1785521242::1::::<><><>0<>0<>add6e91524765f5a34f6fde48982ae74<>res://.godot/imported/3.png-f3eafc8fb2d35d491c21e577f119dffc.ctex::
 ::res://Player/Characters/الانميشن/وقوف/::1785521117
 الولد الابيض.png::CompressedTexture2D::8364114440124887215::1785521242::1785521242::1::::<><><>0<>0<>41fbca20caf2545b536ae495e373d3f6<>res://.godot/imported/الولد الابيض.png-62c1aee42904644bf4eda61b3b6bd4f0.ctex::
-::res://scene for testing/::1785525042
+::res://scene for testing/::1785593485
 ground.gd::GDScript::2574312470714908442::1785521242::0::1::::<>StaticBody2D<><>0<>0<><>::
-ground.tscn::PackedScene::3007400415036554778::1785525042::0::1::::<><><>0<>0<><>::uid://bcxasyeigyl7o::::res://scene for testing/ground.gd<>uid://beg5ijdr25k2e::::res://word/تكتشر/العشب.pngال.png
+ground.tscn::PackedScene::3007400415036554778::1785593476::0::1::::<><><>0<>0<><>::uid://bcxasyeigyl7o::::res://scene for testing/ground.gd<>uid://beg5ijdr25k2e::::res://word/تكتشر/العشب.pngال.png
 pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png::CompressedTexture2D::8086246807689756968::1785521242::1785521242::1::::<><><>0<>0<>f954915dce2ac4a469b4e362a7b97297<>res://.godot/imported/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png-778934e2ef25061f5c19318b4549d400.ctex::
+new_ground.tscn::PackedScene::519299154673701510::1785593485::0::1::::<><><>0<>0<><>::uid://beg5ijdr25k2e::::res://word/تكتشر/العشب.pngال.png
 ::res://word/::1785521117
 العالم.tscn::PackedScene::7548362440901741290::1785521242::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
 ::res://word/تكتشر/::1785525056
@@ -39,7 +44,9 @@ pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-ima
 العشب.png::CompressedTexture2D::3053130209714900990::1785523532::1785523535::1::::<><><>0<>0<>2e34dc85e9fb1829a0bd93edcef2088c<>res://.godot/imported/العشب.png-727e1a727fc1a0861b41f8f2a9aa7f4d.ctex::
 العشب.pngال.png::CompressedTexture2D::2681398599058061762::1785525042::1785525056::1::::<><><>0<>0<>3ade92c5cdc8767e5a0ec2660268e49e<>res://.godot/imported/العشب.pngال.png-5fff3d406c4de2262cb1e6bdbf6e3de9.ctex::
 عشي.png::CompressedTexture2D::7153989124039024587::1785521242::1785521242::1::::<><><>0<>0<>17addc5fb76ff405e96c85d578e667c0<>res://.godot/imported/عشي.png-de5b7f497ef88c87abdbb6626a67bb8f.ctex::
-::res://الاصوات/::1785575301
+::res://الاصوات/::1785607293
+echo sound.wav::AudioStreamWAV::7442897892377965157::1785606957::1785606977::1::::<><><>0<>0<>3c963bb17babdd5d710c61ba12b92e43<>res://.godot/imported/echo sound.wav-ee10269c006048e98ac4744931630f41.sample::
+echo walking sound.wav::AudioStreamWAV::3401074284388347132::1785607293::1785607308::1::::<><><>0<>0<>abb273eca5e420fc6876a5586ad2e18c<>res://.godot/imported/echo walking sound.wav-14017b5416d619a13a6b753fe75c9a0b.sample::
 ::res://الاصوات/أصوات الاصطدام او غير/::1785575301
 License.txt::TextFile::-1::1785575301::0::1::::<><><>0<>0<><>::
 ::res://الاصوات/أصوات الاصطدام او غير/Audio/::1785575301

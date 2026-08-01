@@ -9,3 +9,8 @@ res://القائمات/القائمه الرائيسيه/القائمه_الرا
 res://echo_wave.tscn
 res://echo_wave.gd
 res://VignetteEffectShader.gdshader
+res://echo_mask.gdshader
+res://new_main.tscn
+res://scene for testing/ground.tscn
+res://scene for testing/new_ground.tscn
+res://test_node.gd
