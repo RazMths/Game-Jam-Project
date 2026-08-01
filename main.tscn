@@ -39,8 +39,10 @@ scale = Vector2(0.485, 1)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=616888279]
 position = Vector2(4, -125)
 
-[node name="Player" parent="." unique_id=891439576 instance=ExtResource("2_h2yge")]
+[node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
 position = Vector2(9, 136)
+fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
+camera = NodePath("../Camera2D")
 
 [node name="PngtreeSilhouetteOfPineForestWithSmallAndTallEvergreenTreesOnPngImage4838656" type="Sprite2D" parent="." unique_id=966759777]
 z_index = -1
@@ -58,3 +60,18 @@ scale = Vector2(0.43, 1)
 
 [node name="Power up" parent="." unique_id=612369099 instance=ExtResource("4_1bvp3")]
 position = Vector2(62, 127)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852383026]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=301807383]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=438519875]
+layout_mode = 0
+offset_right = 118.0
+offset_bottom = 27.0

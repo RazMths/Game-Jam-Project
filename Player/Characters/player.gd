@@ -141,9 +141,10 @@ func _physics_process(delta: float) -> void:
 
 # --- دالة معالجة العداد والاهتزاز ---
 func handle_fear_timer(delta: float) -> void:
+	print(current_fear_time)
 	if current_fear_time > 0:
 		current_fear_time -= delta
-		
+	
 		if fear_progress_bar:
 			fear_progress_bar.value = current_fear_time
 			

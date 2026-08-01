@@ -1,4 +1,2 @@
-res://القائمه الرائيسيه/القائمه الرائيسيه.tscn
 res://main.tscn
-res://القائمه الرائيسيه/القائمه_الرائيسيه.gd
-res://Player/Characters/player.tscn
+res://Player/Characters/player.gd

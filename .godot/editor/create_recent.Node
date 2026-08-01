@@ -1,9 +1,9 @@
-Label
-TextureButton
-ColorRect
 ProgressBar
 Control
 CanvasLayer
+Label
+TextureButton
+ColorRect
 Sprite2D
 Camera2D
 AnimatedSprite2D
