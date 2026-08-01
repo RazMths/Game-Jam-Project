@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cwplhe37nno1a"]
+
+[ext_resource type="Script" path="res://ghost.gd" id="1_v5pp4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6attn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obmiq"]
+size = Vector2(26, 60)
+
+[node name="Ghost" type="Area2D" unique_id=959379480]
+script = ExtResource("1_v5pp4")
+
+[node name="mesh" type="MeshInstance2D" parent="." unique_id=1102427038]
+modulate = Color(0.906121, 0, 0.35507104, 1)
+scale = Vector2(26, 60.000004)
+mesh = SubResource("BoxMesh_6attn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1871790803]
+shape = SubResource("RectangleShape2D_obmiq")

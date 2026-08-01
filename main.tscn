@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bi32pe66qa6dy" path="res://scene for testing/ground.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="2_h2yge"]
-[ext_resource type="Texture2D" uid="uid://dnhbkk4buusmi" path="res://scene for testing/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://blftmxdlk301y" path="res://power_up.tscn" id="4_1bvp3"]
 
 [node name="main" type="Node2D" unique_id=1916839064]
@@ -43,12 +42,6 @@ position = Vector2(4, -125)
 position = Vector2(9, 136)
 fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
 camera = NodePath("../Camera2D")
-
-[node name="PngtreeSilhouetteOfPineForestWithSmallAndTallEvergreenTreesOnPngImage4838656" type="Sprite2D" parent="." unique_id=966759777]
-z_index = -1
-position = Vector2(-6.0000005, -118)
-scale = Vector2(1.490099, 1.5408388)
-texture = ExtResource("3_h2yge")
 
 [node name="ground9" parent="." unique_id=939245974 instance=ExtResource("1_0xm2m")]
 position = Vector2(-11, -26)

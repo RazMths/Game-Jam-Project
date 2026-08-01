@@ -1,9 +1,8 @@
-res://القائمات/القائمه التوقف/pause_menu.tscn
-res://القائمات/القائمه التوقف/PauseMenu.gd
-res://القائمات/القائمه التوقف/pause_menu.gd
-res://القائمات/options_menu.tscn
-res://القائمات/القائمه الاعدادات/options_menu.tscn
-res://القائمات/القائمه الاعدادات/options_menu.gd
-res://القائمات/القائمه الرائيسيه/القائمه الرائيسيه.tscn
-res://القائمات/القائمه الرائيسيه/القائمه_الرائيسيه.gd
+res://Player/Characters/player.tscn
+res://Player/Characters/player.gd
+res://ghost.gd
+res://ghost.tscn
 res://main.tscn
+res://القائمات/القائمه الاعدادات/options_menu.gd
+res://القائمات/القائمه التوقف/pause_menu.gd
+res://القائمات/القائمه الرائيسيه/القائمه_الرائيسيه.gd
