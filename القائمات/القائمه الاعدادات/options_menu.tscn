@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dv7x8hyljordt" path="res://القائمات/القائمه الاعدادات/options_menu.gd" id="1_4ccf3"]
 [ext_resource type="Texture2D" uid="uid://bmp0ker3rylw8" path="res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png" id="2_6h7hs"]
-[ext_resource type="AudioStream" uid="uid://b3hmh60wpf1en" path="res://الاصوات/النهاية او بداية او العبة/البداية او النهاية كمان.ogg" id="2_jvwqu"]
 [ext_resource type="Texture2D" uid="uid://jnnd1bxqnh3s" path="res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png" id="3_yi5eh"]
 [ext_resource type="FontFile" uid="uid://buj7iofbg43d4" path="res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf" id="4_udrhe"]
 
@@ -77,10 +76,6 @@ offset_right = 620.0
 offset_bottom = 600.0
 text = "Exit"
 label_settings = SubResource("LabelSettings_r0f0h")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1597526478]
-stream = ExtResource("2_jvwqu")
-autoplay = true
 
 [connection signal="toggled" from="ColorRect/CheckBox" to="." method="_on_check_box_toggled"]
 [connection signal="value_changed" from="ColorRect/HSlider" to="." method="_on_h_slider_value_changed"]
