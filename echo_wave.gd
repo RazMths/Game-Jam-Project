@@ -8,6 +8,7 @@ var expansion_speed: float = 350.0
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
+	area_entered.connect(_on_area_entered)
 
 func _process(delta: float) -> void:
 	# 1. تكبير قطر الدائرة تدريجياً
@@ -29,6 +30,11 @@ func _draw() -> void:
 	draw_arc(Vector2.ZERO, current_radius, 0, TAU, 32, Color(0, 0.9, 1.0, alpha), 2.0)
 
 func _on_body_entered(body: Node) -> void:
+	# إذا لمست الموجة منصة، نطلب من المنصة أن تظهر!
+	if body.has_method("reveal_platform"):
+		body.reveal_platform()
+
+func _on_area_entered(body: Node) -> void:
 	# إذا لمست الموجة منصة، نطلب من المنصة أن تظهر!
 	if body.has_method("reveal_platform"):
 		body.reveal_platform()

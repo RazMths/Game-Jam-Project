@@ -6,3 +6,5 @@ res://main.tscn
 res://القائمات/القائمه الاعدادات/options_menu.gd
 res://القائمات/القائمه التوقف/pause_menu.gd
 res://القائمات/القائمه الرائيسيه/القائمه_الرائيسيه.gd
+res://echo_wave.tscn
+res://echo_wave.gd
