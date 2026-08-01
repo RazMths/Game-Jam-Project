@@ -51,6 +51,5 @@ func open_from(caller: Control) -> void:
 
 # 📌 عند الضغط على زر العودة/الخروج
 func _on_back_pressed() -> void:
-	hide()
-	if previous_menu:
-		previous_menu.show() # العودة للشاشة السابقة مباشرة
+	# الانتقال المباشر لملف القائمة الرئيسية اللي تحدده بنفسك
+	get_tree().change_scene_to_file("res://القائمات/القائمه الرائيسيه/القائمه الرائيسيه.tscn")

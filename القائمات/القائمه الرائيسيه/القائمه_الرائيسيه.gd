@@ -17,3 +17,6 @@ func _on_opsions_pressed() -> void:
 	else:
 		# 2. الانتقال لمشهد آخر في حالة عدم الربط
 		get_tree().change_scene_to_file("res://القائمات/القائمه الاعدادات/options_menu.tscn")
+
+func _on_resume_pressed() -> void:
+	get_tree().change_scene_to_file("res://main.tscn")

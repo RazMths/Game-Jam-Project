@@ -1,44 +1,44 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785615957
+::res://::1785622887
 echo_mask.gdshader::Shader::8929780257697292260::1785613430::0::1::::<><><>0<>0<><>::
 echo_wave.gd::GDScript::8990162606447599727::1785612998::0::1::::<>Area2D<><>0<>0<><>::
-echo_wave.tscn::PackedScene::7730046669918722604::1785612998::0::1::::<><><>0<>0<><>::uid://d1c5wulmm8utr::::res://echo_wave.gd
+echo_wave.tscn::PackedScene::7730046669918722604::1785617262::0::1::::<><><>0<>0<><>::uid://d1c5wulmm8utr::::res://echo_wave.gd
 ghost.gd::GDScript::8113814340216088341::1785612998::0::1::::<>Area2D<><>0<>0<><>::
 ghost.tscn::PackedScene::6348642236031334756::1785612998::0::1::::<><><>0<>0<><>::uid://dnunlpjid7htd::::res://ghost.gd<>uid://j4ntpku3avxf::::res://ideativas-tlm-halloween-9862664_640.png
 icon.svg::CompressedTexture2D::2422543624120626462::1785444999::1785530268::1::::<><><>0<>0<>f07825c0a0b0da6ed0b55b8dc649a8c6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ideativas-tlm-halloween-9862664_640.png::CompressedTexture2D::692390602844629287::1785612998::1785612998::1::::<><><>0<>0<>e12e51850d1fcb75ab855e7cf10bfc5a<>res://.godot/imported/ideativas-tlm-halloween-9862664_640.png-03a06227f538cd4c74c647d0bac98c00.ctex::
-main.tscn::PackedScene::5306283812555800665::1785615957::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://c7krkrlq72r2r::::res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://blftmxdlk301y::::res://power_up.tscn<>uid://cwplhe37nno1a::::res://ghost.tscn<>uid://cvsjodrqp0mdo::::res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png
+main.tscn::PackedScene::5306283812555800665::1785617247::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://c7krkrlq72r2r::::res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://blftmxdlk301y::::res://power_up.tscn<>uid://cwplhe37nno1a::::res://ghost.tscn<>uid://cvsjodrqp0mdo::::res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png
 new_main.tscn::PackedScene::2895099643762878130::1785612998::0::1::::<><><>0<>0<><>::uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://d0hwf8w4dmms7::::res://echo_mask.gdshader<>uid://hns1tcs6vt8a::::res://scene for testing/new_ground.tscn<>uid://dqwfwg0cox5wc::::res://test_node.gd<>uid://cwplhe37nno1a::::res://ghost.tscn
 power_up.gd::GDScript::6708314893361166078::1785516411::0::1::::<>Area2D<><>0<>0<><>::
-power_up.tscn::PackedScene::3169996118056927632::1785516438::0::1::::<><><>0<>0<><>::uid://c2ts736njtwew::::res://power_up.gd
+power_up.tscn::PackedScene::3169996118056927632::1785617256::0::1::::<><><>0<>0<><>::uid://c2ts736njtwew::::res://power_up.gd<>uid://cwyk5vrr6ssde::::res://word/تكتشر/اساس/زجاجه صحه.png
 test_node.gd::GDScript::8328043086177606654::1785612998::0::1::::<>Node<><>0<>0<><>::
 VignetteEffectShader.gdshader::Shader::841026662284322787::1785612998::0::1::::<><><>0<>0<><>::
-العالم.tscn::PackedScene::2840517321453043917::1785507314::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
+العالم.tscn::PackedScene::2840517321453043917::1785617264::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
 ::res://Player/::1785490075
-::res://Player/Characters/::1785615845
+::res://Player/Characters/::1785617258
 player.gd::GDScript::6085750118889052468::1785615845::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::1034129163329373470::1785615568::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Player/Characters/player.gd<>uid://dieq0euv7qjse::::res://echo_wave.tscn<>uid://drfv0ixwmcret::::res://Player/Characters/الانميشن/وقوف/الولد الابيض.png<>uid://cwpmecveq3hhs::::res://Player/Characters/الانميشن/الركض/1.png<>uid://dst4tjqx3jsny::::res://Player/Characters/الانميشن/الركض/2.png<>uid://mq3a6biyfdsp::::res://Player/Characters/الانميشن/قفز/2.png<>uid://b7pv7v3lg0w0l::::res://Player/Characters/الانميشن/الركض/3.png<>uid://clxgjjkhpujqu::::res://Player/Characters/الانميشن/الركض/4.png<>uid://boprgxhve7e3u::::res://الاصوات/echo walking sound.wav<>uid://debno8v20f2a8::::res://الاصوات/echo sound.wav
+player.tscn::PackedScene::1034129163329373470::1785617258::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Player/Characters/player.gd<>uid://dieq0euv7qjse::::res://echo_wave.tscn<>uid://drfv0ixwmcret::::res://Player/Characters/الانميشن/وقوف/الولد الابيض.png<>uid://cwpmecveq3hhs::::res://Player/Characters/الانميشن/الركض/1.png<>uid://dst4tjqx3jsny::::res://Player/Characters/الانميشن/الركض/2.png<>uid://mq3a6biyfdsp::::res://Player/Characters/الانميشن/قفز/2.png<>uid://b7pv7v3lg0w0l::::res://Player/Characters/الانميشن/الركض/3.png<>uid://clxgjjkhpujqu::::res://Player/Characters/الانميشن/الركض/4.png<>uid://boprgxhve7e3u::::res://الاصوات/echo walking sound.wav<>uid://debno8v20f2a8::::res://الاصوات/echo sound.wav
 ::res://Player/Characters/الانميشن/::1785505463
 ::res://Player/Characters/الانميشن/الركض/::1785490552
 1.png::CompressedTexture2D::6348697478514453308::1785489164::1785490552::1::::<><><>0<>0<>09367426a3c89b171e7a6d656893ff2e<>res://.godot/imported/1.png-41741f158beb406f72f4136b8a07c815.ctex::
 2.png::CompressedTexture2D::8463679635275271426::1785489216::1785490552::1::::<><><>0<>0<>f8aea6086b03e86508c4e99e7f45134f<>res://.godot/imported/2.png-7d0099ea706cf9addcbe61ad87d223e5.ctex::
 3.png::CompressedTexture2D::4664762695427779645::1785489143::1785490552::1::::<><><>0<>0<>cd566254a551609c8f4a81b76c466e39<>res://.godot/imported/3.png-3385595981a29b6d6377bb81b1c89a1c.ctex::
 4.png::CompressedTexture2D::5592780198346761544::1785489623::1785490552::1::::<><><>0<>0<>d0b4b47f04adb321bcfe2b90b16f97bb<>res://.godot/imported/4.png-accfa4c13007f50b93fa86a72fad6aa1.ctex::
-::res://Player/Characters/الانميشن/قفز/::1785591122
+::res://Player/Characters/الانميشن/قفز/::1785617052
 1.png::CompressedTexture2D::681563939349868999::1785505514::1785506921::1::::<><><>0<>0<>3a5d6e2df8f633a886d0505341314467<>res://.godot/imported/1.png-8e69075832b33d2922d7d9968a754a04.ctex::
 2.png::CompressedTexture2D::876997873683220967::1785506236::1785506921::1::::<><><>0<>0<>5382b45903368d5fa1c8a228b8230353<>res://.godot/imported/2.png-e0b99ffa8a6e043a51443c9c4875abf9.ctex::
 3.png::CompressedTexture2D::4408803751631894336::1785506883::1785506921::1::::<><><>0<>0<>add6e91524765f5a34f6fde48982ae74<>res://.godot/imported/3.png-f3eafc8fb2d35d491c21e577f119dffc.ctex::
 ::res://Player/Characters/الانميشن/وقوف/::1785490552
 الولد الابيض.png::CompressedTexture2D::8364114440124887215::1785486904::1785490552::1::::<><><>0<>0<>41fbca20caf2545b536ae495e373d3f6<>res://.godot/imported/الولد الابيض.png-62c1aee42904644bf4eda61b3b6bd4f0.ctex::
-::res://scene for testing/::1785613289
+::res://scene for testing/::1785617248
 ground.gd::GDScript::2574312470714908442::1785516437::0::1::::<>StaticBody2D<><>0<>0<><>::
-ground.tscn::PackedScene::3007400415036554778::1785613289::0::1::::<><><>0<>0<><>::uid://bcxasyeigyl7o::::res://scene for testing/ground.gd<>uid://bq7ib6pwc1kds::::res://word/تكتشر/الخلفيات الرائيسيه/الارضيه.png
+ground.tscn::PackedScene::3007400415036554778::1785617248::0::1::::<><><>0<>0<><>::uid://bcxasyeigyl7o::::res://scene for testing/ground.gd<>uid://bq7ib6pwc1kds::::res://word/تكتشر/الخلفيات الرائيسيه/الارضيه.png
 new_ground.tscn::PackedScene::519299154673701510::1785612998::0::1::::<><><>0<>0<><>::uid://beg5ijdr25k2e::::res://word/تكتشر/العشب.pngال.png
 pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png::CompressedTexture2D::8086246807689756968::1785510664::1785510664::1::::<><><>0<>0<>f954915dce2ac4a469b4e362a7b97297<>res://.godot/imported/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png-778934e2ef25061f5c19318b4549d400.ctex::
-::res://word/::1785509787
-العالم.tscn::PackedScene::7548362440901741290::1785490075::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
+::res://word/::1785617257
+العالم.tscn::PackedScene::7548362440901741290::1785617257::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
 ::res://word/تكتشر/::1785590582
-::res://word/تكتشر/اساس/::1785616319
+::res://word/تكتشر/اساس/::1785616321
 زجاجه صحه.png::CompressedTexture2D::6367202867331745810::1785616319::1785616321::1::::<><><>0<>0<>2d523f80e78eee8492ff305763b9b579<>res://.godot/imported/زجاجه صحه.png-c073f37c29bd7fc1b0e6d9f55375e8b7.ctex::
 صندوق.png::CompressedTexture2D::4007089268926454909::1785590603::1785613107::1::::<><><>0<>0<>e0c84604eaa3035f11301ad14233e410<>res://.godot/imported/صندوق.png-d007da5bc489760c0a2c9726407fcdb9.ctex::
 ::res://word/تكتشر/الخلفيات الرائيسيه/::1785613107
@@ -192,14 +192,14 @@ impactWood_medium_004.ogg::AudioStreamOggVorbis::2225503835729530848::1785578455
 ::res://الاصوات/النهاية او بداية او العبة/::1785578481
 البداية او النهاية كمان.ogg::AudioStreamOggVorbis::4366901722170774037::1785578455::1785578481::1::::<><><>0<>0<>0509cd9832679d95e4e50a9d330868fa<>res://.godot/imported/البداية او النهاية كمان.ogg-0a0644924eaf2d18bf8fd53f0879c34b.oggvorbisstr::
 ::res://القائمات/::1785578455
-::res://القائمات/القائمه الاعدادات/::1785579108
+::res://القائمات/القائمه الاعدادات/::1785617248
 options_menu.gd::GDScript::8700743682891530013::1785579108::0::1::::<>Control<><>0<>0<><>::
-options_menu.tscn::PackedScene::4558285349737552225::1785579108::0::1::::<><><>0<>0<><>::uid://dv7x8hyljordt::::res://القائمات/القائمه الاعدادات/options_menu.gd<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf
-::res://القائمات/القائمه التوقف/::1785579108
+options_menu.tscn::PackedScene::4558285349737552225::1785617248::0::1::::<><><>0<>0<><>::uid://dv7x8hyljordt::::res://القائمات/القائمه الاعدادات/options_menu.gd<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf
+::res://القائمات/القائمه التوقف/::1785617249
 pause_menu.gd::GDScript::9167592041068937383::1785579108::0::1::::<>Control<><>0<>0<><>::
-pause_menu.tscn::PackedScene::1834023278567686646::1785578455::0::1::::<><><>0<>0<><>::uid://d3u35wfehcu52::::res://القائمات/القائمه التوقف/pause_menu.gd<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf
-::res://القائمات/القائمه الرائيسيه/::1785584060
-القائمه الرائيسيه.tscn::PackedScene::861903679216020531::1785584060::0::1::::<><><>0<>0<><>::uid://cqxr07utnryjy::::res://القائمات/القائمه الرائيسيه/القائمه_الرائيسيه.gd<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png
+pause_menu.tscn::PackedScene::1834023278567686646::1785617249::0::1::::<><><>0<>0<><>::uid://d3u35wfehcu52::::res://القائمات/القائمه التوقف/pause_menu.gd<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf
+::res://القائمات/القائمه الرائيسيه/::1785617252
+القائمه الرائيسيه.tscn::PackedScene::861903679216020531::1785617252::0::1::::<><><>0<>0<><>::uid://cqxr07utnryjy::::res://القائمات/القائمه الرائيسيه/القائمه_الرائيسيه.gd<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png
 القائمه_الرائيسيه.gd::GDScript::5944422100187381986::1785581509::0::1::::<>Control<><>0<>0<><>::
 ::res://القائمات/القائمه الرائيسيه/game assets/::1785578455
 ::res://القائمات/القائمه الرائيسيه/game assets/game assets/::1785578481

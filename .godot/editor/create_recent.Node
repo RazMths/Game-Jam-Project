@@ -1,9 +1,10 @@
+Label
+TextureButton
 Sprite2D
 MeshInstance2D
 PointLight2D
 CanvasModulate
 AnimatedSprite2D
-Label
 Panel
 AudioStreamPlayer2D
 Node2D
@@ -11,4 +12,3 @@ ColorRect
 CheckButton
 HSlider
 CheckBox
-HBoxContainer
