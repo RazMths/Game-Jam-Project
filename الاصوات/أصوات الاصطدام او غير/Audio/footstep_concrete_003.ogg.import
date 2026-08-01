@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b5rv33fgq2tx"
+path="res://.godot/imported/footstep_concrete_003.ogg-b30da7034060e7b8747eeaaf63d7601d.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/footstep_concrete_003.ogg"
+dest_files=["res://.godot/imported/footstep_concrete_003.ogg-b30da7034060e7b8747eeaaf63d7601d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

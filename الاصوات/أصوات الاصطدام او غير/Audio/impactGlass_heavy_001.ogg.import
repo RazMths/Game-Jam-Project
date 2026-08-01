@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dxq71bvkp1lv3"
+path="res://.godot/imported/impactGlass_heavy_001.ogg-05cf7527fa3c11823c964966ec1af8bc.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/impactGlass_heavy_001.ogg"
+dest_files=["res://.godot/imported/impactGlass_heavy_001.ogg-05cf7527fa3c11823c964966ec1af8bc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

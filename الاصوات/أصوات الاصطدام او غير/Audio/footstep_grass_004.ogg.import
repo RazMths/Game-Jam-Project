@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://donfcnyfst7rx"
+path="res://.godot/imported/footstep_grass_004.ogg-e2a061a0cb11ea6264b9451782229d7e.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/footstep_grass_004.ogg"
+dest_files=["res://.godot/imported/footstep_grass_004.ogg-e2a061a0cb11ea6264b9451782229d7e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

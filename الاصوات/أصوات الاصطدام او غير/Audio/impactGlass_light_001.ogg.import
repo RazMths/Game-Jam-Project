@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvc18fh8qa77k"
+path="res://.godot/imported/impactGlass_light_001.ogg-6c62424f1e71ea6a07f7d9648307e92f.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/impactGlass_light_001.ogg"
+dest_files=["res://.godot/imported/impactGlass_light_001.ogg-6c62424f1e71ea6a07f7d9648307e92f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

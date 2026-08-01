@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://p1tv7tsi6pe8"
+path="res://.godot/imported/impactBell_heavy_004.ogg-00de12accf3ca409b333db6b08967daa.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/impactBell_heavy_004.ogg"
+dest_files=["res://.godot/imported/impactBell_heavy_004.ogg-00de12accf3ca409b333db6b08967daa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

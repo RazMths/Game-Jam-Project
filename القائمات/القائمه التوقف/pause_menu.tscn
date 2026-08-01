@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://1eodillcbh15"]
+
+[ext_resource type="Script" uid="uid://d3u35wfehcu52" path="res://القائمات/القائمه التوقف/pause_menu.gd" id="1_0jjfk"]
+[ext_resource type="Texture2D" uid="uid://bmp0ker3rylw8" path="res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png" id="1_pgoef"]
+[ext_resource type="Texture2D" uid="uid://jnnd1bxqnh3s" path="res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png" id="2_0jjfk"]
+[ext_resource type="FontFile" uid="uid://buj7iofbg43d4" path="res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf" id="3_gfysh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t6nb5"]
+font = ExtResource("3_gfysh")
+font_size = 90
+
+[sub_resource type="LabelSettings" id="LabelSettings_fpwxs"]
+font = ExtResource("3_gfysh")
+font_size = 70
+
+[node name="PauseMenu" type="Control" unique_id=1988215942]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0jjfk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=28047460]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=602312839]
+modulate = Color(1, 1, 1, 0.23529412)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 814.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="resume" type="TextureButton" parent="CanvasLayer" unique_id=1490224112]
+offset_left = 861.0
+offset_top = 204.0
+offset_right = 1113.0
+offset_bottom = 320.0
+texture_normal = ExtResource("1_pgoef")
+texture_pressed = ExtResource("2_0jjfk")
+
+[node name="opsions" type="TextureButton" parent="CanvasLayer" unique_id=383997036]
+offset_left = 859.0
+offset_top = 349.0
+offset_right = 1111.0
+offset_bottom = 465.0
+texture_normal = ExtResource("1_pgoef")
+texture_pressed = ExtResource("2_0jjfk")
+
+[node name="main_menu" type="TextureButton" parent="CanvasLayer" unique_id=1649943756]
+offset_left = 860.0
+offset_top = 495.0
+offset_right = 1112.0
+offset_bottom = 611.0
+texture_normal = ExtResource("1_pgoef")
+texture_pressed = ExtResource("2_0jjfk")
+
+[node name="Label1" type="Label" parent="CanvasLayer" unique_id=421204593]
+offset_left = 863.0
+offset_top = 39.0
+offset_right = 1100.0
+offset_bottom = 115.0
+text = "Pause"
+label_settings = SubResource("LabelSettings_t6nb5")
+
+[node name="Label5" type="Label" parent="CanvasLayer" unique_id=1800215142]
+offset_left = 870.0
+offset_top = 372.0
+offset_right = 1151.0
+offset_bottom = 448.0
+text = "opsions"
+label_settings = SubResource("LabelSettings_fpwxs")
+
+[node name="Label3" type="Label" parent="CanvasLayer" unique_id=1467482406]
+offset_left = 877.0
+offset_top = 226.0
+offset_right = 1115.0
+offset_bottom = 302.0
+text = "resume"
+label_settings = SubResource("LabelSettings_fpwxs")
+
+[node name="Label6" type="Label" parent="CanvasLayer" unique_id=774847612]
+offset_left = 924.0
+offset_top = 510.0
+offset_right = 1044.0
+offset_bottom = 576.0
+text = "main"
+label_settings = SubResource("LabelSettings_fpwxs")
+
+[connection signal="pressed" from="CanvasLayer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/opsions" to="." method="_on_opsions_pressed"]
+[connection signal="pressed" from="CanvasLayer/main_menu" to="." method="_on_main_menu_pressed"]

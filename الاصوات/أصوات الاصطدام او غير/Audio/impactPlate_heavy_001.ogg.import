@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dcf6uquqxmfmi"
+path="res://.godot/imported/impactPlate_heavy_001.ogg-e2718a3f9795ef4485d293196ebed10d.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/impactPlate_heavy_001.ogg"
+dest_files=["res://.godot/imported/impactPlate_heavy_001.ogg-e2718a3f9795ef4485d293196ebed10d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

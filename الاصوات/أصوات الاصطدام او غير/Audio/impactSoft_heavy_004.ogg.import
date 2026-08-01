@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cnv7vyy8m18a5"
+path="res://.godot/imported/impactSoft_heavy_004.ogg-8217d05c23591de04cef76083cf4bacf.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/impactSoft_heavy_004.ogg"
+dest_files=["res://.godot/imported/impactSoft_heavy_004.ogg-8217d05c23591de04cef76083cf4bacf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

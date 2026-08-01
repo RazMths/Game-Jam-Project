@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bytqg70o5wf2"
+path="res://.godot/imported/impactPlank_medium_000.ogg-96e070b581788d8f2dd1f2cf0e63bc8c.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/impactPlank_medium_000.ogg"
+dest_files=["res://.godot/imported/impactPlank_medium_000.ogg-96e070b581788d8f2dd1f2cf0e63bc8c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

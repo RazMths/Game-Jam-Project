@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://eeiu4fvm485c"
+path="res://.godot/imported/impactWood_heavy_004.ogg-e59bc6005642482e5110a6a2d163d73c.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/impactWood_heavy_004.ogg"
+dest_files=["res://.godot/imported/impactWood_heavy_004.ogg-e59bc6005642482e5110a6a2d163d73c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

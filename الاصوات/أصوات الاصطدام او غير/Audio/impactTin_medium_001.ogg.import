@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cmo1vmgvy8p54"
+path="res://.godot/imported/impactTin_medium_001.ogg-9e4fb21af372be701e4bec80409e7bd9.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/impactTin_medium_001.ogg"
+dest_files=["res://.godot/imported/impactTin_medium_001.ogg-9e4fb21af372be701e4bec80409e7bd9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

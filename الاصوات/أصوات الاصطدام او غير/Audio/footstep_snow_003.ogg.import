@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cfmluugoes7gv"
+path="res://.godot/imported/footstep_snow_003.ogg-245e5a58d957774f4f472d1ae8148178.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/footstep_snow_003.ogg"
+dest_files=["res://.godot/imported/footstep_snow_003.ogg-245e5a58d957774f4f472d1ae8148178.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

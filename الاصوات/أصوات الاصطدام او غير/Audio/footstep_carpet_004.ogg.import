@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cfkt4ilgubdml"
+path="res://.godot/imported/footstep_carpet_004.ogg-19ab3528e0316b26f221caf3de165050.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/footstep_carpet_004.ogg"
+dest_files=["res://.godot/imported/footstep_carpet_004.ogg-19ab3528e0316b26f221caf3de165050.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
