@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bi32pe66qa6dy" path="res://scene for testing/ground.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://blftmxdlk301y" path="res://power_up.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="5_lquwl"]
 
 [node name="main" type="Node2D" unique_id=1916839064]
 
@@ -68,3 +69,15 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 118.0
 offset_bottom = 27.0
+
+[node name="Ghost" parent="." unique_id=959379480 instance=ExtResource("5_lquwl")]
+position = Vector2(242, -1)
+
+[node name="Ghost2" parent="." unique_id=3102647 instance=ExtResource("5_lquwl")]
+position = Vector2(-14, -85)
+
+[node name="Ghost3" parent="." unique_id=2141327756 instance=ExtResource("5_lquwl")]
+position = Vector2(379, -163)
+
+[node name="Ghost4" parent="." unique_id=1039330018 instance=ExtResource("5_lquwl")]
+position = Vector2(-318, -177)
