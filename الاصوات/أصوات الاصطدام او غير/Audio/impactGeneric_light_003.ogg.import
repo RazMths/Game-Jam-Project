@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bmj34hu6tpx5t"
+path="res://.godot/imported/impactGeneric_light_003.ogg-d8bab8018cac673bcf02b56dbaeb4011.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/impactGeneric_light_003.ogg"
+dest_files=["res://.godot/imported/impactGeneric_light_003.ogg-d8bab8018cac673bcf02b56dbaeb4011.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

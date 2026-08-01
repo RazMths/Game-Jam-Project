@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b80a5l4s2gtc3"
+path="res://.godot/imported/مشي عبر الاعشاب.mp3-3936968400490a1374823f0aabe97719.mp3str"
+
+[deps]
+
+source_file="res://الاصوات/المشي/مشي عبر الاعشاب.mp3"
+dest_files=["res://.godot/imported/مشي عبر الاعشاب.mp3-3936968400490a1374823f0aabe97719.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

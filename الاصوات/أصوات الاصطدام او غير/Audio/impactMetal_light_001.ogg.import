@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bts63w5cte5nl"
+path="res://.godot/imported/impactMetal_light_001.ogg-a5e9c0e26448d1e8d53dc91331233291.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/impactMetal_light_001.ogg"
+dest_files=["res://.godot/imported/impactMetal_light_001.ogg-a5e9c0e26448d1e8d53dc91331233291.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

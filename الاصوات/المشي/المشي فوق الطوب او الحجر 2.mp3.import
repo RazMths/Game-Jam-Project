@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://n8emj2p5oqpu"
+path="res://.godot/imported/المشي فوق الطوب او الحجر 2.mp3-3001b346b279595d02f7064591e7d4b2.mp3str"
+
+[deps]
+
+source_file="res://الاصوات/المشي/المشي فوق الطوب او الحجر 2.mp3"
+dest_files=["res://.godot/imported/المشي فوق الطوب او الحجر 2.mp3-3001b346b279595d02f7064591e7d4b2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

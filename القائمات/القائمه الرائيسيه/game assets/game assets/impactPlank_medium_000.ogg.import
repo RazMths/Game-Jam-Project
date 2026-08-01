@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cj3q28mrxcghi"
+path="res://.godot/imported/impactPlank_medium_000.ogg-0dab524d7a7f2b82ccc38a500b2e7ec4.oggvorbisstr"
+
+[deps]
+
+source_file="res://القائمات/القائمه الرائيسيه/game assets/game assets/impactPlank_medium_000.ogg"
+dest_files=["res://.godot/imported/impactPlank_medium_000.ogg-0dab524d7a7f2b82ccc38a500b2e7ec4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8xavx3orcrrg"
+path="res://.godot/imported/مشي مع صدا يمكن في مشهد النهاية اذا ضفنا فيديو.mp3-63eb7e359f3b3dbe10a0212c200c1bd7.mp3str"
+
+[deps]
+
+source_file="res://الاصوات/المشي/مشي مع صدا يمكن في مشهد النهاية اذا ضفنا فيديو.mp3"
+dest_files=["res://.godot/imported/مشي مع صدا يمكن في مشهد النهاية اذا ضفنا فيديو.mp3-63eb7e359f3b3dbe10a0212c200c1bd7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

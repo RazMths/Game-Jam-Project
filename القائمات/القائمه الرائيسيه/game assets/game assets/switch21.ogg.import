@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckkosf61ut46q"
+path="res://.godot/imported/switch21.ogg-c6e739478986afc1f974939db05d625e.oggvorbisstr"
+
+[deps]
+
+source_file="res://القائمات/القائمه الرائيسيه/game assets/game assets/switch21.ogg"
+dest_files=["res://.godot/imported/switch21.ogg-c6e739478986afc1f974939db05d625e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

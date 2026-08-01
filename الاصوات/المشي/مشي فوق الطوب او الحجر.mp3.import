@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmkjmbushfor4"
+path="res://.godot/imported/مشي فوق الطوب او الحجر.mp3-fc19bce29cc99517e10bdbe1079e2959.mp3str"
+
+[deps]
+
+source_file="res://الاصوات/المشي/مشي فوق الطوب او الحجر.mp3"
+dest_files=["res://.godot/imported/مشي فوق الطوب او الحجر.mp3-fc19bce29cc99517e10bdbe1079e2959.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

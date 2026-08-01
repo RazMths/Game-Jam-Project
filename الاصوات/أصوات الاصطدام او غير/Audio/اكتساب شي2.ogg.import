@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtlgqvgs71r8m"
+path="res://.godot/imported/اكتساب شي2.ogg-33b19cfd6e54d7cd2501406f62272b81.oggvorbisstr"
+
+[deps]
+
+source_file="res://الاصوات/أصوات الاصطدام او غير/Audio/اكتساب شي2.ogg"
+dest_files=["res://.godot/imported/اكتساب شي2.ogg-33b19cfd6e54d7cd2501406f62272b81.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
