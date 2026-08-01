@@ -203,6 +203,11 @@ func add_fear_time(amount: float) -> void:
 	current_fear_time = clamp(current_fear_time + amount, 0.0, MAX_FEAR_TIME)
 	if fear_progress_bar:
 		fear_progress_bar.value = current_fear_time
+		
+	# إذا نزل العداد للصفر بسبب ضربة الشبح -> Game Over
+	if current_fear_time <= 0:
+		current_fear_time = 0.0
+		game_over_fear()
 
 func game_over_fear() -> void:
 	get_tree().reload_current_scene()

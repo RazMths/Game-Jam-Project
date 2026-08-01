@@ -40,7 +40,7 @@ scale = Vector2(0.485, 1)
 position = Vector2(4, -125)
 
 [node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
-position = Vector2(9, 136)
+position = Vector2(-152, -142)
 fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
 camera = NodePath("../Camera2D")
 
