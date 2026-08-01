@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpwnawnfg6rt1"
-path="res://.godot/imported/الارض.png-f7b3a71f746b4571e4a5be469170e191.ctex"
+uid="uid://c7krkrlq72r2r"
+path="res://.godot/imported/الخلفيه الرائيسيه.png-64fb5bda2d41c040589c67f308e01466.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://word/تكتشر/الارض.png"
-dest_files=["res://.godot/imported/الارض.png-f7b3a71f746b4571e4a5be469170e191.ctex"]
+source_file="res://word/تكتشر/الخلفيه الرائيسيه.png"
+dest_files=["res://.godot/imported/الخلفيه الرائيسيه.png-64fb5bda2d41c040589c67f308e01466.ctex"]
 
 [params]
 

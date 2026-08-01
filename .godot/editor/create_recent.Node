@@ -1,15 +1,14 @@
+Label
+Panel
 AudioStreamPlayer2D
 CheckButton
 HSlider
 CheckBox
 ColorRect
 Sprite2D
-Label
 HBoxContainer
 VBoxContainer
 CanvasLayer
 TextureButton
 ProgressBar
 Control
-Camera2D
-AnimatedSprite2D

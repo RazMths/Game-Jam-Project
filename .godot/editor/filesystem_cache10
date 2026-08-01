@@ -1,9 +1,9 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785578480
+::res://::1785579131
 echo_wave.gd::GDScript::8990162606447599727::1785490075::0::1::::<>Area2D<><>0<>0<><>::
 echo_wave.tscn::PackedScene::7730046669918722604::1785492523::0::1::::<><><>0<>0<><>::uid://d1c5wulmm8utr::::res://echo_wave.gd
 icon.svg::CompressedTexture2D::2422543624120626462::1785444999::1785530268::1::::<><><>0<>0<>f07825c0a0b0da6ed0b55b8dc649a8c6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-main.tscn::PackedScene::5306283812555800665::1785531612::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://dnhbkk4buusmi::::res://scene for testing/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png<>uid://blftmxdlk301y::::res://power_up.tscn
+main.tscn::PackedScene::5306283812555800665::1785579108::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://dnhbkk4buusmi::::res://scene for testing/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png<>uid://blftmxdlk301y::::res://power_up.tscn<>uid://1eodillcbh15::::res://القائمات/القائمه التوقف/pause_menu.tscn
 power_up.gd::GDScript::6708314893361166078::1785516411::0::1::::<>Area2D<><>0<>0<><>::
 power_up.tscn::PackedScene::3169996118056927632::1785516438::0::1::::<><><>0<>0<><>::uid://c2ts736njtwew::::res://power_up.gd
 العالم.tscn::PackedScene::2840517321453043917::1785507314::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
@@ -29,17 +29,12 @@ ground.tscn::PackedScene::3007400415036554778::1785524207::0::1::::<><><>0<>0<><
 pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png::CompressedTexture2D::8086246807689756968::1785510664::1785510664::1::::<><><>0<>0<>f954915dce2ac4a469b4e362a7b97297<>res://.godot/imported/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png-778934e2ef25061f5c19318b4549d400.ctex::
 ::res://word/::1785509787
 العالم.tscn::PackedScene::7548362440901741290::1785490075::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
-::res://word/تكتشر/::1785524127
-images.jpg::CompressedTexture2D::6023208314858722406::1785510522::1785522917::1::::<><><>0<>0<>e4c92244120c9ef0e6763a16c3f8ce67<>res://.godot/imported/images.jpg-bd4c0cb07f7667bfedd3d0bba923f879.ctex::
-pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png::CompressedTexture2D::7728607931734827779::1785510659::1785522917::1::::<><><>0<>0<>d6451478cf6fd11036a6ebac1c46c093<>res://.godot/imported/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png-94ee286c2ab529b61ca633e12f1c1d45.ctex::
-الارض.png::CompressedTexture2D::3485460145591460380::1785509891::1785522917::1::::<><><>0<>0<>1a01a68bb750b4298c1b62d85c10e332<>res://.godot/imported/الارض.png-f7b3a71f746b4571e4a5be469170e191.ctex::
-العشب.png::CompressedTexture2D::3053130209714900990::1785509818::1785522917::1::::<><><>0<>0<>2e34dc85e9fb1829a0bd93edcef2088c<>res://.godot/imported/العشب.png-727e1a727fc1a0861b41f8f2a9aa7f4d.ctex::
-العشب.pngال.png::CompressedTexture2D::2681398599058061762::1785524126::1785524127::1::::<><><>0<>0<>3ade92c5cdc8767e5a0ec2660268e49e<>res://.godot/imported/العشب.pngال.png-5fff3d406c4de2262cb1e6bdbf6e3de9.ctex::
-عشي.png::CompressedTexture2D::7153989124039024587::1785512864::1785512866::1::::<><><>0<>0<>17addc5fb76ff405e96c85d578e667c0<>res://.godot/imported/عشي.png-de5b7f497ef88c87abdbb6626a67bb8f.ctex::
+::res://word/تكتشر/::1785584044
+الخلفيه الرائيسيه.png::CompressedTexture2D::7040579098820527363::1785583558::1785584058::1::::<><><>0<>0<>6c457c0e1a9ebe96176f1130d99e1782<>res://.godot/imported/الخلفيه الرائيسيه.png-64fb5bda2d41c040589c67f308e01466.ctex::
 ::res://الاصوات/::1785578455
 ::res://الاصوات/أصوات الاصطدام او غير/::1785578455
 License.txt::TextFile::-1::1785578455::0::1::::<><><>0<>0<><>::
-::res://الاصوات/أصوات الاصطدام او غير/Audio/::1785578455
+::res://الاصوات/أصوات الاصطدام او غير/Audio/::1785578481
 footstep_carpet_000.ogg::AudioStreamOggVorbis::7471322576679197733::1785578455::1785578481::1::::<><><>0<>0<>fb9172d7ea565bed2d4c312c40e5980e<>res://.godot/imported/footstep_carpet_000.ogg-e164890d42149deeed1ca7b2127d7112.oggvorbisstr::
 footstep_carpet_001.ogg::AudioStreamOggVorbis::4686898648598301095::1785578455::1785578481::1::::<><><>0<>0<>805e9affa39112d6e1e2fe2d5aa5df48<>res://.godot/imported/footstep_carpet_001.ogg-33d0cfb1636181823f97888c783bcb03.oggvorbisstr::
 footstep_carpet_002.ogg::AudioStreamOggVorbis::7865288290951034303::1785578455::1785578481::1::::<><><>0<>0<>3758212bc0242a1284a17d9058c68582<>res://.godot/imported/footstep_carpet_002.ogg-d5822c25da520a442008af57acc7d450.oggvorbisstr::
@@ -170,26 +165,26 @@ impactWood_medium_004.ogg::AudioStreamOggVorbis::2225503835729530848::1785578455
 اكتساب شي2.ogg::AudioStreamOggVorbis::8515952223276475714::1785578455::1785578481::1::::<><><>0<>0<>289a12e97d9e598fd4ae3a1b3de5a8cc<>res://.godot/imported/اكتساب شي2.ogg-33b19cfd6e54d7cd2501406f62272b81.oggvorbisstr::
 اكتساب شي 1.ogg::AudioStreamOggVorbis::5104137771319466445::1785578455::1785578481::1::::<><><>0<>0<>59425ffb57756aadc2d0f716ffbe1b0a<>res://.godot/imported/اكتساب شي 1.ogg-a594b4674f652feb1d351ce3cce622e3.oggvorbisstr::
 اكتساب شي.ogg::AudioStreamOggVorbis::1570307109717901853::1785578455::1785578481::1::::<><><>0<>0<>5636a7785797109024ec3695a688f1a2<>res://.godot/imported/اكتساب شي.ogg-eda8371ada23c0ffe3d379b79e443a7a.oggvorbisstr::
-::res://الاصوات/المشي/::1785578455
+::res://الاصوات/المشي/::1785578480
 المشي فوق الطوب او الحجر 2.mp3::AudioStreamMP3::980844245818379458::1785578455::1785578480::1::::<><><>0<>0<>c0f6ec0e19f005662dc4bbf1fe30a5ef<>res://.godot/imported/المشي فوق الطوب او الحجر 2.mp3-3001b346b279595d02f7064591e7d4b2.mp3str::
 مشي عبر الاعشاب.mp3::AudioStreamMP3::4754316164827167244::1785578455::1785578480::1::::<><><>0<>0<>8576bfc853378378cb8390d00344aa98<>res://.godot/imported/مشي عبر الاعشاب.mp3-3936968400490a1374823f0aabe97719.mp3str::
 مشي فوق الخشب.mp3::AudioStreamMP3::166147951913458252::1785578455::1785578480::1::::<><><>0<>0<>9b1fcf80232481c63ecf118938e3dbdf<>res://.godot/imported/مشي فوق الخشب.mp3-2eead1b6bea2118229f2ec97f1e508ae.mp3str::
 مشي فوق الطوب او الحجر.mp3::AudioStreamMP3::3249898551598688111::1785578455::1785578480::1::::<><><>0<>0<>e6f4f4995f4a5c2938291e36f990427c<>res://.godot/imported/مشي فوق الطوب او الحجر.mp3-fc19bce29cc99517e10bdbe1079e2959.mp3str::
 مشي مع صدا يمكن في مشهد النهاية اذا ضفنا فيديو.mp3::AudioStreamMP3::4750171965714036844::1785578455::1785578480::1::::<><><>0<>0<>2fc263a64e74ad07a9c48816252d6f08<>res://.godot/imported/مشي مع صدا يمكن في مشهد النهاية اذا ضفنا فيديو.mp3-63eb7e359f3b3dbe10a0212c200c1bd7.mp3str::
-::res://الاصوات/النهاية او بداية او العبة/::1785578455
+::res://الاصوات/النهاية او بداية او العبة/::1785578481
 البداية او النهاية كمان.ogg::AudioStreamOggVorbis::4366901722170774037::1785578455::1785578481::1::::<><><>0<>0<>0509cd9832679d95e4e50a9d330868fa<>res://.godot/imported/البداية او النهاية كمان.ogg-0a0644924eaf2d18bf8fd53f0879c34b.oggvorbisstr::
 ::res://القائمات/::1785578455
-::res://القائمات/القائمه الاعدادات/::1785578455
-options_menu.gd::GDScript::8700743682891530013::1785578455::0::1::::<>Control<><>0<>0<><>::
-options_menu.tscn::PackedScene::4558285349737552225::1785578455::0::1::::<><><>0<>0<><>::uid://dv7x8hyljordt::::res://القائمات/القائمه الاعدادات/options_menu.gd<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://b3hmh60wpf1en::::res://الاصوات/النهاية او بداية او العبة/البداية او النهاية كمان.ogg<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf
-::res://القائمات/القائمه التوقف/::1785578455
-pause_menu.gd::GDScript::9167592041068937383::1785578455::0::1::::<>Control<><>0<>0<><>::
+::res://القائمات/القائمه الاعدادات/::1785579108
+options_menu.gd::GDScript::8700743682891530013::1785579108::0::1::::<>Control<><>0<>0<><>::
+options_menu.tscn::PackedScene::4558285349737552225::1785579108::0::1::::<><><>0<>0<><>::uid://dv7x8hyljordt::::res://القائمات/القائمه الاعدادات/options_menu.gd<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf
+::res://القائمات/القائمه التوقف/::1785579108
+pause_menu.gd::GDScript::9167592041068937383::1785579108::0::1::::<>Control<><>0<>0<><>::
 pause_menu.tscn::PackedScene::1834023278567686646::1785578455::0::1::::<><><>0<>0<><>::uid://d3u35wfehcu52::::res://القائمات/القائمه التوقف/pause_menu.gd<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf
-::res://القائمات/القائمه الرائيسيه/::1785578455
-القائمه الرائيسيه.tscn::PackedScene::861903679216020531::1785578455::0::1::::<><><>0<>0<><>::uid://cqxr07utnryjy::::res://القائمات/القائمه الرائيسيه/القائمه_الرائيسيه.gd<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png
-القائمه_الرائيسيه.gd::GDScript::5944422100187381986::1785578455::0::1::::<>Control<><>0<>0<><>::
+::res://القائمات/القائمه الرائيسيه/::1785581509
+القائمه الرائيسيه.tscn::PackedScene::861903679216020531::1785581258::0::1::::<><><>0<>0<><>::uid://cqxr07utnryjy::::res://القائمات/القائمه الرائيسيه/القائمه_الرائيسيه.gd<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png
+القائمه_الرائيسيه.gd::GDScript::5944422100187381986::1785581509::0::1::::<>Control<><>0<>0<><>::
 ::res://القائمات/القائمه الرائيسيه/game assets/::1785578455
-::res://القائمات/القائمه الرائيسيه/game assets/game assets/::1785578455
+::res://القائمات/القائمه الرائيسيه/game assets/game assets/::1785578481
 big_.png::CompressedTexture2D::3261188494069538889::1785578455::1785578481::1::::<><><>0<>0<>4155b711c2883aa17941a11278e7b68e<>res://.godot/imported/big_.png-86baa7a32e9be73aac88f0568164bba7.ctex::
 big_pressed.png::CompressedTexture2D::659332550051571566::1785578455::1785578481::1::::<><><>0<>0<>da937a1cbd1f261f05b1a1e2587069ff<>res://.godot/imported/big_pressed.png-2305a760a4b6b5b65bed200714263db3.ctex::
 cannon_base.png::CompressedTexture2D::8848468207463489984::1785578455::1785578481::1::::<><><>0<>0<>f8dc2c8c44c463f873ccd62a3c0664c6<>res://.godot/imported/cannon_base.png-4ac333a76933f1a7b77e02c8aae05b91.ctex::
