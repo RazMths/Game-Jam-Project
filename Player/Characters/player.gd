@@ -2,11 +2,20 @@ extends CharacterBody2D
 
 # --- الثوابت والإعدادات الأساسية ---
 @export_category("Movement Settings")
-@export var SPEED = 280.0           
+@export var SPEED = 280.0            
 @export var JUMP_VELOCITY = -380.0  
 @export var GRAVITY = 850.0         
 @export var ACCELERATION = 2400.0   
 @export var DECELERATION = 2800.0   
+
+# --- إعدادات الإضاءة التفاعلية ---
+@export_category("Dynamic Light")
+@export var IDLE_LIGHT_SCALE: float = 1.0   # حجم النور وأنت واقف
+@export var WALK_LIGHT_SCALE: float = 1.5   # حجم النور وأنت ماشي (أكبر حبتين)
+@export var JUMP_LIGHT_SCALE: float = 4.0   # الانفجار الضوئي لما تنط
+
+var light_tween: Tween
+var is_light_flashing: bool = false # عشان نعرف إن النور في حالة الـ 3 ثواني
 
 # --- إعدادات عداد الخوف / الوقت ---
 @export_category("Fear & Darkness Settings")
@@ -22,7 +31,7 @@ var current_fear_time: float = 0.0
 @export var camera: Camera2D # اسحب عقدة Camera2D من شجرة المشهد
 @export var LOW_TIME_THRESHOLD: float = 0.25 
 @export var SHAKE_INTENSITY: float = 2.5 
-@export var CAMERA_FOLLOW_SPEED: float = 5.0 # سرعة تتبع الكاميرا للاعب (ضعها 0 لو الكاميرا ثابتة تماماً بالخلفية)
+@export var CAMERA_FOLLOW_SPEED: float = 5.0 # سرعة تتبع الكاميرا للاعب
 
 var low_time_shake: float = 0.0
 var dash_impact_shake: float = 0.0
@@ -57,9 +66,9 @@ var ghost_timer: float = 0.0
 var original_color: Color = Color.WHITE
 var color_tween: Tween
 
-# أضف هذا المتغير في أعلى الكود مع باقي الإعدادات
+# --- إعدادات تأثير الظلمة ---
 @export_category("Vignette / Fear Shader")
-@export var vignette_rect: ColorRect # اسحب عقدة الـ ColorRect هنا من الـ Inspector
+@export var vignette_rect: ColorRect # اسحب عقدة الـ ColorRect هنا
 
 # --- القفز المزدوج ---
 var jumps_left: int = 2
@@ -68,12 +77,11 @@ var jumps_left: int = 2
 @export_category("Effects")
 @export var wave_scene: PackedScene
 
-# --- الإشارة إلى عقدة التحريكات ---
+# --- الإشارة إلى العقد الداخلية ---
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-
-# for audio 
 @onready var wk_audio: AudioStreamPlayer2D = $"wk audio"
 @onready var jp_audio: AudioStreamPlayer2D = $"jp audio"
+@onready var my_light: PointLight2D = $PointLight2D # تأكد إن عندك نود النور بنفس الاسم
 
 
 func _ready() -> void:
@@ -84,7 +92,6 @@ func _ready() -> void:
 		fear_progress_bar.max_value = MAX_FEAR_TIME
 		fear_progress_bar.value = current_fear_time
 		
-	# حفظ موقع الكاميرا الأصلي إذا كانت ثابتة في المكان
 	if camera:
 		base_camera_position = camera.global_position
 
@@ -114,17 +121,19 @@ func _physics_process(delta: float) -> void:
 		jumps_left = 2
 		can_dash = true
 
-	# 3. القفز والقفز المزدوج
+	# 3. القفز والقفز المزدوج (مع وميض النور)
 	if Input.is_action_just_pressed("jump"):
 		jp_audio.play()
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
 			jumps_left -= 1
 			spawn_echo(180.0)
+			trigger_jump_light() # تشغيل الإضاءة لـ 3 ثواني
 		elif jumps_left > 0:
 			velocity.y = JUMP_VELOCITY * 0.92
 			jumps_left -= 1
 			spawn_echo(240.0)
+			trigger_jump_light() # تشغيل الإضاءة لـ 3 ثواني للقفزة المزدوجة
 
 	# 4. الحركة الأفقية
 	var direction := Input.get_axis("left", "right")
@@ -136,10 +145,18 @@ func _physics_process(delta: float) -> void:
 		
 	update_animations(direction)
 
-	# 5. صدى الخطوات
+	# 5. التحكم التلقائي في حجم الإضاءة حسب الحركة (يشتغل فقط لو مفيش وميض قفز)
+	if my_light and not is_light_flashing:
+		var target_scale = IDLE_LIGHT_SCALE
+		if is_on_floor() and direction != 0:
+			target_scale = WALK_LIGHT_SCALE # النور يكبر حبتين مع المشي
+		
+		my_light.texture_scale = lerp(my_light.texture_scale, target_scale, 10.0 * delta)
+
+	# 6. صدى الخطوات
 	handle_walk_echo(delta, direction)
 
-	# 6. الاندفاع والصدى اليدوي
+	# 7. الاندفاع والصدى اليدوي
 	if Input.is_action_just_pressed("dash") and can_dash:
 		start_dash(direction)
 		
@@ -149,7 +166,28 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	align_sprite_to_floor(delta)
 
-# --- دالة معالجة العداد والاهتزاز ---
+
+# --- دالة وميض النور التدريجي (3 ثواني) ---
+func trigger_jump_light() -> void:
+	if not my_light: return
+	
+	is_light_flashing = true
+	my_light.texture_scale = JUMP_LIGHT_SCALE # يكبر فوراً
+	
+	if light_tween and light_tween.is_running():
+		light_tween.kill() # لو نط تاني في النص، يصفر العداد ويبدأ من جديد
+		
+	light_tween = create_tween()
+	# النور بيصغر بالتدريج الناعم لمدة 3.0 ثواني لحد ما يرجع لحجم الوقوف
+	light_tween.tween_property(my_light, "texture_scale", IDLE_LIGHT_SCALE, 3.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	light_tween.tween_callback(reset_light_flashing)
+
+func reset_light_flashing() -> void:
+	is_light_flashing = false
+
+
+# --- باقي الدوال بدون أي تغيير ---
+
 func handle_fear_timer(delta: float) -> void:
 	if current_fear_time > 0:
 		current_fear_time -= delta
@@ -157,36 +195,29 @@ func handle_fear_timer(delta: float) -> void:
 		if fear_progress_bar:
 			fear_progress_bar.value = current_fear_time
 			
-		var time_ratio = current_fear_time / MAX_FEAR_TIME # القيمة من 1.0 (أمان) إلى 0.0 (خوف كامل)
-		var fear_factor = 1.0 - time_ratio                 # القيمة من 0.0 (أمان) إلى 1.0 (خوف كامل)
+		var time_ratio = current_fear_time / MAX_FEAR_TIME 
+		var fear_factor = 1.0 - time_ratio                 
 
-		# 1. حساب اهتزاز الكاميرا
 		if time_ratio <= LOW_TIME_THRESHOLD:
 			var stress_factor = 1.0 - (time_ratio / LOW_TIME_THRESHOLD)
 			low_time_shake = SHAKE_INTENSITY * stress_factor
 		else:
 			low_time_shake = 0.0
 			
-		# 2. تحديث تأثير الظلمة (Vignette) في الـ Shader
 		update_vignette_effect(fear_factor)
 
 	if current_fear_time <= 0:
 		current_fear_time = 0.0
 		game_over_fear()
 
-# --- دالة تحديث المظلل ---# --- دالة تحديث المظلل ليتبع اللاعب في وجود كاميرا ثابتة ---
 func update_vignette_effect(fear_factor: float) -> void:
 	if vignette_rect and vignette_rect.material:
 		var mat = vignette_rect.material as ShaderMaterial
-		
-		# 1. تحويل موقع اللاعب المباشر لإحداثيات الشاشة بالبكسل
 		var canvas_transform = get_viewport().get_canvas_transform()
 		var player_screen_pos = canvas_transform * global_position
 		
-		# 2. إرسال الموقع المباشر بدون عكس محور Y
 		mat.set_shader_parameter("player_screen_pos", player_screen_pos)
 		
-		# 3. إعدادات الشفافية الخفيفة والدائرة الواسعة
 		var opacity = lerp(0.1, 0.65, fear_factor)
 		var inner_rad = lerp(300.0, 100.0, fear_factor)
 		var outer_rad = lerp(700.0, 350.0, fear_factor)
@@ -195,13 +226,11 @@ func update_vignette_effect(fear_factor: float) -> void:
 		mat.set_shader_parameter("inner_radius", inner_rad)
 		mat.set_shader_parameter("outer_radius", outer_rad)
 
-# --- دالة تطبيق اهتزاز الكاميرا المستقلة ---
 func apply_camera_shake(delta: float) -> void:
 	if camera:
 		dash_impact_shake = move_toward(dash_impact_shake, 0.0, delta * 15.0)
 		var total_shake = low_time_shake + dash_impact_shake
 		
-		# إذا كنت تريد الكاميرا تتتبع اللاعب بنعومة من بعيد:
 		if CAMERA_FOLLOW_SPEED > 0:
 			base_camera_position = base_camera_position.lerp(global_position, CAMERA_FOLLOW_SPEED * delta)
 			
@@ -212,10 +241,8 @@ func apply_camera_shake(delta: float) -> void:
 				randf_range(-total_shake, total_shake)
 			)
 			
-		# تطبيق الموقع النهائي للكاميرا (الموقع الأصلي/المتتبع + الهزة)
 		camera.global_position = base_camera_position + shake_offset
 
-# --- باقي الدوال كما هي ---
 func start_dash(dir: float) -> void:
 	is_dashing = true
 	can_dash = false
@@ -240,7 +267,6 @@ func add_fear_time(amount: float) -> void:
 	if fear_progress_bar:
 		fear_progress_bar.value = current_fear_time
 		
-	# إذا نزل العداد للصفر بسبب ضربة الشبح -> Game Over
 	if current_fear_time <= 0:
 		current_fear_time = 0.0
 		game_over_fear()

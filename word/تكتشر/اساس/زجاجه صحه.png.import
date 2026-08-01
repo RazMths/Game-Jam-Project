@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7krkrlq72r2r"
-path="res://.godot/imported/الخلفيه الرائيسيه.png-fb9f0c40becbcd78b6670d39f395824b.ctex"
+uid="uid://cwyk5vrr6ssde"
+path="res://.godot/imported/زجاجه صحه.png-c073f37c29bd7fc1b0e6d9f55375e8b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png"
-dest_files=["res://.godot/imported/الخلفيه الرائيسيه.png-fb9f0c40becbcd78b6670d39f395824b.ctex"]
+source_file="res://word/تكتشر/اساس/زجاجه صحه.png"
+dest_files=["res://.godot/imported/زجاجه صحه.png-c073f37c29bd7fc1b0e6d9f55375e8b7.ctex"]
 
 [params]
 

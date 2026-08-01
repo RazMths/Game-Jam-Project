@@ -53,6 +53,16 @@ animations = [{
 "speed": 5.5
 }]
 
+[sub_resource type="Gradient" id="Gradient_8o5op"]
+offsets = PackedFloat32Array(0, 0.29411766, 0.32352942, 0.5882353, 0.9558824, 0.97794116)
+colors = PackedColorArray(0.9809484, 0.9809484, 0.9809484, 1, 0.9191176, 0.9191176, 0.9191176, 1, 0.9894501, 0.9894501, 0.9894501, 1, 0.98175263, 0.98175263, 0.98175263, 1, 1, 1, 1, 0.24705882, 0.71831363, 0.74690515, 0.7191762, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_47tcw"]
+gradient = SubResource("Gradient_8o5op")
+fill = 1
+fill_from = Vector2(0.485, 0.5)
+fill_to = Vector2(0.47, 0.055)
+
 [node name="Player" type="CharacterBody2D" unique_id=891439576]
 script = ExtResource("1_5mj4t")
 JUMP_VELOCITY = -470.0
@@ -81,3 +91,7 @@ max_polyphony = 3
 stream = ExtResource("10_8o5op")
 pitch_scale = 1.15
 max_polyphony = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=859370305]
+blend_mode = 2
+texture = SubResource("GradientTexture2D_47tcw")

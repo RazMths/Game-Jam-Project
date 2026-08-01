@@ -1,19 +1,18 @@
 [gd_scene format=3 uid="uid://chunypk5a35q8"]
 
 [ext_resource type="PackedScene" uid="uid://bi32pe66qa6dy" path="res://scene for testing/ground.tscn" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://c7krkrlq72r2r" path="res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://blftmxdlk301y" path="res://power_up.tscn" id="4_1bvp3"]
-[ext_resource type="Shader" uid="uid://d0hwf8w4dmms7" path="res://echo_mask.gdshader" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="5_lquwl"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mtjga"]
-shader = ExtResource("4_lquwl")
-shader_parameter/echo_positions = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-shader_parameter/echo_radii = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-shader_parameter/active_echoes_count = 0
-shader_parameter/ambient_darkness = 1.0
+[ext_resource type="Texture2D" uid="uid://cvsjodrqp0mdo" path="res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png" id="6_7mycd"]
 
 [node name="main" type="Node2D" unique_id=1916839064]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1563126919]
+position = Vector2(-6.0000076, -101.25)
+scale = Vector2(1.4108856, 1.324)
+texture = ExtResource("1_lquwl")
 
 [node name="ground" parent="." unique_id=1026929526 instance=ExtResource("1_0xm2m")]
 position = Vector2(-48, 188)
@@ -47,11 +46,10 @@ scale = Vector2(0.485, 1)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=616888279]
 position = Vector2(4, -125)
 
-[node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera", "vignette_rect") instance=ExtResource("2_h2yge")]
-position = Vector2(-152, -142)
+[node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
+position = Vector2(-150, 145)
 fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
 camera = NodePath("../Camera2D")
-vignette_rect = NodePath("../CanvasLayer/Control/ColorRect")
 
 [node name="ground9" parent="." unique_id=939245974 instance=ExtResource("1_0xm2m")]
 position = Vector2(-11, -26)
@@ -62,7 +60,8 @@ position = Vector2(-311, -115)
 scale = Vector2(0.43, 1)
 
 [node name="Power up" parent="." unique_id=612369099 instance=ExtResource("4_1bvp3")]
-position = Vector2(62, 127)
+position = Vector2(62, 160)
+scale = Vector2(0.5, 0.5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852383026]
 
@@ -71,18 +70,12 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 7.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1807466999]
-material = SubResource("ShaderMaterial_mtjga")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=438519875]
 layout_mode = 0
@@ -100,3 +93,11 @@ position = Vector2(379, -163)
 
 [node name="Ghost4" parent="." unique_id=1039330018 instance=ExtResource("5_lquwl")]
 position = Vector2(-318, -177)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1966870530]
+position = Vector2(105.00003, -282)
+scale = Vector2(0.21184632, 0.2424)
+texture = ExtResource("6_7mycd")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1064730375]
+color = Color(0.16078432, 0.16078432, 0.16078432, 0.81960785)

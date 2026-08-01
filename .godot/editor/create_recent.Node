@@ -1,3 +1,8 @@
+Sprite2D
+MeshInstance2D
+PointLight2D
+CanvasModulate
+AnimatedSprite2D
 Label
 Panel
 AudioStreamPlayer2D
@@ -6,10 +11,4 @@ ColorRect
 CheckButton
 HSlider
 CheckBox
-Sprite2D
 HBoxContainer
-VBoxContainer
-CanvasLayer
-TextureButton
-ProgressBar
-Control

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bi32pe66qa6dy"]
 
 [ext_resource type="Script" uid="uid://bcxasyeigyl7o" path="res://scene for testing/ground.gd" id="1_bf6ie"]
-[ext_resource type="Texture2D" uid="uid://beg5ijdr25k2e" path="res://word/تكتشر/العشب.pngال.png" id="2_qbt0e"]
+[ext_resource type="Texture2D" uid="uid://bq7ib6pwc1kds" path="res://word/تكتشر/الخلفيات الرائيسيه/الارضيه.png" id="2_qbt0e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
 size = Vector2(258, 28)
@@ -15,4 +15,8 @@ shape = SubResource("RectangleShape2D_7dm0k")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=83332232]
 position = Vector2(2.9999938, -6.999999)
 scale = Vector2(0.22000001, 0.105)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1006365997]
+position = Vector2(40.49998, 9)
+scale = Vector2(0.67342585, 0.39379996)
 texture = ExtResource("2_qbt0e")
