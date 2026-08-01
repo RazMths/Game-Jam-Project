@@ -28,12 +28,6 @@ animations = [{
 }, {
 "duration": 0.7,
 "texture": ExtResource("5_crptq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_8munr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_8munr")
 }],
 "loop": 0,
 "name": &"jamp",
@@ -76,5 +70,3 @@ position = Vector2(-1, 0)
 scale = Vector2(0.115, 0.115)
 sprite_frames = SubResource("SpriteFrames_ajdtp")
 animation = &"jamp"
-frame = 1
-frame_progress = 1.0

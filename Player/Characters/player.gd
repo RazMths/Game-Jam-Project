@@ -57,6 +57,10 @@ var ghost_timer: float = 0.0
 var original_color: Color = Color.WHITE
 var color_tween: Tween
 
+# أضف هذا المتغير في أعلى الكود مع باقي الإعدادات
+@export_category("Vignette / Fear Shader")
+@export var vignette_rect: ColorRect # اسحب عقدة الـ ColorRect هنا من الـ Inspector
+
 # --- القفز المزدوج ---
 var jumps_left: int = 2
 
@@ -141,23 +145,49 @@ func _physics_process(delta: float) -> void:
 
 # --- دالة معالجة العداد والاهتزاز ---
 func handle_fear_timer(delta: float) -> void:
-	print(current_fear_time)
 	if current_fear_time > 0:
 		current_fear_time -= delta
-	
+		
 		if fear_progress_bar:
 			fear_progress_bar.value = current_fear_time
 			
-		var time_ratio = current_fear_time / MAX_FEAR_TIME
-		
+		var time_ratio = current_fear_time / MAX_FEAR_TIME # القيمة من 1.0 (أمان) إلى 0.0 (خوف كامل)
+		var fear_factor = 1.0 - time_ratio                 # القيمة من 0.0 (أمان) إلى 1.0 (خوف كامل)
+
+		# 1. حساب اهتزاز الكاميرا
 		if time_ratio <= LOW_TIME_THRESHOLD:
 			var stress_factor = 1.0 - (time_ratio / LOW_TIME_THRESHOLD)
 			low_time_shake = SHAKE_INTENSITY * stress_factor
 		else:
 			low_time_shake = 0.0
+			
+		# 2. تحديث تأثير الظلمة (Vignette) في الـ Shader
+		update_vignette_effect(fear_factor)
 
-		if current_fear_time <= 0:
-			game_over_fear()
+	if current_fear_time <= 0:
+		current_fear_time = 0.0
+		game_over_fear()
+
+# --- دالة تحديث المظلل ---# --- دالة تحديث المظلل ليتبع اللاعب في وجود كاميرا ثابتة ---
+func update_vignette_effect(fear_factor: float) -> void:
+	if vignette_rect and vignette_rect.material:
+		var mat = vignette_rect.material as ShaderMaterial
+		
+		# 1. تحويل موقع اللاعب المباشر لإحداثيات الشاشة بالبكسل
+		var canvas_transform = get_viewport().get_canvas_transform()
+		var player_screen_pos = canvas_transform * global_position
+		
+		# 2. إرسال الموقع المباشر بدون عكس محور Y
+		mat.set_shader_parameter("player_screen_pos", player_screen_pos)
+		
+		# 3. إعدادات الشفافية الخفيفة والدائرة الواسعة
+		var opacity = lerp(0.1, 0.65, fear_factor)
+		var inner_rad = lerp(300.0, 100.0, fear_factor)
+		var outer_rad = lerp(700.0, 350.0, fear_factor)
+
+		mat.set_shader_parameter("vignette_opacity", opacity)
+		mat.set_shader_parameter("inner_radius", inner_rad)
+		mat.set_shader_parameter("outer_radius", outer_rad)
 
 # --- دالة تطبيق اهتزاز الكاميرا المستقلة ---
 func apply_camera_shake(delta: float) -> void:
@@ -236,7 +266,7 @@ func spawn_ghost() -> void:
 	ghost.flip_h = animated_sprite.flip_h
 	ghost.modulate = GHOST_COLOR
 	ghost.scale = animated_sprite.scale
-	get_tree().current_scene.add_child(ghost)
+	get_tree().current_scene.call_deferred("add_child", ghost)
 	
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)

@@ -1,8 +1,8 @@
+ColorRect
 AudioStreamPlayer2D
 CheckButton
 HSlider
 CheckBox
-ColorRect
 Sprite2D
 Label
 HBoxContainer
@@ -12,4 +12,3 @@ TextureButton
 ProgressBar
 Control
 Camera2D
-AnimatedSprite2D
