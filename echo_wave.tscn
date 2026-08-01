@@ -4,8 +4,15 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mtjga"]
 
-[node name="echo wave" type="Area2D" unique_id=1325153548]
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_mtjga"]
+buffer_length = 0.1
+
+[node name="echo wave" type="Area2D" unique_id=1325153548 groups=["echo_waves"]]
 script = ExtResource("1_o5kvl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=388056063]
 shape = SubResource("CircleShape2D_mtjga")
+
+[node name="echo sound generater" type="AudioStreamPlayer2D" parent="." unique_id=490321178]
+stream = SubResource("AudioStreamGenerator_mtjga")
+autoplay = true

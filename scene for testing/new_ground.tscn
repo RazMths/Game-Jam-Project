@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://hns1tcs6vt8a"]
+
+[ext_resource type="Texture2D" uid="uid://beg5ijdr25k2e" path="res://word/تكتشر/العشب.pngال.png" id="2_7stab"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
+size = Vector2(258, 28)
+
+[node name="ground" type="StaticBody2D" unique_id=1026929526]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=935068014]
+shape = SubResource("RectangleShape2D_7dm0k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=83332232]
+position = Vector2(2.9999938, -6.999999)
+scale = Vector2(0.22000001, 0.105)
+texture = ExtResource("2_7stab")

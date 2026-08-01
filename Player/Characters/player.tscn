@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://mq3a6biyfdsp" path="res://Player/Characters/الانميشن/قفز/2.png" id="5_crptq"]
 [ext_resource type="Texture2D" uid="uid://b7pv7v3lg0w0l" path="res://Player/Characters/الانميشن/الركض/3.png" id="6_8o5op"]
 [ext_resource type="Texture2D" uid="uid://clxgjjkhpujqu" path="res://Player/Characters/الانميشن/الركض/4.png" id="7_crptq"]
+[ext_resource type="AudioStream" uid="uid://boprgxhve7e3u" path="res://الاصوات/echo walking sound.wav" id="9_8munr"]
+[ext_resource type="AudioStream" uid="uid://debno8v20f2a8" path="res://الاصوات/echo sound.wav" id="10_8o5op"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65n15"]
 size = Vector2(12, 56)
@@ -28,12 +30,6 @@ animations = [{
 }, {
 "duration": 0.7,
 "texture": ExtResource("5_crptq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_8munr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_8munr")
 }],
 "loop": 0,
 "name": &"jamp",
@@ -76,5 +72,12 @@ position = Vector2(-1, 0)
 scale = Vector2(0.115, 0.115)
 sprite_frames = SubResource("SpriteFrames_ajdtp")
 animation = &"jamp"
-frame = 1
-frame_progress = 1.0
+
+[node name="wk audio" type="AudioStreamPlayer2D" parent="." unique_id=1614566273]
+stream = ExtResource("9_8munr")
+max_polyphony = 3
+
+[node name="jp audio" type="AudioStreamPlayer2D" parent="." unique_id=1678676974]
+stream = ExtResource("10_8o5op")
+pitch_scale = 1.15
+max_polyphony = 2

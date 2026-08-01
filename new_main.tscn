@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bhin4rt5w4yec"]
+
+[ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="1_5d015"]
+[ext_resource type="Shader" uid="uid://d0hwf8w4dmms7" path="res://echo_mask.gdshader" id="2_2ss5u"]
+[ext_resource type="PackedScene" uid="uid://hns1tcs6vt8a" path="res://scene for testing/new_ground.tscn" id="3_2ss5u"]
+[ext_resource type="Script" uid="uid://dqwfwg0cox5wc" path="res://test_node.gd" id="4_ckrgq"]
+[ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="5_touta"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ckrgq"]
+shader = ExtResource("2_2ss5u")
+shader_parameter/player_screen_pos = Vector2(0, 0)
+shader_parameter/player_light_radius = 45.0
+shader_parameter/echo_positions = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/echo_radii = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/echo_opacities = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/active_echoes_count = 0
+shader_parameter/glow_color = Color(1, 0.73594284, 0.61748344, 1)
+shader_parameter/echo_intensity = 1.6
+shader_parameter/ambient_darkness = 1.0
+
+[node name="NewMain" type="Node2D" unique_id=1285115932]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1276956186]
+position = Vector2(4, -125)
+zoom = Vector2(0.64, 0.64)
+
+[node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("1_5d015")]
+position = Vector2(-152, -142)
+fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
+camera = NodePath("../Camera2D")
+STEP_ECHO_INTERVAL = 0.3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1772756112]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=787087501]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1537856671]
+material = SubResource("ShaderMaterial_ckrgq")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=1400585149]
+layout_mode = 0
+offset_right = 118.0
+offset_bottom = 27.0
+
+[node name="ground" parent="." unique_id=1026929526 instance=ExtResource("3_2ss5u")]
+position = Vector2(-178, -7)
+
+[node name="ground5" parent="." unique_id=1425303000 instance=ExtResource("3_2ss5u")]
+position = Vector2(-125, -339)
+
+[node name="ground2" parent="." unique_id=823114332 instance=ExtResource("3_2ss5u")]
+position = Vector2(231, -52)
+
+[node name="ground3" parent="." unique_id=1511720448 instance=ExtResource("3_2ss5u")]
+position = Vector2(-422, -151)
+
+[node name="ground4" parent="." unique_id=1727490008 instance=ExtResource("3_2ss5u")]
+position = Vector2(134, -183.99998)
+rotation = -0.5235988
+scale = Vector2(0.59999967, 1)
+
+[node name="Test node" type="Node2D" parent="." unique_id=2107032192 node_paths=PackedStringArray("echo_shader_rect", "player")]
+script = ExtResource("4_ckrgq")
+echo_shader_rect = NodePath("../CanvasLayer/Control/ColorRect")
+player = NodePath("../Player")
+
+[node name="Ghost" parent="." unique_id=959379480 instance=ExtResource("5_touta")]
+position = Vector2(244, -141)
+
+[node name="Ghost2" parent="." unique_id=1526425979 instance=ExtResource("5_touta")]
+position = Vector2(-433, -231)
+
+[node name="Ghost3" parent="." unique_id=186231958 instance=ExtResource("5_touta")]
+position = Vector2(-122, -415)

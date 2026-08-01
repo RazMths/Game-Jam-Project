@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cwplhe37nno1a"]
+
+[ext_resource type="Script" uid="uid://dnunlpjid7htd" path="res://ghost.gd" id="1_v5pp4"]
+[ext_resource type="Texture2D" uid="uid://j4ntpku3avxf" path="res://ideativas-tlm-halloween-9862664_640.png" id="2_6attn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obmiq"]
+size = Vector2(26, 48)
+
+[node name="Ghost" type="Area2D" unique_id=959379480]
+script = ExtResource("1_v5pp4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1871790803]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_obmiq")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1925787941]
+position = Vector2(1, 0)
+scale = Vector2(0.07534247, 0.08125)
+texture = ExtResource("2_6attn")
