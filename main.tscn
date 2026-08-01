@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dnhbkk4buusmi" path="res://scene for testing/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://blftmxdlk301y" path="res://power_up.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://1eodillcbh15" path="res://القائمات/القائمه التوقف/pause_menu.tscn" id="5_lquwl"]
 
 [node name="main" type="Node2D" unique_id=1916839064]
 
@@ -58,3 +59,6 @@ scale = Vector2(0.43, 1)
 
 [node name="Power up" parent="." unique_id=612369099 instance=ExtResource("4_1bvp3")]
 position = Vector2(62, 127)
+
+[node name="PauseMenu" parent="." unique_id=1988215942 instance=ExtResource("5_lquwl")]
+visible = false

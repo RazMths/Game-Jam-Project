@@ -15,4 +15,5 @@ func _on_exit_pressed() -> void:
 func _on_opsions_pressed() -> void:
 	hide() # إخفاء قائمة التوقف
 	if options_menu:
-		options_menu.show() # إظهار قائمة الإعدادات
+		get_tree().change_scene_to_file("res://القائمات/القائمه الاعدادات/options_menu.tscn")
+ 
