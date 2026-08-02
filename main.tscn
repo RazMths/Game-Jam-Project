@@ -1,13 +1,32 @@
 [gd_scene format=3 uid="uid://chunypk5a35q8"]
 
 [ext_resource type="PackedScene" uid="uid://bi32pe66qa6dy" path="res://scene for testing/ground.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dqwfwg0cox5wc" path="res://test_node.gd" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://c7krkrlq72r2r" path="res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://blftmxdlk301y" path="res://power_up.tscn" id="4_1bvp3"]
+[ext_resource type="Shader" uid="uid://d0hwf8w4dmms7" path="res://echo_mask.gdshader" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://cvsjodrqp0mdo" path="res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png" id="6_7mycd"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mtjga"]
+shader = ExtResource("5_272bh")
+shader_parameter/player_screen_pos = Vector2(0, 0)
+shader_parameter/player_light_radius = 120.0
+shader_parameter/echo_positions = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/echo_radii = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/echo_opacities = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/active_echoes_count = 0
+shader_parameter/glow_color = Color(1, 0.8552519, 0.8712497, 1)
+shader_parameter/echo_intensity = 1.6
+shader_parameter/ambient_darkness = 1.0
+
 [node name="main" type="Node2D" unique_id=1916839064]
+
+[node name="Important Node" type="Node2D" parent="." unique_id=1509368350 node_paths=PackedStringArray("echo_shader_rect", "player")]
+script = ExtResource("1_5vw27")
+echo_shader_rect = NodePath("../CanvasLayer/Control/ColorRect")
+player = NodePath("../Player")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1563126919]
 position = Vector2(-6.0000076, -101.25)
@@ -70,10 +89,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 7.0
-offset_top = 7.0
-offset_right = 7.0
-offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -81,6 +96,15 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 118.0
 offset_bottom = 27.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1032889451]
+material = SubResource("ShaderMaterial_mtjga")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Ghost" parent="." unique_id=959379480 instance=ExtResource("5_lquwl")]
 position = Vector2(242, -1)
@@ -98,6 +122,3 @@ position = Vector2(-318, -177)
 position = Vector2(105.00003, -282)
 scale = Vector2(0.21184632, 0.2424)
 texture = ExtResource("6_7mycd")
-
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1064730375]
-color = Color(0.16078432, 0.16078432, 0.16078432, 0.81960785)

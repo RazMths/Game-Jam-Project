@@ -81,8 +81,6 @@ var jumps_left: int = 2
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var wk_audio: AudioStreamPlayer2D = $"wk audio"
 @onready var jp_audio: AudioStreamPlayer2D = $"jp audio"
-@onready var my_light: PointLight2D = $PointLight2D # تأكد إن عندك نود النور بنفس الاسم
-
 
 func _ready() -> void:
 	original_color = animated_sprite.modulate
@@ -128,12 +126,12 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY
 			jumps_left -= 1
 			spawn_echo(180.0)
-			trigger_jump_light() # تشغيل الإضاءة لـ 3 ثواني
+# تشغيل الإضاءة لـ 3 ثواني
 		elif jumps_left > 0:
 			velocity.y = JUMP_VELOCITY * 0.92
 			jumps_left -= 1
 			spawn_echo(240.0)
-			trigger_jump_light() # تشغيل الإضاءة لـ 3 ثواني للقفزة المزدوجة
+# تشغيل الإضاءة لـ 3 ثواني للقفزة المزدوجة
 
 	# 4. الحركة الأفقية
 	var direction := Input.get_axis("left", "right")
@@ -144,14 +142,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, DECELERATION * delta)
 		
 	update_animations(direction)
-
-	# 5. التحكم التلقائي في حجم الإضاءة حسب الحركة (يشتغل فقط لو مفيش وميض قفز)
-	if my_light and not is_light_flashing:
-		var target_scale = IDLE_LIGHT_SCALE
-		if is_on_floor() and direction != 0:
-			target_scale = WALK_LIGHT_SCALE # النور يكبر حبتين مع المشي
-		
-		my_light.texture_scale = lerp(my_light.texture_scale, target_scale, 10.0 * delta)
 
 	# 6. صدى الخطوات
 	handle_walk_echo(delta, direction)
@@ -165,25 +155,6 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	align_sprite_to_floor(delta)
-
-
-# --- دالة وميض النور التدريجي (3 ثواني) ---
-func trigger_jump_light() -> void:
-	if not my_light: return
-	
-	is_light_flashing = true
-	my_light.texture_scale = JUMP_LIGHT_SCALE # يكبر فوراً
-	
-	if light_tween and light_tween.is_running():
-		light_tween.kill() # لو نط تاني في النص، يصفر العداد ويبدأ من جديد
-		
-	light_tween = create_tween()
-	# النور بيصغر بالتدريج الناعم لمدة 3.0 ثواني لحد ما يرجع لحجم الوقوف
-	light_tween.tween_property(my_light, "texture_scale", IDLE_LIGHT_SCALE, 3.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	light_tween.tween_callback(reset_light_flashing)
-
-func reset_light_flashing() -> void:
-	is_light_flashing = false
 
 
 # --- باقي الدوال بدون أي تغيير ---
