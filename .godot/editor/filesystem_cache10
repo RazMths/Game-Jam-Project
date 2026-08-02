@@ -1,16 +1,16 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785662700
+::res://::1785675261
 echo_mask.gdshader::Shader::8929780257697292260::1785638085::0::1::::<><><>0<>0<><>::
 echo_wave.gd::GDScript::8990162606447599727::1785610938::0::1::::<>Area2D<><>0<>0<><>::
 echo_wave.tscn::PackedScene::7730046669918722604::1785610551::0::1::::<><><>0<>0<><>::uid://d1c5wulmm8utr::::res://echo_wave.gd
 ghost.gd::GDScript::8113814340216088341::1785660590::0::1::::<>Area2D<><>0<>0<><>::
-ghost.tscn::PackedScene::6348642236031334756::1785660526::0::1::::<><><>0<>0<><>::uid://dnunlpjid7htd::::res://ghost.gd<>uid://j4ntpku3avxf::::res://ideativas-tlm-halloween-9862664_640.png<>uid://bflk7on6nqtn4::::res://الاصوات/ghost scream echo.wav<>uid://caj3d2swwg7l1::::res://الاصوات/echo push ghost sound.mp3
+ghost.tscn::PackedScene::6348642236031334756::1785675261::0::1::::<><><>0<>0<><>::uid://dnunlpjid7htd::::res://ghost.gd<>uid://j4ntpku3avxf::::res://ideativas-tlm-halloween-9862664_640.png<>uid://cicgsjvi4shyj::::res://الاصوات/echo ghost sounds.wav<>uid://caj3d2swwg7l1::::res://الاصوات/echo push ghost sound.mp3
 icon.svg::CompressedTexture2D::2422543624120626462::1785516437::1785637778::1::::<><><>0<>0<>f07825c0a0b0da6ed0b55b8dc649a8c6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ideativas-tlm-halloween-9862664_640.png::CompressedTexture2D::692390602844629287::1785584071::1785637778::1::::<><><>0<>0<>8dbd71c2be151b527360869e7c53af93<>res://.godot/imported/ideativas-tlm-halloween-9862664_640.png-03a06227f538cd4c74c647d0bac98c00.ctex::
-main.tscn::PackedScene::5306283812555800665::1785662087::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://dqwfwg0cox5wc::::res://test_node.gd<>uid://c7krkrlq72r2r::::res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://blftmxdlk301y::::res://power_up.tscn<>uid://d0hwf8w4dmms7::::res://echo_mask.gdshader<>uid://cwplhe37nno1a::::res://ghost.tscn<>uid://cvsjodrqp0mdo::::res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png
+main.tscn::PackedScene::5306283812555800665::1785669353::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://dqwfwg0cox5wc::::res://test_node.gd<>uid://c7krkrlq72r2r::::res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://blftmxdlk301y::::res://power_up.tscn<>uid://d0hwf8w4dmms7::::res://echo_mask.gdshader<>uid://cwplhe37nno1a::::res://ghost.tscn<>uid://cvsjodrqp0mdo::::res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png
 new_main.tscn::PackedScene::2895099643762878130::1785637732::0::1::::<><><>0<>0<><>::uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://d0hwf8w4dmms7::::res://echo_mask.gdshader<>uid://hns1tcs6vt8a::::res://scene for testing/new_ground.tscn<>uid://dqwfwg0cox5wc::::res://test_node.gd<>uid://cwplhe37nno1a::::res://ghost.tscn
-power_up.gd::GDScript::6708314893361166078::1785662671::0::1::::<>Area2D<><>0<>0<><>::
-power_up.tscn::PackedScene::3169996118056927632::1785662700::0::1::::<><><>0<>0<><>::uid://c2ts736njtwew::::res://power_up.gd<>uid://cwyk5vrr6ssde::::res://word/تكتشر/اساس/زجاجه صحه.png<>uid://sw3k1tnrvgs2::::res://الاصوات/echo sound power upwav.wav
+power_up.gd::GDScript::6708314893361166078::1785669022::0::1::::<>Area2D<><>0<>0<><>::
+power_up.tscn::PackedScene::3169996118056927632::1785663224::0::1::::<><><>0<>0<><>::uid://c2ts736njtwew::::res://power_up.gd<>uid://cwyk5vrr6ssde::::res://word/تكتشر/اساس/زجاجه صحه.png<>uid://sw3k1tnrvgs2::::res://الاصوات/echo sound power upwav.wav
 test_node.gd::GDScript::8328043086177606654::1785596643::0::1::::<>Node<><>0<>0<><>::
 VignetteEffectShader.gdshader::Shader::841026662284322787::1785638085::0::1::::<><><>0<>0<><>::
 العالم.tscn::PackedScene::2840517321453043917::1785516437::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
@@ -38,8 +38,8 @@ pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-ima
 ::res://word/::1785637563
 العالم.tscn::PackedScene::7548362440901741290::1785521242::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
 ::res://word/تكتشر/::1785637563
-::res://word/تكتشر/اساس/::1785663033
-glass fragmet.png::CompressedTexture2D::3655015421047215138::1785663033::1785663034::1::::<><><>0<>0<>7f9d0626e267b72bbfc9913b1f320c7d<>res://.godot/imported/glass fragmet.png-6b362e07e45f62c8ed13d5d8ea753b97.ctex::
+::res://word/تكتشر/اساس/::1785669291
+glass fragmet.png::CompressedTexture2D::5268516648490190958::1785669290::1785669291::1::::<><><>0<>0<>d411d123e5b0b4f952d97209eb779d29<>res://.godot/imported/glass fragmet.png-6b362e07e45f62c8ed13d5d8ea753b97.ctex::
 زجاجه صحه.png::CompressedTexture2D::6367202867331745810::1785637563::1785637563::1::::<><><>0<>0<>2d523f80e78eee8492ff305763b9b579<>res://.godot/imported/زجاجه صحه.png-c073f37c29bd7fc1b0e6d9f55375e8b7.ctex::
 صندوق.png::CompressedTexture2D::4007089268926454909::1785637563::1785637563::1::::<><><>0<>0<>e0c84604eaa3035f11301ad14233e410<>res://.godot/imported/صندوق.png-d007da5bc489760c0a2c9726407fcdb9.ctex::
 ::res://word/تكتشر/الخلفيات الرائيسيه/::1785637563
@@ -48,11 +48,14 @@ glass fragmet.png::CompressedTexture2D::3655015421047215138::1785663033::1785663
 الخلفيه الرائيسيه.png::CompressedTexture2D::7040579098820527363::1785637563::1785637563::1::::<><><>0<>0<>b17b605d7d2e7bb261eea968e67c21c0<>res://.godot/imported/الخلفيه الرائيسيه.png-fb9f0c40becbcd78b6670d39f395824b.ctex::
 الشباك.png::CompressedTexture2D::6284537521987258780::1785637563::1785637563::1::::<><><>0<>0<>d2b28484f204dbe3787bb67861ec0aed<>res://.godot/imported/الشباك.png-63303e3ab3615e7f43a9c45545b3fcdf.ctex::
 الشعار.png::CompressedTexture2D::2783460980687009539::1785637563::1785637563::1::::<><><>0<>0<>a00ecf1b7bbc2669c408c5e6acc57753<>res://.godot/imported/الشعار.png-0d483340466b95359a2f843c04ba9249.ctex::
-::res://الاصوات/::1785662387
+::res://الاصوات/::1785676085
+background audio.mp3::AudioStreamMP3::6610108206461984081::1785676085::1785676086::1::::<><><>0<>0<>634ed8cd652d8667657923ec20fb0d51<>res://.godot/imported/background audio.mp3-33b4832edb5767247ff6160fd716ec0f.mp3str::
 echo dash.wav::AudioStreamWAV::4144088799683978465::1785655017::1785655019::1::::<><><>0<>0<>555fdf4d10af392ce9614f01ce02e6d1<>res://.godot/imported/echo dash.wav-d448c08747a7e0946dd532f09cb4d977.sample::
+echo ghost sounds.wav::AudioStreamWAV::5338877823799465205::1785675199::1785675201::1::::<><><>0<>0<>596d08c12b56bcd8564ec217cb49fe86<>res://.godot/imported/echo ghost sounds.wav-de8a42ffbf457566fb235add1d058823.sample::
 echo jump.wav::AudioStreamWAV::7474186413382023594::1785653847::1785653849::1::::<><><>0<>0<>5ef473db6e49808c812ae6936bfb672e<>res://.godot/imported/echo jump.wav-c890031a26d5412fbde4f5f992653871.sample::
 echo power up.wav::AudioStreamWAV::1562746633956194629::1785661495::1785661517::1::::<><><>0<>0<>b3d9b187a0307937aed9482ba3fdb796<>res://.godot/imported/echo power up.wav-96aab9678baef9c6377e9d8bb89ef01c.sample::
 echo push ghost sound.mp3::AudioStreamMP3::4793127647318101088::1785660409::1785660409::1::::<><><>0<>0<>efc2e579c6f4ae74463e5841557512db<>res://.godot/imported/echo push ghost sound.mp3-dd748120ed5946e86a1a22281a1fc34c.mp3str::
+echo select1.wav::AudioStreamWAV::4800559012889071487::1785675466::1785675468::1::::<><><>0<>0<>2f7b4294051e413a3d2d482337c59953<>res://.godot/imported/echo select1.wav-74cc311096d9f0a96057b39f4472b5aa.sample::
 echo sound power upwav.wav::AudioStreamWAV::1310534825383006767::1785662384::1785662387::1::::<><><>0<>0<>2e73761220f9ed0735b1fad7dbada39d<>res://.godot/imported/echo sound power upwav.wav-25c9926d2bfdec9caf509f35f0e538a9.sample::
 echo sound.wav::AudioStreamWAV::7442897892377965157::1785606957::1785637778::1::::<><><>0<>0<>3c963bb17babdd5d710c61ba12b92e43<>res://.godot/imported/echo sound.wav-ee10269c006048e98ac4744931630f41.sample::
 echo walking sound.wav::AudioStreamWAV::3401074284388347132::1785607293::1785637778::1::::<><><>0<>0<>abb273eca5e420fc6876a5586ad2e18c<>res://.godot/imported/echo walking sound.wav-14017b5416d619a13a6b753fe75c9a0b.sample::
@@ -207,12 +210,15 @@ options_menu.tscn::PackedScene::4558285349737552225::1785583416::0::1::::<><><>0
 ::res://القائمات/القائمه التوقف/::1785583416
 pause_menu.gd::GDScript::9167592041068937383::1785583416::0::1::::<>Control<><>0<>0<><>::
 pause_menu.tscn::PackedScene::1834023278567686646::1785575301::0::1::::<><><>0<>0<><>::uid://d3u35wfehcu52::::res://القائمات/القائمه التوقف/pause_menu.gd<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf
-::res://القائمات/القائمه الرائيسيه/::1785637563
+::res://القائمات/القائمه الرائيسيه/::1785674775
 Global.gd::GDScript::185343267558133047::1785637563::0::1::::<>Node<><>0<>0<><>::
+main_menu.tscn::PackedScene::4210432548783749317::1785674775::0::1::::<><><>0<>0<><>::uid://dpue7qc13p5h2::::res://القائمات/القائمه الرائيسيه/main_menu.gd<>uid://drb3v5kqh8t74::::res://القائمات/القائمه الرائيسيه/menu_light.gdshader<>uid://byovl2bcbr621::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaywriteNZGuides-Regular.ttf<>uid://canorgo83vdsh::::res://الاصوات/echo select1.wav
+menu_light.gdshader::Shader::8356275940035567009::1785673916::0::1::::<><><>0<>0<><>::
+main_menu.gd::GDScript::8253683118789581049::1785674775::0::1::::<>Control<><>0<>0<><>::
 القائمه الرائيسيه.tscn::PackedScene::861903679216020531::1785637563::0::1::::<><><>0<>0<><>::uid://cqxr07utnryjy::::res://القائمات/القائمه الرائيسيه/القائمه_الرائيسيه.gd<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png
 القائمه_الرائيسيه.gd::GDScript::5944422100187381986::1785637563::0::1::::<>Control<><>0<>0<><>::
 ::res://القائمات/القائمه الرائيسيه/game assets/::1785575301
-::res://القائمات/القائمه الرائيسيه/game assets/game assets/::1785637563
+::res://القائمات/القائمه الرائيسيه/game assets/game assets/::1785670441
 big_.png::CompressedTexture2D::3261188494069538889::1785575301::1785575301::1::::<><><>0<>0<>4155b711c2883aa17941a11278e7b68e<>res://.godot/imported/big_.png-86baa7a32e9be73aac88f0568164bba7.ctex::
 big_pressed.png::CompressedTexture2D::659332550051571566::1785575301::1785575301::1::::<><><>0<>0<>da937a1cbd1f261f05b1a1e2587069ff<>res://.godot/imported/big_pressed.png-2305a760a4b6b5b65bed200714263db3.ctex::
 cannon_base.png::CompressedTexture2D::8848468207463489984::1785575301::1785575301::1::::<><><>0<>0<>f8dc2c8c44c463f873ccd62a3c0664c6<>res://.godot/imported/cannon_base.png-4ac333a76933f1a7b77e02c8aae05b91.ctex::
@@ -222,4 +228,5 @@ Global.gd::GDScript::6789913022961750314::1785637563::0::1::::<>Node<><>0<>0<><>
 glow.png::CompressedTexture2D::2727287882017680747::1785575301::1785575301::1::::<><><>0<>0<>f09992bba2273f3a12bbfa404d606c36<>res://.godot/imported/glow.png-30b33623d70fdd516858c237e1f34365.ctex::
 impactPlank_medium_000.ogg::AudioStreamOggVorbis::5463364978173294382::1785575301::1785575301::1::::<><><>0<>0<>f48efc9ebd49dc2aa788ebf500312ac2<>res://.godot/imported/impactPlank_medium_000.ogg-0dab524d7a7f2b82ccc38a500b2e7ec4.oggvorbisstr::
 PlaymegamesReguler-2OOee.ttf::FontFile::3810734929465602587::1785575301::1785575301::1::::<><><>0<>0<>fd8f794f46de740429f7cae130165d60<>res://.godot/imported/PlaymegamesReguler-2OOee.ttf-c0eb4d97055de0b93577a460e0b2456d.fontdata::
+PlaywriteNZGuides-Regular.ttf::FontFile::4101150339911935172::1785670441::1785670406::1::::<><><>0<>0<>6dd2b9ad74ae8ada15fd93cdc133de04<>res://.godot/imported/PlaywriteNZGuides-Regular.ttf-017b782ee89ecb73730a73721b085adc.fontdata::
 switch21.ogg::AudioStreamOggVorbis::5496256075210659066::1785575301::1785575301::1::::<><><>0<>0<>f6b18c5a425aee5b56e0b491ff21cb6a<>res://.godot/imported/switch21.ogg-c6e739478986afc1f974939db05d625e.oggvorbisstr::

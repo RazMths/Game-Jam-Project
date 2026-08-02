@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://b08thdrwdqwyn"]
+
+[ext_resource type="Script" uid="uid://dpue7qc13p5h2" path="res://القائمات/القائمه الرائيسيه/main_menu.gd" id="1_06udk"]
+[ext_resource type="Shader" uid="uid://drb3v5kqh8t74" path="res://القائمات/القائمه الرائيسيه/menu_light.gdshader" id="1_mlclh"]
+[ext_resource type="FontFile" uid="uid://byovl2bcbr621" path="res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaywriteNZGuides-Regular.ttf" id="1_vtgvk"]
+[ext_resource type="Shader" uid="uid://csghl1pgr5kad" path="res://القائمات/القائمه الرائيسيه/circle_transition.gdshader" id="4_q3j7k"]
+[ext_resource type="AudioStream" uid="uid://canorgo83vdsh" path="res://الاصوات/echo select1.wav" id="4_qx16e"]
+[ext_resource type="AudioStream" uid="uid://c1f8rs8bk8rw0" path="res://الاصوات/background audio.mp3" id="5_l6cdo"]
+[ext_resource type="Texture2D" uid="uid://j4ntpku3avxf" path="res://ideativas-tlm-halloween-9862664_640.png" id="6_axpik"]
+[ext_resource type="Script" uid="uid://d027il63y3se4" path="res://القائمات/القائمه الرائيسيه/t.gd" id="7_crr37"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mlclh"]
+shader = ExtResource("1_mlclh")
+shader_parameter/mouse_position = Vector2(0, 0)
+shader_parameter/light_radius = 130.0
+shader_parameter/glow_color = Color(0.585208, 0.92390406, 1, 1)
+shader_parameter/ambient_darkness = 0.9710000461225
+shader_parameter/wave_positions = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/wave_radii = PackedFloat32Array(0, 0, 0, 0, 0)
+shader_parameter/wave_opacities = PackedFloat32Array(0, 0, 0, 0, 0)
+shader_parameter/active_waves_count = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_mtjga"]
+line_spacing = 3.18
+font = ExtResource("1_vtgvk")
+font_size = 69
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mtjga"]
+shader = ExtResource("4_q3j7k")
+shader_parameter/circle_size = 0.0
+shader_parameter/circle_center = Vector2(0.5, 0.5)
+shader_parameter/screen_aspect = 1.7778
+
+[node name="main menu" type="Control" unique_id=1034179122]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06udk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1699866504]
+
+[node name="background" type="ColorRect" parent="CanvasLayer" unique_id=1327053971]
+material = SubResource("ShaderMaterial_mlclh")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=485387709]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -121.0
+offset_right = 120.0
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1919964279]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vtgvk")
+theme_override_font_sizes/font_size = 34
+text = "Start"
+
+[node name="OptionButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1621801083]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vtgvk")
+theme_override_font_sizes/font_size = 34
+text = "Option 
+"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1418697310]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vtgvk")
+theme_override_font_sizes/font_size = 34
+text = "Quit
+
+"
+
+[node name="Title" type="Label" parent="CanvasLayer" unique_id=1399030203]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Wake UP!"
+label_settings = SubResource("LabelSettings_mtjga")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=779310445]
+material = SubResource("ShaderMaterial_mlclh")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TransitionRect" type="ColorRect" parent="CanvasLayer" unique_id=1623077334]
+material = SubResource("ShaderMaterial_mtjga")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+
+[node name="sl audio" type="AudioStreamPlayer2D" parent="CanvasLayer" unique_id=908036010]
+position = Vector2(-57, 313)
+stream = ExtResource("4_qx16e")
+volume_db = 7.0
+pitch_scale = 1.79
+max_polyphony = 3
+
+[node name="BackgroundAudio" type="AudioStreamPlayer2D" parent="CanvasLayer" unique_id=1363804343]
+position = Vector2(-132, 226)
+stream = ExtResource("5_l6cdo")
+autoplay = true
+
+[node name="IdeativasTlmHalloween9862664640" type="Sprite2D" parent="CanvasLayer" unique_id=517675811]
+visible = false
+position = Vector2(557, 298)
+scale = Vector2(0.06506863, 0.06562499)
+texture = ExtResource("6_axpik")
+script = ExtResource("7_crr37")
