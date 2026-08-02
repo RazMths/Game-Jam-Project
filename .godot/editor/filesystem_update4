@@ -3,3 +3,7 @@ res://VignetteEffectShader.gdshader
 res://echo_mask.gdshader
 res://Player/Characters/player.tscn
 res://Player/Characters/player.gd
+res://ghost.tscn
+res://ghost.gd
+res://power_up.tscn
+res://power_up.gd

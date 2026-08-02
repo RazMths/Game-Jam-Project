@@ -1,23 +1,23 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785637777
-echo_mask.gdshader::Shader::8929780257697292260::1785601218::0::1::::<><><>0<>0<><>::
+::res://::1785662700
+echo_mask.gdshader::Shader::8929780257697292260::1785638085::0::1::::<><><>0<>0<><>::
 echo_wave.gd::GDScript::8990162606447599727::1785610938::0::1::::<>Area2D<><>0<>0<><>::
 echo_wave.tscn::PackedScene::7730046669918722604::1785610551::0::1::::<><><>0<>0<><>::uid://d1c5wulmm8utr::::res://echo_wave.gd
-ghost.gd::GDScript::8113814340216088341::1785600918::0::1::::<>Area2D<><>0<>0<><>::
-ghost.tscn::PackedScene::6348642236031334756::1785584823::0::1::::<><><>0<>0<><>::uid://dnunlpjid7htd::::res://ghost.gd<>uid://j4ntpku3avxf::::res://ideativas-tlm-halloween-9862664_640.png
+ghost.gd::GDScript::8113814340216088341::1785660590::0::1::::<>Area2D<><>0<>0<><>::
+ghost.tscn::PackedScene::6348642236031334756::1785660526::0::1::::<><><>0<>0<><>::uid://dnunlpjid7htd::::res://ghost.gd<>uid://j4ntpku3avxf::::res://ideativas-tlm-halloween-9862664_640.png<>uid://bflk7on6nqtn4::::res://الاصوات/ghost scream echo.wav<>uid://caj3d2swwg7l1::::res://الاصوات/echo push ghost sound.mp3
 icon.svg::CompressedTexture2D::2422543624120626462::1785516437::1785637778::1::::<><><>0<>0<>f07825c0a0b0da6ed0b55b8dc649a8c6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ideativas-tlm-halloween-9862664_640.png::CompressedTexture2D::692390602844629287::1785584071::1785637778::1::::<><><>0<>0<>8dbd71c2be151b527360869e7c53af93<>res://.godot/imported/ideativas-tlm-halloween-9862664_640.png-03a06227f538cd4c74c647d0bac98c00.ctex::
-main.tscn::PackedScene::5306283812555800665::1785637563::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://c7krkrlq72r2r::::res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://blftmxdlk301y::::res://power_up.tscn<>uid://cwplhe37nno1a::::res://ghost.tscn<>uid://cvsjodrqp0mdo::::res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png
+main.tscn::PackedScene::5306283812555800665::1785662087::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://dqwfwg0cox5wc::::res://test_node.gd<>uid://c7krkrlq72r2r::::res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://blftmxdlk301y::::res://power_up.tscn<>uid://d0hwf8w4dmms7::::res://echo_mask.gdshader<>uid://cwplhe37nno1a::::res://ghost.tscn<>uid://cvsjodrqp0mdo::::res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png
 new_main.tscn::PackedScene::2895099643762878130::1785637732::0::1::::<><><>0<>0<><>::uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://d0hwf8w4dmms7::::res://echo_mask.gdshader<>uid://hns1tcs6vt8a::::res://scene for testing/new_ground.tscn<>uid://dqwfwg0cox5wc::::res://test_node.gd<>uid://cwplhe37nno1a::::res://ghost.tscn
-power_up.gd::GDScript::6708314893361166078::1785516437::0::1::::<>Area2D<><>0<>0<><>::
-power_up.tscn::PackedScene::3169996118056927632::1785637563::0::1::::<><><>0<>0<><>::uid://c2ts736njtwew::::res://power_up.gd<>uid://cwyk5vrr6ssde::::res://word/تكتشر/اساس/زجاجه صحه.png
+power_up.gd::GDScript::6708314893361166078::1785662671::0::1::::<>Area2D<><>0<>0<><>::
+power_up.tscn::PackedScene::3169996118056927632::1785662700::0::1::::<><><>0<>0<><>::uid://c2ts736njtwew::::res://power_up.gd<>uid://cwyk5vrr6ssde::::res://word/تكتشر/اساس/زجاجه صحه.png<>uid://sw3k1tnrvgs2::::res://الاصوات/echo sound power upwav.wav
 test_node.gd::GDScript::8328043086177606654::1785596643::0::1::::<>Node<><>0<>0<><>::
-VignetteEffectShader.gdshader::Shader::841026662284322787::1785590989::0::1::::<><><>0<>0<><>::
+VignetteEffectShader.gdshader::Shader::841026662284322787::1785638085::0::1::::<><><>0<>0<><>::
 العالم.tscn::PackedScene::2840517321453043917::1785516437::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
 ::res://Player/::1785519776
-::res://Player/Characters/::1785637563
-player.gd::GDScript::6085750118889052468::1785637563::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::1034129163329373470::1785637563::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Player/Characters/player.gd<>uid://dieq0euv7qjse::::res://echo_wave.tscn<>uid://drfv0ixwmcret::::res://Player/Characters/الانميشن/وقوف/الولد الابيض.png<>uid://cwpmecveq3hhs::::res://Player/Characters/الانميشن/الركض/1.png<>uid://dst4tjqx3jsny::::res://Player/Characters/الانميشن/الركض/2.png<>uid://mq3a6biyfdsp::::res://Player/Characters/الانميشن/قفز/2.png<>uid://b7pv7v3lg0w0l::::res://Player/Characters/الانميشن/الركض/3.png<>uid://clxgjjkhpujqu::::res://Player/Characters/الانميشن/الركض/4.png<>uid://boprgxhve7e3u::::res://الاصوات/echo walking sound.wav<>uid://debno8v20f2a8::::res://الاصوات/echo sound.wav
+::res://Player/Characters/::1785661249
+player.gd::GDScript::6085750118889052468::1785661183::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::1034129163329373470::1785661249::0::1::::<><><>0<>0<><>::uid://csx8oedxtsdyy::::res://Player/Characters/player.gd<>uid://dieq0euv7qjse::::res://echo_wave.tscn<>uid://drfv0ixwmcret::::res://Player/Characters/الانميشن/وقوف/الولد الابيض.png<>uid://cwpmecveq3hhs::::res://Player/Characters/الانميشن/الركض/1.png<>uid://dst4tjqx3jsny::::res://Player/Characters/الانميشن/الركض/2.png<>uid://mq3a6biyfdsp::::res://Player/Characters/الانميشن/قفز/2.png<>uid://b7pv7v3lg0w0l::::res://Player/Characters/الانميشن/الركض/3.png<>uid://clxgjjkhpujqu::::res://Player/Characters/الانميشن/الركض/4.png<>uid://cmtcvxo6b75t6::::res://الاصوات/walking echo.wav<>uid://deqs01rygyv8u::::res://الاصوات/echo jump.wav<>uid://b0bosi4co7t26::::res://الاصوات/echo dash.wav
 ::res://Player/Characters/الانميشن/::1785519776
 ::res://Player/Characters/الانميشن/الركض/::1785521117
 1.png::CompressedTexture2D::6348697478514453308::1785521242::1785521242::1::::<><><>0<>0<>09367426a3c89b171e7a6d656893ff2e<>res://.godot/imported/1.png-41741f158beb406f72f4136b8a07c815.ctex::
@@ -38,7 +38,8 @@ pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-ima
 ::res://word/::1785637563
 العالم.tscn::PackedScene::7548362440901741290::1785521242::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
 ::res://word/تكتشر/::1785637563
-::res://word/تكتشر/اساس/::1785637563
+::res://word/تكتشر/اساس/::1785663033
+glass fragmet.png::CompressedTexture2D::3655015421047215138::1785663033::1785663034::1::::<><><>0<>0<>7f9d0626e267b72bbfc9913b1f320c7d<>res://.godot/imported/glass fragmet.png-6b362e07e45f62c8ed13d5d8ea753b97.ctex::
 زجاجه صحه.png::CompressedTexture2D::6367202867331745810::1785637563::1785637563::1::::<><><>0<>0<>2d523f80e78eee8492ff305763b9b579<>res://.godot/imported/زجاجه صحه.png-c073f37c29bd7fc1b0e6d9f55375e8b7.ctex::
 صندوق.png::CompressedTexture2D::4007089268926454909::1785637563::1785637563::1::::<><><>0<>0<>e0c84604eaa3035f11301ad14233e410<>res://.godot/imported/صندوق.png-d007da5bc489760c0a2c9726407fcdb9.ctex::
 ::res://word/تكتشر/الخلفيات الرائيسيه/::1785637563
@@ -47,9 +48,16 @@ pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-ima
 الخلفيه الرائيسيه.png::CompressedTexture2D::7040579098820527363::1785637563::1785637563::1::::<><><>0<>0<>b17b605d7d2e7bb261eea968e67c21c0<>res://.godot/imported/الخلفيه الرائيسيه.png-fb9f0c40becbcd78b6670d39f395824b.ctex::
 الشباك.png::CompressedTexture2D::6284537521987258780::1785637563::1785637563::1::::<><><>0<>0<>d2b28484f204dbe3787bb67861ec0aed<>res://.godot/imported/الشباك.png-63303e3ab3615e7f43a9c45545b3fcdf.ctex::
 الشعار.png::CompressedTexture2D::2783460980687009539::1785637563::1785637563::1::::<><><>0<>0<>a00ecf1b7bbc2669c408c5e6acc57753<>res://.godot/imported/الشعار.png-0d483340466b95359a2f843c04ba9249.ctex::
-::res://الاصوات/::1785607308
+::res://الاصوات/::1785662387
+echo dash.wav::AudioStreamWAV::4144088799683978465::1785655017::1785655019::1::::<><><>0<>0<>555fdf4d10af392ce9614f01ce02e6d1<>res://.godot/imported/echo dash.wav-d448c08747a7e0946dd532f09cb4d977.sample::
+echo jump.wav::AudioStreamWAV::7474186413382023594::1785653847::1785653849::1::::<><><>0<>0<>5ef473db6e49808c812ae6936bfb672e<>res://.godot/imported/echo jump.wav-c890031a26d5412fbde4f5f992653871.sample::
+echo power up.wav::AudioStreamWAV::1562746633956194629::1785661495::1785661517::1::::<><><>0<>0<>b3d9b187a0307937aed9482ba3fdb796<>res://.godot/imported/echo power up.wav-96aab9678baef9c6377e9d8bb89ef01c.sample::
+echo push ghost sound.mp3::AudioStreamMP3::4793127647318101088::1785660409::1785660409::1::::<><><>0<>0<>efc2e579c6f4ae74463e5841557512db<>res://.godot/imported/echo push ghost sound.mp3-dd748120ed5946e86a1a22281a1fc34c.mp3str::
+echo sound power upwav.wav::AudioStreamWAV::1310534825383006767::1785662384::1785662387::1::::<><><>0<>0<>2e73761220f9ed0735b1fad7dbada39d<>res://.godot/imported/echo sound power upwav.wav-25c9926d2bfdec9caf509f35f0e538a9.sample::
 echo sound.wav::AudioStreamWAV::7442897892377965157::1785606957::1785637778::1::::<><><>0<>0<>3c963bb17babdd5d710c61ba12b92e43<>res://.godot/imported/echo sound.wav-ee10269c006048e98ac4744931630f41.sample::
 echo walking sound.wav::AudioStreamWAV::3401074284388347132::1785607293::1785637778::1::::<><><>0<>0<>abb273eca5e420fc6876a5586ad2e18c<>res://.godot/imported/echo walking sound.wav-14017b5416d619a13a6b753fe75c9a0b.sample::
+ghost scream echo.wav::AudioStreamWAV::2760738129346423059::1785655433::1785655434::1::::<><><>0<>0<>4567aec3f7eea177aa91ee4a0e4bd90c<>res://.godot/imported/ghost scream echo.wav-cdbc5dccae945bc74617c3f3c10f2da2.sample::
+walking echo.wav::AudioStreamWAV::5654490835102704909::1785654511::1785654514::1::::<><><>0<>0<>2dc5402cd968e4c273fddc4b64cd1fef<>res://.godot/imported/walking echo.wav-4f26682584f35cbee09137c20fa8e706.sample::
 ::res://الاصوات/أصوات الاصطدام او غير/::1785575301
 License.txt::TextFile::-1::1785575301::0::1::::<><><>0<>0<><>::
 ::res://الاصوات/أصوات الاصطدام او غير/Audio/::1785575301

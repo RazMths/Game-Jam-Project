@@ -81,6 +81,8 @@ var jumps_left: int = 2
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var wk_audio: AudioStreamPlayer2D = $"wk audio"
 @onready var jp_audio: AudioStreamPlayer2D = $"jp audio"
+@onready var dh_audio: AudioStreamPlayer2D = $"dh audio"
+
 
 func _ready() -> void:
 	original_color = animated_sprite.modulate
@@ -121,16 +123,19 @@ func _physics_process(delta: float) -> void:
 
 	# 3. القفز والقفز المزدوج (مع وميض النور)
 	if Input.is_action_just_pressed("jump"):
-		jp_audio.play()
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
 			jumps_left -= 1
 			spawn_echo(180.0)
+			jp_audio.pitch_scale = 1.1
+			jp_audio.play()
 # تشغيل الإضاءة لـ 3 ثواني
 		elif jumps_left > 0:
 			velocity.y = JUMP_VELOCITY * 0.92
 			jumps_left -= 1
 			spawn_echo(240.0)
+			jp_audio.pitch_scale = 1.6
+			jp_audio.play()
 # تشغيل الإضاءة لـ 3 ثواني للقفزة المزدوجة
 
 	# 4. الحركة الأفقية
@@ -166,8 +171,7 @@ func handle_fear_timer(delta: float) -> void:
 		if fear_progress_bar:
 			fear_progress_bar.value = current_fear_time
 			
-		var time_ratio = current_fear_time / MAX_FEAR_TIME 
-		var fear_factor = 1.0 - time_ratio                 
+		var time_ratio = current_fear_time / MAX_FEAR_TIME              
 
 		if time_ratio <= LOW_TIME_THRESHOLD:
 			var stress_factor = 1.0 - (time_ratio / LOW_TIME_THRESHOLD)
@@ -175,27 +179,11 @@ func handle_fear_timer(delta: float) -> void:
 		else:
 			low_time_shake = 0.0
 			
-		update_vignette_effect(fear_factor)
 
 	if current_fear_time <= 0:
 		current_fear_time = 0.0
 		game_over_fear()
 
-func update_vignette_effect(fear_factor: float) -> void:
-	if vignette_rect and vignette_rect.material:
-		var mat = vignette_rect.material as ShaderMaterial
-		var canvas_transform = get_viewport().get_canvas_transform()
-		var player_screen_pos = canvas_transform * global_position
-		
-		mat.set_shader_parameter("player_screen_pos", player_screen_pos)
-		
-		var opacity = lerp(0.1, 0.65, fear_factor)
-		var inner_rad = lerp(300.0, 100.0, fear_factor)
-		var outer_rad = lerp(700.0, 350.0, fear_factor)
-
-		mat.set_shader_parameter("vignette_opacity", opacity)
-		mat.set_shader_parameter("inner_radius", inner_rad)
-		mat.set_shader_parameter("outer_radius", outer_rad)
 
 func apply_camera_shake(delta: float) -> void:
 	if camera:
@@ -215,6 +203,7 @@ func apply_camera_shake(delta: float) -> void:
 		camera.global_position = base_camera_position + shake_offset
 
 func start_dash(dir: float) -> void:
+	dh_audio.play()
 	is_dashing = true
 	can_dash = false
 	dash_timer = DASH_DURATION
@@ -269,7 +258,7 @@ func spawn_ghost() -> void:
 	ghost.flip_h = animated_sprite.flip_h
 	ghost.modulate = GHOST_COLOR
 	ghost.scale = animated_sprite.scale
-	get_tree().root.call_deferred("add_child", ghost)
+	get_tree().current_scene.call_deferred("add_child", ghost)
 	
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
@@ -287,6 +276,8 @@ func handle_walk_echo(delta: float, dir: float) -> void:
 	if is_on_floor() and dir != 0:
 		step_echo_timer -= delta
 		if step_echo_timer <= 0.0:
+			wk_audio.pitch_scale = randf_range(0.95, 1)
+			wk_audio.volume_db = randf_range(-1, 1)
 			wk_audio.play()
 			spawn_echo(STEP_ECHO_RADIUS)
 			step_echo_timer = STEP_ECHO_INTERVAL

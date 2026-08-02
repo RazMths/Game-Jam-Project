@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dnunlpjid7htd" path="res://ghost.gd" id="1_v5pp4"]
 [ext_resource type="Texture2D" uid="uid://j4ntpku3avxf" path="res://ideativas-tlm-halloween-9862664_640.png" id="2_6attn"]
+[ext_resource type="AudioStream" uid="uid://bflk7on6nqtn4" path="res://الاصوات/ghost scream echo.wav" id="3_obmiq"]
+[ext_resource type="AudioStream" uid="uid://caj3d2swwg7l1" path="res://الاصوات/echo push ghost sound.mp3" id="4_xtt71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obmiq"]
 size = Vector2(26, 48)
@@ -17,3 +19,12 @@ shape = SubResource("RectangleShape2D_obmiq")
 position = Vector2(1, 0)
 scale = Vector2(0.07534247, 0.08125)
 texture = ExtResource("2_6attn")
+
+[node name="sm audio" type="AudioStreamPlayer2D" parent="." unique_id=1191011480]
+position = Vector2(0, -2)
+stream = ExtResource("3_obmiq")
+volume_db = -10.095
+
+[node name="ph audio" type="AudioStreamPlayer2D" parent="." unique_id=1500732641]
+position = Vector2(24, 11)
+stream = ExtResource("4_xtt71")

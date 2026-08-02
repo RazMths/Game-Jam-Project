@@ -2,19 +2,13 @@
 
 [ext_resource type="Script" uid="uid://c2ts736njtwew" path="res://power_up.gd" id="1_lbdsv"]
 [ext_resource type="Texture2D" uid="uid://cwyk5vrr6ssde" path="res://word/تكتشر/اساس/زجاجه صحه.png" id="2_mkoic"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_mtjga"]
+[ext_resource type="AudioStream" uid="uid://sw3k1tnrvgs2" path="res://الاصوات/echo sound power upwav.wav" id="3_h1prs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mtjga"]
 size = Vector2(16, 38)
 
 [node name="Power up" type="Area2D" unique_id=612369099]
 script = ExtResource("1_lbdsv")
-
-[node name="mesh" type="MeshInstance2D" parent="." unique_id=805023228]
-modulate = Color(0.906121, 0, 0.35507104, 1)
-scale = Vector2(16, 38)
-mesh = SubResource("BoxMesh_mtjga")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=471469069]
 shape = SubResource("RectangleShape2D_mtjga")
@@ -23,3 +17,7 @@ shape = SubResource("RectangleShape2D_mtjga")
 position = Vector2(9.536743e-07, -14.749996)
 scale = Vector2(0.17860003, 0.1672)
 texture = ExtResource("2_mkoic")
+
+[node name="pu audio" type="AudioStreamPlayer2D" parent="." unique_id=642120915]
+position = Vector2(-2, -2)
+stream = ExtResource("3_h1prs")

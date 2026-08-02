@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0bosi4co7t26"
+path="res://.godot/imported/echo dash.wav-d448c08747a7e0946dd532f09cb4d977.sample"
+
+[deps]
+
+source_file="res://الاصوات/echo dash.wav"
+dest_files=["res://.godot/imported/echo dash.wav-d448c08747a7e0946dd532f09cb4d977.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
