@@ -18,7 +18,8 @@ var direction: int = 1
 var fade_tween: Tween
 var duration: float = 1.4
 
-@onready var sprite = $Sprite # أو Sprite2D
+# تعديل الربط ليكون مخصصاً للـ AnimatedSprite2D
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var sm_audio: AudioStreamPlayer2D = $"sm audio"
 @onready var ph_audio: AudioStreamPlayer2D = $"ph audio"
 
@@ -26,16 +27,17 @@ func _ready() -> void:
 	start_x = global_position.x
 	body_entered.connect(_on_body_entered)
 	
-	# for fading effect
-	#sprite.modulate.a = 0.0
+	# تشغيل الانميشن الافتراضي عند بداية المشهد
+	if animated_sprite:
+		animated_sprite.play()
 
 func _physics_process(delta: float) -> void:
 	global_position.x += SPEED * direction * delta
 	
 	if abs(global_position.x - start_x) >= MOVE_DISTANCE:
 		direction *= -1
-		if sprite:
-			sprite.flip_h = (direction < 0)
+		if animated_sprite:
+			animated_sprite.flip_h = (direction < 0)
 
 func _on_body_entered(body: Node) -> void:
 	if body.name == "Player" or body.has_method("add_fear_time"):
@@ -66,29 +68,29 @@ func _on_body_entered(body: Node) -> void:
 
 # --- دالة انفجار صورة الشبح لملايين القطع الشفافة ---
 func spawn_ghost_burst() -> void:
-	# 1. إخفاء الشبح الاصلي وتعطيل تصادمه فوراً
-	var ad = AudioStreamPlayer2D
-	ad = sm_audio.duplicate()
+	# 1. إخفاء الشبح الأصلي وتعطيل تصادمه فوراً
+	var ad = sm_audio.duplicate() as AudioStreamPlayer2D
 	get_tree().current_scene.add_child(ad)
 	ad.play()
 	monitoring = false
-	if sprite:
-		sprite.visible = false
+	
+	if animated_sprite:
+		animated_sprite.visible = false
 
-	# الحصول على الملمس الحالي (Texture) للشبح
+	# الحصول على الملمس (Texture) للفريم الحالي من الـ AnimatedSprite2D
 	var current_texture: Texture2D = null
-	if sprite is AnimatedSprite2D:
-		current_texture = sprite.sprite_frames.get_frame_texture(sprite.animation, sprite.frame)
-	elif sprite is Sprite2D:
-		current_texture = sprite.texture
+	if animated_sprite and animated_sprite.sprite_frames:
+		var current_anim = animated_sprite.animation
+		var current_frame = animated_sprite.frame
+		current_texture = animated_sprite.sprite_frames.get_frame_texture(current_anim, current_frame)
 
 	# 2. إنشاء شظايا صور متحركة متناثرة دائرياً
 	for i in range(BURST_PIECES_COUNT):
 		var piece = Sprite2D.new()
 		piece.texture = current_texture
 		piece.global_position = global_position
-		piece.scale = sprite.scale if sprite else Vector2.ONE
-		piece.flip_h = sprite.flip_h if sprite else false
+		piece.scale = animated_sprite.scale if animated_sprite else Vector2.ONE
+		piece.flip_h = animated_sprite.flip_h if animated_sprite else false
 		
 		# جعل لون الشظايا خفيفاً مضيئاً وشبه شفاف
 		piece.modulate = Color(2.0, 1.2, 1.2, 0.8) # إعطاؤها لون أحمر/مضيء خفيف

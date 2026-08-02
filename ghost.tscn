@@ -1,12 +1,27 @@
 [gd_scene format=3 uid="uid://cwplhe37nno1a"]
 
 [ext_resource type="Script" uid="uid://dnunlpjid7htd" path="res://ghost.gd" id="1_v5pp4"]
-[ext_resource type="Texture2D" uid="uid://j4ntpku3avxf" path="res://ideativas-tlm-halloween-9862664_640.png" id="2_6attn"]
 [ext_resource type="AudioStream" uid="uid://cicgsjvi4shyj" path="res://الاصوات/echo ghost sounds.wav" id="3_xtt71"]
+[ext_resource type="Texture2D" uid="uid://c8hkidgfij3uc" path="res://الشبح/1.png" id="4_kjq22"]
 [ext_resource type="AudioStream" uid="uid://caj3d2swwg7l1" path="res://الاصوات/echo push ghost sound.mp3" id="4_xtt71"]
+[ext_resource type="Texture2D" uid="uid://bwmgvkytrm40" path="res://الشبح/2.png" id="5_hiw70"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obmiq"]
 size = Vector2(26, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_47tcw"]
+animations = [{
+"frames": [{
+"duration": 0.8,
+"texture": ExtResource("4_kjq22")
+}, {
+"duration": 0.7,
+"texture": ExtResource("5_hiw70")
+}],
+"loop": 1,
+"name": &"RUN",
+"speed": 5.0
+}]
 
 [node name="Ghost" type="Area2D" unique_id=959379480]
 script = ExtResource("1_v5pp4")
@@ -14,11 +29,6 @@ script = ExtResource("1_v5pp4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1871790803]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_obmiq")
-
-[node name="Sprite" type="Sprite2D" parent="." unique_id=1925787941]
-position = Vector2(1, 0)
-scale = Vector2(0.07534247, 0.08125)
-texture = ExtResource("2_6attn")
 
 [node name="sm audio" type="AudioStreamPlayer2D" parent="." unique_id=1191011480]
 position = Vector2(0, -2)
@@ -29,3 +39,9 @@ pitch_scale = 0.98
 [node name="ph audio" type="AudioStreamPlayer2D" parent="." unique_id=1500732641]
 position = Vector2(24, 11)
 stream = ExtResource("4_xtt71")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2016126151]
+position = Vector2(-10, -6.000004)
+scale = Vector2(0.14840002, 0.14840002)
+sprite_frames = SubResource("SpriteFrames_47tcw")
+animation = &"RUN"

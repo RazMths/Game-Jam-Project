@@ -1,0 +1,5 @@
+res://القائمات/القائمه الرائيسيه/main_menu.tscn
+res://echo_mask.gdshader
+res://VignetteEffectShader.gdshader
+res://ghost.tscn
+res://ghost.gd

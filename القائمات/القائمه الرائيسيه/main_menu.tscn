@@ -110,7 +110,6 @@ theme_override_font_sizes/font_size = 34
 text = "Start"
 
 [node name="OptionButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1621801083]
-visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_vtgvk")
 theme_override_font_sizes/font_size = 34
@@ -169,7 +168,6 @@ stream = ExtResource("5_l6cdo")
 autoplay = true
 
 [node name="IdeativasTlmHalloween9862664640" type="Sprite2D" parent="CanvasLayer" unique_id=517675811]
-visible = false
 position = Vector2(557, 298)
 scale = Vector2(0.06506863, 0.06562499)
 texture = ExtResource("6_axpik")
