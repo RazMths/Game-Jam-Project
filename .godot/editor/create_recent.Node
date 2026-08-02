@@ -1,3 +1,6 @@
+CheckBox
+HSlider
+VSlider
 Label
 ColorRect
 CanvasLayer
@@ -10,5 +13,3 @@ MeshInstance2D
 PointLight2D
 CanvasModulate
 AnimatedSprite2D
-Panel
-AudioStreamPlayer2D
