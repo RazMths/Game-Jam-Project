@@ -19,6 +19,8 @@ var fade_tween: Tween
 var duration: float = 1.4
 
 @onready var sprite = $Sprite # أو Sprite2D
+@onready var sm_audio: AudioStreamPlayer2D = $"sm audio"
+@onready var ph_audio: AudioStreamPlayer2D = $"ph audio"
 
 func _ready() -> void:
 	start_x = global_position.x
@@ -55,6 +57,9 @@ func _on_body_entered(body: Node) -> void:
 				body.add_fear_time(-CONTACT_PENALTY)
 				
 			if "velocity" in body:
+				ph_audio.pitch_scale = randf_range(0.9, 1.1)
+				print(ph_audio.pitch_scale)
+				ph_audio.play()
 				var push_dir = 1.0 if body.global_position.x > global_position.x else -1.0
 				body.velocity.x = push_dir * 900.0
 				body.velocity.y = -400.0
@@ -62,6 +67,10 @@ func _on_body_entered(body: Node) -> void:
 # --- دالة انفجار صورة الشبح لملايين القطع الشفافة ---
 func spawn_ghost_burst() -> void:
 	# 1. إخفاء الشبح الاصلي وتعطيل تصادمه فوراً
+	var ad = AudioStreamPlayer2D
+	ad = sm_audio.duplicate()
+	get_tree().current_scene.add_child(ad)
+	ad.play()
 	monitoring = false
 	if sprite:
 		sprite.visible = false
