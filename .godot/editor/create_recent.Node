@@ -1,6 +1,9 @@
-Node2D
-ColorRect
 Label
+ColorRect
+CanvasLayer
+Button
+VBoxContainer
+Node2D
 TextureButton
 Sprite2D
 MeshInstance2D
@@ -9,6 +12,3 @@ CanvasModulate
 AnimatedSprite2D
 Panel
 AudioStreamPlayer2D
-CheckButton
-HSlider
-CheckBox

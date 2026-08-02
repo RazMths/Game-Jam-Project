@@ -1,0 +1,17 @@
+res://main.tscn
+res://VignetteEffectShader.gdshader
+res://echo_mask.gdshader
+res://Player/Characters/player.tscn
+res://Player/Characters/player.gd
+res://ghost.tscn
+res://ghost.gd
+res://power_up.tscn
+res://power_up.gd
+res://القائمات/القائمه الرائيسيه/main_menu.tscn
+res://القائمات/القائمه الرائيسيه/menu_light.gdshader
+res://القائمات/القائمه الرائيسيه/main_menu.gd
+res://القائمات/القائمه الرائيسيه/t.gd
+res://القائمات/القائمه الاعدادات/options_menu.tscn
+res://القائمات/القائمه الرائيسيه/circle_transition.gdshader
+res://القائمات/loading_screen.tscn
+res://القائمات/loading_screen.gd

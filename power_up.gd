@@ -63,8 +63,8 @@ func _play_glass_break_effect() -> void:
 	mat.angular_velocity_max = 360.0
 	
 	# أحجام متعدّدة للشظايا (صغيرة وكبيرة)
-	mat.scale_min = 0.08
-	mat.scale_max = 0.12
+	mat.scale_min = 0.04
+	mat.scale_max = 0.08
 	
 	# الشفافية والتلاشي التدريجي قبل الاختفاء
 	mat.color = Color(0.5, 0.5, 0.5, 1.0) # نحافظ على ألوان الصورة الأصلية

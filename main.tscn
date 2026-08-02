@@ -112,6 +112,7 @@ offset_right = 90.0
 offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=438519875]
 layout_mode = 0
