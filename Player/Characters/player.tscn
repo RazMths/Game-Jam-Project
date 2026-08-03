@@ -26,9 +26,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_8o5op")
-}, {
 "duration": 0.7,
 "texture": ExtResource("5_crptq")
 }],

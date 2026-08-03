@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://drucifmu28jp1"]
 
+[ext_resource type="VideoStream" uid="uid://vu64aur64e72" path="res://tuto/first one.ogv" id="1_gryqj"]
+[ext_resource type="Script" uid="uid://bets88p3dupv1" path="res://tuto/video1.gd" id="1_osurg"]
+
 [node name="after start" type="Node2D" unique_id=19827956]
+script = ExtResource("1_osurg")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=2131269651]
 offset_right = 40.0
 offset_bottom = 40.0
+stream = ExtResource("1_gryqj")
+autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1574484159]
+position = Vector2(401, 229)
+zoom = Vector2(1.47, 1.47)

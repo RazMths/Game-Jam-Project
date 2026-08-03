@@ -1,6 +1,8 @@
-res://main.tscn
+res://tuto/tutroial_scene.tscn
 res://echo_mask.gdshader
 res://tuto/tutroial_scene.gdshader
-res://test_node.gd
-res://area_2d.gd
-res://ربط.gd
+res://Player/Characters/player.tscn
+res://tuto/after_start.tscn
+res://tuto/video1.gd
+res://القائمات/loading_screen.tscn
+res://القائمات/loading_screen.gd
