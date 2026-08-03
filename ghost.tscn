@@ -31,7 +31,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_obmiq")
 
 [node name="sm audio" type="AudioStreamPlayer2D" parent="." unique_id=1191011480]
-position = Vector2(0, -2)
+position = Vector2(4, 4)
 stream = ExtResource("3_xtt71")
 volume_db = 5.84
 pitch_scale = 0.98

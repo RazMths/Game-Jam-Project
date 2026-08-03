@@ -2,3 +2,4 @@ res://main.tscn
 res://echo_mask.gdshader
 res://tuto/tutroial_scene.gdshader
 res://sprite_2d_3.gd
+res://ghost.tscn
