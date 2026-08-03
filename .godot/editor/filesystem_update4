@@ -1,6 +1,8 @@
 res://main.tscn
 res://echo_mask.gdshader
 res://tuto/tutroial_scene.gdshader
-res://test_node.gd
 res://area_2d.gd
-res://ربط.gd
+res://power_up.tscn
+res://القائمات/القائمه الرائيسيه/main_menu.tscn
+res://tuto/intro.tscn
+res://القائمات/القائمه التوقف/pause_menu.tscn

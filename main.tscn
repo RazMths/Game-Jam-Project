@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://cr4a7l6uwvpyq" path="res://word/تكتشر/الخلفيات الرائيسيه/الباب.png" id="7_kek77"]
 [ext_resource type="Script" uid="uid://dpdv05w6ismep" path="res://area_2d.gd" id="8_efxa6"]
+[ext_resource type="Texture2D" uid="uid://d2p42gqm5rur6" path="res://word/تكتشر/اساس/صنودق1.png" id="8_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://c5a8qjdanhsor" path="res://اتنا.png" id="10_dg77c"]
 [ext_resource type="Script" uid="uid://coq2042tc5jfc" path="res://tuto/tutNode.gd" id="11_efxa6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfm02"]
@@ -36,7 +38,7 @@ shader_parameter/ambient_darkness = 1.0
 [node name="حيط" type="Node2D" parent="level1" unique_id=600538582]
 
 [node name="حيط" type="Sprite2D" parent="level1/حيط" unique_id=1563126919]
-position = Vector2(30, -183)
+position = Vector2(35, -143)
 scale = Vector2(1.4108856, 1.324)
 texture = ExtResource("1_lquwl")
 
@@ -151,6 +153,10 @@ scale = Vector2(4.5875163, 4.2881656)
 [node name="Camera2D" type="Camera2D" parent="level1" unique_id=616888279]
 position = Vector2(4, -125)
 
+[node name="صندوق" type="Node2D" parent="level1" unique_id=476752832]
+
+[node name="الشعار" type="Node2D" parent="level1" unique_id=60240824]
+
 [node name="level2" type="Node2D" parent="." unique_id=759690256]
 
 [node name="شبح" type="Node2D" parent="level2" unique_id=1815470192]
@@ -200,11 +206,11 @@ position = Vector2(-1867, -402)
 scale = Vector2(1.4108856, 1.324)
 
 [node name="ارض طائر" parent="level2/ارض طائره" unique_id=917220440 instance=ExtResource("1_0xm2m")]
-position = Vector2(-94.97583, 175.22656)
+position = Vector2(-97.81093, 175.98186)
 scale = Vector2(0.30477312, 0.755287)
 
 [node name="ground13" parent="level2/ارض طائره" unique_id=205533772 instance=ExtResource("1_0xm2m")]
-position = Vector2(-130.41455, -115.5589)
+position = Vector2(-132.54088, -116.314186)
 rotation = -0.5500744
 scale = Vector2(0.30986908, 0.7439882)
 skew = 0.054935217
@@ -303,6 +309,30 @@ scale = Vector2(6.001601, 7.272723)
 position = Vector2(-1891, -374)
 scale = Vector2(1, 1.0000002)
 
+[node name="صندوق" type="Node2D" parent="level2" unique_id=974449203]
+
+[node name="صنودق1" type="Sprite2D" parent="level2/صندوق" unique_id=1595093550]
+position = Vector2(-1733, -119)
+scale = Vector2(0.23745997, 0.25719994)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق2" type="Sprite2D" parent="level2/صندوق" unique_id=1079905748]
+position = Vector2(-1789.9999, -120.00001)
+scale = Vector2(0.23745997, 0.25719994)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق3" type="Sprite2D" parent="level2/صندوق" unique_id=634042564]
+position = Vector2(-1759, -165)
+scale = Vector2(0.23745997, 0.25719994)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق4" type="Sprite2D" parent="level2/صندوق" unique_id=1320441492]
+position = Vector2(-2427, -119)
+scale = Vector2(0.23745997, 0.25719994)
+texture = ExtResource("8_ycdy4")
+
+[node name="الشعار" type="Node2D" parent="level2" unique_id=436326558]
+
 [node name="level3" type="Node2D" parent="." unique_id=1450222338]
 position = Vector2(-1470.9375, -608.96875)
 scale = Vector2(0.1666222, 0.1375001)
@@ -342,92 +372,39 @@ scale = Vector2(6.001601, 7.2727222)
 
 [node name="ارض الطائر" type="Node2D" parent="level3" unique_id=1055685582]
 
-[node name="ground16" parent="level3/ارض الطائر" unique_id=1548225854 instance=ExtResource("1_0xm2m")]
-position = Vector2(1331.9802, -2378.4075)
-rotation = -0.17021962
-scale = Vector2(2.5806885, 7.2727222)
+[node name="ground13" parent="level3/ارض الطائر" unique_id=693937581 instance=ExtResource("1_0xm2m")]
+position = Vector2(1085.9147, 1010.68115)
+rotation = -0.5500744
+scale = Vector2(0.30986908, 0.7439882)
+skew = 0.054935217
 
-[node name="ground15" parent="level3/ارض الطائر" unique_id=349164719 instance=ExtResource("1_0xm2m")]
-position = Vector2(-102.401855, -5178.4053)
-scale = Vector2(2.5806885, 7.2727222)
+[node name="ground" parent="level3/ارض الطائر" unique_id=1832232306 instance=ExtResource("1_0xm2m")]
+position = Vector2(1860.1213, -3825.6792)
+scale = Vector2(3.6388938, 5.5007143)
 
-[node name="ground17" parent="level3/ارض الطائر" unique_id=1493441195 instance=ExtResource("1_0xm2m")]
-position = Vector2(2454.2798, -2822.0435)
-rotation = 0.049769998
-scale = Vector2(2.5806885, 7.2727222)
+[node name="ground2" parent="level3/ارض الطائر" unique_id=1848202036 instance=ExtResource("1_0xm2m")]
+position = Vector2(4266.7637, -3942.042)
+scale = Vector2(-3.4880013, 6.54091)
 
-[node name="ground13" parent="level3/ارض الطائر" unique_id=1913342768 instance=ExtResource("1_0xm2m")]
-position = Vector2(3534.5679, -3251.1343)
-scale = Vector2(2.5806885, 7.2727222)
+[node name="ground3" parent="level3/ارض الطائر" unique_id=535577676 instance=ExtResource("1_0xm2m")]
+position = Vector2(5599.119, -4792.95)
+scale = Vector2(-3.4880013, 6.54091)
 
-[node name="ground19" parent="level3/ارض الطائر" unique_id=313443581 instance=ExtResource("1_0xm2m")]
-position = Vector2(4290.7695, -3374.7705)
-scale = Vector2(2.5806885, 7.2727222)
+[node name="ground4" parent="level3/ارض الطائر" unique_id=1869819782 instance=ExtResource("1_0xm2m")]
+position = Vector2(4518.8306, -5352.9497)
+scale = Vector2(-1.5674888, 6.54091)
 
-[node name="ground20" parent="level3/ارض الطائر" unique_id=1319021524 instance=ExtResource("1_0xm2m")]
-position = Vector2(5076.9795, -3491.134)
-scale = Vector2(2.5806885, 7.2727222)
+[node name="ground5" parent="level3/ارض الطائر" unique_id=2016172789 instance=ExtResource("1_0xm2m")]
+position = Vector2(3552.5732, -5825.677)
+scale = Vector2(-3.4880013, 6.54091)
 
-[node name="ground23" parent="level3/ارض الطائر" unique_id=1127035496 instance=ExtResource("1_0xm2m")]
-position = Vector2(275.69852, -3316.5884)
-rotation = -0.01930964
-scale = Vector2(2.5806885, 7.2727222)
+[node name="ground6" parent="level3/ارض الطائر" unique_id=284950018 instance=ExtResource("1_0xm2m")]
+position = Vector2(1349.9854, -5585.677)
+scale = Vector2(-3.4880013, 6.54091)
 
-[node name="ground30" parent="level3/ارض الطائر" unique_id=1978505511 instance=ExtResource("1_0xm2m")]
-position = Vector2(-648.548, -2603.8618)
-rotation = 0.02888757
-scale = Vector2(2.5806885, 7.2727222)
-
-[node name="ground25" parent="level3/ارض الطائر" unique_id=2009185013 instance=ExtResource("1_0xm2m")]
-position = Vector2(1416.0028, -3738.4063)
-rotation = -0.0702503
-scale = Vector2(2.5806885, 7.2727222)
-
-[node name="ground26" parent="level3/ارض الطائر" unique_id=1114725365 instance=ExtResource("1_0xm2m")]
-position = Vector2(2424.2717, -4232.951)
-rotation = -0.15688545
-scale = Vector2(2.5806885, 7.2727222)
-
-[node name="ground31" parent="level3/ارض الطائر" unique_id=202129194 instance=ExtResource("1_0xm2m")]
-position = Vector2(5539.1025, -4502.042)
-rotation = 0.10928881
-scale = Vector2(2.5806885, 7.2727222)
-
-[node name="ground28" parent="level3/ارض الطائر" unique_id=507010051 instance=ExtResource("1_0xm2m")]
-position = Vector2(3588.582, -4312.951)
-scale = Vector2(2.5806885, 7.2727222)
-
-[node name="ground29" parent="level3/ارض الطائر" unique_id=1308087881 instance=ExtResource("1_0xm2m")]
-position = Vector2(4260.7617, -4305.678)
-scale = Vector2(2.5806885, 7.2727222)
-
-[node name="ground33" parent="level3/ارض الطائر" unique_id=703134488 instance=ExtResource("1_0xm2m")]
-position = Vector2(3552.5728, -5571.132)
-scale = Vector2(2.5806885, 7.2727222)
-
-[node name="ground34" parent="level3/ارض الطائر" unique_id=1209837248 instance=ExtResource("1_0xm2m")]
-position = Vector2(2328.246, -5571.132)
-scale = Vector2(2.5806885, 7.2727222)
-
-[node name="ground35" parent="level3/ارض الطائر" unique_id=409301560 instance=ExtResource("1_0xm2m")]
-position = Vector2(1337.9819, -5476.5864)
-rotation = -0.3600701
-scale = Vector2(2.5806885, 7.2727222)
-
-[node name="ground32" parent="level3/ارض الطائر" unique_id=1783347711 instance=ExtResource("1_0xm2m")]
-position = Vector2(4584.8486, -5309.314)
-rotation = 0.38369286
-scale = Vector2(2.5806885, 7.2727222)
-
-[node name="ground21" parent="level3/ارض الطائر" unique_id=277546517 instance=ExtResource("1_0xm2m")]
-position = Vector2(4836.916, -4283.861)
-rotation = 0.055502057
-scale = Vector2(2.5806885, 7.2727222)
-
-[node name="ground22" parent="level3/ارض الطائر" unique_id=1534273312 instance=ExtResource("1_0xm2m")]
-position = Vector2(5299.0386, -3978.4063)
-rotation = -1.5522988
-scale = Vector2(2.5806885, 7.2727222)
+[node name="ground7" parent="level3/ارض الطائر" unique_id=1559502730 instance=ExtResource("1_0xm2m")]
+position = Vector2(-114.405396, -5134.769)
+scale = Vector2(-3.4880013, 6.54091)
 
 [node name="الباب" type="Node2D" parent="level3" unique_id=1679117270]
 
@@ -440,7 +417,7 @@ texture = ExtResource("7_kek77")
 position = Vector2(-27.525146, -70.89307)
 script = ExtResource("8_efxa6")
 target_spawn = NodePath("../../../Camera2D3/SpawnPoint4")
-target_camera = NodePath("../../../Camera2D3")
+target_camera = NodePath("../../../../level4/Camera2D4")
 player = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level3/الباب/Sprite2D3/Area2D" unique_id=1375032917]
@@ -472,67 +449,85 @@ texture = ExtResource("3_efxa6")
 
 [node name="زجاجه صحه" type="Node2D" parent="level3" unique_id=1725955144]
 
-[node name="Power up7" parent="level3/زجاجه صحه" unique_id=86460766 instance=ExtResource("4_1bvp3")]
-position = Vector2(1920.1376, -2254.7708)
-scale = Vector2(3.0008006, 3.6363611)
-
 [node name="Power up8" parent="level3/زجاجه صحه" unique_id=822071128 instance=ExtResource("4_1bvp3")]
-position = Vector2(365.7229, -2349.3162)
+position = Vector2(1500.0255, -4029.315)
 scale = Vector2(3.0008006, 3.6363611)
 
 [node name="Power up9" parent="level3/زجاجه صحه" unique_id=965450415 instance=ExtResource("4_1bvp3")]
-position = Vector2(2394.2642, -3171.1338)
+position = Vector2(4320.778, -4182.0425)
 scale = Vector2(3.0008006, 3.6363611)
 
 [node name="Power up10" parent="level3/زجاجه صحه" unique_id=115458854 instance=ExtResource("4_1bvp3")]
-position = Vector2(4320.7773, -3665.6787)
-scale = Vector2(3.0008006, 3.6363611)
-
-[node name="Power up11" parent="level3/زجاجه صحه" unique_id=968809187 instance=ExtResource("4_1bvp3")]
-position = Vector2(1379.9934, -4029.3147)
+position = Vector2(3552.5732, -6029.3135)
 scale = Vector2(3.0008006, 3.6363611)
 
 [node name="Power up12" parent="level3/زجاجه صحه" unique_id=1731598995 instance=ExtResource("4_1bvp3")]
-position = Vector2(5563.1094, -4800.223)
+position = Vector2(5611.122, -5032.95)
 scale = Vector2(3.0008006, 3.6363611)
 
 [node name="Power up13" parent="level3/زجاجه صحه" unique_id=1316784693 instance=ExtResource("4_1bvp3")]
-position = Vector2(2334.2478, -5818.4043)
+position = Vector2(1217.95, -5847.495)
 scale = Vector2(3.0008006, 3.6363611)
 
 [node name="شبح" type="Node2D" parent="level3" unique_id=1687733853]
-
-[node name="شبح2" parent="level3/شبح" unique_id=1280523882 instance=ExtResource("5_lquwl")]
-position = Vector2(1596.0508, -2982.0435)
-scale = Vector2(6.001601, 7.2727222)
 
 [node name="شبح5" parent="level3/شبح" unique_id=1269261920 instance=ExtResource("5_lquwl")]
 position = Vector2(515.7627, -5774.7686)
 scale = Vector2(6.001601, 7.2727222)
 
 [node name="شبح6" parent="level3/شبح" unique_id=1612119057 instance=ExtResource("5_lquwl")]
-position = Vector2(1079.9131, -4116.588)
-scale = Vector2(6.001601, 7.2727222)
-
-[node name="شبح7" parent="level3/شبح" unique_id=2122961357 instance=ExtResource("5_lquwl")]
-position = Vector2(2502.293, -4843.8604)
+position = Vector2(1908.134, -4145.6787)
 scale = Vector2(6.001601, 7.2727222)
 
 [node name="شبح8" parent="level3/شبح" unique_id=1085241005 instance=ExtResource("5_lquwl")]
-position = Vector2(3960.6816, -4967.497)
+position = Vector2(3558.5747, -6102.0405)
 scale = Vector2(6.001601, 7.2727222)
 
 [node name="شبح4" parent="level3/شبح" unique_id=990216822 instance=ExtResource("5_lquwl")]
-position = Vector2(2706.3472, -3614.7705)
+position = Vector2(4674.8726, -4225.6787)
 scale = Vector2(6.001601, 7.2727222)
 
 [node name="حيط" type="Node2D" parent="level3" unique_id=390761911]
 
 [node name="حيط2" type="Sprite2D" parent="level3/حيط" unique_id=501412987]
 z_index = -1
-position = Vector2(2796.3708, -4174.77)
+position = Vector2(3294.504, -4051.1323)
 scale = Vector2(9.272026, 8.645812)
 texture = ExtResource("1_lquwl")
+
+[node name="صندوق" type="Node2D" parent="level3" unique_id=1112955094]
+
+[node name="صنودق2" type="Sprite2D" parent="level3/صندوق" unique_id=323330560]
+position = Vector2(3384.5278, -2196.589)
+scale = Vector2(1.228041, 1.5536897)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق3" type="Sprite2D" parent="level3/صندوق" unique_id=868573165]
+position = Vector2(3660.6016, -2189.3164)
+scale = Vector2(1.228041, 1.5536897)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق4" type="Sprite2D" parent="level3/صندوق" unique_id=568808478]
+position = Vector2(3942.6768, -2196.589)
+scale = Vector2(1.228041, 1.5536897)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق5" type="Sprite2D" parent="level3/صندوق" unique_id=756556864]
+position = Vector2(3810.6416, -2465.6797)
+scale = Vector2(1.228041, 1.5536897)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق6" type="Sprite2D" parent="level3/صندوق" unique_id=1797531488]
+position = Vector2(3510.5615, -2472.9524)
+scale = Vector2(1.228041, 1.5536897)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق7" type="Sprite2D" parent="level3/صندوق" unique_id=561362364]
+position = Vector2(3672.6047, -2749.316)
+scale = Vector2(1.228041, 1.5536897)
+texture = ExtResource("8_ycdy4")
+
+[node name="الشعار" type="Node2D" parent="level3" unique_id=1064727384]
 
 [node name="level4" type="Node2D" parent="." unique_id=398608689]
 
@@ -676,7 +671,7 @@ shape = SubResource("CapsuleShape2D_vfm02")
 
 [node name="حيط4" type="Sprite2D" parent="level4/حيط" unique_id=176287431]
 z_index = -2
-position = Vector2(633.99994, -1422)
+position = Vector2(659, -1371)
 scale = Vector2(1.3970118, 1.4126438)
 texture = ExtResource("1_lquwl")
 
@@ -692,6 +687,35 @@ target_camera = NodePath("../../../level5/Camera2D5")
 
 [node name="SpawnPoint5" type="Marker2D" parent="level4/Camera2D4" unique_id=1026297439]
 position = Vector2(842, 710)
+
+[node name="صندوق" type="Node2D" parent="level4" unique_id=1236558146]
+
+[node name="صنودق6" type="Sprite2D" parent="level4/صندوق" unique_id=1447669916]
+position = Vector2(606, -1147)
+scale = Vector2(0.21650386, 0.24861111)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق7" type="Sprite2D" parent="level4/صندوق" unique_id=1565941763]
+position = Vector2(732, -1147)
+scale = Vector2(0.21650386, 0.24861111)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق8" type="Sprite2D" parent="level4/صندوق" unique_id=1451731192]
+position = Vector2(668, -1146)
+scale = Vector2(0.21650386, 0.24861111)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق9" type="Sprite2D" parent="level4/صندوق" unique_id=172309756]
+position = Vector2(699.00006, -1187)
+scale = Vector2(0.21650386, 0.24861111)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق10" type="Sprite2D" parent="level4/صندوق" unique_id=1219842988]
+position = Vector2(634.00006, -1191)
+scale = Vector2(0.21650386, 0.24861111)
+texture = ExtResource("8_ycdy4")
+
+[node name="الشعار" type="Node2D" parent="level4" unique_id=1055140803]
 
 [node name="level5" type="Node2D" parent="." unique_id=1199472547]
 
@@ -805,13 +829,35 @@ texture = ExtResource("3_efxa6")
 
 [node name="حيط5" type="Sprite2D" parent="level5/حيط" unique_id=799527878]
 z_index = -2
-position = Vector2(2458.0002, -1050)
+position = Vector2(2406.0002, -1009.0001)
 scale = Vector2(2.423159, 1.757522)
 texture = ExtResource("1_lquwl")
 
 [node name="Camera2D5" type="Camera2D" parent="level5" unique_id=472976942]
 position = Vector2(2378, -1046)
 zoom = Vector2(0.6, 0.6)
+
+[node name="صندوق" type="Node2D" parent="level5" unique_id=1677408144]
+
+[node name="صنودق1" type="Sprite2D" parent="level5/صندوق" unique_id=1480854661]
+position = Vector2(2353, -669)
+scale = Vector2(0.23745997, 0.25719994)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق2" type="Sprite2D" parent="level5/صندوق" unique_id=1169053149]
+position = Vector2(2407.9998, -670.00006)
+scale = Vector2(0.23745997, 0.25719994)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق3" type="Sprite2D" parent="level5/صندوق" unique_id=51169800]
+position = Vector2(2382, -717)
+scale = Vector2(0.23745997, 0.25719994)
+texture = ExtResource("8_ycdy4")
+
+[node name="صنودق4" type="Sprite2D" parent="level5/صندوق" unique_id=271689868]
+position = Vector2(1819, -1260)
+scale = Vector2(0.23745997, 0.25719994)
+texture = ExtResource("8_ycdy4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852383026]
 
@@ -833,14 +879,20 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="اتنا" type="Sprite2D" parent="CanvasLayer/Control" unique_id=288784607]
+position = Vector2(579, 32)
+scale = Vector2(0.3308, 0.34625137)
+texture = ExtResource("10_dg77c")
+
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=438519875]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -157.0
-offset_right = 157.0
-offset_bottom = 27.0
+offset_left = -56.0
+offset_top = 2.0
+offset_right = 48.0
+offset_bottom = 75.0
 grow_horizontal = 2
 
 [node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
@@ -852,6 +904,10 @@ camera = NodePath("../level1/Camera2D")
 script = ExtResource("11_efxa6")
 echo_shader_rect = NodePath("../CanvasLayer/Control/ColorRect")
 player = NodePath("../Player")
+
+[node name="ground" parent="." unique_id=1860495525 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1325, -991)
+scale = Vector2(0.5600098, 1)
 
 [connection signal="body_entered" from="level1/باب/Sprite2D2/Area2D" to="level1/باب/Sprite2D2/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="level4/الباب/Sprite2D3/Area2D" to="level4/Camera2D4/Important Node" method="_on_area_2d_body_entered"]
