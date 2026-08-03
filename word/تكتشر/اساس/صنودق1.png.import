@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxdcf7c8d5bq0"
-path="res://.godot/imported/صندوق.png-d007da5bc489760c0a2c9726407fcdb9.ctex"
+uid="uid://d2p42gqm5rur6"
+path="res://.godot/imported/صنودق1.png-024ab89207f304fcac1b3da59cf37778.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://word/تكتشر/اساس/صندوق.png"
-dest_files=["res://.godot/imported/صندوق.png-d007da5bc489760c0a2c9726407fcdb9.ctex"]
+source_file="res://word/تكتشر/اساس/صنودق1.png"
+dest_files=["res://.godot/imported/صنودق1.png-024ab89207f304fcac1b3da59cf37778.ctex"]
 
 [params]
 
