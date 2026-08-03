@@ -1,2 +1,6 @@
 res://main.tscn
-res://Player/Characters/player.gd
+res://القائمات/القائمه الاعدادات/options_menu.tscn
+res://القائمات/القائمه الرائيسيه/القائمه الرائيسيه.tscn
+res://ghost.tscn
+res://power_up.tscn
+res://العالم.tscn

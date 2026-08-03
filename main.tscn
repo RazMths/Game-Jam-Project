@@ -31,6 +31,14 @@ shader_parameter/ambient_darkness = 1.0
 
 [node name="main" type="Node2D" unique_id=1916839064]
 
+[node name="PauseMenu" parent="." unique_id=1988215942 node_paths=PackedStringArray("options_menu") instance=ExtResource("9_kek77")]
+z_index = 10
+offset_left = 12.0
+offset_top = -21.0
+offset_right = 12.0
+offset_bottom = -21.0
+options_menu = NodePath("../OptionsMenu")
+
 [node name="level1" type="Node2D" parent="." unique_id=1725090150]
 
 [node name="حيط" type="Node2D" parent="level1" unique_id=600538582]
@@ -94,9 +102,13 @@ scale = Vector2(0.43, 1)
 position = Vector2(-311, -115)
 scale = Vector2(0.43, 1)
 
+[node name="ground11" parent="level1/ارض طائر" unique_id=1026929526 instance=ExtResource("1_0xm2m")]
+position = Vector2(89, -228)
+scale = Vector2(0.43, 1)
+
 [node name="الارض" type="Node2D" parent="level1" unique_id=384525005]
 
-[node name="الارض2" parent="level1/الارض" unique_id=1026929526 instance=ExtResource("1_0xm2m")]
+[node name="الارض2" parent="level1/الارض" unique_id=2128218324 instance=ExtResource("1_0xm2m")]
 position = Vector2(-48, 188)
 
 [node name="ground2" parent="level1/الارض" unique_id=1044888151 instance=ExtResource("1_0xm2m")]
@@ -118,6 +130,9 @@ scale = Vector2(0.43, 1)
 [node name="ground7" parent="level1/الارض" unique_id=1413859773 instance=ExtResource("1_0xm2m")]
 position = Vector2(-605, 188)
 scale = Vector2(0.43, 1)
+
+[node name="ground5" parent="level1/الارض" unique_id=612029081 instance=ExtResource("1_0xm2m")]
+position = Vector2(428, 376)
 
 [node name="Camera2D" type="Camera2D" parent="level1" unique_id=616888279]
 position = Vector2(4, -125)
@@ -325,38 +340,6 @@ scale = Vector2(6.001601, 7.2727222)
 [node name="ground" parent="level3/ارض/ground" unique_id=1162124040 instance=ExtResource("1_0xm2m")]
 position = Vector2(1683, -231)
 
-[node name="ground" parent="level3/ارض/ground/ground" unique_id=207008698 instance=ExtResource("1_0xm2m")]
-position = Vector2(1260, 447)
-
-[node name="ground2" parent="level3/ارض/ground/ground" unique_id=926911886 instance=ExtResource("1_0xm2m")]
-position = Vector2(1000, 447)
-
-[node name="ground3" parent="level3/ارض/ground/ground" unique_id=595393159 instance=ExtResource("1_0xm2m")]
-position = Vector2(1522, 447)
-
-[node name="ground4" parent="level3/ارض/ground/ground" unique_id=1204358409 instance=ExtResource("1_0xm2m")]
-position = Vector2(1784, 447)
-
-[node name="ground6" parent="level3/ارض/ground/ground" unique_id=379876012 instance=ExtResource("1_0xm2m")]
-position = Vector2(814, 447)
-scale = Vector2(0.43, 1)
-
-[node name="ground7" parent="level3/ارض/ground/ground" unique_id=37202613 instance=ExtResource("1_0xm2m")]
-position = Vector2(703, 447)
-scale = Vector2(0.43, 1)
-
-[node name="ground" parent="level3/ارض/ground/ground/ground7" unique_id=1683703487 instance=ExtResource("1_0xm2m")]
-position = Vector2(1453.9526, -147)
-
-[node name="ground2" parent="level3/ارض/ground/ground/ground7" unique_id=104456922 instance=ExtResource("1_0xm2m")]
-position = Vector2(1109.3022, -147)
-
-[node name="ground3" parent="level3/ارض/ground/ground/ground7" unique_id=1063566794 instance=ExtResource("1_0xm2m")]
-position = Vector2(1801.2549, -147)
-
-[node name="ground4" parent="level3/ارض/ground/ground/ground7" unique_id=1424145346 instance=ExtResource("1_0xm2m")]
-position = Vector2(2148.5576, -147)
-
 [node name="ground2" parent="level3/ارض/ground" unique_id=2114401822 instance=ExtResource("1_0xm2m")]
 position = Vector2(1423, -231)
 
@@ -469,14 +452,11 @@ texture = ExtResource("1_lquwl")
 [node name="Camera2D4" type="Camera2D" parent="level4" unique_id=131999018]
 position = Vector2(670, -1412)
 
-[node name="SpawnPoint5" type="Marker2D" parent="level4/Camera2D4" unique_id=1151579498]
-position = Vector2(795, 540)
-
 [node name="Important Node" type="Node2D" parent="level4/Camera2D4" unique_id=876930830 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
 position = Vector2(-673.99994, 2040)
 scale = Vector2(4.5875163, 4.2881646)
 script = ExtResource("1_5vw27")
-target_spawn = NodePath("../SpawnPoint5")
+target_spawn = NodePath("")
 echo_shader_rect = NodePath("../../../CanvasLayer2/Control/ColorRect")
 player = NodePath("../../../Player")
 target_camera = NodePath("../../../level5/Camera2D5")
@@ -485,24 +465,120 @@ target_camera = NodePath("../../../level5/Camera2D5")
 
 [node name="الارض" type="Node2D" parent="level5" unique_id=597075547]
 
+[node name="ground" parent="level5/الارض" unique_id=253440030 instance=ExtResource("1_0xm2m")]
+position = Vector2(1947, -625)
+
+[node name="ground2" parent="level5/الارض" unique_id=803012997 instance=ExtResource("1_0xm2m")]
+position = Vector2(1687, -625)
+
+[node name="ground3" parent="level5/الارض" unique_id=1849838648 instance=ExtResource("1_0xm2m")]
+position = Vector2(2214, -624.99994)
+
+[node name="ground4" parent="level5/الارض" unique_id=683317105 instance=ExtResource("1_0xm2m")]
+position = Vector2(2471, -625)
+
+[node name="ground6" parent="level5/الارض" unique_id=1519226085 instance=ExtResource("1_0xm2m")]
+position = Vector2(1501, -625)
+scale = Vector2(0.43, 1)
+
+[node name="ground7" parent="level5/الارض" unique_id=1815888207 instance=ExtResource("1_0xm2m")]
+position = Vector2(1390, -625)
+scale = Vector2(0.43, 1)
+
+[node name="ground" parent="level5/الارض/ground7" unique_id=1098882115 instance=ExtResource("1_0xm2m")]
+position = Vector2(1760.4648, -211)
+
+[node name="ground2" parent="level5/الارض/ground7" unique_id=1066505860 instance=ExtResource("1_0xm2m")]
+position = Vector2(1109.3022, -147)
+
+[node name="ground3" parent="level5/الارض/ground7" unique_id=992212977 instance=ExtResource("1_0xm2m")]
+position = Vector2(1744.1863, -441)
+
+[node name="ground4" parent="level5/الارض/ground7" unique_id=447589700 instance=ExtResource("1_0xm2m")]
+position = Vector2(2246.5115, -350)
+
+[node name="SpawnPoint5" type="Marker2D" parent="level5/الارض" unique_id=1026297439]
+position = Vector2(1482, -532)
+
+[node name="ground5" parent="level5/الارض" unique_id=1204110833 instance=ExtResource("1_0xm2m")]
+position = Vector2(2737, -625)
+
+[node name="ground8" parent="level5/الارض" unique_id=248487720 instance=ExtResource("1_0xm2m")]
+position = Vector2(3272, -625)
+
+[node name="ground9" parent="level5/الارض" unique_id=2013692553 instance=ExtResource("1_0xm2m")]
+position = Vector2(3004, -625)
+
+[node name="ground10" parent="level5/الارض" unique_id=722967261 instance=ExtResource("1_0xm2m")]
+position = Vector2(1917, -1215)
+
+[node name="ground11" parent="level5/الارض" unique_id=386678071 instance=ExtResource("1_0xm2m")]
+position = Vector2(2469, -1310)
+
+[node name="ground12" parent="level5/الارض" unique_id=248968428 instance=ExtResource("1_0xm2m")]
+position = Vector2(2666, -1035)
+
+[node name="ground13" parent="level5/الارض" unique_id=825342506 instance=ExtResource("1_0xm2m")]
+position = Vector2(3002, -894)
+
+[node name="ground14" parent="level5/الارض" unique_id=1321788182 instance=ExtResource("1_0xm2m")]
+position = Vector2(3082, -1171)
+
+[node name="ground15" parent="level5/الارض" unique_id=1202786267 instance=ExtResource("1_0xm2m")]
+position = Vector2(2135, -1427)
+
 [node name="شبح" type="Node2D" parent="level5" unique_id=1904787674]
+
+[node name="Ghost4" parent="level5/شبح" unique_id=1279933483 instance=ExtResource("5_lquwl")]
+position = Vector2(1848, -837)
+
+[node name="Ghost4" parent="level5/شبح/Ghost4" unique_id=510129653 instance=ExtResource("5_lquwl")]
+position = Vector2(628, -544)
+
+[node name="Ghost5" parent="level5/شبح" unique_id=401637737 instance=ExtResource("5_lquwl")]
+position = Vector2(2680, -1123)
+
+[node name="Ghost6" parent="level5/شبح" unique_id=1510790442 instance=ExtResource("5_lquwl")]
+position = Vector2(2358, -1022)
+
+[node name="Ghost7" parent="level5/شبح" unique_id=1133027773 instance=ExtResource("5_lquwl")]
+position = Vector2(3004, -939)
 
 [node name="ارض طائر" type="Node2D" parent="level5" unique_id=1390117500]
 
 [node name="زجاجه صحه" type="Node2D" parent="level5" unique_id=447588291]
 
+[node name="زجاجه صحه" parent="level5/زجاجه صحه" unique_id=2130399713 instance=ExtResource("4_1bvp3")]
+position = Vector2(2141, -1095)
+scale = Vector2(0.5, 0.5)
+
+[node name="زجاجه صحه2" parent="level5/زجاجه صحه" unique_id=1586864106 instance=ExtResource("4_1bvp3")]
+position = Vector2(2138, -1465)
+scale = Vector2(0.5, 0.5)
+
 [node name="شباك" type="Node2D" parent="level5" unique_id=80863121]
+
+[node name="Sprite2D3" type="Sprite2D" parent="level5/شباك" unique_id=1084343480]
+position = Vector2(1587.0001, -840)
+scale = Vector2(0.4135539, 0.516)
+texture = ExtResource("3_efxa6")
+
+[node name="Sprite2D4" type="Sprite2D" parent="level5/شباك" unique_id=1851157505]
+position = Vector2(2702, -832)
+scale = Vector2(0.4135539, 0.516)
+texture = ExtResource("3_efxa6")
 
 [node name="حيط" type="Node2D" parent="level5" unique_id=866191202]
 
 [node name="حيط5" type="Sprite2D" parent="level5/حيط" unique_id=799527878]
 z_index = -1
-position = Vector2(1940.0001, -934)
-scale = Vector2(1.3970118, 1.4126438)
+position = Vector2(2499, -1040.0001)
+scale = Vector2(2.423159, 1.757522)
 texture = ExtResource("1_lquwl")
 
 [node name="Camera2D5" type="Camera2D" parent="level5" unique_id=472976942]
-position = Vector2(1901, -957)
+position = Vector2(2378, -1046)
+zoom = Vector2(0.6, 0.6)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=852383026]
 
@@ -511,6 +587,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -917.0
+offset_top = 460.0
+offset_right = -917.0
+offset_bottom = 460.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -521,10 +601,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -101.0
-offset_top = -128.0
-offset_right = 90.0
-offset_bottom = 26.0
+offset_left = 829.0
+offset_top = -505.0
+offset_right = 1020.0
+offset_bottom = -351.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -533,10 +613,6 @@ mouse_filter = 2
 layout_mode = 0
 offset_right = 118.0
 offset_bottom = 27.0
-
-[node name="PauseMenu" parent="CanvasLayer2" unique_id=1988215942 node_paths=PackedStringArray("options_menu") instance=ExtResource("9_kek77")]
-z_index = 10
-options_menu = NodePath("../../OptionsMenu")
 
 [node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
 position = Vector2(-150, 145)
@@ -572,13 +648,13 @@ target_camera = NodePath("../../level2/Camera2D2")
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 0.0
+offset_left = 60.0
+offset_top = -11.0
+offset_right = 60.0
+offset_bottom = -11.0
 grow_horizontal = 1
 grow_vertical = 1
-pause_menu = NodePath("../CanvasLayer2/PauseMenu")
+pause_menu = NodePath("../PauseMenu")
 
 [connection signal="body_entered" from="level2/باب/Sprite2D3/Area2D" to="level2/Camera2D2/Important Node" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="level3/الباب/Sprite2D3/Area2D" to="level3/Camera2D3/Important Node" method="_on_area_2d_body_entered"]

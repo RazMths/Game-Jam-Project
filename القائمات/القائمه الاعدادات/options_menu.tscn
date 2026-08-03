@@ -24,8 +24,10 @@ script = ExtResource("1_4ccf3")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1111643797]
 layout_mode = 0
-offset_right = 1159.0
-offset_bottom = 643.0
+offset_left = -64.0
+offset_top = 13.0
+offset_right = 1095.0
+offset_bottom = 656.0
 color = Color(0, 0, 0, 0.23529412)
 
 [node name="CheckBox" type="CheckBox" parent="ColorRect" unique_id=1902248941]
