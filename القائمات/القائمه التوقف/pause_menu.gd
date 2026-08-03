@@ -1,5 +1,4 @@
 extends Control
-@export var options_menu: Control
 func _ready() -> void:
 	# 1. تفعيل عمل هذا السكربت دائماً حتى لو كانت اللعبة متوقفة
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -35,12 +34,3 @@ func _on_main_menu_pressed() -> void:
 	
 	# الانتقال إلى مشهد القائمة الرئيسية
 	get_tree().change_scene_to_file("res://القائمات/القائمه الرائيسيه/القائمه الرائيسيه.tscn")
-
-
-
-
-
-func _on_opsions_pressed() -> void:
-	hide() # إخفاء قائمة التوقف
-	if options_menu:
-		get_tree().change_scene_to_file("res://القائمات/القائمه الاعدادات/options_menu.tscn")

@@ -3,3 +3,10 @@ res://tuto/speaking_area.gd
 res://tuto/tutroial_scene.gdshader
 res://tuto/tutroial_scene.gd
 res://main.tscn
+res://echo_mask.gdshader
+res://القائمات/القائمه التوقف/pause_menu.tscn
+res://tuto/intro.tscn
+res://tuto/videos.gd
+res://القائمات/القائمه الرائيسيه/main_menu.tscn
+res://القائمات/القائمه الرائيسيه/main_menu.gd
+res://القائمات/القائمه التوقف/pause_menu.gd

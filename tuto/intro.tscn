@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ba1x4wt7o8sda"]
+
+[ext_resource type="Script" uid="uid://ceibx1sk48hi3" path="res://tuto/videos.gd" id="1_ib0sw"]
+[ext_resource type="VideoStream" uid="uid://iawng0b13are" path="res://tuto/intro.ogv" id="1_tb14q"]
+[ext_resource type="AudioStream" uid="uid://b4mmmh6ljdxwf" path="res://tuto/intro sound.mp3" id="3_5vo57"]
+[ext_resource type="AudioStream" uid="uid://c420v14nb0xne" path="res://tuto/intro sound1.mp3" id="4_cwrld"]
+
+[node name="intro" type="Node2D" unique_id=1266356439 node_paths=PackedStringArray("video")]
+script = ExtResource("1_ib0sw")
+video = NodePath("VideoStreamPlayer")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=267806603]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_tb14q")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1856600189]
+position = Vector2(882, 528)
+zoom = Vector2(0.685, 0.685)
+
+[node name="IntroSound" type="AudioStreamPlayer2D" parent="." unique_id=1126375652]
+position = Vector2(-105, 907)
+stream = ExtResource("3_5vo57")
+pitch_scale = 0.73
+autoplay = true
+
+[node name="IntroSound1" type="AudioStreamPlayer2D" parent="." unique_id=1870625152]
+position = Vector2(73, 1129)
+stream = ExtResource("4_cwrld")

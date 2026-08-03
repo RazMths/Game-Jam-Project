@@ -3,7 +3,6 @@ extends Control
 # ربط العقد حسب شجرة المشهد عندك
 @onready var dark_overlay: ColorRect = $CanvasLayer/background
 @onready var start_button: Button = $CanvasLayer/VBoxContainer/StartButton
-@onready var option_button: Button = $CanvasLayer/VBoxContainer/OptionButton
 @onready var quit_button: Button = $CanvasLayer/VBoxContainer/QuitButton
 @onready var sl_audio: AudioStreamPlayer2D = $"CanvasLayer/sl audio"
 
@@ -42,7 +41,6 @@ func _ready() -> void:
 	# 1. ربط أزرار القائمة الرئيسية
 	start_button.pressed.connect(_on_start_pressed)
 	quit_button.pressed.connect(_on_quit_pressed)
-	option_button.pressed.connect(_on_option_pressed)
 
 	# 2. ربط زر الشاشة الكاملة
 	if fullscreen_check:
@@ -63,7 +61,7 @@ func _ready() -> void:
 		audio_level.value_changed.connect(_on_audio_level_changed)
 
 	# 4. ربط التمرير (Hover) لجميع العناصر
-	var interactive_controls = [start_button, option_button, quit_button, fullscreen_check, audio_level]
+	var interactive_controls = [start_button, quit_button, fullscreen_check, audio_level]
 	for control in interactive_controls:
 		if control and control is Control:
 			control.mouse_entered.connect(_on_control_hover.bind(control))
@@ -168,7 +166,7 @@ func _on_control_hover(control: Control) -> void:
 	if control:
 		var btn_center = control.global_position + (control.size / 2.0)
 		if sl_audio:
-			sl_audio.pitch_scale = randf_range(0.9, 1.3)
+			sl_audio.pitch_scale = randf_range(0.8, 1.1)
 			sl_audio.play()
 		spawn_menu_wave(btn_center, 220.0, 750.0)
 
@@ -198,12 +196,6 @@ func _on_audio_level_changed(value: float) -> void:
 
 # --- أزرار القائمة والتأثيرات ---
 
-func _on_option_pressed() -> void:
-	if options_menu:
-		options_menu.show()
-		hide()
-	else:
-		get_tree().change_scene_to_file("res://القائمات/القائمه الاعدادات/options_menu.tscn")
 
 func _on_start_pressed() -> void:
 	_play_circle_transition(start_button, func():
