@@ -122,7 +122,7 @@ func _process_random_settings_lights(delta: float) -> void:
 			var center = rect.position + (rect.size / 2.0)
 			
 			# موجة بطيئة وناعمة تركز على نود الخيار
-			spawn_menu_wave(center, 130.0, 120.0)
+			spawn_menu_wave(center, 220.0, 120.0)
 
 # دالة إنشاء موجة صدى
 func spawn_menu_wave(pos: Vector2, target_radius: float = 400.0, custom_speed: float = 750.0) -> void:

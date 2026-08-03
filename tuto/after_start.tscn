@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://drucifmu28jp1"]
+
+[node name="after start" type="Node2D" unique_id=19827956]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=2131269651]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1574484159]
