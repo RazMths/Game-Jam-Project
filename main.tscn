@@ -671,7 +671,7 @@ shape = SubResource("CapsuleShape2D_vfm02")
 
 [node name="حيط4" type="Sprite2D" parent="level4/حيط" unique_id=176287431]
 z_index = -2
-position = Vector2(659, -1371)
+position = Vector2(627, -1369)
 scale = Vector2(1.3970118, 1.4126438)
 texture = ExtResource("1_lquwl")
 
