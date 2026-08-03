@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://bm4fof4iioim1"]
+
+[ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="1_sqta8"]
+[ext_resource type="Script" uid="uid://coq2042tc5jfc" path="res://tuto/tutNode.gd" id="1_sv0oy"]
+[ext_resource type="Script" uid="uid://bx7h38kk5vnwf" path="res://tuto/tutroial_scene.gd" id="1_vvkyc"]
+[ext_resource type="Texture2D" uid="uid://c83cg70xffq36" path="res://tuto/movement.png" id="3_0s4ki"]
+[ext_resource type="Shader" uid="uid://d0hwf8w4dmms7" path="res://echo_mask.gdshader" id="3_21vcw"]
+[ext_resource type="Texture2D" uid="uid://c7krkrlq72r2r" path="res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png" id="4_sv0oy"]
+[ext_resource type="Texture2D" uid="uid://cqr8drcf1d3ef" path="res://tuto/Move Forward.png" id="4_uqi76"]
+[ext_resource type="PackedScene" uid="uid://bx86mbs7q8ly8" path="res://tuto/ground for tutroial.tscn" id="4_y68h5"]
+[ext_resource type="Texture2D" uid="uid://b1n0kxf0pq625" path="res://tuto/ruls.png" id="6_x6r35"]
+[ext_resource type="Texture2D" uid="uid://ge2cthlmmh0l" path="res://tuto/shift.png" id="7_vvkyc"]
+[ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="8_16bfp"]
+[ext_resource type="PackedScene" uid="uid://blftmxdlk301y" path="res://power_up.tscn" id="9_ykjr4"]
+[ext_resource type="Script" uid="uid://bpq1fhw1xcaj2" path="res://tuto/speaking_area.gd" id="12_5l4dy"]
+[ext_resource type="Shader" uid="uid://gvsvgh4pflqj" path="res://tuto/tutroial_scene.gdshader" id="12_x6r35"]
+[ext_resource type="AudioStream" uid="uid://dm4g0j6iuee1s" path="res://tuto/tutorial voice-enhanced-v2.wav" id="13_njk1e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y68h5"]
+shader = ExtResource("3_21vcw")
+shader_parameter/transition_size = 1.0
+shader_parameter/player_screen_pos = Vector2(0, 0)
+shader_parameter/player_light_radius = 120.0
+shader_parameter/echo_positions = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/echo_radii = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/echo_opacities = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/active_echoes_count = 0
+shader_parameter/glow_color = Color(1, 0.8552519, 0.8712497, 1)
+shader_parameter/echo_intensity = 1.6
+shader_parameter/ambient_darkness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mtjga"]
+shader = ExtResource("12_x6r35")
+shader_parameter/circle_center = Vector2(0.5, 0.5)
+shader_parameter/circle_size = 1.5
+shader_parameter/screen_aspect = 1.777
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtjga"]
+size = Vector2(662, 610)
+
+[node name="Tutroial Scene" type="Node2D" unique_id=1562986716 node_paths=PackedStringArray("transition_rect", "trigger_area")]
+script = ExtResource("1_vvkyc")
+transition_rect = NodePath("CanvasLayer/Control/transition rect")
+trigger_area = NodePath("Speaking Area")
+
+[node name="Important Node" type="Node2D" parent="." unique_id=936184997 node_paths=PackedStringArray("echo_shader_rect", "player")]
+position = Vector2(-494.87836, 1221.591)
+scale = Vector2(4.5875163, 4.2881646)
+script = ExtResource("1_sv0oy")
+echo_shader_rect = NodePath("../CanvasLayer/Control/ColorRect")
+player = NodePath("../Player")
+
+[node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("1_sqta8")]
+position = Vector2(1746, 529)
+MAX_FEAR_TIME = 200.0
+fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
+camera = NodePath("../Camera2D")
+CAMERA_FOLLOW_SPEED = 0.8
+
+[node name="environments" type="Node2D" parent="." unique_id=1333677008]
+position = Vector2(2163, 328)
+
+[node name="Movement" type="Sprite2D" parent="environments" unique_id=618215188]
+z_index = -1
+position = Vector2(-224, 145)
+scale = Vector2(0.453125, 0.453125)
+texture = ExtResource("3_0s4ki")
+
+[node name="MoveForward" type="Sprite2D" parent="environments" unique_id=475808960]
+z_index = -1
+position = Vector2(70, 239)
+scale = Vector2(0.24609375, 0.265625)
+texture = ExtResource("4_uqi76")
+
+[node name="MoveForward2" type="Sprite2D" parent="environments" unique_id=1261199073]
+z_index = -1
+position = Vector2(758, 237)
+scale = Vector2(0.24609375, 0.265625)
+texture = ExtResource("4_uqi76")
+
+[node name="MoveForward3" type="Sprite2D" parent="environments" unique_id=1283275442]
+z_index = -1
+position = Vector2(1506, 237)
+scale = Vector2(0.24609375, 0.265625)
+texture = ExtResource("4_uqi76")
+
+[node name="G" parent="environments" unique_id=31887931 instance=ExtResource("4_y68h5")]
+position = Vector2(697, 281)
+scale = Vector2(10.000005, 1)
+
+[node name="Ruls" type="Sprite2D" parent="environments" unique_id=1934958319]
+z_index = -1
+position = Vector2(396, 151)
+scale = Vector2(0.5078125, 0.51171875)
+texture = ExtResource("6_x6r35")
+
+[node name="Shift" type="Sprite2D" parent="environments" unique_id=1882663556]
+z_index = -1
+position = Vector2(1042, 149)
+scale = Vector2(0.57421875, 0.546875)
+texture = ExtResource("7_vvkyc")
+
+[node name="Ghost" parent="environments" unique_id=959379480 instance=ExtResource("8_16bfp")]
+position = Vector2(1211, 215)
+
+[node name="Ghost2" parent="environments" unique_id=341114757 instance=ExtResource("8_16bfp")]
+position = Vector2(814, 218)
+
+[node name="Power up" parent="environments" unique_id=612369099 instance=ExtResource("9_ykjr4")]
+position = Vector2(509, 237)
+scale = Vector2(0.515, 0.515)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1520127627]
+position = Vector2(2163, 328)
+
+[node name="background" type="Sprite2D" parent="Camera2D" unique_id=169184801]
+z_index = -2
+position = Vector2(5, 7)
+scale = Vector2(1.2700107, 1.104)
+texture = ExtResource("4_sv0oy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1552907959]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1262593748]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=2007224805]
+material = SubResource("ShaderMaterial_y68h5")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=2006920825]
+layout_mode = 0
+offset_right = 118.0
+offset_bottom = 27.0
+
+[node name="transition rect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1563926926]
+material = SubResource("ShaderMaterial_mtjga")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Speaking Area" type="Area2D" parent="." unique_id=305596851]
+position = Vector2(4000, 519)
+script = ExtResource("12_5l4dy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Speaking Area" unique_id=1418543637]
+position = Vector2(3, -232)
+shape = SubResource("RectangleShape2D_mtjga")
+
+[node name="sp audio" type="AudioStreamPlayer2D" parent="Speaking Area" unique_id=544265692]
+stream = ExtResource("13_njk1e")
+volume_db = 3.095

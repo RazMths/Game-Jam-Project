@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dm4g0j6iuee1s"
+path="res://.godot/imported/tutorial voice-enhanced-v2.wav-9bc70652966f95c0f447bd526c539826.sample"
+
+[deps]
+
+source_file="res://tuto/tutorial voice-enhanced-v2.wav"
+dest_files=["res://.godot/imported/tutorial voice-enhanced-v2.wav-9bc70652966f95c0f447bd526c539826.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
