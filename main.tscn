@@ -162,6 +162,9 @@ position = Vector2(214, 188)
 [node name="ground4" parent="." unique_id=993685892 instance=ExtResource("1_0xm2m")]
 position = Vector2(476, 188)
 
+[node name="ground4" parent="ground4" unique_id=283252370 instance=ExtResource("1_0xm2m")]
+position = Vector2(476, 188)
+
 [node name="ground5" parent="." unique_id=2146517963 instance=ExtResource("1_0xm2m")]
 position = Vector2(222, 56)
 scale = Vector2(0.43, 1)
