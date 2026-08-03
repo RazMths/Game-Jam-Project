@@ -1,3 +1,6 @@
+CollisionShape2D
+Area2D
+Sprite2D
 VBoxContainer
 Button
 Control
@@ -5,11 +8,7 @@ CanvasLayer
 VideoStreamPlayer
 Node2D
 Camera2D
-Sprite2D
 Marker2D
-CollisionShape2D
-Area2D
 AnimatedSprite2D
 CheckBox
 HSlider
-VSlider

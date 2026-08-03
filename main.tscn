@@ -12,11 +12,16 @@
 [ext_resource type="Script" uid="uid://dpdv05w6ismep" path="res://area_2d.gd" id="8_efxa6"]
 [ext_resource type="Texture2D" uid="uid://d2p42gqm5rur6" path="res://word/تكتشر/اساس/صنودق1.png" id="8_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://c5a8qjdanhsor" path="res://اتنا.png" id="10_dg77c"]
+[ext_resource type="Script" uid="uid://cp8asxtlncp0b" path="res://sprite_2d_3.gd" id="10_w48qg"]
 [ext_resource type="Script" uid="uid://coq2042tc5jfc" path="res://tuto/tutNode.gd" id="11_efxa6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfm02"]
-radius = 175.45905
-height = 558.79895
+radius = 41.0
+height = 130.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vivmo"]
+radius = 155.97559
+height = 598.3887
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_efxa6"]
 shader = ExtResource("5_272bh")
@@ -660,7 +665,7 @@ texture = ExtResource("7_kek77")
 position = Vector2(-59.637817, 53.70166)
 script = ExtResource("8_efxa6")
 target_spawn = NodePath("../../../Camera2D4/SpawnPoint5")
-target_camera = NodePath("../../../Camera2D4")
+target_camera = NodePath("../../../../level5/Camera2D5")
 player = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level4/الباب/Sprite2D3/Area2D" unique_id=1995792637]
@@ -671,7 +676,7 @@ shape = SubResource("CapsuleShape2D_vfm02")
 
 [node name="حيط4" type="Sprite2D" parent="level4/حيط" unique_id=176287431]
 z_index = -2
-position = Vector2(627, -1369)
+position = Vector2(650, -1407)
 scale = Vector2(1.3970118, 1.4126438)
 texture = ExtResource("1_lquwl")
 
@@ -859,6 +864,21 @@ position = Vector2(1819, -1260)
 scale = Vector2(0.23745997, 0.25719994)
 texture = ExtResource("8_ycdy4")
 
+[node name="الباب" type="Node2D" parent="level5" unique_id=1213699742]
+
+[node name="Sprite2D3" type="Sprite2D" parent="level5/الباب" unique_id=586238398 node_paths=PackedStringArray("player")]
+position = Vector2(3089, -1262)
+scale = Vector2(0.21798287, 0.2607001)
+texture = ExtResource("7_kek77")
+script = ExtResource("10_w48qg")
+player = NodePath("../../../Player")
+
+[node name="Area2D" type="Area2D" parent="level5/الباب/Sprite2D3" unique_id=1268319490]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level5/الباب/Sprite2D3/Area2D" unique_id=699657416]
+position = Vector2(-36.70013, -3.8358252)
+shape = SubResource("CapsuleShape2D_vivmo")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852383026]
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=301807383]
@@ -912,3 +932,4 @@ scale = Vector2(0.5600098, 1)
 
 [connection signal="body_entered" from="level1/باب/Sprite2D2/Area2D" to="level1/باب/Sprite2D2/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="level4/الباب/Sprite2D3/Area2D" to="level4/Camera2D4/Important Node" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="level5/الباب/Sprite2D3/Area2D" to="level2/باب/Sprite2D3/Area2D" method="_on_area_2d_body_entered"]
