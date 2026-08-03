@@ -8,9 +8,11 @@
 [ext_resource type="Shader" uid="uid://d0hwf8w4dmms7" path="res://echo_mask.gdshader" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://cvsjodrqp0mdo" path="res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://1eodillcbh15" path="res://القائمات/القائمه التوقف/pause_menu.tscn" id="9_kek77"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mtjga"]
 shader = ExtResource("5_272bh")
+shader_parameter/transition_size = 1.0
 shader_parameter/player_screen_pos = Vector2(0, 0)
 shader_parameter/player_light_radius = 120.0
 shader_parameter/echo_positions = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
@@ -21,12 +23,17 @@ shader_parameter/glow_color = Color(1, 0.8552519, 0.8712497, 1)
 shader_parameter/echo_intensity = 1.6
 shader_parameter/ambient_darkness = 1.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfm02"]
+radius = 114.6879
+height = 367.00128
+
 [node name="main" type="Node2D" unique_id=1916839064]
 
-[node name="Important Node" type="Node2D" parent="." unique_id=1509368350 node_paths=PackedStringArray("echo_shader_rect", "player")]
+[node name="Important Node" type="Node2D" parent="." unique_id=1509368350 node_paths=PackedStringArray("echo_shader_rect", "player", "target_camera")]
 script = ExtResource("1_5vw27")
 echo_shader_rect = NodePath("../CanvasLayer/Control/ColorRect")
 player = NodePath("../Player")
+target_camera = NodePath("../Camera2D2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1563126919]
 position = Vector2(-6.0000076, -101.25)
@@ -35,6 +42,26 @@ texture = ExtResource("1_lquwl")
 
 [node name="ground" parent="." unique_id=1026929526 instance=ExtResource("1_0xm2m")]
 position = Vector2(-48, 188)
+
+[node name="ground" parent="ground" unique_id=1127268890 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1861, -263)
+
+[node name="ground2" parent="ground" unique_id=674232912 instance=ExtResource("1_0xm2m")]
+position = Vector2(-2121, -263)
+
+[node name="ground3" parent="ground" unique_id=336320928 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1599, -263)
+
+[node name="ground4" parent="ground" unique_id=581300502 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1337, -263)
+
+[node name="ground6" parent="ground" unique_id=357530775 instance=ExtResource("1_0xm2m")]
+position = Vector2(-2307, -263)
+scale = Vector2(0.43, 1)
+
+[node name="ground7" parent="ground" unique_id=236486115 instance=ExtResource("1_0xm2m")]
+position = Vector2(-2418, -263)
+scale = Vector2(0.43, 1)
 
 [node name="ground2" parent="." unique_id=1901872701 instance=ExtResource("1_0xm2m")]
 position = Vector2(-308, 188)
@@ -132,6 +159,29 @@ position = Vector2(379, -163)
 position = Vector2(-318, -177)
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1966870530]
-position = Vector2(105.00003, -282)
-scale = Vector2(0.21184632, 0.2424)
+position = Vector2(107.87501, -284.875)
+scale = Vector2(0.21798287, 0.2332)
 texture = ExtResource("6_7mycd")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D2" unique_id=1953744864]
+position = Vector2(-26.951693, 42.345627)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Area2D" unique_id=1493808634]
+position = Vector2(-32.112614, -115.78044)
+shape = SubResource("CapsuleShape2D_vfm02")
+
+[node name="PauseMenu" parent="." unique_id=1988215942 instance=ExtResource("9_kek77")]
+
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=166993089]
+position = Vector2(-1891, -374)
+
+[node name="Camera2D3" type="Camera2D" parent="." unique_id=2103061501]
+position = Vector2(-1024, -1189)
+
+[node name="Camera2D4" type="Camera2D" parent="." unique_id=131999018]
+position = Vector2(670, -1412)
+
+[node name="Camera2D5" type="Camera2D" parent="." unique_id=472976942]
+position = Vector2(1901, -618)
+
+[connection signal="body_entered" from="Sprite2D2/Area2D" to="Important Node" method="_on_area_2d_body_entered"]

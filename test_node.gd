@@ -2,6 +2,7 @@ extends Node
 
 @export var echo_shader_rect: ColorRect
 @export var player: Node2D 
+@export var target_camera: Camera2D
 
 var active_waves: Array = []
 
@@ -16,3 +17,10 @@ func _process(_delta: float) -> void:
 	if player:
 		var player_pos = canvas_transform * player.global_position
 		mat.set_shader_parameter("player_screen_pos", player_pos)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	# التأكد من أن الكائن الذي دخل هو اللاعب
+	if body == player:
+		if target_camera:
+			target_camera.make_current()
