@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dqwfwg0cox5wc" path="res://test_node.gd" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://c7krkrlq72r2r" path="res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://Player/Characters/player.tscn" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cvsjodrqp0mdo" path="res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png" id="3_efxa6"]
 [ext_resource type="PackedScene" uid="uid://blftmxdlk301y" path="res://power_up.tscn" id="4_1bvp3"]
 [ext_resource type="Shader" uid="uid://d0hwf8w4dmms7" path="res://echo_mask.gdshader" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="5_lquwl"]
@@ -30,127 +31,179 @@ height = 558.79895
 
 [node name="main" type="Node2D" unique_id=1916839064]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1563126919]
-position = Vector2(-6.0000076, -101.25)
+[node name="حيط" type="Sprite2D" parent="." unique_id=1563126919]
+position = Vector2(-3, -172)
 scale = Vector2(1.4108856, 1.324)
 texture = ExtResource("1_lquwl")
 
-[node name="ground" parent="." unique_id=1026929526 instance=ExtResource("1_0xm2m")]
+[node name="حيط3" type="Sprite2D" parent="حيط" unique_id=1656028747]
+z_index = -1
+position = Vector2(-1321.156, -173.71602)
+texture = ExtResource("1_lquwl")
+
+[node name="حيط2" type="Sprite2D" parent="حيط" unique_id=501412987]
+z_index = -1
+position = Vector2(-696.869, -787.3866)
+scale = Vector2(1.0950041, 0.89788514)
+texture = ExtResource("1_lquwl")
+
+[node name="حيط4" type="Sprite2D" parent="حيط" unique_id=176287431]
+z_index = -1
+position = Vector2(923.5335, -788.5196)
+scale = Vector2(1.8930372, 1.6094317)
+texture = ExtResource("1_lquwl")
+
+[node name="الارض" parent="." unique_id=1026929526 instance=ExtResource("1_0xm2m")]
 position = Vector2(-48, 188)
 
-[node name="ground" parent="ground" unique_id=1127268890 instance=ExtResource("1_0xm2m")]
+[node name="ground" parent="الارض" unique_id=1127268890 instance=ExtResource("1_0xm2m")]
 position = Vector2(-1861, -263)
 
-[node name="ground" parent="ground/ground" unique_id=1728150411 instance=ExtResource("1_0xm2m")]
+[node name="ground" parent="الارض/ground" unique_id=1728150411 instance=ExtResource("1_0xm2m")]
 position = Vector2(871, -797)
 
-[node name="ground" parent="ground/ground/ground" unique_id=1162124040 instance=ExtResource("1_0xm2m")]
+[node name="ground" parent="الارض/ground/ground" unique_id=1162124040 instance=ExtResource("1_0xm2m")]
 position = Vector2(1683, -231)
 
-[node name="ground" parent="ground/ground/ground/ground" unique_id=207008698 instance=ExtResource("1_0xm2m")]
+[node name="ground" parent="الارض/ground/ground/ground" unique_id=207008698 instance=ExtResource("1_0xm2m")]
 position = Vector2(1260, 447)
 
-[node name="ground2" parent="ground/ground/ground/ground" unique_id=926911886 instance=ExtResource("1_0xm2m")]
+[node name="ground2" parent="الارض/ground/ground/ground" unique_id=926911886 instance=ExtResource("1_0xm2m")]
 position = Vector2(1000, 447)
 
-[node name="ground3" parent="ground/ground/ground/ground" unique_id=595393159 instance=ExtResource("1_0xm2m")]
+[node name="ground3" parent="الارض/ground/ground/ground" unique_id=595393159 instance=ExtResource("1_0xm2m")]
 position = Vector2(1522, 447)
 
-[node name="ground4" parent="ground/ground/ground/ground" unique_id=1204358409 instance=ExtResource("1_0xm2m")]
+[node name="ground4" parent="الارض/ground/ground/ground" unique_id=1204358409 instance=ExtResource("1_0xm2m")]
 position = Vector2(1784, 447)
 
-[node name="ground6" parent="ground/ground/ground/ground" unique_id=379876012 instance=ExtResource("1_0xm2m")]
+[node name="ground6" parent="الارض/ground/ground/ground" unique_id=379876012 instance=ExtResource("1_0xm2m")]
 position = Vector2(814, 447)
 scale = Vector2(0.43, 1)
 
-[node name="ground7" parent="ground/ground/ground/ground" unique_id=37202613 instance=ExtResource("1_0xm2m")]
+[node name="ground7" parent="الارض/ground/ground/ground" unique_id=37202613 instance=ExtResource("1_0xm2m")]
 position = Vector2(703, 447)
 scale = Vector2(0.43, 1)
 
-[node name="ground" parent="ground/ground/ground/ground/ground7" unique_id=1683703487 instance=ExtResource("1_0xm2m")]
+[node name="ground" parent="الارض/ground/ground/ground/ground7" unique_id=1683703487 instance=ExtResource("1_0xm2m")]
 position = Vector2(1453.9526, -147)
 
-[node name="ground2" parent="ground/ground/ground/ground/ground7" unique_id=104456922 instance=ExtResource("1_0xm2m")]
+[node name="ground2" parent="الارض/ground/ground/ground/ground7" unique_id=104456922 instance=ExtResource("1_0xm2m")]
 position = Vector2(1109.3022, -147)
 
-[node name="ground3" parent="ground/ground/ground/ground/ground7" unique_id=1063566794 instance=ExtResource("1_0xm2m")]
+[node name="ground3" parent="الارض/ground/ground/ground/ground7" unique_id=1063566794 instance=ExtResource("1_0xm2m")]
 position = Vector2(1801.2549, -147)
 
-[node name="ground4" parent="ground/ground/ground/ground/ground7" unique_id=1424145346 instance=ExtResource("1_0xm2m")]
+[node name="ground4" parent="الارض/ground/ground/ground/ground7" unique_id=1424145346 instance=ExtResource("1_0xm2m")]
 position = Vector2(2148.5576, -147)
 
-[node name="ground2" parent="ground/ground/ground" unique_id=2114401822 instance=ExtResource("1_0xm2m")]
+[node name="ground2" parent="الارض/ground/ground" unique_id=2114401822 instance=ExtResource("1_0xm2m")]
 position = Vector2(1423, -231)
 
-[node name="ground3" parent="ground/ground/ground" unique_id=983239508 instance=ExtResource("1_0xm2m")]
+[node name="ground3" parent="الارض/ground/ground" unique_id=983239508 instance=ExtResource("1_0xm2m")]
 position = Vector2(1945, -231)
 
-[node name="ground4" parent="ground/ground/ground" unique_id=690062758 instance=ExtResource("1_0xm2m")]
+[node name="ground4" parent="الارض/ground/ground" unique_id=690062758 instance=ExtResource("1_0xm2m")]
 position = Vector2(2207, -231)
 
-[node name="ground6" parent="ground/ground/ground" unique_id=1902506830 instance=ExtResource("1_0xm2m")]
+[node name="ground6" parent="الارض/ground/ground" unique_id=1902506830 instance=ExtResource("1_0xm2m")]
 position = Vector2(1237, -231)
 scale = Vector2(0.43, 1)
 
-[node name="ground7" parent="ground/ground/ground" unique_id=861376677 instance=ExtResource("1_0xm2m")]
+[node name="ground7" parent="الارض/ground/ground" unique_id=861376677 instance=ExtResource("1_0xm2m")]
 position = Vector2(1126, -231)
 scale = Vector2(0.43, 1)
 
-[node name="ground" parent="ground/ground/ground/ground7" unique_id=506744969 instance=ExtResource("1_0xm2m")]
+[node name="ground" parent="الارض/ground/ground/ground7" unique_id=506744969 instance=ExtResource("1_0xm2m")]
 position = Vector2(1453.9526, -147)
 
-[node name="ground2" parent="ground/ground/ground/ground7" unique_id=1821963943 instance=ExtResource("1_0xm2m")]
+[node name="ground2" parent="الارض/ground/ground/ground7" unique_id=1821963943 instance=ExtResource("1_0xm2m")]
 position = Vector2(1109.3022, -147)
 
-[node name="ground3" parent="ground/ground/ground/ground7" unique_id=1154139127 instance=ExtResource("1_0xm2m")]
+[node name="ground3" parent="الارض/ground/ground/ground7" unique_id=1154139127 instance=ExtResource("1_0xm2m")]
 position = Vector2(1801.2549, -147)
 
-[node name="ground4" parent="ground/ground/ground/ground7" unique_id=1476386731 instance=ExtResource("1_0xm2m")]
+[node name="ground4" parent="الارض/ground/ground/ground7" unique_id=1476386731 instance=ExtResource("1_0xm2m")]
 position = Vector2(2148.5576, -147)
 
-[node name="ground2" parent="ground/ground" unique_id=202749888 instance=ExtResource("1_0xm2m")]
+[node name="ground2" parent="الارض/ground" unique_id=202749888 instance=ExtResource("1_0xm2m")]
 position = Vector2(611, -797)
 
-[node name="ground3" parent="ground/ground" unique_id=1313237224 instance=ExtResource("1_0xm2m")]
+[node name="ground3" parent="الارض/ground" unique_id=1313237224 instance=ExtResource("1_0xm2m")]
 position = Vector2(1133, -797)
 
-[node name="ground4" parent="ground/ground" unique_id=826876289 instance=ExtResource("1_0xm2m")]
+[node name="ground4" parent="الارض/ground" unique_id=826876289 instance=ExtResource("1_0xm2m")]
 position = Vector2(1395, -797)
 
-[node name="ground6" parent="ground/ground" unique_id=1964171433 instance=ExtResource("1_0xm2m")]
+[node name="ground6" parent="الارض/ground" unique_id=1964171433 instance=ExtResource("1_0xm2m")]
 position = Vector2(425, -797)
 scale = Vector2(0.43, 1)
 
-[node name="ground7" parent="ground/ground" unique_id=1954136790 instance=ExtResource("1_0xm2m")]
+[node name="ground7" parent="الارض/ground" unique_id=1954136790 instance=ExtResource("1_0xm2m")]
 position = Vector2(314, -797)
 scale = Vector2(0.43, 1)
 
-[node name="ground" parent="ground/ground/ground7" unique_id=1548225854 instance=ExtResource("1_0xm2m")]
+[node name="ground" parent="الارض/ground/ground7" unique_id=1548225854 instance=ExtResource("1_0xm2m")]
 position = Vector2(1453.9526, -147)
 
-[node name="ground2" parent="ground/ground/ground7" unique_id=349164719 instance=ExtResource("1_0xm2m")]
+[node name="ground2" parent="الارض/ground/ground7" unique_id=349164719 instance=ExtResource("1_0xm2m")]
 position = Vector2(1109.3022, -147)
 
-[node name="ground3" parent="ground/ground/ground7" unique_id=1189411679 instance=ExtResource("1_0xm2m")]
+[node name="ground3" parent="الارض/ground/ground7" unique_id=1189411679 instance=ExtResource("1_0xm2m")]
 position = Vector2(1801.2549, -147)
 
-[node name="ground4" parent="ground/ground/ground7" unique_id=1913342768 instance=ExtResource("1_0xm2m")]
+[node name="ground4" parent="الارض/ground/ground7" unique_id=1913342768 instance=ExtResource("1_0xm2m")]
 position = Vector2(2148.5576, -147)
 
-[node name="ground2" parent="ground" unique_id=674232912 instance=ExtResource("1_0xm2m")]
+[node name="ground2" parent="الارض" unique_id=674232912 instance=ExtResource("1_0xm2m")]
 position = Vector2(-2121, -263)
 
-[node name="ground3" parent="ground" unique_id=336320928 instance=ExtResource("1_0xm2m")]
+[node name="ground3" parent="الارض" unique_id=336320928 instance=ExtResource("1_0xm2m")]
 position = Vector2(-1599, -263)
 
-[node name="ground4" parent="ground" unique_id=581300502 instance=ExtResource("1_0xm2m")]
+[node name="ground4" parent="الارض" unique_id=581300502 instance=ExtResource("1_0xm2m")]
 position = Vector2(-1337, -263)
 
-[node name="ground6" parent="ground" unique_id=357530775 instance=ExtResource("1_0xm2m")]
+[node name="ground6" parent="الارض" unique_id=357530775 instance=ExtResource("1_0xm2m")]
 position = Vector2(-2307, -263)
 scale = Vector2(0.43, 1)
 
-[node name="ground7" parent="ground" unique_id=236486115 instance=ExtResource("1_0xm2m")]
+[node name="ground8" parent="الارض" unique_id=917220440 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1953, -358)
+scale = Vector2(0.43, 1)
+
+[node name="ground9" parent="الارض" unique_id=585318110 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1799, -424)
+scale = Vector2(0.43, 1)
+
+[node name="ground10" parent="الارض" unique_id=97246528 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1634.9999, -479)
+scale = Vector2(0.43, 1)
+
+[node name="ground11" parent="الارض" unique_id=291176108 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1871.9999, -578)
+rotation = 0.23931454
+scale = Vector2(0.43, 1)
+
+[node name="ground14" parent="الارض" unique_id=1676789581 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1744, -772)
+scale = Vector2(0.43, 1)
+
+[node name="ground15" parent="الارض" unique_id=600512160 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1428.9999, -741)
+scale = Vector2(0.43, 1)
+
+[node name="ground12" parent="الارض" unique_id=616946919 instance=ExtResource("1_0xm2m")]
+position = Vector2(-2135, -602)
+rotation = 0.25855815
+scale = Vector2(0.43, 1)
+
+[node name="ground13" parent="الارض" unique_id=205533772 instance=ExtResource("1_0xm2m")]
+position = Vector2(-2003, -743)
+rotation = -0.5221685
+scale = Vector2(0.43, 1)
+
+[node name="ground7" parent="الارض" unique_id=236486115 instance=ExtResource("1_0xm2m")]
 position = Vector2(-2418, -263)
 scale = Vector2(0.43, 1)
 
@@ -163,8 +216,8 @@ position = Vector2(214, 188)
 [node name="ground4" parent="." unique_id=993685892 instance=ExtResource("1_0xm2m")]
 position = Vector2(476, 188)
 
-[node name="ground4" parent="ground4" unique_id=283252370 instance=ExtResource("1_0xm2m")]
-position = Vector2(476, 188)
+[node name="ground11" parent="." unique_id=283252370 instance=ExtResource("1_0xm2m")]
+position = Vector2(952, 376)
 
 [node name="ground5" parent="." unique_id=2146517963 instance=ExtResource("1_0xm2m")]
 position = Vector2(222, 56)
@@ -182,6 +235,31 @@ scale = Vector2(0.43, 1)
 position = Vector2(401.99997, -106.000015)
 rotation = -0.3246443
 scale = Vector2(0.485, 1)
+
+[node name="شببيك" type="Sprite2D" parent="." unique_id=172716032]
+position = Vector2(-2363.807, -355.1875)
+scale = Vector2(0.24718657, 0.2918)
+texture = ExtResource("3_efxa6")
+
+[node name="شببيك2" type="Sprite2D" parent="." unique_id=2090952017]
+position = Vector2(-2272.0002, -572)
+scale = Vector2(0.24718657, 0.2918)
+texture = ExtResource("3_efxa6")
+
+[node name="شببيك3" type="Sprite2D" parent="." unique_id=770272007]
+position = Vector2(-1634, -173)
+scale = Vector2(0.24718657, 0.2918)
+texture = ExtResource("3_efxa6")
+
+[node name="شببيك4" type="Sprite2D" parent="." unique_id=2074607961]
+position = Vector2(-1455, -177.99997)
+scale = Vector2(0.24718657, 0.2918)
+texture = ExtResource("3_efxa6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1395458297]
+position = Vector2(-153, -49.00003)
+scale = Vector2(0.4135539, 0.516)
+texture = ExtResource("3_efxa6")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=852383026]
 
@@ -217,9 +295,6 @@ offset_bottom = 27.0
 z_index = 10
 options_menu = NodePath("../../OptionsMenu")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=616888279]
-position = Vector2(4, -125)
-
 [node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
 position = Vector2(-150, 145)
 fear_progress_bar = NodePath("../CanvasLayer2/Control/ProgressBar")
@@ -245,17 +320,42 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(-523, 117)
 scale = Vector2(0.5, 0.5)
 
-[node name="Ghost" parent="." unique_id=959379480 instance=ExtResource("5_lquwl")]
-position = Vector2(242, -1)
+[node name="Power up4" parent="." unique_id=1187287724 instance=ExtResource("4_1bvp3")]
+position = Vector2(-1687, -336)
+scale = Vector2(0.5, 0.5)
 
-[node name="Ghost2" parent="." unique_id=3102647 instance=ExtResource("5_lquwl")]
-position = Vector2(-14, -85)
+[node name="Power up5" parent="." unique_id=483007237 instance=ExtResource("4_1bvp3")]
+position = Vector2(-1910, -433)
+scale = Vector2(0.5, 0.5)
+
+[node name="Power up6" parent="." unique_id=500542028 instance=ExtResource("4_1bvp3")]
+position = Vector2(-2081, -604)
+scale = Vector2(0.5, 0.5)
+
+[node name="Power up7" parent="." unique_id=1229724029 instance=ExtResource("4_1bvp3")]
+position = Vector2(-2231, -130)
+scale = Vector2(0.5, 0.5)
+
+[node name="اشباح" parent="." unique_id=959379480 instance=ExtResource("5_lquwl")]
+position = Vector2(242, -1)
 
 [node name="Ghost3" parent="." unique_id=2141327756 instance=ExtResource("5_lquwl")]
 position = Vector2(379, -163)
 
+[node name="Ghost2" parent="." unique_id=3102647 instance=ExtResource("5_lquwl")]
+position = Vector2(-14, -85)
+
 [node name="Ghost4" parent="." unique_id=1039330018 instance=ExtResource("5_lquwl")]
 position = Vector2(-318, -177)
+
+[node name="Ghost5" parent="." unique_id=1583809454 instance=ExtResource("5_lquwl")]
+position = Vector2(-1961, -469)
+
+[node name="Ghost6" parent="." unique_id=1881376600 instance=ExtResource("5_lquwl")]
+position = Vector2(-2321, -493)
+
+[node name="Ghost7" parent="." unique_id=1747664653 instance=ExtResource("5_lquwl")]
+position = Vector2(-1953, -292)
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1966870530]
 position = Vector2(101.875015, -296.875)
@@ -270,7 +370,7 @@ position = Vector2(-16.303944, -7.0529785)
 shape = SubResource("CapsuleShape2D_vfm02")
 
 [node name="SpawnPoint2" type="Marker2D" parent="Sprite2D2" unique_id=1990957326]
-position = Vector2(-11147.091, 475.45038)
+position = Vector2(-12086.57, 682.10974)
 scale = Vector2(4.5875163, 4.2881656)
 
 [node name="Important Node" type="Node2D" parent="Sprite2D2" unique_id=1509368350 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
@@ -282,12 +382,15 @@ echo_shader_rect = NodePath("../../CanvasLayer2/Control/ColorRect")
 player = NodePath("../../Player")
 target_camera = NodePath("../../Camera2D2")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=616888279]
+position = Vector2(4, -125)
+
 [node name="Camera2D2" type="Camera2D" parent="." unique_id=166993089]
 position = Vector2(-1891, -374)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Camera2D2" unique_id=727006241]
-position = Vector2(206, 183.00012)
-scale = Vector2(0.21798287, 0.23980002)
+position = Vector2(420.06247, -234.96878)
+scale = Vector2(0.1666222, 0.1375001)
 texture = ExtResource("7_kek77")
 
 [node name="Area2D" type="Area2D" parent="Camera2D2/Sprite2D3" unique_id=697638413]
@@ -370,6 +473,10 @@ position = Vector2(1901, -957)
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
 pause_menu = NodePath("../CanvasLayer2/PauseMenu")

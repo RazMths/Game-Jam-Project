@@ -1,3 +1,2 @@
 res://main.tscn
-res://ghost.tscn
-res://ghost.gd
+res://Player/Characters/player.gd
