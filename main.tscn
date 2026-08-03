@@ -12,6 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://1eodillcbh15" path="res://القائمات/القائمه التوقف/pause_menu.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://b57cj8tap0umb" path="res://القائمات/القائمه الاعدادات/options_menu.tscn" id="10_4c57u"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfm02"]
+radius = 175.45905
+height = 558.79895
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mtjga"]
 shader = ExtResource("5_272bh")
 shader_parameter/transition_size = 1.0
@@ -25,241 +29,480 @@ shader_parameter/glow_color = Color(1, 0.8552519, 0.8712497, 1)
 shader_parameter/echo_intensity = 1.6
 shader_parameter/ambient_darkness = 1.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfm02"]
-radius = 175.45905
-height = 558.79895
-
 [node name="main" type="Node2D" unique_id=1916839064]
 
-[node name="حيط" type="Sprite2D" parent="." unique_id=1563126919]
+[node name="level1" type="Node2D" parent="." unique_id=1725090150]
+
+[node name="حيط" type="Node2D" parent="level1" unique_id=600538582]
+
+[node name="حيط" type="Sprite2D" parent="level1/حيط" unique_id=1563126919]
 position = Vector2(-3, -172)
 scale = Vector2(1.4108856, 1.324)
 texture = ExtResource("1_lquwl")
 
-[node name="حيط3" type="Sprite2D" parent="حيط" unique_id=1656028747]
-z_index = -1
-position = Vector2(-1321.156, -173.71602)
-texture = ExtResource("1_lquwl")
+[node name="شبح" type="Node2D" parent="level1" unique_id=153123204]
 
-[node name="حيط2" type="Sprite2D" parent="حيط" unique_id=501412987]
-z_index = -1
-position = Vector2(-696.869, -787.3866)
-scale = Vector2(1.0950041, 0.89788514)
-texture = ExtResource("1_lquwl")
+[node name="اشباح" parent="level1/شبح" unique_id=959379480 instance=ExtResource("5_lquwl")]
+position = Vector2(242, -1)
 
-[node name="حيط4" type="Sprite2D" parent="حيط" unique_id=176287431]
-z_index = -1
-position = Vector2(923.5335, -788.5196)
-scale = Vector2(1.8930372, 1.6094317)
-texture = ExtResource("1_lquwl")
+[node name="Ghost3" parent="level1/شبح" unique_id=2141327756 instance=ExtResource("5_lquwl")]
+position = Vector2(379, -163)
 
-[node name="الارض" parent="." unique_id=1026929526 instance=ExtResource("1_0xm2m")]
-position = Vector2(-48, 188)
+[node name="Ghost2" parent="level1/شبح" unique_id=3102647 instance=ExtResource("5_lquwl")]
+position = Vector2(-14, -85)
 
-[node name="ground" parent="الارض" unique_id=1127268890 instance=ExtResource("1_0xm2m")]
-position = Vector2(-1861, -263)
+[node name="Ghost4" parent="level1/شبح" unique_id=1039330018 instance=ExtResource("5_lquwl")]
+position = Vector2(-318, -177)
 
-[node name="ground" parent="الارض/ground" unique_id=1728150411 instance=ExtResource("1_0xm2m")]
-position = Vector2(871, -797)
+[node name="زجاجه صحه" type="Node2D" parent="level1" unique_id=273602778]
 
-[node name="ground" parent="الارض/ground/ground" unique_id=1162124040 instance=ExtResource("1_0xm2m")]
-position = Vector2(1683, -231)
+[node name="Power up" parent="level1/زجاجه صحه" unique_id=612369099 instance=ExtResource("4_1bvp3")]
+position = Vector2(62, 160)
+scale = Vector2(0.5, 0.5)
 
-[node name="ground" parent="الارض/ground/ground/ground" unique_id=207008698 instance=ExtResource("1_0xm2m")]
-position = Vector2(1260, 447)
+[node name="Power up2" parent="level1/زجاجه صحه" unique_id=2096508304 instance=ExtResource("4_1bvp3")]
+position = Vector2(-365, 64)
+scale = Vector2(0.5, 0.5)
 
-[node name="ground2" parent="الارض/ground/ground/ground" unique_id=926911886 instance=ExtResource("1_0xm2m")]
-position = Vector2(1000, 447)
+[node name="Power up3" parent="level1/زجاجه صحه" unique_id=499746787 instance=ExtResource("4_1bvp3")]
+position = Vector2(-523, 117)
+scale = Vector2(0.5, 0.5)
 
-[node name="ground3" parent="الارض/ground/ground/ground" unique_id=595393159 instance=ExtResource("1_0xm2m")]
-position = Vector2(1522, 447)
+[node name="شباك" type="Node2D" parent="level1" unique_id=1631289207]
 
-[node name="ground4" parent="الارض/ground/ground/ground" unique_id=1204358409 instance=ExtResource("1_0xm2m")]
-position = Vector2(1784, 447)
+[node name="Sprite2D3" type="Sprite2D" parent="level1/شباك" unique_id=1395458297]
+position = Vector2(-153, -49.00003)
+scale = Vector2(0.4135539, 0.516)
+texture = ExtResource("3_efxa6")
 
-[node name="ground6" parent="الارض/ground/ground/ground" unique_id=379876012 instance=ExtResource("1_0xm2m")]
-position = Vector2(814, 447)
-scale = Vector2(0.43, 1)
+[node name="ارض طائر" type="Node2D" parent="level1" unique_id=1249490492]
 
-[node name="ground7" parent="الارض/ground/ground/ground" unique_id=37202613 instance=ExtResource("1_0xm2m")]
-position = Vector2(703, 447)
-scale = Vector2(0.43, 1)
-
-[node name="ground" parent="الارض/ground/ground/ground/ground7" unique_id=1683703487 instance=ExtResource("1_0xm2m")]
-position = Vector2(1453.9526, -147)
-
-[node name="ground2" parent="الارض/ground/ground/ground/ground7" unique_id=104456922 instance=ExtResource("1_0xm2m")]
-position = Vector2(1109.3022, -147)
-
-[node name="ground3" parent="الارض/ground/ground/ground/ground7" unique_id=1063566794 instance=ExtResource("1_0xm2m")]
-position = Vector2(1801.2549, -147)
-
-[node name="ground4" parent="الارض/ground/ground/ground/ground7" unique_id=1424145346 instance=ExtResource("1_0xm2m")]
-position = Vector2(2148.5576, -147)
-
-[node name="ground2" parent="الارض/ground/ground" unique_id=2114401822 instance=ExtResource("1_0xm2m")]
-position = Vector2(1423, -231)
-
-[node name="ground3" parent="الارض/ground/ground" unique_id=983239508 instance=ExtResource("1_0xm2m")]
-position = Vector2(1945, -231)
-
-[node name="ground4" parent="الارض/ground/ground" unique_id=690062758 instance=ExtResource("1_0xm2m")]
-position = Vector2(2207, -231)
-
-[node name="ground6" parent="الارض/ground/ground" unique_id=1902506830 instance=ExtResource("1_0xm2m")]
-position = Vector2(1237, -231)
-scale = Vector2(0.43, 1)
-
-[node name="ground7" parent="الارض/ground/ground" unique_id=861376677 instance=ExtResource("1_0xm2m")]
-position = Vector2(1126, -231)
-scale = Vector2(0.43, 1)
-
-[node name="ground" parent="الارض/ground/ground/ground7" unique_id=506744969 instance=ExtResource("1_0xm2m")]
-position = Vector2(1453.9526, -147)
-
-[node name="ground2" parent="الارض/ground/ground/ground7" unique_id=1821963943 instance=ExtResource("1_0xm2m")]
-position = Vector2(1109.3022, -147)
-
-[node name="ground3" parent="الارض/ground/ground/ground7" unique_id=1154139127 instance=ExtResource("1_0xm2m")]
-position = Vector2(1801.2549, -147)
-
-[node name="ground4" parent="الارض/ground/ground/ground7" unique_id=1476386731 instance=ExtResource("1_0xm2m")]
-position = Vector2(2148.5576, -147)
-
-[node name="ground2" parent="الارض/ground" unique_id=202749888 instance=ExtResource("1_0xm2m")]
-position = Vector2(611, -797)
-
-[node name="ground3" parent="الارض/ground" unique_id=1313237224 instance=ExtResource("1_0xm2m")]
-position = Vector2(1133, -797)
-
-[node name="ground4" parent="الارض/ground" unique_id=826876289 instance=ExtResource("1_0xm2m")]
-position = Vector2(1395, -797)
-
-[node name="ground6" parent="الارض/ground" unique_id=1964171433 instance=ExtResource("1_0xm2m")]
-position = Vector2(425, -797)
-scale = Vector2(0.43, 1)
-
-[node name="ground7" parent="الارض/ground" unique_id=1954136790 instance=ExtResource("1_0xm2m")]
-position = Vector2(314, -797)
-scale = Vector2(0.43, 1)
-
-[node name="ground" parent="الارض/ground/ground7" unique_id=1548225854 instance=ExtResource("1_0xm2m")]
-position = Vector2(1453.9526, -147)
-
-[node name="ground2" parent="الارض/ground/ground7" unique_id=349164719 instance=ExtResource("1_0xm2m")]
-position = Vector2(1109.3022, -147)
-
-[node name="ground3" parent="الارض/ground/ground7" unique_id=1189411679 instance=ExtResource("1_0xm2m")]
-position = Vector2(1801.2549, -147)
-
-[node name="ground4" parent="الارض/ground/ground7" unique_id=1913342768 instance=ExtResource("1_0xm2m")]
-position = Vector2(2148.5576, -147)
-
-[node name="ground2" parent="الارض" unique_id=674232912 instance=ExtResource("1_0xm2m")]
-position = Vector2(-2121, -263)
-
-[node name="ground3" parent="الارض" unique_id=336320928 instance=ExtResource("1_0xm2m")]
-position = Vector2(-1599, -263)
-
-[node name="ground4" parent="الارض" unique_id=581300502 instance=ExtResource("1_0xm2m")]
-position = Vector2(-1337, -263)
-
-[node name="ground6" parent="الارض" unique_id=357530775 instance=ExtResource("1_0xm2m")]
-position = Vector2(-2307, -263)
-scale = Vector2(0.43, 1)
-
-[node name="ground8" parent="الارض" unique_id=917220440 instance=ExtResource("1_0xm2m")]
-position = Vector2(-1953, -358)
-scale = Vector2(0.43, 1)
-
-[node name="ground9" parent="الارض" unique_id=585318110 instance=ExtResource("1_0xm2m")]
-position = Vector2(-1799, -424)
-scale = Vector2(0.43, 1)
-
-[node name="ground10" parent="الارض" unique_id=97246528 instance=ExtResource("1_0xm2m")]
-position = Vector2(-1634.9999, -479)
-scale = Vector2(0.43, 1)
-
-[node name="ground11" parent="الارض" unique_id=291176108 instance=ExtResource("1_0xm2m")]
-position = Vector2(-1871.9999, -578)
-rotation = 0.23931454
-scale = Vector2(0.43, 1)
-
-[node name="ground14" parent="الارض" unique_id=1676789581 instance=ExtResource("1_0xm2m")]
-position = Vector2(-1744, -772)
-scale = Vector2(0.43, 1)
-
-[node name="ground15" parent="الارض" unique_id=600512160 instance=ExtResource("1_0xm2m")]
-position = Vector2(-1428.9999, -741)
-scale = Vector2(0.43, 1)
-
-[node name="ground12" parent="الارض" unique_id=616946919 instance=ExtResource("1_0xm2m")]
-position = Vector2(-2135, -602)
-rotation = 0.25855815
-scale = Vector2(0.43, 1)
-
-[node name="ground13" parent="الارض" unique_id=205533772 instance=ExtResource("1_0xm2m")]
-position = Vector2(-2003, -743)
-rotation = -0.5221685
-scale = Vector2(0.43, 1)
-
-[node name="ground7" parent="الارض" unique_id=236486115 instance=ExtResource("1_0xm2m")]
-position = Vector2(-2418, -263)
-scale = Vector2(0.43, 1)
-
-[node name="ground2" parent="." unique_id=1901872701 instance=ExtResource("1_0xm2m")]
-position = Vector2(-308, 188)
-
-[node name="ground3" parent="." unique_id=1851421787 instance=ExtResource("1_0xm2m")]
-position = Vector2(214, 188)
-
-[node name="ground4" parent="." unique_id=993685892 instance=ExtResource("1_0xm2m")]
-position = Vector2(476, 188)
-
-[node name="ground11" parent="." unique_id=283252370 instance=ExtResource("1_0xm2m")]
-position = Vector2(952, 376)
-
-[node name="ground5" parent="." unique_id=2146517963 instance=ExtResource("1_0xm2m")]
+[node name="ground5" parent="level1/ارض طائر" unique_id=2146517963 instance=ExtResource("1_0xm2m")]
 position = Vector2(222, 56)
 scale = Vector2(0.43, 1)
 
-[node name="ground6" parent="." unique_id=1229989855 instance=ExtResource("1_0xm2m")]
+[node name="ground8" parent="level1/ارض طائر" unique_id=537059906 instance=ExtResource("1_0xm2m")]
+position = Vector2(401.99997, -106.000015)
+rotation = -0.32464433
+scale = Vector2(0.485, 0.99999994)
+
+[node name="ground9" parent="level1/ارض طائر" unique_id=939245974 instance=ExtResource("1_0xm2m")]
+position = Vector2(-11, -26)
+scale = Vector2(0.43, 1)
+
+[node name="ground10" parent="level1/ارض طائر" unique_id=920013394 instance=ExtResource("1_0xm2m")]
+position = Vector2(-311, -115)
+scale = Vector2(0.43, 1)
+
+[node name="الارض" type="Node2D" parent="level1" unique_id=384525005]
+
+[node name="الارض2" parent="level1/الارض" unique_id=1026929526 instance=ExtResource("1_0xm2m")]
+position = Vector2(-48, 188)
+
+[node name="ground2" parent="level1/الارض" unique_id=1044888151 instance=ExtResource("1_0xm2m")]
+position = Vector2(-308, 188)
+
+[node name="ground3" parent="level1/الارض" unique_id=2117987082 instance=ExtResource("1_0xm2m")]
+position = Vector2(214, 188)
+
+[node name="ground4" parent="level1/الارض" unique_id=1393967594 instance=ExtResource("1_0xm2m")]
+position = Vector2(476, 188)
+
+[node name="ground11" parent="level1/الارض" unique_id=1739114588 instance=ExtResource("1_0xm2m")]
+position = Vector2(952, 376)
+
+[node name="ground6" parent="level1/الارض" unique_id=1129610108 instance=ExtResource("1_0xm2m")]
 position = Vector2(-494, 188)
 scale = Vector2(0.43, 1)
 
-[node name="ground7" parent="." unique_id=22310443 instance=ExtResource("1_0xm2m")]
+[node name="ground7" parent="level1/الارض" unique_id=1413859773 instance=ExtResource("1_0xm2m")]
 position = Vector2(-605, 188)
 scale = Vector2(0.43, 1)
 
-[node name="ground8" parent="." unique_id=537059906 instance=ExtResource("1_0xm2m")]
-position = Vector2(401.99997, -106.000015)
-rotation = -0.3246443
-scale = Vector2(0.485, 1)
+[node name="Camera2D" type="Camera2D" parent="level1" unique_id=616888279]
+position = Vector2(4, -125)
 
-[node name="شببيك" type="Sprite2D" parent="." unique_id=172716032]
+[node name="level2" type="Node2D" parent="." unique_id=759690256]
+
+[node name="شبح" type="Node2D" parent="level2" unique_id=1815470192]
+
+[node name="شبح" parent="level2/شبح" unique_id=1747664653 instance=ExtResource("5_lquwl")]
+position = Vector2(-1953, -292)
+
+[node name="Ghost5" parent="level2/شبح" unique_id=1583809454 instance=ExtResource("5_lquwl")]
+position = Vector2(-1961, -469)
+
+[node name="Ghost6" parent="level2/شبح" unique_id=1881376600 instance=ExtResource("5_lquwl")]
+position = Vector2(-2321, -493)
+
+[node name="حيط" type="Node2D" parent="level2" unique_id=1734062262]
+
+[node name="حيط3" type="Sprite2D" parent="level2/حيط" unique_id=1656028747]
+z_index = -1
+position = Vector2(-1867, -402)
+scale = Vector2(1.4108856, 1.324)
+texture = ExtResource("1_lquwl")
+
+[node name="الارض" type="Node2D" parent="level2" unique_id=2111541051]
+
+[node name="ارض" parent="level2/الارض" unique_id=674232912 instance=ExtResource("1_0xm2m")]
+position = Vector2(-2169, -75)
+
+[node name="ground3" parent="level2/الارض" unique_id=336320928 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1647, -75)
+
+[node name="ground4" parent="level2/الارض" unique_id=581300502 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1385, -75)
+
+[node name="ground6" parent="level2/الارض" unique_id=357530775 instance=ExtResource("1_0xm2m")]
+position = Vector2(-2355, -75)
+scale = Vector2(0.43, 1)
+
+[node name="ground7" parent="level2/الارض" unique_id=236486115 instance=ExtResource("1_0xm2m")]
+position = Vector2(-2466, -75)
+scale = Vector2(0.43, 1)
+
+[node name="ground" parent="level2/الارض" unique_id=1127268890 instance=ExtResource("1_0xm2m")]
+position = Vector2(-1909, -75)
+
+[node name="ارض طائره" type="Node2D" parent="level2" unique_id=1823845965]
+position = Vector2(-1867, -402)
+scale = Vector2(1.4108856, 1.324)
+
+[node name="ارض طائر" parent="level2/ارض طائره" unique_id=917220440 instance=ExtResource("1_0xm2m")]
+position = Vector2(-94.97583, 175.22656)
+scale = Vector2(0.30477312, 0.755287)
+
+[node name="ground13" parent="level2/ارض طائره" unique_id=205533772 instance=ExtResource("1_0xm2m")]
+position = Vector2(-130.41455, -115.5589)
+rotation = -0.5500744
+scale = Vector2(0.30986908, 0.7439882)
+skew = 0.054935217
+
+[node name="ground9" parent="level2/ارض طائره" unique_id=585318110 instance=ExtResource("1_0xm2m")]
+position = Vector2(14.175537, 125.37764)
+scale = Vector2(0.30477312, 0.755287)
+
+[node name="ground10" parent="level2/ارض طائره" unique_id=97246528 instance=ExtResource("1_0xm2m")]
+position = Vector2(130.41467, 83.83685)
+scale = Vector2(0.30477312, 0.755287)
+
+[node name="ground11" parent="level2/ارض طائره" unique_id=291176108 instance=ExtResource("1_0xm2m")]
+position = Vector2(-37.56494, 9.063446)
+rotation = 0.2543698
+scale = Vector2(0.30593154, 0.75274986)
+skew = -0.029284835
+
+[node name="ground12" parent="level2/ارض طائره" unique_id=616946919 instance=ExtResource("1_0xm2m")]
+position = Vector2(-223.97278, -9.063446)
+rotation = 0.27470884
+scale = Vector2(0.30612054, 0.75233406)
+skew = -0.031433463
+
+[node name="ground14" parent="level2/ارض طائره" unique_id=1676789581 instance=ExtResource("1_0xm2m")]
+position = Vector2(53.15808, -137.46225)
+scale = Vector2(0.30477312, 0.755287)
+
+[node name="ground15" parent="level2/ارض طائره" unique_id=600512160 instance=ExtResource("1_0xm2m")]
+position = Vector2(276.42224, -114.04834)
+scale = Vector2(0.30477312, 0.755287)
+
+[node name="زجاجه صحه" type="Node2D" parent="level2" unique_id=662200958]
+
+[node name="زجاجه صحه" parent="level2/زجاجه صحه" unique_id=1229724029 instance=ExtResource("4_1bvp3")]
+position = Vector2(-2231, -130)
+scale = Vector2(0.5, 0.5)
+
+[node name="Power up4" parent="level2/زجاجه صحه" unique_id=1187287724 instance=ExtResource("4_1bvp3")]
+position = Vector2(-1687, -336)
+scale = Vector2(0.5, 0.5)
+
+[node name="Power up5" parent="level2/زجاجه صحه" unique_id=483007237 instance=ExtResource("4_1bvp3")]
+position = Vector2(-1910, -433)
+scale = Vector2(0.5, 0.5)
+
+[node name="Power up6" parent="level2/زجاجه صحه" unique_id=500542028 instance=ExtResource("4_1bvp3")]
+position = Vector2(-2081, -604)
+scale = Vector2(0.5, 0.5)
+
+[node name="شباك" type="Node2D" parent="level2" unique_id=343923269]
+
+[node name="شببيك" type="Sprite2D" parent="level2/شباك" unique_id=172716032]
 position = Vector2(-2363.807, -355.1875)
 scale = Vector2(0.24718657, 0.2918)
 texture = ExtResource("3_efxa6")
 
-[node name="شببيك2" type="Sprite2D" parent="." unique_id=2090952017]
+[node name="شببيك2" type="Sprite2D" parent="level2/شباك" unique_id=2090952017]
 position = Vector2(-2272.0002, -572)
 scale = Vector2(0.24718657, 0.2918)
 texture = ExtResource("3_efxa6")
 
-[node name="شببيك3" type="Sprite2D" parent="." unique_id=770272007]
+[node name="شببيك3" type="Sprite2D" parent="level2/شباك" unique_id=770272007]
 position = Vector2(-1634, -173)
 scale = Vector2(0.24718657, 0.2918)
 texture = ExtResource("3_efxa6")
 
-[node name="شببيك4" type="Sprite2D" parent="." unique_id=2074607961]
+[node name="شببيك4" type="Sprite2D" parent="level2/شباك" unique_id=2074607961]
 position = Vector2(-1455, -177.99997)
 scale = Vector2(0.24718657, 0.2918)
 texture = ExtResource("3_efxa6")
 
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1395458297]
-position = Vector2(-153, -49.00003)
-scale = Vector2(0.4135539, 0.516)
-texture = ExtResource("3_efxa6")
+[node name="باب" type="Node2D" parent="level2" unique_id=27619845]
+
+[node name="Sprite2D3" type="Sprite2D" parent="level2/باب" unique_id=727006241]
+position = Vector2(-1470.9375, -608.96875)
+scale = Vector2(0.1666222, 0.1375001)
+texture = ExtResource("7_kek77")
+
+[node name="Area2D" type="Area2D" parent="level2/باب/Sprite2D3" unique_id=697638413]
+position = Vector2(-27.525146, -70.89307)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level2/باب/Sprite2D3/Area2D" unique_id=506570101]
+position = Vector2(4.587547, 95.913376)
+shape = SubResource("CapsuleShape2D_vfm02")
+
+[node name="Camera2D2" type="Camera2D" parent="level2" unique_id=166993089]
+position = Vector2(-1891, -374)
+
+[node name="SpawnPoint3" type="Marker2D" parent="level2/Camera2D2" unique_id=1739714572]
+position = Vector2(391, -628)
+
+[node name="Important Node" type="Node2D" parent="level2/Camera2D2" unique_id=410467732 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
+position = Vector2(-494.87836, 1221.591)
+scale = Vector2(4.5875163, 4.2881646)
+script = ExtResource("1_5vw27")
+target_spawn = NodePath("../SpawnPoint3")
+echo_shader_rect = NodePath("../../../CanvasLayer2/Control/ColorRect")
+player = NodePath("../../../Player")
+target_camera = NodePath("../../../level3/Camera2D3")
+
+[node name="level3" type="Node2D" parent="." unique_id=1450222338]
+position = Vector2(-1470.9375, -608.96875)
+scale = Vector2(0.1666222, 0.1375001)
+
+[node name="Camera2D3" type="Camera2D" parent="level3" unique_id=2103061501]
+position = Vector2(2682.3408, -4218.4063)
+scale = Vector2(6.001601, 7.2727222)
+
+[node name="SpawnPoint4" type="Marker2D" parent="level3/Camera2D3" unique_id=1078376491]
+position = Vector2(1247, -109)
+
+[node name="Important Node" type="Node2D" parent="level3/Camera2D3" unique_id=2061403253 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
+position = Vector2(-673.99994, 2040)
+scale = Vector2(4.5875163, 4.2881646)
+script = ExtResource("1_5vw27")
+target_spawn = NodePath("../SpawnPoint4")
+echo_shader_rect = NodePath("../../../CanvasLayer2/Control/ColorRect")
+player = NodePath("../../../Player")
+target_camera = NodePath("../../../level4/Camera2D4")
+
+[node name="ارض" type="Node2D" parent="level3" unique_id=1362798353]
+
+[node name="ground12" parent="level3/ارض" unique_id=202749888 instance=ExtResource("1_0xm2m")]
+position = Vector2(1037.9019, -1912.9536)
+scale = Vector2(6.001601, 7.2727222)
+
+[node name="ground17" parent="level3/ارض" unique_id=1313237224 instance=ExtResource("1_0xm2m")]
+position = Vector2(4170.738, -1912.9536)
+scale = Vector2(6.001601, 7.2727222)
+
+[node name="ground18" parent="level3/ارض" unique_id=826876289 instance=ExtResource("1_0xm2m")]
+position = Vector2(5743.157, -1912.9536)
+scale = Vector2(6.001601, 7.2727222)
+
+[node name="ground19" parent="level3/ارض" unique_id=1964171433 instance=ExtResource("1_0xm2m")]
+position = Vector2(-78.39551, -1912.9536)
+scale = Vector2(2.5806885, 7.2727222)
+
+[node name="ground20" parent="level3/ارض" unique_id=1954136790 instance=ExtResource("1_0xm2m")]
+position = Vector2(-744.57324, -1912.9536)
+scale = Vector2(2.5806885, 7.2727222)
+
+[node name="ground" parent="level3/ارض" unique_id=1728150411 instance=ExtResource("1_0xm2m")]
+position = Vector2(2598.3184, -1912.9536)
+scale = Vector2(6.001601, 7.2727222)
+
+[node name="ground" parent="level3/ارض/ground" unique_id=1162124040 instance=ExtResource("1_0xm2m")]
+position = Vector2(1683, -231)
+
+[node name="ground" parent="level3/ارض/ground/ground" unique_id=207008698 instance=ExtResource("1_0xm2m")]
+position = Vector2(1260, 447)
+
+[node name="ground2" parent="level3/ارض/ground/ground" unique_id=926911886 instance=ExtResource("1_0xm2m")]
+position = Vector2(1000, 447)
+
+[node name="ground3" parent="level3/ارض/ground/ground" unique_id=595393159 instance=ExtResource("1_0xm2m")]
+position = Vector2(1522, 447)
+
+[node name="ground4" parent="level3/ارض/ground/ground" unique_id=1204358409 instance=ExtResource("1_0xm2m")]
+position = Vector2(1784, 447)
+
+[node name="ground6" parent="level3/ارض/ground/ground" unique_id=379876012 instance=ExtResource("1_0xm2m")]
+position = Vector2(814, 447)
+scale = Vector2(0.43, 1)
+
+[node name="ground7" parent="level3/ارض/ground/ground" unique_id=37202613 instance=ExtResource("1_0xm2m")]
+position = Vector2(703, 447)
+scale = Vector2(0.43, 1)
+
+[node name="ground" parent="level3/ارض/ground/ground/ground7" unique_id=1683703487 instance=ExtResource("1_0xm2m")]
+position = Vector2(1453.9526, -147)
+
+[node name="ground2" parent="level3/ارض/ground/ground/ground7" unique_id=104456922 instance=ExtResource("1_0xm2m")]
+position = Vector2(1109.3022, -147)
+
+[node name="ground3" parent="level3/ارض/ground/ground/ground7" unique_id=1063566794 instance=ExtResource("1_0xm2m")]
+position = Vector2(1801.2549, -147)
+
+[node name="ground4" parent="level3/ارض/ground/ground/ground7" unique_id=1424145346 instance=ExtResource("1_0xm2m")]
+position = Vector2(2148.5576, -147)
+
+[node name="ground2" parent="level3/ارض/ground" unique_id=2114401822 instance=ExtResource("1_0xm2m")]
+position = Vector2(1423, -231)
+
+[node name="ground3" parent="level3/ارض/ground" unique_id=983239508 instance=ExtResource("1_0xm2m")]
+position = Vector2(1945, -231)
+
+[node name="ground4" parent="level3/ارض/ground" unique_id=690062758 instance=ExtResource("1_0xm2m")]
+position = Vector2(2207, -231)
+
+[node name="ground6" parent="level3/ارض/ground" unique_id=1902506830 instance=ExtResource("1_0xm2m")]
+position = Vector2(1237, -231)
+scale = Vector2(0.43, 1)
+
+[node name="ground7" parent="level3/ارض/ground" unique_id=861376677 instance=ExtResource("1_0xm2m")]
+position = Vector2(1126, -231)
+scale = Vector2(0.43, 1)
+
+[node name="ground" parent="level3/ارض/ground/ground7" unique_id=506744969 instance=ExtResource("1_0xm2m")]
+position = Vector2(1453.9526, -147)
+
+[node name="ground2" parent="level3/ارض/ground/ground7" unique_id=1821963943 instance=ExtResource("1_0xm2m")]
+position = Vector2(1109.3022, -147)
+
+[node name="ground3" parent="level3/ارض/ground/ground7" unique_id=1154139127 instance=ExtResource("1_0xm2m")]
+position = Vector2(1801.2549, -147)
+
+[node name="ground4" parent="level3/ارض/ground/ground7" unique_id=1476386731 instance=ExtResource("1_0xm2m")]
+position = Vector2(2148.5576, -147)
+
+[node name="ارض الطائر" type="Node2D" parent="level3" unique_id=1055685582]
+
+[node name="ground16" parent="level3/ارض الطائر" unique_id=1548225854 instance=ExtResource("1_0xm2m")]
+position = Vector2(3007.6255, -2982.0435)
+scale = Vector2(2.5806885, 7.2727222)
+
+[node name="ground15" parent="level3/ارض الطائر" unique_id=349164719 instance=ExtResource("1_0xm2m")]
+position = Vector2(2118.1904, -2982.0435)
+scale = Vector2(2.5806885, 7.2727222)
+
+[node name="ground14" parent="level3/ارض الطائر" unique_id=1189411679 instance=ExtResource("1_0xm2m")]
+position = Vector2(3903.9043, -2982.0435)
+scale = Vector2(2.5806885, 7.2727222)
+
+[node name="ground13" parent="level3/ارض الطائر" unique_id=1913342768 instance=ExtResource("1_0xm2m")]
+position = Vector2(4800.1846, -2982.0435)
+scale = Vector2(2.5806885, 7.2727222)
+
+[node name="الباب" type="Node2D" parent="level3" unique_id=1679117270]
+
+[node name="Sprite2D3" type="Sprite2D" parent="level3/الباب" unique_id=1047515875]
+position = Vector2(4278.7666, -3709.316)
+scale = Vector2(1.3082463, 1.743999)
+texture = ExtResource("7_kek77")
+
+[node name="Area2D" type="Area2D" parent="level3/الباب/Sprite2D3" unique_id=2024639099]
+position = Vector2(-27.525146, -70.89307)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level3/الباب/Sprite2D3/Area2D" unique_id=1375032917]
+position = Vector2(-9.17502, 70.89286)
+shape = SubResource("CapsuleShape2D_vfm02")
+
+[node name="شباك" type="Node2D" parent="level3" unique_id=2099353021]
+
+[node name="زجاجه صحه" type="Node2D" parent="level3" unique_id=1725955144]
+
+[node name="شبح" type="Node2D" parent="level3" unique_id=1687733853]
+
+[node name="حيط" type="Node2D" parent="level3" unique_id=390761911]
+
+[node name="حيط2" type="Sprite2D" parent="level3/حيط" unique_id=501412987]
+z_index = -1
+position = Vector2(2909.1865, -4403.8604)
+scale = Vector2(9.272026, 8.645812)
+texture = ExtResource("1_lquwl")
+
+[node name="level4" type="Node2D" parent="." unique_id=398608689]
+
+[node name="الارض" type="Node2D" parent="level4" unique_id=1884876619]
+
+[node name="شبح" type="Node2D" parent="level4" unique_id=1935905213]
+
+[node name="ارض طائر" type="Node2D" parent="level4" unique_id=1344992356]
+
+[node name="زجاجه صحه" type="Node2D" parent="level4" unique_id=712448449]
+
+[node name="شباك" type="Node2D" parent="level4" unique_id=1659608877]
+
+[node name="الباب" type="Node2D" parent="level4" unique_id=95392341]
+
+[node name="Sprite2D3" type="Sprite2D" parent="level4/الباب" unique_id=2082096412]
+position = Vector2(936, -1342)
+scale = Vector2(0.21798287, 0.23980002)
+texture = ExtResource("7_kek77")
+
+[node name="Area2D" type="Area2D" parent="level4/الباب/Sprite2D3" unique_id=491034992]
+position = Vector2(-27.525146, -70.89307)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level4/الباب/Sprite2D3/Area2D" unique_id=1995792637]
+position = Vector2(-9.17502, 70.89286)
+shape = SubResource("CapsuleShape2D_vfm02")
+
+[node name="حيط" type="Node2D" parent="level4" unique_id=573184984]
+
+[node name="حيط4" type="Sprite2D" parent="level4/حيط" unique_id=176287431]
+z_index = -1
+position = Vector2(648.5, -1440.451)
+scale = Vector2(1.3970118, 1.4126438)
+texture = ExtResource("1_lquwl")
+
+[node name="Camera2D4" type="Camera2D" parent="level4" unique_id=131999018]
+position = Vector2(670, -1412)
+
+[node name="SpawnPoint5" type="Marker2D" parent="level4/Camera2D4" unique_id=1151579498]
+position = Vector2(795, 540)
+
+[node name="Important Node" type="Node2D" parent="level4/Camera2D4" unique_id=876930830 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
+position = Vector2(-673.99994, 2040)
+scale = Vector2(4.5875163, 4.2881646)
+script = ExtResource("1_5vw27")
+target_spawn = NodePath("../SpawnPoint5")
+echo_shader_rect = NodePath("../../../CanvasLayer2/Control/ColorRect")
+player = NodePath("../../../Player")
+target_camera = NodePath("../../../level5/Camera2D5")
+
+[node name="level5" type="Node2D" parent="." unique_id=1199472547]
+
+[node name="الارض" type="Node2D" parent="level5" unique_id=597075547]
+
+[node name="شبح" type="Node2D" parent="level5" unique_id=1904787674]
+
+[node name="ارض طائر" type="Node2D" parent="level5" unique_id=1390117500]
+
+[node name="زجاجه صحه" type="Node2D" parent="level5" unique_id=447588291]
+
+[node name="شباك" type="Node2D" parent="level5" unique_id=80863121]
+
+[node name="حيط" type="Node2D" parent="level5" unique_id=866191202]
+
+[node name="حيط5" type="Sprite2D" parent="level5/حيط" unique_id=799527878]
+z_index = -1
+position = Vector2(1940.0001, -934)
+scale = Vector2(1.3970118, 1.4126438)
+texture = ExtResource("1_lquwl")
+
+[node name="Camera2D5" type="Camera2D" parent="level5" unique_id=472976942]
+position = Vector2(1901, -957)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=852383026]
 
@@ -298,64 +541,7 @@ options_menu = NodePath("../../OptionsMenu")
 [node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
 position = Vector2(-150, 145)
 fear_progress_bar = NodePath("../CanvasLayer2/Control/ProgressBar")
-camera = NodePath("../Camera2D")
-
-[node name="ground9" parent="." unique_id=939245974 instance=ExtResource("1_0xm2m")]
-position = Vector2(-11, -26)
-scale = Vector2(0.43, 1)
-
-[node name="ground10" parent="." unique_id=920013394 instance=ExtResource("1_0xm2m")]
-position = Vector2(-311, -115)
-scale = Vector2(0.43, 1)
-
-[node name="Power up" parent="." unique_id=612369099 instance=ExtResource("4_1bvp3")]
-position = Vector2(62, 160)
-scale = Vector2(0.5, 0.5)
-
-[node name="Power up2" parent="." unique_id=2096508304 instance=ExtResource("4_1bvp3")]
-position = Vector2(-365, 64)
-scale = Vector2(0.5, 0.5)
-
-[node name="Power up3" parent="." unique_id=499746787 instance=ExtResource("4_1bvp3")]
-position = Vector2(-523, 117)
-scale = Vector2(0.5, 0.5)
-
-[node name="Power up4" parent="." unique_id=1187287724 instance=ExtResource("4_1bvp3")]
-position = Vector2(-1687, -336)
-scale = Vector2(0.5, 0.5)
-
-[node name="Power up5" parent="." unique_id=483007237 instance=ExtResource("4_1bvp3")]
-position = Vector2(-1910, -433)
-scale = Vector2(0.5, 0.5)
-
-[node name="Power up6" parent="." unique_id=500542028 instance=ExtResource("4_1bvp3")]
-position = Vector2(-2081, -604)
-scale = Vector2(0.5, 0.5)
-
-[node name="Power up7" parent="." unique_id=1229724029 instance=ExtResource("4_1bvp3")]
-position = Vector2(-2231, -130)
-scale = Vector2(0.5, 0.5)
-
-[node name="اشباح" parent="." unique_id=959379480 instance=ExtResource("5_lquwl")]
-position = Vector2(242, -1)
-
-[node name="Ghost3" parent="." unique_id=2141327756 instance=ExtResource("5_lquwl")]
-position = Vector2(379, -163)
-
-[node name="Ghost2" parent="." unique_id=3102647 instance=ExtResource("5_lquwl")]
-position = Vector2(-14, -85)
-
-[node name="Ghost4" parent="." unique_id=1039330018 instance=ExtResource("5_lquwl")]
-position = Vector2(-318, -177)
-
-[node name="Ghost5" parent="." unique_id=1583809454 instance=ExtResource("5_lquwl")]
-position = Vector2(-1961, -469)
-
-[node name="Ghost6" parent="." unique_id=1881376600 instance=ExtResource("5_lquwl")]
-position = Vector2(-2321, -493)
-
-[node name="Ghost7" parent="." unique_id=1747664653 instance=ExtResource("5_lquwl")]
-position = Vector2(-1953, -292)
+camera = NodePath("../level1/Camera2D")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1966870530]
 position = Vector2(101.875015, -296.875)
@@ -380,94 +566,7 @@ script = ExtResource("1_5vw27")
 target_spawn = NodePath("../SpawnPoint2")
 echo_shader_rect = NodePath("../../CanvasLayer2/Control/ColorRect")
 player = NodePath("../../Player")
-target_camera = NodePath("../../Camera2D2")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=616888279]
-position = Vector2(4, -125)
-
-[node name="Camera2D2" type="Camera2D" parent="." unique_id=166993089]
-position = Vector2(-1891, -374)
-
-[node name="Sprite2D3" type="Sprite2D" parent="Camera2D2" unique_id=727006241]
-position = Vector2(420.06247, -234.96878)
-scale = Vector2(0.1666222, 0.1375001)
-texture = ExtResource("7_kek77")
-
-[node name="Area2D" type="Area2D" parent="Camera2D2/Sprite2D3" unique_id=697638413]
-position = Vector2(-27.525146, -70.89307)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D2/Sprite2D3/Area2D" unique_id=506570101]
-position = Vector2(4.587547, 95.913376)
-shape = SubResource("CapsuleShape2D_vfm02")
-
-[node name="SpawnPoint3" type="Marker2D" parent="Camera2D2" unique_id=1739714572]
-position = Vector2(391, -628)
-
-[node name="Important Node" type="Node2D" parent="Camera2D2" unique_id=410467732 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
-position = Vector2(-494.87836, 1221.591)
-scale = Vector2(4.5875163, 4.2881646)
-script = ExtResource("1_5vw27")
-target_spawn = NodePath("../SpawnPoint3")
-echo_shader_rect = NodePath("../../CanvasLayer2/Control/ColorRect")
-player = NodePath("../../Player")
-target_camera = NodePath("../../Camera2D3")
-
-[node name="Camera2D3" type="Camera2D" parent="." unique_id=2103061501]
-position = Vector2(-1024, -1189)
-
-[node name="Sprite2D3" type="Sprite2D" parent="Camera2D3" unique_id=1047515875]
-position = Vector2(266, 69.999985)
-scale = Vector2(0.21798287, 0.23980002)
-texture = ExtResource("7_kek77")
-
-[node name="Area2D" type="Area2D" parent="Camera2D3/Sprite2D3" unique_id=2024639099]
-position = Vector2(-27.525146, -70.89307)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D3/Sprite2D3/Area2D" unique_id=1375032917]
-position = Vector2(-9.17502, 70.89286)
-shape = SubResource("CapsuleShape2D_vfm02")
-
-[node name="SpawnPoint4" type="Marker2D" parent="Camera2D3" unique_id=1078376491]
-position = Vector2(1247, -109)
-
-[node name="Important Node" type="Node2D" parent="Camera2D3" unique_id=2061403253 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
-position = Vector2(-673.99994, 2040)
-scale = Vector2(4.5875163, 4.2881646)
-script = ExtResource("1_5vw27")
-target_spawn = NodePath("../SpawnPoint4")
-echo_shader_rect = NodePath("../../CanvasLayer2/Control/ColorRect")
-player = NodePath("../../Player")
-target_camera = NodePath("../../Camera2D4")
-
-[node name="Camera2D4" type="Camera2D" parent="." unique_id=131999018]
-position = Vector2(670, -1412)
-
-[node name="Sprite2D3" type="Sprite2D" parent="Camera2D4" unique_id=2082096412]
-position = Vector2(266, 69.999985)
-scale = Vector2(0.21798287, 0.23980002)
-texture = ExtResource("7_kek77")
-
-[node name="Area2D" type="Area2D" parent="Camera2D4/Sprite2D3" unique_id=491034992]
-position = Vector2(-27.525146, -70.89307)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D4/Sprite2D3/Area2D" unique_id=1995792637]
-position = Vector2(-9.17502, 70.89286)
-shape = SubResource("CapsuleShape2D_vfm02")
-
-[node name="SpawnPoint5" type="Marker2D" parent="Camera2D4" unique_id=1151579498]
-position = Vector2(795, 540)
-
-[node name="Important Node" type="Node2D" parent="Camera2D4" unique_id=876930830 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
-position = Vector2(-673.99994, 2040)
-scale = Vector2(4.5875163, 4.2881646)
-script = ExtResource("1_5vw27")
-target_spawn = NodePath("../SpawnPoint5")
-echo_shader_rect = NodePath("../../CanvasLayer2/Control/ColorRect")
-player = NodePath("../../Player")
-target_camera = NodePath("../../Camera2D5")
-
-[node name="Camera2D5" type="Camera2D" parent="." unique_id=472976942]
-position = Vector2(1901, -957)
+target_camera = NodePath("../../level2/Camera2D2")
 
 [node name="OptionsMenu" parent="." unique_id=639943598 node_paths=PackedStringArray("pause_menu") instance=ExtResource("10_4c57u")]
 anchors_preset = 0
@@ -481,7 +580,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pause_menu = NodePath("../CanvasLayer2/PauseMenu")
 
+[connection signal="body_entered" from="level2/باب/Sprite2D3/Area2D" to="level2/Camera2D2/Important Node" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="level3/الباب/Sprite2D3/Area2D" to="level3/Camera2D3/Important Node" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="level4/الباب/Sprite2D3/Area2D" to="level4/Camera2D4/Important Node" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Sprite2D2/Area2D" to="Sprite2D2/Important Node" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Camera2D2/Sprite2D3/Area2D" to="Camera2D2/Important Node" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Camera2D3/Sprite2D3/Area2D" to="Camera2D3/Important Node" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Camera2D4/Sprite2D3/Area2D" to="Camera2D4/Important Node" method="_on_area_2d_body_entered"]
