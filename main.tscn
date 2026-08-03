@@ -9,6 +9,7 @@
 [ext_resource type="Shader" uid="uid://d0hwf8w4dmms7" path="res://echo_mask.gdshader" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://cr4a7l6uwvpyq" path="res://word/تكتشر/الخلفيات الرائيسيه/الباب.png" id="7_kek77"]
+[ext_resource type="Script" uid="uid://dpdv05w6ismep" path="res://area_2d.gd" id="8_efxa6"]
 [ext_resource type="Script" uid="uid://coq2042tc5jfc" path="res://tuto/tutNode.gd" id="11_efxa6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfm02"]
@@ -132,8 +133,12 @@ position = Vector2(101.875015, -296.875)
 scale = Vector2(0.20517606, 0.19480003)
 texture = ExtResource("7_kek77")
 
-[node name="Area2D" type="Area2D" parent="level1/باب/Sprite2D2" unique_id=1953744864]
+[node name="Area2D" type="Area2D" parent="level1/باب/Sprite2D2" unique_id=1953744864 node_paths=PackedStringArray("target_spawn", "target_camera", "player")]
 position = Vector2(-26.951693, 42.345627)
+script = ExtResource("8_efxa6")
+target_spawn = NodePath("../SpawnPoint2")
+target_camera = NodePath("../../../../level2/Camera2D2")
+player = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level1/باب/Sprite2D2/Area2D" unique_id=1493808634]
 position = Vector2(-16.303944, -7.0529785)
@@ -142,15 +147,6 @@ shape = SubResource("CapsuleShape2D_vfm02")
 [node name="SpawnPoint2" type="Marker2D" parent="level1/باب/Sprite2D2" unique_id=1990957326]
 position = Vector2(-12086.57, 682.10974)
 scale = Vector2(4.5875163, 4.2881656)
-
-[node name="Important Node" type="Node2D" parent="level1/باب/Sprite2D2" unique_id=1509368350 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
-position = Vector2(-494.87836, 1221.591)
-scale = Vector2(4.5875163, 4.2881646)
-script = ExtResource("1_5vw27")
-target_spawn = NodePath("../SpawnPoint2")
-echo_shader_rect = NodePath("")
-player = NodePath("../../../../Player")
-target_camera = NodePath("../../../../level2/Camera2D2")
 
 [node name="Camera2D" type="Camera2D" parent="level1" unique_id=616888279]
 position = Vector2(4, -125)
@@ -288,26 +284,24 @@ position = Vector2(-1470.9375, -608.96875)
 scale = Vector2(0.1666222, 0.1375001)
 texture = ExtResource("7_kek77")
 
-[node name="Area2D" type="Area2D" parent="level2/باب/Sprite2D3" unique_id=697638413]
+[node name="Area2D" type="Area2D" parent="level2/باب/Sprite2D3" unique_id=697638413 node_paths=PackedStringArray("target_spawn", "target_camera", "player")]
 position = Vector2(-27.525146, -70.89307)
+script = ExtResource("8_efxa6")
+target_spawn = NodePath("SpawnPoint3")
+target_camera = NodePath("../../../../level3/Camera2D3")
+player = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level2/باب/Sprite2D3/Area2D" unique_id=506570101]
 position = Vector2(4.587547, 95.913376)
 shape = SubResource("CapsuleShape2D_vfm02")
 
+[node name="SpawnPoint3" type="Marker2D" parent="level2/باب/Sprite2D3/Area2D" unique_id=1739714572]
+position = Vector2(381.24512, -2300.2417)
+scale = Vector2(6.001601, 7.272723)
+
 [node name="Camera2D2" type="Camera2D" parent="level2" unique_id=166993089]
 position = Vector2(-1891, -374)
-
-[node name="SpawnPoint3" type="Marker2D" parent="level2/Camera2D2" unique_id=1739714572]
-position = Vector2(479, -561)
-
-[node name="Important Node" type="Node2D" parent="level2/Camera2D2" unique_id=410467732 node_paths=PackedStringArray("target_spawn", "player", "target_camera")]
-position = Vector2(-494.87836, 1221.591)
-scale = Vector2(4.5875163, 4.2881646)
-script = ExtResource("1_5vw27")
-target_spawn = NodePath("../SpawnPoint3")
-player = NodePath("../../../Player")
-target_camera = NodePath("../../../level3/Camera2D3")
+scale = Vector2(1, 1.0000002)
 
 [node name="level3" type="Node2D" parent="." unique_id=1450222338]
 position = Vector2(-1470.9375, -608.96875)
@@ -319,13 +313,6 @@ scale = Vector2(6.001601, 7.2727222)
 
 [node name="SpawnPoint4" type="Marker2D" parent="level3/Camera2D3" unique_id=1078376491]
 position = Vector2(1247, -109)
-
-[node name="Important Node" type="Node2D" parent="level3/Camera2D3" unique_id=2061403253 node_paths=PackedStringArray("target_spawn", "target_camera")]
-position = Vector2(-673.99994, 2040)
-scale = Vector2(4.5875163, 4.2881646)
-script = ExtResource("1_5vw27")
-target_spawn = NodePath("../SpawnPoint4")
-target_camera = NodePath("../../../level4/Camera2D4")
 
 [node name="ارض" type="Node2D" parent="level3" unique_id=1362798353]
 
@@ -449,8 +436,12 @@ position = Vector2(-48.387695, -5745.677)
 scale = Vector2(1.3082463, 1.743999)
 texture = ExtResource("7_kek77")
 
-[node name="Area2D" type="Area2D" parent="level3/الباب/Sprite2D3" unique_id=2024639099]
+[node name="Area2D" type="Area2D" parent="level3/الباب/Sprite2D3" unique_id=2024639099 node_paths=PackedStringArray("target_spawn", "target_camera", "player")]
 position = Vector2(-27.525146, -70.89307)
+script = ExtResource("8_efxa6")
+target_spawn = NodePath("../../../Camera2D3/SpawnPoint4")
+target_camera = NodePath("../../../Camera2D3")
+player = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level3/الباب/Sprite2D3/Area2D" unique_id=1375032917]
 position = Vector2(-9.175293, 50.042145)
@@ -670,8 +661,12 @@ position = Vector2(1150, -1198)
 scale = Vector2(0.21798287, 0.2607001)
 texture = ExtResource("7_kek77")
 
-[node name="Area2D" type="Area2D" parent="level4/الباب/Sprite2D3" unique_id=491034992]
+[node name="Area2D" type="Area2D" parent="level4/الباب/Sprite2D3" unique_id=491034992 node_paths=PackedStringArray("target_spawn", "target_camera", "player")]
 position = Vector2(-59.637817, 53.70166)
+script = ExtResource("8_efxa6")
+target_spawn = NodePath("../../../Camera2D4/SpawnPoint5")
+target_camera = NodePath("../../../Camera2D4")
+player = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level4/الباب/Sprite2D3/Area2D" unique_id=1995792637]
 position = Vector2(36.700134, -65.20923)
@@ -858,7 +853,5 @@ script = ExtResource("11_efxa6")
 echo_shader_rect = NodePath("../CanvasLayer/Control/ColorRect")
 player = NodePath("../Player")
 
-[connection signal="body_entered" from="level1/باب/Sprite2D2/Area2D" to="level1/باب/Sprite2D2/Important Node" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="level2/باب/Sprite2D3/Area2D" to="level2/Camera2D2/Important Node" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="level3/الباب/Sprite2D3/Area2D" to="level3/Camera2D3/Important Node" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="level1/باب/Sprite2D2/Area2D" to="level1/باب/Sprite2D2/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="level4/الباب/Sprite2D3/Area2D" to="level4/Camera2D4/Important Node" method="_on_area_2d_body_entered"]
