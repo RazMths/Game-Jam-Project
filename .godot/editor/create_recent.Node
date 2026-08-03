@@ -1,3 +1,4 @@
+CanvasLayer
 Marker2D
 CollisionShape2D
 Area2D
@@ -9,6 +10,5 @@ HSlider
 VSlider
 Label
 ColorRect
-CanvasLayer
 Button
 VBoxContainer

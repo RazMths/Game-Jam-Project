@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://cr4a7l6uwvpyq" path="res://word/تكتشر/الخلفيات الرائيسيه/الباب.png" id="7_kek77"]
 [ext_resource type="PackedScene" uid="uid://1eodillcbh15" path="res://القائمات/القائمه التوقف/pause_menu.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://b57cj8tap0umb" path="res://القائمات/القائمه الاعدادات/options_menu.tscn" id="10_4c57u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mtjga"]
 shader = ExtResource("5_272bh")
@@ -191,6 +192,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer2/Control" unique_id=1032889451]
 material = SubResource("ShaderMaterial_mtjga")
@@ -210,6 +212,10 @@ mouse_filter = 2
 layout_mode = 0
 offset_right = 118.0
 offset_bottom = 27.0
+
+[node name="PauseMenu" parent="CanvasLayer2" unique_id=1988215942 node_paths=PackedStringArray("options_menu") instance=ExtResource("9_kek77")]
+z_index = 10
+options_menu = NodePath("../../OptionsMenu")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=616888279]
 position = Vector2(4, -125)
@@ -360,7 +366,13 @@ target_camera = NodePath("../../Camera2D5")
 [node name="Camera2D5" type="Camera2D" parent="." unique_id=472976942]
 position = Vector2(1901, -957)
 
-[node name="PauseMenu" parent="." unique_id=1988215942 instance=ExtResource("9_kek77")]
+[node name="OptionsMenu" parent="." unique_id=639943598 node_paths=PackedStringArray("pause_menu") instance=ExtResource("10_4c57u")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+pause_menu = NodePath("../CanvasLayer2/PauseMenu")
 
 [connection signal="body_entered" from="Sprite2D2/Area2D" to="Sprite2D2/Important Node" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Camera2D2/Sprite2D3/Area2D" to="Camera2D2/Important Node" method="_on_area_2d_body_entered"]
