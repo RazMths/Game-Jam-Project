@@ -1,5 +1,8 @@
 shader_type canvas_item;
 
+// --- إعدادات تأثير الانتقال ---
+uniform float transition_size : hint_range(0.0, 1.0) = 1.0;
+
 uniform vec2 player_screen_pos;
 uniform float player_light_radius = 120.0;
 
@@ -50,4 +53,13 @@ void fragment() {
     
     // إخراج السواد مع التوهج والشفافية لإظهار البيئة
     COLOR = vec4(base_black + glow_effect, (1.0 - visibility) * ambient_darkness);
+	
+	// 4. تطبيق قناع الانتقال متمركزاً على موقع اللاعب
+	float max_radius = 1500.0; // شعاع كافٍ لتغطية الشاشة بالكامل
+	float current_trans_radius = max_radius * transition_size;
+	float dist_from_player = distance(FRAGCOORD.xy, player_screen_pos);
+
+	// إخفاء كل ما هو خارج نطاق دائرة الانتقال
+	float transition_mask = smoothstep(current_trans_radius, current_trans_radius - 10.0, dist_from_player);
+	visibility *= transition_mask;
 }

@@ -1,0 +1,4 @@
+res://main.tscn
+res://echo_mask.gdshader
+res://VignetteEffectShader.gdshader
+res://test_node.gd
