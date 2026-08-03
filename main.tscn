@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://blftmxdlk301y" path="res://power_up.tscn" id="4_1bvp3"]
 [ext_resource type="Shader" uid="uid://d0hwf8w4dmms7" path="res://echo_mask.gdshader" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://cwplhe37nno1a" path="res://ghost.tscn" id="5_lquwl"]
-[ext_resource type="Texture2D" uid="uid://cvsjodrqp0mdo" path="res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://cr4a7l6uwvpyq" path="res://word/تكتشر/الخلفيات الرائيسيه/الباب.png" id="7_kek77"]
 [ext_resource type="PackedScene" uid="uid://1eodillcbh15" path="res://القائمات/القائمه التوقف/pause_menu.tscn" id="9_kek77"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mtjga"]
@@ -24,16 +24,10 @@ shader_parameter/echo_intensity = 1.6
 shader_parameter/ambient_darkness = 1.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfm02"]
-radius = 114.6879
-height = 367.00128
+radius = 175.45905
+height = 558.79895
 
 [node name="main" type="Node2D" unique_id=1916839064]
-
-[node name="Important Node" type="Node2D" parent="." unique_id=1509368350 node_paths=PackedStringArray("echo_shader_rect", "player", "target_camera")]
-script = ExtResource("1_5vw27")
-echo_shader_rect = NodePath("../CanvasLayer/Control/ColorRect")
-player = NodePath("../Player")
-target_camera = NodePath("../Camera2D2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1563126919]
 position = Vector2(-6.0000076, -101.25)
@@ -45,6 +39,102 @@ position = Vector2(-48, 188)
 
 [node name="ground" parent="ground" unique_id=1127268890 instance=ExtResource("1_0xm2m")]
 position = Vector2(-1861, -263)
+
+[node name="ground" parent="ground/ground" unique_id=1728150411 instance=ExtResource("1_0xm2m")]
+position = Vector2(871, -797)
+
+[node name="ground" parent="ground/ground/ground" unique_id=1162124040 instance=ExtResource("1_0xm2m")]
+position = Vector2(1683, -231)
+
+[node name="ground" parent="ground/ground/ground/ground" unique_id=207008698 instance=ExtResource("1_0xm2m")]
+position = Vector2(1260, 447)
+
+[node name="ground2" parent="ground/ground/ground/ground" unique_id=926911886 instance=ExtResource("1_0xm2m")]
+position = Vector2(1000, 447)
+
+[node name="ground3" parent="ground/ground/ground/ground" unique_id=595393159 instance=ExtResource("1_0xm2m")]
+position = Vector2(1522, 447)
+
+[node name="ground4" parent="ground/ground/ground/ground" unique_id=1204358409 instance=ExtResource("1_0xm2m")]
+position = Vector2(1784, 447)
+
+[node name="ground6" parent="ground/ground/ground/ground" unique_id=379876012 instance=ExtResource("1_0xm2m")]
+position = Vector2(814, 447)
+scale = Vector2(0.43, 1)
+
+[node name="ground7" parent="ground/ground/ground/ground" unique_id=37202613 instance=ExtResource("1_0xm2m")]
+position = Vector2(703, 447)
+scale = Vector2(0.43, 1)
+
+[node name="ground" parent="ground/ground/ground/ground/ground7" unique_id=1683703487 instance=ExtResource("1_0xm2m")]
+position = Vector2(1453.9526, -147)
+
+[node name="ground2" parent="ground/ground/ground/ground/ground7" unique_id=104456922 instance=ExtResource("1_0xm2m")]
+position = Vector2(1109.3022, -147)
+
+[node name="ground3" parent="ground/ground/ground/ground/ground7" unique_id=1063566794 instance=ExtResource("1_0xm2m")]
+position = Vector2(1801.2549, -147)
+
+[node name="ground4" parent="ground/ground/ground/ground/ground7" unique_id=1424145346 instance=ExtResource("1_0xm2m")]
+position = Vector2(2148.5576, -147)
+
+[node name="ground2" parent="ground/ground/ground" unique_id=2114401822 instance=ExtResource("1_0xm2m")]
+position = Vector2(1423, -231)
+
+[node name="ground3" parent="ground/ground/ground" unique_id=983239508 instance=ExtResource("1_0xm2m")]
+position = Vector2(1945, -231)
+
+[node name="ground4" parent="ground/ground/ground" unique_id=690062758 instance=ExtResource("1_0xm2m")]
+position = Vector2(2207, -231)
+
+[node name="ground6" parent="ground/ground/ground" unique_id=1902506830 instance=ExtResource("1_0xm2m")]
+position = Vector2(1237, -231)
+scale = Vector2(0.43, 1)
+
+[node name="ground7" parent="ground/ground/ground" unique_id=861376677 instance=ExtResource("1_0xm2m")]
+position = Vector2(1126, -231)
+scale = Vector2(0.43, 1)
+
+[node name="ground" parent="ground/ground/ground/ground7" unique_id=506744969 instance=ExtResource("1_0xm2m")]
+position = Vector2(1453.9526, -147)
+
+[node name="ground2" parent="ground/ground/ground/ground7" unique_id=1821963943 instance=ExtResource("1_0xm2m")]
+position = Vector2(1109.3022, -147)
+
+[node name="ground3" parent="ground/ground/ground/ground7" unique_id=1154139127 instance=ExtResource("1_0xm2m")]
+position = Vector2(1801.2549, -147)
+
+[node name="ground4" parent="ground/ground/ground/ground7" unique_id=1476386731 instance=ExtResource("1_0xm2m")]
+position = Vector2(2148.5576, -147)
+
+[node name="ground2" parent="ground/ground" unique_id=202749888 instance=ExtResource("1_0xm2m")]
+position = Vector2(611, -797)
+
+[node name="ground3" parent="ground/ground" unique_id=1313237224 instance=ExtResource("1_0xm2m")]
+position = Vector2(1133, -797)
+
+[node name="ground4" parent="ground/ground" unique_id=826876289 instance=ExtResource("1_0xm2m")]
+position = Vector2(1395, -797)
+
+[node name="ground6" parent="ground/ground" unique_id=1964171433 instance=ExtResource("1_0xm2m")]
+position = Vector2(425, -797)
+scale = Vector2(0.43, 1)
+
+[node name="ground7" parent="ground/ground" unique_id=1954136790 instance=ExtResource("1_0xm2m")]
+position = Vector2(314, -797)
+scale = Vector2(0.43, 1)
+
+[node name="ground" parent="ground/ground/ground7" unique_id=1548225854 instance=ExtResource("1_0xm2m")]
+position = Vector2(1453.9526, -147)
+
+[node name="ground2" parent="ground/ground/ground7" unique_id=349164719 instance=ExtResource("1_0xm2m")]
+position = Vector2(1109.3022, -147)
+
+[node name="ground3" parent="ground/ground/ground7" unique_id=1189411679 instance=ExtResource("1_0xm2m")]
+position = Vector2(1801.2549, -147)
+
+[node name="ground4" parent="ground/ground/ground7" unique_id=1913342768 instance=ExtResource("1_0xm2m")]
+position = Vector2(2148.5576, -147)
 
 [node name="ground2" parent="ground" unique_id=674232912 instance=ExtResource("1_0xm2m")]
 position = Vector2(-2121, -263)
@@ -89,12 +179,41 @@ position = Vector2(401.99997, -106.000015)
 rotation = -0.3246443
 scale = Vector2(0.485, 1)
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=852383026]
+
+[node name="Control" type="Control" parent="CanvasLayer2" unique_id=301807383]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/Control" unique_id=1032889451]
+material = SubResource("ShaderMaterial_mtjga")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -101.0
+offset_top = -128.0
+offset_right = 90.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2/Control" unique_id=438519875]
+layout_mode = 0
+offset_right = 118.0
+offset_bottom = 27.0
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=616888279]
 position = Vector2(4, -125)
 
 [node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
 position = Vector2(-150, 145)
-fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
+fear_progress_bar = NodePath("../CanvasLayer2/Control/ProgressBar")
 camera = NodePath("../Camera2D")
 
 [node name="ground9" parent="." unique_id=939245974 instance=ExtResource("1_0xm2m")]
@@ -117,35 +236,6 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(-523, 117)
 scale = Vector2(0.5, 0.5)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852383026]
-
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=301807383]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1032889451]
-material = SubResource("ShaderMaterial_mtjga")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -101.0
-offset_top = -128.0
-offset_right = 90.0
-offset_bottom = 26.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=438519875]
-layout_mode = 0
-offset_right = 118.0
-offset_bottom = 27.0
-
 [node name="Ghost" parent="." unique_id=959379480 instance=ExtResource("5_lquwl")]
 position = Vector2(242, -1)
 
@@ -159,29 +249,117 @@ position = Vector2(379, -163)
 position = Vector2(-318, -177)
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1966870530]
-position = Vector2(107.87501, -284.875)
-scale = Vector2(0.21798287, 0.2332)
-texture = ExtResource("6_7mycd")
+position = Vector2(101.875015, -296.875)
+scale = Vector2(0.20517606, 0.19480003)
+texture = ExtResource("7_kek77")
 
 [node name="Area2D" type="Area2D" parent="Sprite2D2" unique_id=1953744864]
 position = Vector2(-26.951693, 42.345627)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Area2D" unique_id=1493808634]
-position = Vector2(-32.112614, -115.78044)
+position = Vector2(-16.303944, -7.0529785)
 shape = SubResource("CapsuleShape2D_vfm02")
 
-[node name="PauseMenu" parent="." unique_id=1988215942 instance=ExtResource("9_kek77")]
+[node name="SpawnPoint2" type="Marker2D" parent="Sprite2D2" unique_id=1990957326]
+position = Vector2(-11147.091, 475.45038)
+scale = Vector2(4.5875163, 4.2881656)
+
+[node name="Important Node" type="Node2D" parent="Sprite2D2" unique_id=1509368350 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
+position = Vector2(-494.87836, 1221.591)
+scale = Vector2(4.5875163, 4.2881646)
+script = ExtResource("1_5vw27")
+target_spawn = NodePath("../SpawnPoint2")
+echo_shader_rect = NodePath("../../CanvasLayer2/Control/ColorRect")
+player = NodePath("../../Player")
+target_camera = NodePath("../../Camera2D2")
 
 [node name="Camera2D2" type="Camera2D" parent="." unique_id=166993089]
 position = Vector2(-1891, -374)
 
+[node name="Sprite2D3" type="Sprite2D" parent="Camera2D2" unique_id=727006241]
+position = Vector2(206, 183.00012)
+scale = Vector2(0.21798287, 0.23980002)
+texture = ExtResource("7_kek77")
+
+[node name="Area2D" type="Area2D" parent="Camera2D2/Sprite2D3" unique_id=697638413]
+position = Vector2(-27.525146, -70.89307)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D2/Sprite2D3/Area2D" unique_id=506570101]
+position = Vector2(4.587547, 95.913376)
+shape = SubResource("CapsuleShape2D_vfm02")
+
+[node name="SpawnPoint3" type="Marker2D" parent="Camera2D2" unique_id=1739714572]
+position = Vector2(391, -628)
+
+[node name="Important Node" type="Node2D" parent="Camera2D2" unique_id=410467732 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
+position = Vector2(-494.87836, 1221.591)
+scale = Vector2(4.5875163, 4.2881646)
+script = ExtResource("1_5vw27")
+target_spawn = NodePath("../SpawnPoint3")
+echo_shader_rect = NodePath("../../CanvasLayer2/Control/ColorRect")
+player = NodePath("../../Player")
+target_camera = NodePath("../../Camera2D3")
+
 [node name="Camera2D3" type="Camera2D" parent="." unique_id=2103061501]
 position = Vector2(-1024, -1189)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Camera2D3" unique_id=1047515875]
+position = Vector2(266, 69.999985)
+scale = Vector2(0.21798287, 0.23980002)
+texture = ExtResource("7_kek77")
+
+[node name="Area2D" type="Area2D" parent="Camera2D3/Sprite2D3" unique_id=2024639099]
+position = Vector2(-27.525146, -70.89307)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D3/Sprite2D3/Area2D" unique_id=1375032917]
+position = Vector2(-9.17502, 70.89286)
+shape = SubResource("CapsuleShape2D_vfm02")
+
+[node name="SpawnPoint4" type="Marker2D" parent="Camera2D3" unique_id=1078376491]
+position = Vector2(1247, -109)
+
+[node name="Important Node" type="Node2D" parent="Camera2D3" unique_id=2061403253 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
+position = Vector2(-673.99994, 2040)
+scale = Vector2(4.5875163, 4.2881646)
+script = ExtResource("1_5vw27")
+target_spawn = NodePath("../SpawnPoint4")
+echo_shader_rect = NodePath("../../CanvasLayer2/Control/ColorRect")
+player = NodePath("../../Player")
+target_camera = NodePath("../../Camera2D4")
 
 [node name="Camera2D4" type="Camera2D" parent="." unique_id=131999018]
 position = Vector2(670, -1412)
 
-[node name="Camera2D5" type="Camera2D" parent="." unique_id=472976942]
-position = Vector2(1901, -618)
+[node name="Sprite2D3" type="Sprite2D" parent="Camera2D4" unique_id=2082096412]
+position = Vector2(266, 69.999985)
+scale = Vector2(0.21798287, 0.23980002)
+texture = ExtResource("7_kek77")
 
-[connection signal="body_entered" from="Sprite2D2/Area2D" to="Important Node" method="_on_area_2d_body_entered"]
+[node name="Area2D" type="Area2D" parent="Camera2D4/Sprite2D3" unique_id=491034992]
+position = Vector2(-27.525146, -70.89307)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D4/Sprite2D3/Area2D" unique_id=1995792637]
+position = Vector2(-9.17502, 70.89286)
+shape = SubResource("CapsuleShape2D_vfm02")
+
+[node name="SpawnPoint5" type="Marker2D" parent="Camera2D4" unique_id=1151579498]
+position = Vector2(795, 540)
+
+[node name="Important Node" type="Node2D" parent="Camera2D4" unique_id=876930830 node_paths=PackedStringArray("target_spawn", "echo_shader_rect", "player", "target_camera")]
+position = Vector2(-673.99994, 2040)
+scale = Vector2(4.5875163, 4.2881646)
+script = ExtResource("1_5vw27")
+target_spawn = NodePath("../SpawnPoint5")
+echo_shader_rect = NodePath("../../CanvasLayer2/Control/ColorRect")
+player = NodePath("../../Player")
+target_camera = NodePath("../../Camera2D5")
+
+[node name="Camera2D5" type="Camera2D" parent="." unique_id=472976942]
+position = Vector2(1901, -957)
+
+[node name="PauseMenu" parent="." unique_id=1988215942 instance=ExtResource("9_kek77")]
+
+[connection signal="body_entered" from="Sprite2D2/Area2D" to="Sprite2D2/Important Node" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Camera2D2/Sprite2D3/Area2D" to="Camera2D2/Important Node" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Camera2D3/Sprite2D3/Area2D" to="Camera2D3/Important Node" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Camera2D4/Sprite2D3/Area2D" to="Camera2D4/Important Node" method="_on_area_2d_body_entered"]
