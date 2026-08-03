@@ -897,6 +897,7 @@ grow_horizontal = 2
 
 [node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
 position = Vector2(-150, 145)
+MAX_FEAR_TIME = 60.0
 fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
 camera = NodePath("../level1/Camera2D")
 

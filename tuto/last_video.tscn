@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dbm6buk6fxhul"]
+
+[ext_resource type="Script" uid="uid://dgxom5a8hvtx" path="res://tuto/last_video.gd" id="1_31um4"]
+[ext_resource type="VideoStream" uid="uid://xh64jomm24yc" path="res://tuto/second one.ogv" id="1_bqe04"]
+[ext_resource type="FontFile" uid="uid://byovl2bcbr621" path="res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaywriteNZGuides-Regular.ttf" id="2_p7730"]
+
+[node name="last video" type="Node2D" unique_id=23093783]
+script = ExtResource("1_31um4")
+
+[node name="video" type="VideoStreamPlayer" parent="." unique_id=816393814]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_bqe04")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2062038727]
+position = Vector2(391, 226)
+zoom = Vector2(1.545, 1.545)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=731260951]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1725102021]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=1375170802]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -85.0
+offset_right = 130.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="RestartButton" type="Button" parent="CanvasLayer/Control/VBoxContainer" unique_id=758788632]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_p7730")
+theme_override_font_sizes/font_size = 34
+text = "Restart?"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/Control/VBoxContainer" unique_id=420433922]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_p7730")
+theme_override_font_sizes/font_size = 34
+text = "Quit
+
+"

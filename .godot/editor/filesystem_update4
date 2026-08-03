@@ -1,3 +1,7 @@
-res://main.tscn
+res://Player/Characters/player.tscn
 res://echo_mask.gdshader
 res://tuto/tutroial_scene.gdshader
+res://Player/Characters/player.gd
+res://main.tscn
+res://tuto/last_video.tscn
+res://tuto/last_video.gd

@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://csx8oedxtsdyy" path="res://Player/Characters/player.gd" id="1_5mj4t"]
 [ext_resource type="PackedScene" uid="uid://dieq0euv7qjse" path="res://echo_wave.tscn" id="2_jrrtc"]
 [ext_resource type="Texture2D" uid="uid://drfv0ixwmcret" path="res://Player/Characters/الانميشن/وقوف/الولد الابيض.png" id="2_nhaih"]
+[ext_resource type="Texture2D" uid="uid://dhqskm6jhbnkh" path="res://Player/Characters/الانميشن/الموت/1.png" id="3_1s11d"]
+[ext_resource type="Texture2D" uid="uid://cygkt0o1qtgab" path="res://Player/Characters/الانميشن/الموت/2.png" id="4_h5ja2"]
 [ext_resource type="Texture2D" uid="uid://cwpmecveq3hhs" path="res://Player/Characters/الانميشن/الركض/1.png" id="4_jrrtc"]
 [ext_resource type="Texture2D" uid="uid://dst4tjqx3jsny" path="res://Player/Characters/الانميشن/الركض/2.png" id="5_8munr"]
 [ext_resource type="Texture2D" uid="uid://mq3a6biyfdsp" path="res://Player/Characters/الانميشن/قفز/2.png" id="5_crptq"]
+[ext_resource type="Texture2D" uid="uid://skeufku1f6kp" path="res://Player/Characters/الانميشن/الموت/3.png" id="5_erkgg"]
 [ext_resource type="Texture2D" uid="uid://b7pv7v3lg0w0l" path="res://Player/Characters/الانميشن/الركض/3.png" id="6_8o5op"]
 [ext_resource type="Texture2D" uid="uid://clxgjjkhpujqu" path="res://Player/Characters/الانميشن/الركض/4.png" id="7_crptq"]
 [ext_resource type="AudioStream" uid="uid://cmtcvxo6b75t6" path="res://الاصوات/walking echo.wav" id="9_8o5op"]
@@ -17,6 +20,20 @@ size = Vector2(12, 56)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ajdtp"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1s11d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h5ja2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_erkgg")
+}],
+"loop": 0,
+"name": &"die",
+"speed": 2.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_nhaih")
@@ -69,7 +86,7 @@ texture_filter = 1
 position = Vector2(-1, 0)
 scale = Vector2(0.115, 0.115)
 sprite_frames = SubResource("SpriteFrames_ajdtp")
-animation = &"jamp"
+animation = &"die"
 
 [node name="wk audio" type="AudioStreamPlayer2D" parent="." unique_id=1614566273]
 stream = ExtResource("9_8o5op")

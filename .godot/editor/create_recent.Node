@@ -1,8 +1,11 @@
+VBoxContainer
+Button
+Control
+CanvasLayer
+VideoStreamPlayer
 Node2D
 Camera2D
-VideoStreamPlayer
 Sprite2D
-CanvasLayer
 Marker2D
 CollisionShape2D
 Area2D
@@ -10,5 +13,3 @@ AnimatedSprite2D
 CheckBox
 HSlider
 VSlider
-Label
-ColorRect
