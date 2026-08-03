@@ -1,10 +1,10 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785687062
-echo_mask.gdshader::Shader::8929780257697292260::1785662748::0::1::::<><><>0<>0<><>::
+::res://::1785705512
+echo_mask.gdshader::Shader::8929780257697292260::1785687183::0::1::::<><><>0<>0<><>::
 echo_wave.gd::GDScript::8990162606447599727::1785612998::0::1::::<>Area2D<><>0<>0<><>::
 echo_wave.tscn::PackedScene::7730046669918722604::1785663180::0::1::::<><><>0<>0<><>::uid://d1c5wulmm8utr::::res://echo_wave.gd
-ghost.gd::GDScript::8113814340216088341::1785663761::0::1::::<>Area2D<><>0<>0<><>::
-ghost.tscn::PackedScene::6348642236031334756::1785686408::0::1::::<><><>0<>0<><>::uid://dnunlpjid7htd::::res://ghost.gd<>uid://j4ntpku3avxf::::res://ideativas-tlm-halloween-9862664_640.png<>uid://cicgsjvi4shyj::::res://الاصوات/echo ghost sounds.wav<>uid://caj3d2swwg7l1::::res://الاصوات/echo push ghost sound.mp3
+ghost.gd::GDScript::8113814340216088341::1785688504::0::1::::<>Area2D<><>0<>0<><>::
+ghost.tscn::PackedScene::6348642236031334756::1785688504::0::1::::<><><>0<>0<><>::uid://dnunlpjid7htd::::res://ghost.gd<>uid://cicgsjvi4shyj::::res://الاصوات/echo ghost sounds.wav<>uid://c8hkidgfij3uc::::res://الشبح/1.png<>uid://caj3d2swwg7l1::::res://الاصوات/echo push ghost sound.mp3<>uid://bwmgvkytrm40::::res://الشبح/2.png
 icon.svg::CompressedTexture2D::2422543624120626462::1785444999::1785662736::1::::<><><>0<>0<>f07825c0a0b0da6ed0b55b8dc649a8c6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ideativas-tlm-halloween-9862664_640.png::CompressedTexture2D::692390602844629287::1785612998::1785662736::1::::<><><>0<>0<>8dbd71c2be151b527360869e7c53af93<>res://.godot/imported/ideativas-tlm-halloween-9862664_640.png-03a06227f538cd4c74c647d0bac98c00.ctex::
 main.tscn::PackedScene::5306283812555800665::1785686408::0::1::::<><><>0<>0<><>::uid://bi32pe66qa6dy::::res://scene for testing/ground.tscn<>uid://dqwfwg0cox5wc::::res://test_node.gd<>uid://c7krkrlq72r2r::::res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png<>uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://blftmxdlk301y::::res://power_up.tscn<>uid://d0hwf8w4dmms7::::res://echo_mask.gdshader<>uid://cwplhe37nno1a::::res://ghost.tscn<>uid://cvsjodrqp0mdo::::res://word/تكتشر/الخلفيات الرائيسيه/الشباك.png
@@ -12,7 +12,7 @@ new_main.tscn::PackedScene::2895099643762878130::1785662716::0::1::::<><><>0<>0<
 power_up.gd::GDScript::6708314893361166078::1785686408::0::1::::<>Area2D<><>0<>0<><>::
 power_up.tscn::PackedScene::3169996118056927632::1785663761::0::1::::<><><>0<>0<><>::uid://c2ts736njtwew::::res://power_up.gd<>uid://cwyk5vrr6ssde::::res://word/تكتشر/اساس/زجاجه صحه.png<>uid://sw3k1tnrvgs2::::res://الاصوات/echo sound power upwav.wav
 test_node.gd::GDScript::8328043086177606654::1785612998::0::1::::<>Node<><>0<>0<><>::
-VignetteEffectShader.gdshader::Shader::841026662284322787::1785662748::0::1::::<><><>0<>0<><>::
+VignetteEffectShader.gdshader::Shader::841026662284322787::1785687183::0::1::::<><><>0<>0<><>::
 العالم.tscn::PackedScene::2840517321453043917::1785663182::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
 ::res://Cutscene/::1785686995
 2الغرفه.png::CompressedTexture2D::4631201442703107103::1785685582::1785686995::1::::<><><>0<>0<>6b719b39ad0b35f4ee9eaf3a2342137a<>res://.godot/imported/2الغرفه.png-01d2dedc46fa0de465d6c507d7b703a1.ctex::
@@ -219,11 +219,11 @@ options_menu.tscn::PackedScene::4558285349737552225::1785686408::0::1::::<><><>0
 ::res://القائمات/القائمه التوقف/::1785617249
 pause_menu.gd::GDScript::9167592041068937383::1785579108::0::1::::<>Control<><>0<>0<><>::
 pause_menu.tscn::PackedScene::1834023278567686646::1785617249::0::1::::<><><>0<>0<><>::uid://d3u35wfehcu52::::res://القائمات/القائمه التوقف/pause_menu.gd<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf
-::res://القائمات/القائمه الرائيسيه/::1785687011
+::res://القائمات/القائمه الرائيسيه/::1785687183
 circle_transition.gdshader::Shader::6049072871153153707::1785686408::0::1::::<><><>0<>0<><>::
 Global.gd::GDScript::185343267558133047::1785624520::0::1::::<>Node<><>0<>0<><>::
 main_menu.gd::GDScript::8253683118789581049::1785687011::0::1::::<>Control<><>0<>0<><>::
-main_menu.tscn::PackedScene::4210432548783749317::1785687011::0::1::::<><><>0<>0<><>::uid://dpue7qc13p5h2::::res://القائمات/القائمه الرائيسيه/main_menu.gd<>uid://drb3v5kqh8t74::::res://القائمات/القائمه الرائيسيه/menu_light.gdshader<>uid://byovl2bcbr621::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaywriteNZGuides-Regular.ttf<>uid://csghl1pgr5kad::::res://القائمات/القائمه الرائيسيه/circle_transition.gdshader<>uid://canorgo83vdsh::::res://الاصوات/echo select1.wav<>uid://c1f8rs8bk8rw0::::res://الاصوات/background audio.mp3<>uid://j4ntpku3avxf::::res://ideativas-tlm-halloween-9862664_640.png<>uid://d027il63y3se4::::res://القائمات/القائمه الرائيسيه/t.gd
+main_menu.tscn::PackedScene::4210432548783749317::1785687183::0::1::::<><><>0<>0<><>::uid://dpue7qc13p5h2::::res://القائمات/القائمه الرائيسيه/main_menu.gd<>uid://drb3v5kqh8t74::::res://القائمات/القائمه الرائيسيه/menu_light.gdshader<>uid://byovl2bcbr621::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaywriteNZGuides-Regular.ttf<>uid://csghl1pgr5kad::::res://القائمات/القائمه الرائيسيه/circle_transition.gdshader<>uid://canorgo83vdsh::::res://الاصوات/echo select1.wav<>uid://c1f8rs8bk8rw0::::res://الاصوات/background audio.mp3<>uid://j4ntpku3avxf::::res://ideativas-tlm-halloween-9862664_640.png<>uid://d027il63y3se4::::res://القائمات/القائمه الرائيسيه/t.gd
 menu_light.gdshader::Shader::8356275940035567009::1785686409::0::1::::<><><>0<>0<><>::
 t.gd::GDScript::8971679198460666637::1785686409::0::1::::<>Sprite2D<><>0<>0<><>::
 القائمه الرائيسيه.tscn::PackedScene::861903679216020531::1785663185::0::1::::<><><>0<>0<><>::uid://cqxr07utnryjy::::res://القائمات/القائمه الرائيسيه/القائمه_الرائيسيه.gd<>uid://buj7iofbg43d4::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaymegamesReguler-2OOee.ttf<>uid://bmp0ker3rylw8::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_.png<>uid://jnnd1bxqnh3s::::res://القائمات/القائمه الرائيسيه/game assets/game assets/big_pressed.png
