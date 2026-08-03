@@ -20,8 +20,8 @@ radius = 41.0
 height = 130.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vivmo"]
-radius = 155.97559
-height = 598.3887
+radius = 69.04492
+height = 398.92676
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_efxa6"]
 shader = ExtResource("5_272bh")
@@ -915,7 +915,7 @@ offset_bottom = 75.0
 grow_horizontal = 2
 
 [node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
-position = Vector2(-150, 145)
+position = Vector2(-412, 135)
 MAX_FEAR_TIME = 60.0
 fear_progress_bar = NodePath("../CanvasLayer/Control/ProgressBar")
 camera = NodePath("../level1/Camera2D")
