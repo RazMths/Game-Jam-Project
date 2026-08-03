@@ -301,11 +301,12 @@ position = Vector2(-1891, -374)
 [node name="SpawnPoint3" type="Marker2D" parent="level2/Camera2D2" unique_id=1739714572]
 position = Vector2(479, -561)
 
-[node name="Important Node" type="Node2D" parent="level2/Camera2D2" unique_id=410467732 node_paths=PackedStringArray("target_spawn", "target_camera")]
+[node name="Important Node" type="Node2D" parent="level2/Camera2D2" unique_id=410467732 node_paths=PackedStringArray("target_spawn", "player", "target_camera")]
 position = Vector2(-494.87836, 1221.591)
 scale = Vector2(4.5875163, 4.2881646)
 script = ExtResource("1_5vw27")
 target_spawn = NodePath("../SpawnPoint3")
+player = NodePath("../../../Player")
 target_camera = NodePath("../../../level3/Camera2D3")
 
 [node name="level3" type="Node2D" parent="." unique_id=1450222338]
