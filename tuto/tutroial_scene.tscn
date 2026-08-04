@@ -34,14 +34,16 @@ shader = ExtResource("12_x6r35")
 shader_parameter/circle_center = Vector2(0.5, 0.5)
 shader_parameter/circle_size = 1.5
 shader_parameter/screen_aspect = 1.777
+shader_parameter/circle_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mtjga"]
 size = Vector2(662, 610)
 
-[node name="Tutroial Scene" type="Node2D" unique_id=1562986716 node_paths=PackedStringArray("transition_rect", "trigger_area")]
+[node name="Tutroial Scene" type="Node2D" unique_id=1562986716 node_paths=PackedStringArray("transition_rect", "trigger_area", "player")]
 script = ExtResource("1_vvkyc")
 transition_rect = NodePath("CanvasLayer/Control/transition rect")
 trigger_area = NodePath("Speaking Area")
+player = NodePath("Player")
 
 [node name="Important Node" type="Node2D" parent="." unique_id=936184997 node_paths=PackedStringArray("echo_shader_rect", "player")]
 position = Vector2(-494.87836, 1221.591)

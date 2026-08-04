@@ -4,6 +4,9 @@ uniform vec2 circle_center = vec2(0.5, 0.5); // مركز الدائرة
 uniform float circle_size : hint_range(0.0, 2.0) = 0.0; // تبدأ مغلقة (0.0)
 uniform float screen_aspect = 1.777; // نسبة أبعاد الشاشة (16:9)
 
+// 🎨 إضافة متغير اللون ليظهر في الـ Inspector (الافتراضي رمادي داكن كما في كودك)
+uniform vec4 circle_color : source_color = vec4(0.3, 0.3, 0.3, 1.0); 
+
 void fragment() {
     vec2 uv = UV;
     // تصحيح الأبعاد لتظل الدائرة كروية
@@ -11,9 +14,9 @@ void fragment() {
     
     float dist = distance(uv, circle_center);
     
-    // ما داخل الدائرة أبيض، وما خارجه شفاف
+    // ما داخل الدائرة يأخذ اللون المحدد، وما خارجه شفاف
     if (dist < circle_size) {
-        COLOR = vec4(0.3, 0.3, 0.3, 1.0); // دائرة بيضاء
+        COLOR = circle_color; // استخدام المتغير بدلاً من القيمة الثابتة
     } else {
         COLOR = vec4(0.0, 0.0, 0.0, 0.0); // باقي الشاشة شفاف
     }

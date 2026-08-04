@@ -1,34 +1,29 @@
 extends Control
 
-# ربط العقد حسب شجرة المشهد عندك
-@onready var dark_overlay: ColorRect = $CanvasLayer/background
+@onready var dark_overlay: ColorRect = $CanvasLayer/ColorRect
 @onready var start_button: Button = $CanvasLayer/VBoxContainer/StartButton
 @onready var quit_button: Button = $CanvasLayer/VBoxContainer/QuitButton
 @onready var sl_audio: AudioStreamPlayer2D = $"CanvasLayer/sl audio"
 
-# عقد التحكم بالصوت والشاشة الكاملة
 @onready var audio_level = $"CanvasLayer/Audio Level"
 @onready var fullscreen_check = $CanvasLayer/FullScreenCheck
 
-# متغير الـ Shader
 var shader_mat: ShaderMaterial
 
-# متغيرات إضاءة العنوان والأعدادات العشوائية
 @export var title_lights_enabled: bool = true
 var title_light_timer: float = 0.0
 var next_title_light_interval: float = 0.5 
 
 @export var settings_lights_enabled: bool = true
 var settings_light_timer: float = 0.0
-var next_settings_light_interval: float = 1.2 # نبضات هادئة كل فترة
+var next_settings_light_interval: float = 1.2 
 
-# هيكل إدارة موجات الصدى
 class MenuEchoWave:
 	var position: Vector2
 	var radius: float = 0.0
 	var opacity: float = 1.0
-	var max_radius: float = 450.0
-	var speed: float = 750.0
+	var max_radius: float = 0.35
+	var speed: float = 0.4
 
 var active_waves: Array[MenuEchoWave] = []
 
@@ -38,11 +33,9 @@ func _ready() -> void:
 	if dark_overlay and dark_overlay.material:
 		shader_mat = dark_overlay.material as ShaderMaterial
 
-	# 1. ربط أزرار القائمة الرئيسية
 	start_button.pressed.connect(_on_start_pressed)
 	quit_button.pressed.connect(_on_quit_pressed)
 
-	# 2. ربط زر الشاشة الكاملة
 	if fullscreen_check:
 		if fullscreen_check is CheckBox or fullscreen_check is CheckButton:
 			fullscreen_check.button_pressed = (DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN)
@@ -50,44 +43,52 @@ func _ready() -> void:
 		elif fullscreen_check is Button:
 			fullscreen_check.pressed.connect(_on_fullscreen_pressed)
 
-	# 3. إعداد سلايدر التحكم بالصوت
 	if audio_level and audio_level is Range:
 		audio_level.min_value = 0.0
 		audio_level.max_value = 1.0
 		audio_level.step = 0.01
 		audio_level.value = 1.0
-		
 		_on_audio_level_changed(1.0)
 		audio_level.value_changed.connect(_on_audio_level_changed)
 
-	# 4. ربط التمرير (Hover) لجميع العناصر
 	var interactive_controls = [start_button, quit_button, fullscreen_check, audio_level]
 	for control in interactive_controls:
 		if control and control is Control:
 			control.mouse_entered.connect(_on_control_hover.bind(control))
 
+# 🎯 تحويل موضع العقدة أو الماوس مباشرة إلى نسبة UV دقيقة (0.0 إلى 1.0) اعتماداً على Viewport الشاشة
+func _node_to_uv(node: Control) -> Vector2:
+	var vp_size = get_viewport_rect().size
+	if vp_size.x == 0.0 or vp_size.y == 0.0:
+		return Vector2.ZERO
+	var screen_pos = node.get_global_transform_with_canvas().origin + (node.size * node.get_global_transform_with_canvas().get_scale() / 2.0)
+	return screen_pos / vp_size
+
+func _mouse_to_uv() -> Vector2:
+	var vp_size = get_viewport_rect().size
+	if vp_size.x == 0.0 or vp_size.y == 0.0:
+		return Vector2.ZERO
+	return get_viewport().get_mouse_position() / vp_size
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		spawn_menu_wave(get_global_mouse_position(), 500.0)
+		# 🎯 تم توسيع نصف قطر موجة الضغطة إلى 0.38 مع تسريع طفيف للانتقال
+		spawn_menu_wave(_mouse_to_uv(), 0.38, 0.45)
 
 func _process(delta: float) -> void:
-	# 1. تحديث موقع ضوء الفأرة للـ Shader
-	var mouse_pos = get_global_mouse_position()
-	if shader_mat:
-		shader_mat.set_shader_parameter("mouse_position", mouse_pos)
+	var vp_size = get_viewport_rect().size
+	if shader_mat and vp_size.y > 0.0:
+		shader_mat.set_shader_parameter("mouse_position", _mouse_to_uv())
+		shader_mat.set_shader_parameter("screen_aspect", vp_size.x / vp_size.y)
 
-	# 2. توليد إضاءة عشوائية حول العنوان
 	if title_lights_enabled:
 		_process_random_title_lights(delta)
 
-	# 3. توليد إضاءة هادئة على خيارات الإعدادات (Full Screen و Audio Level)
 	if settings_lights_enabled:
 		_process_random_settings_lights(delta)
 
-	# 4. تحديث حركة جميع الموجات
 	_update_waves(delta)
 
-# دالة إطلاق إضاءة عشوائية بطيئة حول العنوان
 func _process_random_title_lights(delta: float) -> void:
 	title_light_timer += delta
 	if title_light_timer >= next_title_light_interval:
@@ -96,41 +97,33 @@ func _process_random_title_lights(delta: float) -> void:
 		
 		var title_node = $CanvasLayer/Title
 		if title_node:
-			var rect = title_node.get_global_rect()
-			var margin = 40.0
-			
-			var random_x = randf_range(rect.position.x - margin, rect.position.x + rect.size.x + margin)
-			var random_y = randf_range(rect.position.y - margin, rect.position.y + rect.size.y + margin)
-			
-			spawn_menu_wave(Vector2(random_x, random_y), randf_range(90.0, 170.0), 100.0)
+			var base_uv = _node_to_uv(title_node)
+			# نطاق أوسع قليلاً لإحداثيات التوهج حول العنوان
+			var offset_uv = Vector2(randf_range(-0.14, 0.14), randf_range(-0.07, 0.07))
+			# 🎯 تم تكبير حجم موجات العنوان إلى مدى بين 0.18 و 0.26
+			spawn_menu_wave(base_uv + offset_uv, randf_range(0.18, 0.26), 0.25)
 
-# دالة إطلاق نبضات ضوئية على خيارات الإعدادات لجذب انتباه اللاعب
 func _process_random_settings_lights(delta: float) -> void:
 	settings_light_timer += delta
 	if settings_light_timer >= next_settings_light_interval:
 		settings_light_timer = 0.0
-		next_settings_light_interval = randf_range(1.2, 2.2) # وقت هادئ ومتباعد
+		next_settings_light_interval = randf_range(1.2, 2.2)
 		
-		# اختيار عشوائي بين Audio Level و FullScreenCheck
 		var targets = []
 		if audio_level: targets.append(audio_level)
 		if fullscreen_check: targets.append(fullscreen_check)
 		
 		if targets.size() > 0:
 			var target_node: Control = targets.pick_random()
-			var rect = target_node.get_global_rect()
-			var center = rect.position + (rect.size / 2.0)
-			
-			# موجة بطيئة وناعمة تركز على نود الخيار
-			spawn_menu_wave(center, 220.0, 120.0)
+			# 🎯 تم تكبير حجم موجة خيارات الإعدادات إلى 0.22
+			spawn_menu_wave(_node_to_uv(target_node), 0.22, 0.25)
 
-# دالة إنشاء موجة صدى
-func spawn_menu_wave(pos: Vector2, target_radius: float = 400.0, custom_speed: float = 750.0) -> void:
-	if active_waves.size() >= 20:
+func spawn_menu_wave(uv_pos: Vector2, target_radius: float = 0.35, custom_speed: float = 0.4) -> void:
+	if active_waves.size() >= 10:
 		active_waves.pop_front()
 
 	var wave = MenuEchoWave.new()
-	wave.position = pos
+	wave.position = uv_pos
 	wave.max_radius = target_radius
 	wave.speed = custom_speed
 	active_waves.append(wave)
@@ -161,16 +154,13 @@ func _update_waves(delta: float) -> void:
 		shader_mat.set_shader_parameter("wave_radii", radii)
 		shader_mat.set_shader_parameter("wave_opacities", opacities)
 
-# دالة التمرير فوق العناصر
 func _on_control_hover(control: Control) -> void:
 	if control:
-		var btn_center = control.global_position + (control.size / 2.0)
 		if sl_audio:
 			sl_audio.pitch_scale = randf_range(0.8, 1.1)
 			sl_audio.play()
-		spawn_menu_wave(btn_center, 220.0, 750.0)
-
-# --- الدوال الخاصة بالتحكم بالصوت والشاشة ---
+		# 🎯 تم توسيع موجة حومة الماوس على الأزرار إلى 0.25
+		spawn_menu_wave(_node_to_uv(control), 0.25, 0.35)
 
 func _on_fullscreen_toggled(button_pressed: bool) -> void:
 	if button_pressed:
@@ -194,9 +184,6 @@ func _on_audio_level_changed(value: float) -> void:
 		var db_val = linear_to_db(value)
 		AudioServer.set_bus_volume_db(master_bus_index, db_val)
 
-# --- أزرار القائمة والتأثيرات ---
-
-
 func _on_start_pressed() -> void:
 	_play_circle_transition(start_button, func():
 		get_tree().change_scene_to_file("res://القائمات/loading_screen.tscn")
@@ -214,12 +201,11 @@ func _play_circle_transition(target_button: Button, on_complete: Callable) -> vo
 		return
 
 	var mat = transition_rect.material as ShaderMaterial
-	var btn_center = target_button.global_position + (target_button.size / 2.0)
-	var viewport_size = get_viewport_rect().size
-	var normalized_center = btn_center / viewport_size
+	var normalized_center = _node_to_uv(target_button)
+	var vp_size = get_viewport_rect().size
 	
 	mat.set_shader_parameter("circle_center", normalized_center)
-	mat.set_shader_parameter("screen_aspect", viewport_size.x / viewport_size.y)
+	mat.set_shader_parameter("screen_aspect", vp_size.x / vp_size.y)
 	
 	transition_rect.mouse_filter = Control.MOUSE_FILTER_STOP
 	

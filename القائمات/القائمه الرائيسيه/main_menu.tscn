@@ -11,13 +11,14 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mlclh"]
 shader = ExtResource("1_mlclh")
-shader_parameter/mouse_position = Vector2(0, 0)
-shader_parameter/light_radius = 130.0
+shader_parameter/mouse_position = Vector2(0.5, 0.5)
+shader_parameter/light_radius = 0.235
+shader_parameter/screen_aspect = 1.777
 shader_parameter/glow_color = Color(0.585208, 0.92390406, 1, 1)
-shader_parameter/ambient_darkness = 0.9710000461225
-shader_parameter/wave_positions = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-shader_parameter/wave_radii = PackedFloat32Array(0, 0, 0, 0, 0)
-shader_parameter/wave_opacities = PackedFloat32Array(0, 0, 0, 0, 0)
+shader_parameter/ambient_darkness = 0.9950000472625
+shader_parameter/wave_positions = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/wave_radii = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/wave_opacities = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 shader_parameter/active_waves_count = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_q3j7k"]
@@ -125,7 +126,7 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
-text = "Wake UP!"
+text = "Silent Alley"
 label_settings = SubResource("LabelSettings_mtjga")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=779310445]

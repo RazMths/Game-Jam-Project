@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ceibx1sk48hi3" path="res://tuto/videos.gd" id="1_ib0sw"]
 [ext_resource type="VideoStream" uid="uid://iawng0b13are" path="res://tuto/intro.ogv" id="1_tb14q"]
 [ext_resource type="AudioStream" uid="uid://b4mmmh6ljdxwf" path="res://tuto/intro sound.mp3" id="3_5vo57"]
+[ext_resource type="AudioStream" uid="uid://dwsnp0vio8vuu" path="res://tuto/intro1.mp3" id="3_cwrld"]
 [ext_resource type="AudioStream" uid="uid://c420v14nb0xne" path="res://tuto/intro sound1.mp3" id="4_cwrld"]
 
 [node name="intro" type="Node2D" unique_id=1266356439 node_paths=PackedStringArray("video")]
@@ -21,10 +22,15 @@ zoom = Vector2(0.685, 0.685)
 
 [node name="IntroSound" type="AudioStreamPlayer2D" parent="." unique_id=1126375652]
 position = Vector2(-105, 907)
-stream = ExtResource("3_5vo57")
-pitch_scale = 0.73
+stream = ExtResource("3_cwrld")
+pitch_scale = 1.35
 autoplay = true
 
 [node name="IntroSound1" type="AudioStreamPlayer2D" parent="." unique_id=1870625152]
 position = Vector2(73, 1129)
 stream = ExtResource("4_cwrld")
+
+[node name="IntroSound2" type="AudioStreamPlayer2D" parent="." unique_id=2103674030]
+position = Vector2(431, 1330)
+stream = ExtResource("3_5vo57")
+pitch_scale = 1.4

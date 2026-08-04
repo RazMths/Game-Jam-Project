@@ -3,3 +3,14 @@ res://echo_mask.gdshader
 res://tuto/tutroial_scene.gdshader
 res://sprite_2d_3.gd
 res://ghost.tscn
+res://area_2d.gd
+res://transition.gdshader
+res://tuto/tutNode.gd
+res://echo_wave.gd
+res://tuto/tutroial_scene.tscn
+res://tuto/tutroial_scene.gd
+res://القائمات/القائمه الرائيسيه/main_menu.tscn
+res://القائمات/القائمه الرائيسيه/main_menu.gd
+res://القائمات/القائمه الرائيسيه/menu_light.gdshader
+res://tuto/intro.tscn
+res://tuto/videos.gd

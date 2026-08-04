@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c5a8qjdanhsor" path="res://اتنا.png" id="10_dg77c"]
 [ext_resource type="Script" uid="uid://cp8asxtlncp0b" path="res://sprite_2d_3.gd" id="10_w48qg"]
 [ext_resource type="Script" uid="uid://coq2042tc5jfc" path="res://tuto/tutNode.gd" id="11_efxa6"]
+[ext_resource type="Shader" uid="uid://c6acsp4fu0vx0" path="res://transition.gdshader" id="13_vivmo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfm02"]
 radius = 41.0
@@ -36,6 +37,12 @@ shader_parameter/glow_color = Color(1, 0.8552519, 0.8712497, 1)
 shader_parameter/echo_intensity = 1.6
 shader_parameter/ambient_darkness = 1.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mtjga"]
+shader = ExtResource("13_vivmo")
+shader_parameter/transition_size = 1.0
+shader_parameter/player_screen_pos = Vector2(0.5, 0.5)
+shader_parameter/overlay_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+
 [node name="main" type="Node2D" unique_id=1916839064]
 
 [node name="level1" type="Node2D" parent="." unique_id=1725090150]
@@ -43,6 +50,7 @@ shader_parameter/ambient_darkness = 1.0
 [node name="حيط" type="Node2D" parent="level1" unique_id=600538582]
 
 [node name="حيط" type="Sprite2D" parent="level1/حيط" unique_id=1563126919]
+z_index = -1
 position = Vector2(35, -143)
 scale = Vector2(1.4108856, 1.324)
 texture = ExtResource("1_lquwl")
@@ -68,16 +76,17 @@ position = Vector2(62, 160)
 scale = Vector2(0.5, 0.5)
 
 [node name="Power up2" parent="level1/زجاجه صحه" unique_id=2096508304 instance=ExtResource("4_1bvp3")]
-position = Vector2(-347, 124)
+position = Vector2(-88, -213)
 scale = Vector2(0.5, 0.5)
 
 [node name="Power up3" parent="level1/زجاجه صحه" unique_id=499746787 instance=ExtResource("4_1bvp3")]
-position = Vector2(-523, 117)
+position = Vector2(115, -47)
 scale = Vector2(0.5, 0.5)
 
 [node name="شباك" type="Node2D" parent="level1" unique_id=1631289207]
 
 [node name="Sprite2D3" type="Sprite2D" parent="level1/شباك" unique_id=1395458297]
+z_index = -1
 position = Vector2(-134.00002, -269)
 scale = Vector2(0.4135539, 0.516)
 texture = ExtResource("3_efxa6")
@@ -140,11 +149,12 @@ position = Vector2(101.875015, -296.875)
 scale = Vector2(0.20517606, 0.19480003)
 texture = ExtResource("7_kek77")
 
-[node name="Area2D" type="Area2D" parent="level1/باب/Sprite2D2" unique_id=1953744864 node_paths=PackedStringArray("target_spawn", "target_camera", "player")]
+[node name="Area2D" type="Area2D" parent="level1/باب/Sprite2D2" unique_id=1953744864 node_paths=PackedStringArray("target_spawn", "target_camera", "echo_shader_rect", "player")]
 position = Vector2(-26.951693, 42.345627)
 script = ExtResource("8_efxa6")
 target_spawn = NodePath("../SpawnPoint2")
 target_camera = NodePath("../../../../level2/Camera2D2")
+echo_shader_rect = NodePath("../../../../CanvasLayer/Control/transition")
 player = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level1/باب/Sprite2D2/Area2D" unique_id=1493808634]
@@ -295,11 +305,12 @@ position = Vector2(-1470.9375, -608.96875)
 scale = Vector2(0.1666222, 0.1375001)
 texture = ExtResource("7_kek77")
 
-[node name="Area2D" type="Area2D" parent="level2/باب/Sprite2D3" unique_id=697638413 node_paths=PackedStringArray("target_spawn", "target_camera", "player")]
+[node name="Area2D" type="Area2D" parent="level2/باب/Sprite2D3" unique_id=697638413 node_paths=PackedStringArray("target_spawn", "target_camera", "echo_shader_rect", "player")]
 position = Vector2(-27.525146, -70.89307)
 script = ExtResource("8_efxa6")
 target_spawn = NodePath("SpawnPoint3")
 target_camera = NodePath("../../../../level3/Camera2D3")
+echo_shader_rect = NodePath("../../../../CanvasLayer/Control/transition")
 player = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level2/باب/Sprite2D3/Area2D" unique_id=506570101]
@@ -418,11 +429,12 @@ position = Vector2(-48.387695, -5745.677)
 scale = Vector2(1.3082463, 1.743999)
 texture = ExtResource("7_kek77")
 
-[node name="Area2D" type="Area2D" parent="level3/الباب/Sprite2D3" unique_id=2024639099 node_paths=PackedStringArray("target_spawn", "target_camera", "player")]
+[node name="Area2D" type="Area2D" parent="level3/الباب/Sprite2D3" unique_id=2024639099 node_paths=PackedStringArray("target_spawn", "target_camera", "echo_shader_rect", "player")]
 position = Vector2(-27.525146, -70.89307)
 script = ExtResource("8_efxa6")
 target_spawn = NodePath("../../../Camera2D3/SpawnPoint4")
 target_camera = NodePath("../../../../level4/Camera2D4")
+echo_shader_rect = NodePath("../../../../CanvasLayer/Control/transition")
 player = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level3/الباب/Sprite2D3/Area2D" unique_id=1375032917]
@@ -661,11 +673,12 @@ position = Vector2(1150, -1198)
 scale = Vector2(0.21798287, 0.2607001)
 texture = ExtResource("7_kek77")
 
-[node name="Area2D" type="Area2D" parent="level4/الباب/Sprite2D3" unique_id=491034992 node_paths=PackedStringArray("target_spawn", "target_camera", "player")]
+[node name="Area2D" type="Area2D" parent="level4/الباب/Sprite2D3" unique_id=491034992 node_paths=PackedStringArray("target_spawn", "target_camera", "echo_shader_rect", "player")]
 position = Vector2(-59.637817, 53.70166)
 script = ExtResource("8_efxa6")
 target_spawn = NodePath("../../../Camera2D4/SpawnPoint5")
 target_camera = NodePath("../../../../level5/Camera2D5")
+echo_shader_rect = NodePath("../../../../CanvasLayer/Control/transition")
 player = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level4/الباب/Sprite2D3/Area2D" unique_id=1995792637]
@@ -913,6 +926,15 @@ offset_top = 2.0
 offset_right = 48.0
 offset_bottom = 75.0
 grow_horizontal = 2
+
+[node name="transition" type="ColorRect" parent="CanvasLayer/Control" unique_id=401471245]
+material = SubResource("ShaderMaterial_mtjga")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Player" parent="." unique_id=891439576 node_paths=PackedStringArray("fear_progress_bar", "camera") instance=ExtResource("2_h2yge")]
 position = Vector2(-412, 135)
