@@ -49,7 +49,7 @@ ground.gd::GDScript::2574312470714908442::1785521242::0::1::::<>StaticBody2D<><>
 ground.tscn::PackedScene::3007400415036554778::1785637563::0::1::::<><><>0<>0<><>::uid://bcxasyeigyl7o::::res://scene for testing/ground.gd<>uid://bq7ib6pwc1kds::::res://word/تكتشر/الخلفيات الرائيسيه/الارضيه.png
 new_ground.tscn::PackedScene::519299154673701510::1785593485::0::1::::<><><>0<>0<><>::uid://beg5ijdr25k2e::::res://word/تكتشر/العشب.pngال.png
 pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png::CompressedTexture2D::8086246807689756968::1785521242::1785521242::1::::<><><>0<>0<>f954915dce2ac4a469b4e362a7b97297<>res://.godot/imported/pngtree-silhouette-of-pine-forest-with-small-and-tall-evergreen-trees-on-png-image_4838656.png-778934e2ef25061f5c19318b4549d400.ctex::
-::res://tuto/::1785818490
+::res://tuto/::1785819482
 after_start.tscn::PackedScene::8393895950444322548::1785780243::0::1::::<><><>0<>0<><>::uid://vu64aur64e72::::res://tuto/first one.ogv<>uid://bets88p3dupv1::::res://tuto/video1.gd
 first one.ogv::VideoStreamTheora::1517187317989940451::1785770184::0::1::::<><><>0<>0<><>::
 ground for tutroial.tscn::PackedScene::4070792291360892805::1785760005::0::1::::<><><>0<>0<><>::
@@ -57,7 +57,7 @@ intro1.mp3::AudioStreamMP3::8741392864411789496::1785818490::1785818491::1::::<>
 intro sound1.mp3::AudioStreamMP3::6865612869739357906::1785771023::1785771023::1::::<><><>0<>0<>ee54626c6ff6a93dcc4f4393e95c728d<>res://.godot/imported/intro sound1.mp3-bd36a8d6739854c99aeded68b829e3f7.mp3str::
 intro sound.mp3::AudioStreamMP3::4447420131749163669::1785770939::1785770939::1::::<><><>0<>0<>9b412f591d3972166352b0096b0619ab<>res://.godot/imported/intro sound.mp3-ea54f3b3707faed994b78c6f83d1c8a4.mp3str::
 intro.ogv::VideoStreamTheora::562870092107377446::1785759799::0::1::::<><><>0<>0<><>::
-intro.tscn::PackedScene::2441543970494473174::1785771208::0::1::::<><><>0<>0<><>::uid://ceibx1sk48hi3::::res://tuto/videos.gd<>uid://iawng0b13are::::res://tuto/intro.ogv<>uid://b4mmmh6ljdxwf::::res://tuto/intro sound.mp3<>uid://c420v14nb0xne::::res://tuto/intro sound1.mp3
+intro.tscn::PackedScene::2441543970494473174::1785818927::0::1::::<><><>0<>0<><>::uid://ceibx1sk48hi3::::res://tuto/videos.gd<>uid://iawng0b13are::::res://tuto/intro.ogv<>uid://b4mmmh6ljdxwf::::res://tuto/intro sound.mp3<>uid://dwsnp0vio8vuu::::res://tuto/intro1.mp3<>uid://c420v14nb0xne::::res://tuto/intro sound1.mp3
 last_video.gd::GDScript::224374966055486393::1785784411::0::1::::<>Node2D<><>0<>0<><>::
 last_video.tscn::PackedScene::7256108507666857783::1785783602::0::1::::<><><>0<>0<><>::uid://dgxom5a8hvtx::::res://tuto/last_video.gd<>uid://xh64jomm24yc::::res://tuto/second one.ogv<>uid://byovl2bcbr621::::res://القائمات/القائمه الرائيسيه/game assets/game assets/PlaywriteNZGuides-Regular.ttf
 Move Forward.png::CompressedTexture2D::5932967201805378005::1785760776::1785768150::1::::<><><>0<>0<>649c23a8f75aac3063244f641d41dc31<>res://.godot/imported/Move Forward.png-931816c376e8a85de2d5d5cde753f6bf.ctex::
@@ -65,6 +65,7 @@ movement.png::CompressedTexture2D::7147009653723134255::1785759678::1785768150::
 ruls.png::CompressedTexture2D::4239704528760602368::1785759675::1785768150::1::::<><><>0<>0<>e0a50891a6733a2a2f9ce13482a04a6a<>res://.godot/imported/ruls.png-a2c358fb24cd59a2d4dddc96691e76be.ctex::
 second one.ogv::VideoStreamTheora::1630728557651935422::1785770198::0::1::::<><><>0<>0<><>::
 shift.png::CompressedTexture2D::431034512510527673::1785759677::1785768150::1::::<><><>0<>0<>1c85ddc65cc118e297ac2bc7f9d8049d<>res://.godot/imported/shift.png-0d5da8ab32a0d0bcc3cfa30bbe8a55bf.ctex::
+silent alley.wav::AudioStreamWAV::7275532058306679576::1785819482::1785819485::1::::<><><>0<>0<>d771d57cd2a09b685c8fbac571dd804a<>res://.godot/imported/silent alley.wav-893bed9feab5822c3020c195853664de.sample::
 speaking_area.gd::GDScript::3473871355971279629::1785762626::0::1::::<>Area2D<><>0<>0<><>::
 tutNode.gd::GDScript::5790200791789937664::1785814305::0::1::::<>Node2D<><>0<>0<><>::
 tutorial voice-enhanced-v2.wav::AudioStreamWAV::8061804597397107510::1785762922::1785768150::1::::<><><>0<>0<>cf74d9d5637f65c5476b98801368917d<>res://.godot/imported/tutorial voice-enhanced-v2.wav-9bc70652966f95c0f447bd526c539826.sample::
@@ -72,7 +73,7 @@ tutroial_scene.gd::GDScript::4067300945890345453::1785814407::0::1::::<>Node2D<>
 tutroial_scene.gdshader::Shader::465615729496862669::1785815496::0::1::::<><><>0<>0<><>::
 tutroial_scene.tscn::PackedScene::3288882656086536834::1785815496::0::1::::<><><>0<>0<><>::uid://oy67rn0cumj3::::res://Player/Characters/player.tscn<>uid://coq2042tc5jfc::::res://tuto/tutNode.gd<>uid://bx7h38kk5vnwf::::res://tuto/tutroial_scene.gd<>uid://c83cg70xffq36::::res://tuto/movement.png<>uid://d0hwf8w4dmms7::::res://echo_mask.gdshader<>uid://c7krkrlq72r2r::::res://word/تكتشر/الخلفيات الرائيسيه/الخلفيه الرائيسيه.png<>uid://cqr8drcf1d3ef::::res://tuto/Move Forward.png<>uid://bx86mbs7q8ly8::::res://tuto/ground for tutroial.tscn<>uid://b1n0kxf0pq625::::res://tuto/ruls.png<>uid://ge2cthlmmh0l::::res://tuto/shift.png<>uid://cwplhe37nno1a::::res://ghost.tscn<>uid://blftmxdlk301y::::res://power_up.tscn<>uid://bpq1fhw1xcaj2::::res://tuto/speaking_area.gd<>uid://gvsvgh4pflqj::::res://tuto/tutroial_scene.gdshader<>uid://dm4g0j6iuee1s::::res://tuto/tutorial voice-enhanced-v2.wav
 video1.gd::GDScript::2707552830360650288::1785776816::0::1::::<>Node2D<><>0<>0<><>::
-videos.gd::GDScript::5070214948131385568::1785788609::0::1::::<>Node2D<><>0<>0<><>::
+videos.gd::GDScript::5070214948131385568::1785818879::0::1::::<>Node2D<><>0<>0<><>::
 ::res://word/::1785637563
 العالم.tscn::PackedScene::7548362440901741290::1785521242::0::1::::<><><>0<>0<><>::uid://barq67eed08is::::res://icon.svg
 ::res://word/تكتشر/::1785637563

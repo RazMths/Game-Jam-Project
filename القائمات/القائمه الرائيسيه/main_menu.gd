@@ -93,7 +93,7 @@ func _process_random_title_lights(delta: float) -> void:
 	title_light_timer += delta
 	if title_light_timer >= next_title_light_interval:
 		title_light_timer = 0.0
-		next_title_light_interval = randf_range(0.4, 0.8) 
+		next_title_light_interval = randf_range(0.8, 1.4) 
 		
 		var title_node = $CanvasLayer/Title
 		if title_node:
@@ -101,7 +101,7 @@ func _process_random_title_lights(delta: float) -> void:
 			# نطاق أوسع قليلاً لإحداثيات التوهج حول العنوان
 			var offset_uv = Vector2(randf_range(-0.14, 0.14), randf_range(-0.07, 0.07))
 			# 🎯 تم تكبير حجم موجات العنوان إلى مدى بين 0.18 و 0.26
-			spawn_menu_wave(base_uv + offset_uv, randf_range(0.18, 0.26), 0.25)
+			spawn_menu_wave(base_uv + offset_uv, randf_range(0.25, 0.3), 0.20)
 
 func _process_random_settings_lights(delta: float) -> void:
 	settings_light_timer += delta
@@ -116,10 +116,10 @@ func _process_random_settings_lights(delta: float) -> void:
 		if targets.size() > 0:
 			var target_node: Control = targets.pick_random()
 			# 🎯 تم تكبير حجم موجة خيارات الإعدادات إلى 0.22
-			spawn_menu_wave(_node_to_uv(target_node), 0.22, 0.25)
+			spawn_menu_wave(_node_to_uv(target_node), 0.32, 0.25)
 
 func spawn_menu_wave(uv_pos: Vector2, target_radius: float = 0.35, custom_speed: float = 0.4) -> void:
-	if active_waves.size() >= 10:
+	if active_waves.size() >= 15:
 		active_waves.pop_front()
 
 	var wave = MenuEchoWave.new()
@@ -160,7 +160,7 @@ func _on_control_hover(control: Control) -> void:
 			sl_audio.pitch_scale = randf_range(0.8, 1.1)
 			sl_audio.play()
 		# 🎯 تم توسيع موجة حومة الماوس على الأزرار إلى 0.25
-		spawn_menu_wave(_node_to_uv(control), 0.25, 0.35)
+		spawn_menu_wave(_node_to_uv(control), 0.32, 0.35)
 
 func _on_fullscreen_toggled(button_pressed: bool) -> void:
 	if button_pressed:
